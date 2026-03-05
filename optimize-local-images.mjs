@@ -48,8 +48,12 @@ async function optimizeImages() {
             console.log(`⏳ Optimizing: ${path.relative(PUBLIC_DIR, imagePath)}`);
 
             await sharp(imagePath)
-                .resize({ width: 1200, withoutEnlargement: true })
-                .webp({ quality: 80, effort: 6 })
+                .resize({ width: 2400, withoutEnlargement: true })
+                .modulate({
+                    brightness: 1.05,
+                    contrast: 1.15
+                })
+                .webp({ quality: 95, effort: 6 })
                 .toFile(webpPath);
 
             console.log(`✅ Converted to WebP: ${path.relative(PUBLIC_DIR, webpPath)}`);
