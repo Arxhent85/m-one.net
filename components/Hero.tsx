@@ -11,6 +11,7 @@ const Hero: React.FC = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
 
+  // Hero image selection based on theme
   const heroImage = theme === 'dark'
     ? '/images/hero/hero_dark.webp'
     : '/images/hero/hero_light.webp';
@@ -41,8 +42,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
             className={`inline-block px-6 py-2 mb-12 border rounded-full backdrop-blur-xl text-xs font-bold tracking-[0.2em] uppercase ${theme === 'dark'
-                ? 'border-white/10 bg-white/5 text-white/60'
-                : 'border-black/5 bg-black/5 text-black/60'
+              ? 'border-white/10 bg-white/5 text-white/60'
+              : 'border-black/5 bg-black/5 text-black/60'
               }`}
           >
             {t.hero.since}
@@ -98,8 +99,8 @@ const Hero: React.FC = () => {
 
             <button
               className={`px-12 py-5 rounded-full font-bold text-lg border premium-transition ${theme === 'dark'
-                  ? 'border-white/10 text-white hover:bg-white/5'
-                  : 'border-black/10 text-neutral-900 hover:bg-black/5'
+                ? 'border-white/10 text-white hover:bg-white/5'
+                : 'border-black/10 text-neutral-900 hover:bg-black/5'
                 }`}
             >
               {t.hero.references}
