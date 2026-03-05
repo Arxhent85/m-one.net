@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
   const { theme } = useTheme();
 
   const heroImage = theme === 'dark'
-    ? '/images/hero/hero_dark.png'
-    : '/images/hero/hero_light.png';
+    ? '/images/hero/hero_dark.webp'
+    : '/images/hero/hero_light.webp';
 
   return (
     <section
@@ -40,19 +40,17 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
-            className={`inline-block px-6 py-2 mb-12 border rounded-full backdrop-blur-xl text-xs font-bold tracking-[0.2em] uppercase ${
-              theme === 'dark'
+            className={`inline-block px-6 py-2 mb-12 border rounded-full backdrop-blur-xl text-xs font-bold tracking-[0.2em] uppercase ${theme === 'dark'
                 ? 'border-white/10 bg-white/5 text-white/60'
                 : 'border-black/5 bg-black/5 text-black/60'
-            }`}
+              }`}
           >
             {t.hero.since}
           </motion.div>
 
           <h1
-            className={`text-6xl md:text-[8rem] lg:text-[10rem] font-sans font-black leading-[0.9] mb-12 tracking-tighter ${
-              theme === 'dark' ? 'text-white' : 'text-neutral-950'
-            }`}
+            className={`text-6xl md:text-[8rem] lg:text-[10rem] font-sans font-black leading-[0.9] mb-12 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'
+              }`}
           >
             <motion.span
               initial={{ opacity: 0, y: 100 }}
@@ -76,9 +74,8 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className={`text-xl md:text-2xl mb-16 leading-relaxed max-w-2xl font-light tracking-wide ${
-              theme === 'dark' ? 'text-white/60' : 'text-neutral-500'
-            }`}
+            className={`text-xl md:text-2xl mb-16 leading-relaxed max-w-2xl font-light tracking-wide ${theme === 'dark' ? 'text-white/60' : 'text-neutral-500'
+              }`}
           >
             {t.hero.subtitle}
           </motion.p>
@@ -98,20 +95,19 @@ const Hero: React.FC = () => {
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
-            
+
             <button
-              className={`px-12 py-5 rounded-full font-bold text-lg border premium-transition ${
-                theme === 'dark'
+              className={`px-12 py-5 rounded-full font-bold text-lg border premium-transition ${theme === 'dark'
                   ? 'border-white/10 text-white hover:bg-white/5'
                   : 'border-black/10 text-neutral-900 hover:bg-black/5'
-              }`}
+                }`}
             >
               {t.hero.references}
             </button>
           </motion.div>
         </div>
       </div>
-      
+
       {/* Bottom fade for seamless scroll transition */}
       <div className={`absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white'} to-transparent z-10`} />
     </section>
