@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
@@ -38,7 +37,7 @@ const Footer: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="mb-6">
               <img
-                src="/logos/M-ONE_logo_Lang_weiss.png"
+                src="/logos/M-ONE_logo_Lang_weiss.webp"
                 alt="M-ONE Logo"
                 style={{ height: '36px', width: 'auto' }}
                 className="object-contain block"

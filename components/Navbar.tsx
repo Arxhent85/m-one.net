@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { Menu, X, Search, Globe, Moon, Sun } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
@@ -82,8 +81,8 @@ const Navbar: React.FC = () => {
           <div className="flex items-center gap-2 flex-shrink-0 cursor-pointer" onClick={goHome}>
             <img
               src={theme === 'light'
-                ? "/logos/M-ONE_logo_Lang_schwarz.png"
-                : "/logos/M-ONE_logo_Lang_weiss.png"}
+                ? "/logos/M-ONE_logo_Lang_schwarz.webp"
+                : "/logos/M-ONE_logo_Lang_weiss.webp"}
               alt="M-ONE Logo"
               style={{ height: '40px', width: 'auto' }}
               className="object-contain block transition-all duration-300"
