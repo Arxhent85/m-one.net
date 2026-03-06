@@ -91,7 +91,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 >
                   {/* @ts-ignore */}
                   <model-viewer
-                    src={product.image.replace('-3D-4K-Transparent.webp', '-3Dn.glb')}
+                    src={product.image.replace('-3D-4K-Transparent.webp', '-3D.glb')}
                     poster={product.image}
                     alt={product.name}
                     shadow-intensity="1"
