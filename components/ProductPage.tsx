@@ -67,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-            className="w-full lg:w-3/5 lg:sticky lg:top-32 lg:static flex-col will-change-transform"
+            className="w-full lg:w-3/5 lg:sticky lg:top-32 flex-col will-change-transform"
           >
             <div className="relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]">
               {product.image.includes('3D-4K') && activeMediaIndex === 1 ? (
