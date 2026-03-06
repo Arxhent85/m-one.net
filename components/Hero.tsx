@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 z-0 will-change-transform"
       >
         <img
-          src={heroImage}
+          src={heroImage + "?v=2"}
           alt="M-ONE Hero"
           className="w-full h-full object-cover object-center scale-105"
         />
