@@ -99,7 +99,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 onClick={() => navigateToProduct(product)}
                 className="group cursor-pointer flex flex-col will-change-transform"
               >
-                <div className="relative aspect-[4/5] mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-900/40 rounded-2xl border border-neutral-100 dark:border-neutral-900 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
+                <div className="relative aspect-[4/5] mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}
@@ -123,13 +123,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                     </motion.div>
                   </div>
 
-                  <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-900 mb-4 scale-x-100 group-hover:scale-x-95 transition-transform origin-left duration-500"></div>
-
-                  {product.description && (
-                    <p className="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mb-6 font-medium">
-                      {product.description}
-                    </p>
-                  )}
+                  <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-800 mb-4 scale-x-100 group-hover:scale-x-95 transition-transform origin-left duration-500"></div>
 
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mt-auto opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                     {t.products.viewDetails}

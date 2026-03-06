@@ -21,10 +21,10 @@ const Hero: React.FC = () => {
       id="hero"
       className={`relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}
     >
-      {/* Visual Background */}
+      {/* Visual Background Desktop (with parallax) */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 z-0 will-change-transform"
+        className="absolute inset-0 z-0 hidden md:block will-change-transform"
       >
         <img
           src={heroImage + "?v=2"}
@@ -33,6 +33,16 @@ const Hero: React.FC = () => {
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
       </motion.div>
+
+      {/* Visual Background Mobile (static to prevent black bar jumping) */}
+      <div className="absolute inset-0 z-0 md:hidden">
+        <img
+          src={heroImage + "?v=2"}
+          alt="M-ONE Hero"
+          className="w-full h-full object-cover object-center scale-105"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
+      </div>
 
       {/* Content Container with Aggressive Whitespace */}
       <div className="relative z-20 container mx-auto px-6 pt-20">

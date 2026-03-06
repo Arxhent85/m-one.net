@@ -85,7 +85,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                   key={index}
                   className="group flex flex-col h-full bg-white dark:bg-neutral-800 rounded-xl border border-neutral-100 dark:border-neutral-700 hover:border-brand-500/30 dark:hover:border-brand-500/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="relative overflow-hidden rounded-t-xl bg-gray-50 dark:bg-neutral-700/50 aspect-[4/3] shrink-0">
+                  <div className="relative overflow-hidden rounded-t-xl bg-gray-50 dark:bg-neutral-800 aspect-[4/3] shrink-0">
                     <ImageWithFallback
                       src={product.image}
                       alt={product.name}
@@ -98,9 +98,6 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                       <h3 className="text-xl font-bold text-brand-900 dark:text-white group-hover:text-brand-500 transition-colors">{product.name}</h3>
                       <ArrowRight className="text-brand-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 shrink-0 mt-1" />
                     </div>
-                    {product.description && (
-                      <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line flex-grow">{product.description}</p>
-                    )}
                   </div>
                 </motion.div>
               ))}
