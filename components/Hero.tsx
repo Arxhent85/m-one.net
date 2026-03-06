@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           alt="M-ONE Hero"
           className="w-full h-full object-cover object-center scale-105"
         />
-        <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-black/20' : 'bg-white/10'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
       </motion.div>
 
       {/* Content Container with Aggressive Whitespace */}
