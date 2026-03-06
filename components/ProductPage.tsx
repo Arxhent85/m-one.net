@@ -69,19 +69,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
             className="w-full lg:w-3/5 lg:sticky lg:top-32 flex-col will-change-transform"
           >
             <div className="relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]">
-              {product.image.includes('3D-4K') && activeMediaIndex === 1 ? (
-                // @ts-ignore
-                <model-viewer
-                  src={product.image.replace('-3D-4K-Transparent.webp', '-3Dn.glb')}
-                  alt={product.name}
-                  shadow-intensity="1"
-                  camera-controls
-                  auto-rotate
-                  ar
-                  style={{ width: '100%', height: '100%', backgroundColor: 'transparent' }}
-                // @ts-ignore
-                ></model-viewer>
-              ) : (
+              {/* 2D Image View */}
+              <div
+                className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${activeMediaIndex === 0 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
+                  }`}
+              >
                 <ImageWithFallback
                   src={product.image}
                   alt={product.name}
@@ -89,6 +81,26 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                   fallbackStrategy="picsum"
                 />
+              </div>
+
+              {/* 3D Model View (Preloaded in background) */}
+              {product.image.includes('3D-4K') && (
+                <div
+                  className={`absolute inset-0 transition-opacity duration-500 ${activeMediaIndex === 1 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
+                    }`}
+                >
+                  {/* @ts-ignore */}
+                  <model-viewer
+                    src={product.image.replace('-3D-4K-Transparent.webp', '-3Dn.glb')}
+                    alt={product.name}
+                    shadow-intensity="1"
+                    camera-controls
+                    auto-rotate
+                    ar
+                    loading="eager"
+                    style={{ width: '100%', height: '100%', backgroundColor: 'transparent' }}
+                  ></model-viewer>
+                </div>
               )}
 
               {/* Gallery Toggle (Simplified for Premium Feel) */}
