@@ -94,12 +94,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
               {/* Gallery Toggle (Simplified for Premium Feel) */}
               {product.image.includes('3D-4K') && (
-                <div className="absolute bottom-4 left-4 lg:bottom-10 lg:left-1/2 lg:-translate-x-1/2 flex gap-2 lg:gap-4 p-1.5 lg:p-2 glass-panel rounded-full border border-white/10 shadow-xl z-20">
+                <div className="absolute bottom-3 left-3 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-lg z-20">
                   {[0, 1].map((idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveMediaIndex(idx)}
-                      className={`px-3 py-1.5 lg:px-6 lg:py-2 rounded-full text-[8px] lg:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeMediaIndex === idx
+                      className={`px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-[0.15em] transition-all duration-500 ${activeMediaIndex === idx
                         ? 'bg-brand-500 text-white shadow-lg'
                         : 'text-neutral-500 hover:text-neutral-950 dark:hover:text-white'
                         }`}
