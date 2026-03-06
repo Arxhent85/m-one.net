@@ -73,7 +73,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               {product.image.includes('3D-4K') && activeMediaIndex === 1 ? (
                 // @ts-ignore
                 <model-viewer
-                  src={product.image.replace('-3D-4K-Transparent.webp', '-3D.glb') + '?v=2'}
+                  src={product.image.replace('-3D-4K-Transparent.webp', '-3Dn.glb')}
                   alt={product.name}
                   shadow-intensity="1"
                   camera-controls
