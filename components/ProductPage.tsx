@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { ArrowLeft, ArrowRight, Download, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
