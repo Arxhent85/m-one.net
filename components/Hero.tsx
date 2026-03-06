@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className={`relative min-h-screen w-full flex items-center justify-center overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}
+      className={`relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}
     >
       {/* Visual Background */}
       <motion.div

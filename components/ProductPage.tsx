@@ -67,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-            className="lg:w-3/5 w-full sticky top-32 will-change-transform"
+            className="w-full lg:w-3/5 lg:sticky lg:top-32 lg:static flex-col will-change-transform"
           >
             <div className="relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]">
               {product.image.includes('3D-4K') && activeMediaIndex === 1 ? (
@@ -86,7 +86,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 <ImageWithFallback
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full p-20"
+                  className="w-full h-full p-8 lg:p-20"
                   imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                   fallbackStrategy="picsum"
                 />
@@ -94,12 +94,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
               {/* Gallery Toggle (Simplified for Premium Feel) */}
               {product.image.includes('3D-4K') && (
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4 p-2 glass-panel rounded-full border border-white/10 shadow-2xl">
+                <div className="absolute bottom-4 left-4 lg:bottom-10 lg:left-1/2 lg:-translate-x-1/2 flex gap-2 lg:gap-4 p-1.5 lg:p-2 glass-panel rounded-full border border-white/10 shadow-xl z-20">
                   {[0, 1].map((idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveMediaIndex(idx)}
-                      className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeMediaIndex === idx
+                      className={`px-3 py-1.5 lg:px-6 lg:py-2 rounded-full text-[8px] lg:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeMediaIndex === idx
                         ? 'bg-brand-500 text-white shadow-lg'
                         : 'text-neutral-500 hover:text-neutral-950 dark:hover:text-white'
                         }`}
