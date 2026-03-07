@@ -105,7 +105,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
               {/* Gallery Toggle (Simplified for Premium Feel) */}
               {product.image.includes('3D-4K') && (
-                <div className="absolute bottom-3 left-3 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-lg z-20">
+                <div className="absolute bottom-3 left-3 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-lg z-[60]">
                   {[0, 1].map((idx) => (
                     <button
                       key={idx}
