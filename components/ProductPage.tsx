@@ -92,14 +92,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   {/* @ts-ignore */}
                   <model-viewer
                     src={product.image.replace('-3D-4K-Transparent.webp', '-3D.glb')}
-                    poster={product.image}
                     alt={product.name}
                     shadow-intensity="1"
                     camera-controls
                     auto-rotate
                     ar
                     loading="eager"
-                    reveal="auto"
                     style={{ width: '100%', height: '100%', backgroundColor: 'transparent' }}
                   ></model-viewer>
                 </div>
