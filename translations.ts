@@ -87,7 +87,7 @@ Technische Daten:
           },
           {
             name: 'Neutral Silicon',
-            image: '/products/neutral-silikon/M-ONE BAU SILIKON transparent.webp',
+            image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             description: `M-ONE Neutral Silicon ist ein neutralvernetzender Silikondichtstoff für Dehnungsfugen im Baubereich, speziell für stark belastete Fugen. Härtet zu einem dauerhaft elastischen Dichtstoff aus. Nicht korrosiv und geruchsarm.
 
 Geeignet für: Fenster, Türanschlußfugen, Beton, Metalle, Granit, Marmor.
@@ -282,7 +282,7 @@ Technical Data:
           },
           {
             name: 'Neutral Silicon',
-            image: '/products/neutral-silikon/M-ONE BAU SILIKON transparent.webp',
+            image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             description: `M-ONE Neutral Silicon is a neutral-curing silicone sealant for expansion joints in construction, especially for heavily loaded joints. Cures to a permanently elastic sealant. Non-corrosive and low odor.
 
 Suitable for: Windows, door connection joints, concrete, metals, granite, marble.
@@ -477,7 +477,7 @@ Të Dhënat Teknike:
           },
           {
             name: 'Neutral Silicon',
-            image: '/products/neutral-silikon/M-ONE BAU SILIKON transparent.webp',
+            image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             description: `M-ONE Neutral Silicon është një izolues silikoni neutral për fugat e zgjerimit në ndërtim, veçanërisht për fugat me ngarkesë të lartë. Ngurtësohet në një izolues përgjithmonë elastik. Jo korroziv dhe me erë të lehtë.
 
 I përshtatshëm për: Dritare, fuga lidhëse të dyerve, beton, metale, granit, mermer.

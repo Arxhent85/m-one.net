@@ -147,6 +147,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 >
                   {/* @ts-ignore */}
                   <model-viewer
+                    key={modelSrc}
                     src={modelSrc}
                     alt={`${product.name} ${isPremiumSilikon || isNeutralSilikon ? activeColor!.name : ''} 3D`}
                     shadow-intensity="1"
