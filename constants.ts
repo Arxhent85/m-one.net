@@ -47,3 +47,10 @@ export const PREMIUM_SILIKON_COLORS = [
   { id: 'silber', name: 'Silber', fileSuffix: 'silber' },
   { id: 'weiss', name: 'Weiss', fileSuffix: 'weiss' },
 ];
+
+export const NEUTRAL_SILIKON_COLORS = [
+  { id: 'transparent', name: 'Transparent', fileSuffix: 'transparent' },
+  { id: 'grau', name: 'Grau', fileSuffix: 'grau' },
+  { id: 'schwarz', name: 'Schwarz', fileSuffix: 'schwarz' },
+  { id: 'weiss', name: 'Weiss', fileSuffix: 'weiss' },
+];

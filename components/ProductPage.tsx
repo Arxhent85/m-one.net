@@ -5,7 +5,7 @@ import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
-import { PREMIUM_SILIKON_COLORS } from '../constants';
+import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS } from '../constants';
 import '@google/model-viewer';
 
 // Add type declaration for the custom web component
@@ -35,23 +35,33 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
   const [selectedColorIndex, setSelectedColorIndex] = React.useState(0);
 
   const isPremiumSilikon = product.name.toLowerCase().includes('premium') && product.name.toLowerCase().includes('sili');
-  const activeColor = PREMIUM_SILIKON_COLORS[selectedColorIndex];
+  const isNeutralSilikon = product.name.toLowerCase().includes('neutral') && product.name.toLowerCase().includes('sili');
+
+  const activeColor = isPremiumSilikon 
+    ? PREMIUM_SILIKON_COLORS[Math.min(selectedColorIndex, PREMIUM_SILIKON_COLORS.length - 1)] 
+    : isNeutralSilikon
+      ? NEUTRAL_SILIKON_COLORS[Math.min(selectedColorIndex, NEUTRAL_SILIKON_COLORS.length - 1)]
+      : undefined;
 
   const imageSrc = isPremiumSilikon
-    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor.fileSuffix}.png`
-    : product.image;
+    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.png`
+    : isNeutralSilikon
+      ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.png`
+      : product.image;
 
   const modelSrc = isPremiumSilikon
-    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor.fileSuffix} 3D.glb`
-    : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
+    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix} 3D.glb`
+    : isNeutralSilikon
+      ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.glb`
+      : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
 
-  const has3D = isPremiumSilikon || product.image.includes('3D-4K');
+  const has3D = isPremiumSilikon || isNeutralSilikon || product.image.includes('3D-4K');
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
-  // Preload Premium Silikon images for lightning-fast color switching
+  // Preload Silikon images for lightning-fast color switching
   React.useEffect(() => {
     if (isPremiumSilikon) {
       PREMIUM_SILIKON_COLORS.forEach((color) => {
@@ -62,8 +72,14 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
         // Background fetch 3D model for instant switching
         fetch(`/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix} 3D.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
       });
+    } else if (isNeutralSilikon) {
+      NEUTRAL_SILIKON_COLORS.forEach((color) => {
+        const img = new Image();
+        img.src = `/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.png`;
+        fetch(`/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
+      });
     }
-  }, [isPremiumSilikon]);
+  }, [isPremiumSilikon, isNeutralSilikon]);
 
   const handleDownload = (type: string) => {
     alert(`${type} ${t.products.downloadStarted}`);
@@ -103,10 +119,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${activeMediaIndex === 0 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
                   }`}
               >
-                {isPremiumSilikon ? (
+                {isPremiumSilikon || isNeutralSilikon ? (
                   <img
                     src={imageSrc}
-                    alt={`${product.name} ${activeColor.name}`}
+                    alt={`${product.name} ${activeColor!.name}`}
                     className="w-full h-full p-8 lg:p-20 object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     loading="eager"
                     decoding="sync"
@@ -132,7 +148,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   {/* @ts-ignore */}
                   <model-viewer
                     src={modelSrc}
-                    alt={`${product.name} ${isPremiumSilikon ? activeColor.name : ''} 3D`}
+                    alt={`${product.name} ${isPremiumSilikon || isNeutralSilikon ? activeColor!.name : ''} 3D`}
                     shadow-intensity="1"
                     camera-controls
                     auto-rotate
@@ -179,15 +195,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 {product.name}
               </h1>
 
-              {/* Premium Silikon Color Selection */}
-              {isPremiumSilikon && (
+              {/* Silikon Color Selection */}
+              {(isPremiumSilikon || isNeutralSilikon) && (
                 <div className="mb-12">
                   <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-6 flex items-center gap-4">
                     Farbe Auswählen
                     <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
                   </h3>
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
-                    {PREMIUM_SILIKON_COLORS.map((color, idx) => (
+                    {(isPremiumSilikon ? PREMIUM_SILIKON_COLORS : NEUTRAL_SILIKON_COLORS).map((color, idx) => (
                       <div key={color.id} className="flex flex-col items-center gap-3">
                         <motion.button
                           whileHover={{ 
@@ -207,7 +223,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                           title={color.name}
                         >
                           <img 
-                            src={`/products/premium-silikon/punkt ${color.fileSuffix}.png`} 
+                            src={`/products/${isPremiumSilikon ? 'premium-silikon' : 'neutral-silikon'}/punkt ${color.fileSuffix}.png`} 
                             alt={color.name}
                             className="w-full h-full object-cover scale-110"
                           />
@@ -221,13 +237,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                     ))}
                   </div>
                   <motion.p 
-                    key={activeColor.name}
+                    key={activeColor!.name}
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
                     className="mt-6 text-sm font-bold text-neutral-800 dark:text-neutral-200"
                   >
-                    Ausgewählte Variante: <span className="text-brand-500 tracking-wide uppercase font-black">{activeColor.name}</span>
+                    Ausgewählte Variante: <span className="text-brand-500 tracking-wide uppercase font-black">{activeColor!.name}</span>
                   </motion.p>
                 </div>
               )}
