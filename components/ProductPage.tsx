@@ -44,9 +44,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       : undefined;
 
   const imageSrc = isPremiumSilikon
-    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.png`
+    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.webp`
     : isNeutralSilikon
-      ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.png`
+      ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.webp`
       : product.image;
 
   const modelSrc = isPremiumSilikon
@@ -67,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       PREMIUM_SILIKON_COLORS.forEach((color) => {
         // Preload high-res 2D image
         const img = new Image();
-        img.src = `/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix}.png`;
+        img.src = `/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix}.webp`;
         
         // Background fetch 3D model for instant switching
         fetch(`/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix} 3D.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
@@ -75,7 +75,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
     } else if (isNeutralSilikon) {
       NEUTRAL_SILIKON_COLORS.forEach((color) => {
         const img = new Image();
-        img.src = `/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.png`;
+        img.src = `/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.webp`;
         fetch(`/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
       });
     }
@@ -223,7 +223,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                           title={color.name}
                         >
                           <img 
-                            src={`/products/${isPremiumSilikon ? 'premium-silikon' : 'neutral-silikon'}/punkt ${color.fileSuffix}.png`} 
+                            src={`/products/${isPremiumSilikon ? 'premium-silikon' : 'neutral-silikon'}/punkt ${color.fileSuffix}.webp`} 
                             alt={color.name}
                             className="w-full h-full object-cover scale-110"
                           />
