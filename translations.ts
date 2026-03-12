@@ -1,4 +1,4 @@
-﻿
+
 export const translations = {
   de: {
     nav: {
@@ -81,9 +81,9 @@ Nicht geeignet für: Untergründe die mit Essigsäure reagieren, Aquarien, Leben
 Anwendung: Untergrund muss sauber, fettfrei & trocken sein. Glätten vor Hautbildung (10-12 Min).
 
 Technische Daten:
-â€¢ Anwendungstemperatur: +5°C bis +40°C
-â€¢ Temperaturbeständigkeit: -30°C bis +120°C
-â€¢ Features: Anti Pilz, UV-Beständig`
+• Anwendungstemperatur: +5°C bis +40°C
+• Temperaturbeständigkeit: -30°C bis +120°C
+• Features: Anti Pilz, UV-Beständig`
           },
           {
             name: 'Bau Silicon',
@@ -93,9 +93,9 @@ Technische Daten:
 Geeignet für: Fenster, Türanschlußfugen, Beton, Metalle, Granit, Marmor.
 
 Technische Daten:
-â€¢ Anwendungstemperatur: +5°C bis +40°C
-â€¢ Temperaturbeständigkeit: -40°C bis +120°C
-â€¢ Features: Für Treppen, Geruchsarm, Witterungsbeständig`
+• Anwendungstemperatur: +5°C bis +40°C
+• Temperaturbeständigkeit: -40°C bis +120°C
+• Features: Für Treppen, Geruchsarm, Witterungsbeständig`
           },
           {
             name: 'Struktur Acryl',
@@ -123,10 +123,10 @@ Features: Mauerrisse, Fassadenrisse, Überstreichbar.`
 Geeignet für: Saugende und nicht saugende Untergründe (Stein, Beton, Spiegel, Metall, HPL).
 
 Technische Daten:
-â€¢ Anfangshaftung: 250kg/mÂ²
-â€¢ Endfestigkeit: 25kg/mÂ²
-â€¢ Temperaturbeständigkeit: -40°C bis +90°C
-â€¢ Features: Ohne Bohren, Dauerelastisch`
+• Anfangshaftung: 250kg/m²
+• Endfestigkeit: 25kg/m²
+• Temperaturbeständigkeit: -40°C bis +90°C
+• Features: Ohne Bohren, Dauerelastisch`
           }
         ]
       },
@@ -276,9 +276,9 @@ Not suitable for: Substrates that react with acetic acid, aquariums, food areas.
 Application: Surface must be clean, grease-free & dry. Smooth before skin formation (10-12 min).
 
 Technical Data:
-â€¢ Application Temp: +5°C to +40°C
-â€¢ Temp Resistance: -30°C to +120°C
-â€¢ Features: Anti-fungal, UV-resistant`
+• Application Temp: +5°C to +40°C
+• Temp Resistance: -30°C to +120°C
+• Features: Anti-fungal, UV-resistant`
           },
           {
             name: 'Construction Silicon',
@@ -288,9 +288,9 @@ Technical Data:
 Suitable for: Windows, door connection joints, concrete, metals, granite, marble.
 
 Technical Data:
-â€¢ Application Temp: +5°C to +40°C
-â€¢ Temp Resistance: -40°C to +120°C
-â€¢ Features: For stairs, low odor, weather-resistant`
+• Application Temp: +5°C to +40°C
+• Temp Resistance: -40°C to +120°C
+• Features: For stairs, low odor, weather-resistant`
           },
           {
             name: 'Structure Acrylic',
@@ -318,10 +318,10 @@ Features: Wall cracks, facade cracks, paintable.`
 Suitable for: Absorbent and non-absorbent surfaces (stone, concrete, mirror, metal, HPL).
 
 Technical Data:
-â€¢ Initial adhesion: 250kg/mÂ²
-â€¢ Final strength: 25kg/mÂ²
-â€¢ Temp Resistance: -40°C to +90°C
-â€¢ Features: No drilling, permanently elastic`
+• Initial adhesion: 250kg/m²
+• Final strength: 25kg/m²
+• Temp Resistance: -40°C to +90°C
+• Features: No drilling, permanently elastic`
           }
         ]
       },
@@ -471,9 +471,9 @@ Jo i përshtatshëm për: Sipërfaqe që reagojnë me acid acetik, akuariume, zo
 Aplikimi: Sipërfaqja duhet të jetë e pastër, pa yndyrë dhe e thatë. Lëmoni para krijimit të lëkurës (10-12 min).
 
 Të Dhënat Teknike:
-â€¢ Temperatura e aplikimit: +5°C deri +40°C
-â€¢ Rezistenca ndaj temperaturës: -30°C deri +120°C
-â€¢ Karakteristika: Anti-kërpudhat, rezistent ndaj UV`
+• Temperatura e aplikimit: +5°C deri +40°C
+• Rezistenca ndaj temperaturës: -30°C deri +120°C
+• Karakteristika: Anti-kërpudhat, rezistent ndaj UV`
           },
           {
             name: 'Silikon Ndërtimi',
@@ -483,9 +483,9 @@ Të Dhënat Teknike:
 I përshtatshëm për: Dritare, fuga lidhëse të dyerve, beton, metale, granit, mermer.
 
 Të Dhënat Teknike:
-â€¢ Temperatura e aplikimit: +5°C deri +40°C
-â€¢ Rezistenca ndaj temperaturës: -40°C deri +120°C
-â€¢ Karakteristika: Për shkallë, erë e lehtë, rezistent ndaj motit`
+• Temperatura e aplikimit: +5°C deri +40°C
+• Rezistenca ndaj temperaturës: -40°C deri +120°C
+• Karakteristika: Për shkallë, erë e lehtë, rezistent ndaj motit`
           },
           {
             name: 'Akril Strukturor',
@@ -513,10 +513,10 @@ Karakteristika: Çarje muri, çarje fasade, i lyyeshëm.`
 I përshtatshëm për: Sipërfaqe absorbuese dhe jo-absorbuese (gur, beton, pasqyrë, metal, HPL).
 
 Të Dhënat Teknike:
-â€¢ Ngjitja fillestare: 250kg/mÂ²
-â€¢ Forca përfundimtare: 25kg/mÂ²
-â€¢ Rezistenca ndaj temperaturës: -40°C deri +90°C
-â€¢ Karakteristika: Pa shpim, Përgjithmonë elastik`
+• Ngjitja fillestare: 250kg/m²
+• Forca përfundimtare: 25kg/m²
+• Rezistenca ndaj temperaturës: -40°C deri +90°C
+• Karakteristika: Pa shpim, Përgjithmonë elastik`
           }
         ]
       },

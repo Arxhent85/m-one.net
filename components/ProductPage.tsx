@@ -5,6 +5,7 @@ import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
+import { PREMIUM_SILIKON_COLORS } from '../constants';
 import '@google/model-viewer';
 
 // Add type declaration for the custom web component
@@ -31,6 +32,20 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
   const product = getProductByImage(initialProduct.image) || initialProduct;
   const [activeMediaIndex, setActiveMediaIndex] = React.useState(0);
+  const [selectedColorIndex, setSelectedColorIndex] = React.useState(0);
+
+  const isPremiumSilikon = product.name.toLowerCase().includes('premium') && product.name.toLowerCase().includes('sili');
+  const activeColor = PREMIUM_SILIKON_COLORS[selectedColorIndex];
+
+  const imageSrc = isPremiumSilikon
+    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor.fileSuffix}.png`
+    : product.image;
+
+  const modelSrc = isPremiumSilikon
+    ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor.fileSuffix} 3D.glb`
+    : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
+
+  const has3D = isPremiumSilikon || product.image.includes('3D-4K');
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -75,8 +90,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   }`}
               >
                 <ImageWithFallback
-                  src={product.image}
-                  alt={product.name}
+                  src={imageSrc}
+                  alt={`${product.name} ${isPremiumSilikon ? activeColor.name : ''}`}
                   className="w-full h-full p-8 lg:p-20"
                   imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                   fallbackStrategy="picsum"
@@ -84,15 +99,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               </div>
 
               {/* 3D Model View (Preloaded in background) */}
-              {product.image.includes('3D-4K') && (
+              {has3D && (
                 <div
                   className={`absolute inset-0 transition-opacity duration-500 ${activeMediaIndex === 1 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
                     }`}
                 >
                   {/* @ts-ignore */}
                   <model-viewer
-                    src={product.image.replace('-3D-4K-Transparent.webp', '-3D.glb')}
-                    alt={product.name}
+                    src={modelSrc}
+                    alt={`${product.name} ${isPremiumSilikon ? activeColor.name : ''} 3D`}
                     shadow-intensity="1"
                     camera-controls
                     auto-rotate
@@ -104,7 +119,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               )}
 
               {/* Gallery Toggle (Simplified for Premium Feel) */}
-              {product.image.includes('3D-4K') && (
+              {has3D && (
                 <div className="absolute bottom-3 left-3 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-lg z-[60]">
                   {[0, 1].map((idx) => (
                     <button
@@ -138,7 +153,61 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               <h1 className="text-5xl md:text-6xl font-black text-neutral-950 dark:text-white mb-10 leading-[0.9] tracking-tighter">
                 {product.name}
               </h1>
-              <p className="text-lg text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-12">
+
+              {/* Premium Silikon Color Selection */}
+              {isPremiumSilikon && (
+                <div className="mb-12">
+                  <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-6 flex items-center gap-4">
+                    Farbe Auswählen
+                    <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
+                  </h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                    {PREMIUM_SILIKON_COLORS.map((color, idx) => (
+                      <div key={color.id} className="flex flex-col items-center gap-3">
+                        <motion.button
+                          whileHover={{ 
+                            rotate: [0, -5, 5, -5, 5, 0],
+                            scale: 1.1 
+                          }}
+                          transition={{ 
+                            rotate: { duration: 0.5, ease: "easeInOut" },
+                            scale: { duration: 0.2 }
+                          }}
+                          onClick={() => setSelectedColorIndex(idx)}
+                          className={`relative w-[56px] h-[56px] rounded-full overflow-hidden transition-all duration-300 ${
+                            selectedColorIndex === idx 
+                              ? 'ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-neutral-950 shadow-lg shadow-brand-500/30' 
+                              : 'border border-neutral-200 dark:border-neutral-800'
+                          }`}
+                          title={color.name}
+                        >
+                          <img 
+                            src={`/products/premium-silikon/punkt ${color.fileSuffix}.png`} 
+                            alt={color.name}
+                            className="w-full h-full object-cover scale-110"
+                          />
+                        </motion.button>
+                        <span className={`text-[10px] font-black uppercase tracking-widest text-center transition-colors ${
+                          selectedColorIndex === idx ? 'text-brand-500' : 'text-neutral-400 dark:text-neutral-600'
+                        }`}>
+                          {color.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <motion.p 
+                    key={activeColor.name}
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-6 text-sm font-bold text-neutral-800 dark:text-neutral-200"
+                  >
+                    Ausgewählte Variante: <span className="text-brand-500 tracking-wide uppercase font-black">{activeColor.name}</span>
+                  </motion.p>
+                </div>
+              )}
+
+              <p className="text-lg text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-12 whitespace-pre-line">
                 {product.description}
               </p>
 

@@ -1,4 +1,4 @@
-﻿
+
 import { BrickWall, SprayCan, Sparkles, Wrench } from 'lucide-react';
 
 export const NAV_LINKS = [
@@ -32,3 +32,18 @@ export const CATEGORY_CONFIG = {
     icon: Sparkles,
   }
 };
+
+export const PREMIUM_SILIKON_COLORS = [
+  { id: 'transparent', name: 'Transparent', fileSuffix: 'Transparent' },
+  { id: 'anthrazit', name: 'Anthrazit', fileSuffix: 'anthrazit' },
+  { id: 'bahama', name: 'Bahama', fileSuffix: 'bahama' },
+  { id: 'braun', name: 'Braun', fileSuffix: 'braun' },
+  { id: 'caramel', name: 'Caramel', fileSuffix: 'caramel' },
+  { id: 'grau', name: 'Grau', fileSuffix: 'grau' },
+  { id: 'hellgrau', name: 'Hellgrau', fileSuffix: 'hellgrau' },
+  { id: 'jasmin', name: 'Jasmin', fileSuffix: 'jasmin' },
+  { id: 'manhatten', name: 'Manhatten', fileSuffix: 'manhatten' },
+  { id: 'schwarz', name: 'Schwarz', fileSuffix: 'schwarz' },
+  { id: 'silber', name: 'Silber', fileSuffix: 'silber' },
+  { id: 'weiss', name: 'Weiss', fileSuffix: 'weiss' },
+];
