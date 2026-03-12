@@ -38,6 +38,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
   const isNeutralSilikon = product.name.toLowerCase().includes('neutral') && product.name.toLowerCase().includes('sili');
   const isStrukturAcryl = product.image.includes('/struktur-acryl/');
   const isUniversalAcryl = product.image.includes('/universal-acryl/');
+  const isExtremKleber = product.image.includes('/extrem-kleber/');
   const isAcrylProduct = isStrukturAcryl || isUniversalAcryl;
 
   const activeColor = isPremiumSilikon 
@@ -60,9 +61,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
         ? '/products/struktur-acryl/M-ONE ACRYL STRUKTUR 3D.glb'
         : isUniversalAcryl
           ? '/products/universal-acryl/M-ONE UNIVERSAL ACRYL.glb'
-          : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
+          : isExtremKleber
+            ? '/products/extrem-kleber/profi mont extrem 3D.glb'
+            : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
 
-  const has3D = isPremiumSilikon || isNeutralSilikon || isAcrylProduct || product.image.includes('3D-4K');
+  const has3D = isPremiumSilikon || isNeutralSilikon || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });

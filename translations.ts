@@ -117,16 +117,12 @@ Features: Mauerrisse, Fassadenrisse, Überstreichbar, Schnell regenbeständig.`
           },
           {
             name: 'Extrem Kleber',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Extrem%20Kleber.webp',
-            description: `M-ONE PROFIMONT EXTREM ist ein dauerelastischer und flexibler Klebstoff mit extrem hoher Anfangshaftung (keine Fixierung meist nötig). Geruchlos, überstreichbar, frei von Silikon.
+            image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
+            description: `M-ONE PROFIMONT EXTREM ist ein Dauerelastischer und flexibler Klebstoff mit hoher Anfangshaftung der im Allgemeinen keine Fixierung der Klebeinheit erfordert. Nach dem Auftragen härtet das Produkt mit Luftfeuchtigkeit aus.
 
-Geeignet für: Saugende und nicht saugende Untergründe (Stein, Beton, Spiegel, Metall, HPL).
+Geeignet für: Saugende und nicht saugende Untergründe wie Stein, Beton, Spiegel, Porzellan, Hart-PVC, Metalle und lackiertes Holz und HPL-Platten.
 
-Technische Daten:
-• Anfangshaftung: 250kg/m²
-• Endfestigkeit: 25kg/m²
-• Temperaturbeständigkeit: -40°C bis +90°C
-• Features: Ohne Bohren, Dauerelastisch`
+Features: Ohne Bohren, Dauerelastisch, Neutral und frei von Silikon und Isocyanat.`
           }
         ]
       },
@@ -312,16 +308,12 @@ Features: Wall cracks, facade cracks, paintable, quickly rain-resistant.`
           },
           {
             name: 'Extreme Adhesive',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Extrem%20Kleber.webp',
-            description: `M-ONE PROFIMONT EXTREME is a permanently elastic and flexible adhesive with extremely high initial adhesion (usually no fixation necessary). Odorless, paintable, silicone-free.
+            image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
+            description: `M-ONE PROFIMONT EXTREM is a permanently elastic and flexible adhesive with high initial tack that generally does not require the adhesive unit to be fixed. After application, the product hardens with humidity.
 
-Suitable for: Absorbent and non-absorbent surfaces (stone, concrete, mirror, metal, HPL).
+Suitable for: Absorbent and non-absorbent surfaces such as stone, concrete, mirrors, porcelain, hard PVC, metals and lacquered wood and HPL panels.
 
-Technical Data:
-• Initial adhesion: 250kg/m²
-• Final strength: 25kg/m²
-• Temp Resistance: -40°C to +90°C
-• Features: No drilling, permanently elastic`
+Features: No drilling, permanently elastic, neutral and free of silicone and Isocyanate.`
           }
         ]
       },
@@ -507,16 +499,12 @@ Karakteristika: Çarje muri, çarje fasade, i lyyeshëm, shpejt rezistent ndaj s
           },
           {
             name: 'Ngjitës Ekstrem',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Extrem%20Kleber.webp',
-            description: `M-ONE PROFIMONT EXTREM është një ngjitës përgjithmonë elastik dhe fleksibël me ngjitje fillestare jashtëzakonisht të lartë (zakonisht nuk nevojitet fiksim). Pa erë, i lyyeshëm, pa silikon.
+            image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
+            description: `M-ONE PROFIMONT EXTREM është një ngjitës elastik dhe përherë fleksibël, me një ngjitje të lartë fillestare e cila zakonisht nuk kërkon që njësia ngjitëse të rregullohet. Pas aplikimit, produkti ngurtësohet nga lagështia e ajrit.
 
-I përshtatshëm për: Sipërfaqe absorbuese dhe jo-absorbuese (gur, beton, pasqyrë, metal, HPL).
+I përshtatshëm për: Sipërfaqe thithëse dhe jo-thithëse si guri, betoni, pasqyrat, porcelani, PVC e fortë, metalet dhe druri i llakuar dhe panelet HPL.
 
-Të Dhënat Teknike:
-• Ngjitja fillestare: 250kg/m²
-• Forca përfundimtare: 25kg/m²
-• Rezistenca ndaj temperaturës: -40°C deri +90°C
-• Karakteristika: Pa shpim, Përgjithmonë elastik`
+Karakteristika: Pa shpim, Përgjithmonë elastik, Pa silikon dhe Izocianat.`
           }
         ]
       },
