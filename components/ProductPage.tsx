@@ -51,6 +51,20 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
+  // Preload Premium Silikon images for lightning-fast color switching
+  React.useEffect(() => {
+    if (isPremiumSilikon) {
+      PREMIUM_SILIKON_COLORS.forEach((color) => {
+        // Preload high-res 2D image
+        const img = new Image();
+        img.src = `/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix}.png`;
+        
+        // Background fetch 3D model for instant switching
+        fetch(`/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix} 3D.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
+      });
+    }
+  }, [isPremiumSilikon]);
+
   const handleDownload = (type: string) => {
     alert(`${type} ${t.products.downloadStarted}`);
   };
@@ -89,13 +103,24 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${activeMediaIndex === 0 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
                   }`}
               >
-                <ImageWithFallback
-                  src={imageSrc}
-                  alt={`${product.name} ${isPremiumSilikon ? activeColor.name : ''}`}
-                  className="w-full h-full p-8 lg:p-20"
-                  imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
-                  fallbackStrategy="picsum"
-                />
+                {isPremiumSilikon ? (
+                  <img
+                    src={imageSrc}
+                    alt={`${product.name} ${activeColor.name}`}
+                    className="w-full h-full p-8 lg:p-20 object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    loading="eager"
+                    decoding="sync"
+                    fetchPriority="high"
+                  />
+                ) : (
+                  <ImageWithFallback
+                    src={imageSrc}
+                    alt={product.name}
+                    className="w-full h-full p-8 lg:p-20"
+                    imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    fallbackStrategy="picsum"
+                  />
+                )}
               </div>
 
               {/* 3D Model View (Preloaded in background) */}
