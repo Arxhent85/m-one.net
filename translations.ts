@@ -72,7 +72,7 @@ export const translations = {
         products: [
           {
             name: 'Premium Silicon',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Silikon%20Premium.jpeg',
+            image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             description: `M-ONE Sanitär Silicon Premium ist ein universeller acetatvernetzender Silikondichtstoff. Bildet eine flexible, langlebige, schimmelresistente und antibakterielle Fuge. Ideal für Feuchträume und Fugen mit temporärer Wassereinwirkung.
 
 Geeignet für: Glas, Keramik, glasierte Oberflächen, lackiertes Holz, Sanitär und Küche.
@@ -99,21 +99,21 @@ Technische Daten:
           },
           {
             name: 'Struktur Acryl',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Struktur%20Acryl.jpeg',
-            description: `M-ONE Struktur Acryl ist ein plastischer Dichtstoff mit putzähnlicher Oberflächenstruktur für einfache Füllarbeiten an Fugen, Rissen und Löchern. Universell verwendbar (Innen- und Außenbereich), überstreichbar und alterungsbeständig.
+            image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
+            description: `M-ONE Struktur Acryl ist ein plastischer Dichtstoff mit putzähnlicher Oberflächenstruktur, der eine einfache und universelle Füllarbeit an Fugen, Rissen und Löchern darstellt. Es ist universell verwendbar (Innen- und Außenbereich), überstreichbar, alterungsbeständig, geruchlos und nicht korrosiv gegenüber Metallen.
 
-Geeignet für: Beton, Gasbeton, Mauerwerk, Putz, Holz, Ziegel. Ideal für Rigipsanschluss.
+Haftet gut auf: Beton, Gasbeton, Mauerwerk, Putz, Holz, Ziegel. Ideal für Türen, Fenster und Rollladenanschlüsse.
 
 Features: Dekorativ, Überstreichbar, Putzstruktur.`
           },
           {
             name: 'Universal Acryl',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Universal%20Acryl.jpeg',
-            description: `M-ONE Universal Acryl ist ein einkomponentiger Fugendichtstoff auf Polyacrylatbasis. Universell verwendbar, überstreichbar, geruchlos und nicht korrosiv. Schnell regenbeständig.
+            image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
+            description: `M-ONE Universal Acryl ist ein einkomponentiger Fugendichtstoff auf Polyacrylatbasis. Universell verwendbar (Innen- und Außenbereich), überstreichbar, alterungsbeständig, geruchlos und nicht korrosiv gegenüber Metallen.
 
-Geeignet für: Anschlussfugen zwischen Beton, Mauerwerk, Holz, Treppen, Sockelleisten, Türen und Fenstern.
+Geeignet für: Anschlussfugen und Risse zwischen Beton, Mauerwerk, Holz, Treppen, Sockelleisten, Türen und Fenstern.
 
-Features: Mauerrisse, Fassadenrisse, Überstreichbar.`
+Features: Mauerrisse, Fassadenrisse, Überstreichbar, Schnell regenbeständig.`
           },
           {
             name: 'Extrem Kleber',
@@ -267,7 +267,7 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         products: [
           {
             name: 'Premium Silicon',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Silikon%20Premium.jpeg',
+            image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             description: `M-ONE Sanitary Silicon Premium is a universal acetate-curing silicone sealant. Forms a flexible, durable, mold-resistant, and antibacterial joint. Ideal for damp rooms and joints with temporary water exposure.
 
 Suitable for: Glass, ceramics, glazed surfaces, painted wood, sanitary, and kitchen.
@@ -294,21 +294,21 @@ Technical Data:
           },
           {
             name: 'Structure Acrylic',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Struktur%20Acryl.jpeg',
-            description: `M-ONE Structure Acrylic is a plastic sealant with a plaster-like surface structure for simple filling work on joints, cracks, and holes. Universally usable (indoor and outdoor), paintable, and age-resistant.
+            image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
+            description: `M-ONE Structure Acrylic is an elastoplastic sealant with a plaster-like surface structure that provides easy and universal filling of joints, cracks and holes. Universally applicable (indoor and outdoor), paintable, non-aging, odorless and non-corrosive to metals.
 
-Suitable for: Concrete, aerated concrete, masonry, plaster, wood, brick. Ideal for drywall connections.
+Adheres well to: Concrete, aerated concrete, masonry, plaster, wood, brick. Also very suitable for doors, windows and shutters.
 
 Features: Decorative, Paintable, Plaster structure.`
           },
           {
             name: 'Universal Acrylic',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Universal%20Acryl.jpeg',
-            description: `M-ONE Universal Acrylic is a one-component joint sealant based on polyacrylate. Universally usable, paintable, odorless, and non-corrosive. Quickly rain-resistant.
+            image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
+            description: `M-ONE Universal Acrylic is a one-component polyacrylate-based joint sealant. Universally applicable (inside and outside), paintable, non-aging, odorless and non-corrosive to metals.
 
-Suitable for: Connection joints between concrete, masonry, wood, stairs, skirting boards, doors, and windows.
+Suitable for: Connecting joints and cracks between concrete, masonry, wood, stairs, skirting boards, doors, windows and plasterboards.
 
-Features: Wall cracks, facade cracks, paintable.`
+Features: Wall cracks, facade cracks, paintable, quickly rain-resistant.`
           },
           {
             name: 'Extreme Adhesive',
@@ -462,7 +462,7 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         products: [
           {
             name: 'Silikon Premium',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Silikon%20Premium.jpeg',
+            image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             description: `M-ONE Silikon Sanitar Premium është një izolues silikoni universal me acetat. Krijon një fugë fleksibël, të qëndrueshme, rezistente ndaj mykut dhe antibakteriale. Ideale për dhoma me lagështi dhe fuga me ekspozim të përkohshëm ndaj ujit.
 
 I përshtatshëm për: Xham, qeramikë, sipërfaqe të glazuar, dru të llakuar, pajisje sanitare dhe kuzhinë.
@@ -489,21 +489,21 @@ Të Dhënat Teknike:
           },
           {
             name: 'Akril Strukturor',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Struktur%20Acryl.jpeg',
-            description: `M-ONE Akril Strukturor është një izolues plastik me strukturë sipërfaqësore të ngjashme me suvanë për punë të thjeshta mbushëse në fuga, çarje dhe vrima. I përdorshëm universalisht (brenda dhe jashtë), i lyyeshëm dhe rezistent ndaj vjetërsimit.
+            image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
+            description: `M-ONE Acryl Struktural është masë ngjitëse me një strukturë sipërfaqësore të ngjajshme me atë të fasades, siguron mbushje të lehtë të fugave-nyjeve, çarjeve dhe vrimave me strukturë të vrazhdë. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
-I përshtatshëm për: Beton, beton poroz, muraturë, suva, dru, tulla. Ideal për lidhje gipsi.
+Ngjitet mirë në: Beton, gur, dru, tulla, muraturrë dhe sipërfaqe të tjera. I përshtatshëm për dyer, dritare dhe roleta.
 
 Karakteristika: Dekorativ, I lyyeshëm, Strukturë suvaje.`
           },
           {
             name: 'Akril Universal',
-            image: 'https://axhsckkehhzzxiqiwoih.supabase.co/storage/v1/object/public/M%20ONE%20WEB/Universal%20Acryl.jpeg',
-            description: `M-ONE Akril Universal është një izolues fugash me një përbërës në bazë poliakrilati. I përdorshëm universalisht, i lyyeshëm, pa erë dhe jo korroziv. Rezistent shpejt ndaj shiut.
+            image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
+            description: `M-ONE Universal Acryl është masa njëkomponentëshe me bazë të Polyacrylit. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
-I përshtatshëm për: Fuga lidhëse midis betonit, muraturës, drurit, shkallëve, bazamenteve, dyerve dhe dritareve.
+I përshtatshëm për: Nyjet dhe çarjet midis betonit, muret, lajsnet, dyert, dritaret, rigipsi etj.
 
-Karakteristika: Çarje muri, çarje fasade, i lyyeshëm.`
+Karakteristika: Çarje muri, çarje fasade, i lyyeshëm, shpejt rezistent ndaj shiut.`
           },
           {
             name: 'Ngjitës Ekstrem',
