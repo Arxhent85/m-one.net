@@ -181,7 +181,25 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         title: 'COLORS',
         subtitle: 'Maler & Lackierer',
         description: 'Bringen Sie Farbe in Ihr Leben. Professionelle Anstriche und kreative Wandgestaltung.',
-        products: []
+        products: [
+          {
+            name: 'Felgensilber M ONE',
+            image: '/products/colors/felgensilber-hell.webp',
+            description: `M-ONE Lack-Spray Felgensilber ist ein hochwertiger und schnell trocknender Sprühlackspray mit hoher Deckkraft der zum Lackieren von Felgen, Karosserie und vielem anderen verwendet wird. Das Produkt hat eine ausgezeichnete Haftung, ist widerstandsfähig und beständig gegen Kratzer, Stöße, Schläge sowohl auch gegen Benzin, chemische Substanzen, UV-Strahlung und Witterung. Schützt vor Korrosion und Rost.`
+          },
+          {
+            name: 'Haftgrund M ONE',
+            image: '/products/colors/haftgrund-hell.webp',
+            description: `M-ONE Haftgrund ist eine hochwertige Grundierung für verschiedene Oberflächen. Sie sorgt für eine optimale Haftung der nachfolgenden Lackierung und schützt zuverlässig vor Korrosion. Ideal für Metall, Holz und viele Kunststoffe.`
+          },
+          {
+            name: 'Lack Spray M ONE',
+            image: '/products/colors/lack-spray-hell.webp',
+            description: `M-ONE Lack-Spray ist ein hochwertiger und schnell trocknender Sprühlack mit hoher Deckkraft der zum Lackieren von verschiedenen Oberflächen verwendet wird. Das Produkt hat eine ausgezeichnete Haftung, ist widerstandsfähig und trocknet sehr schnell. 
+
+Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige Rückstände sein. Dose 2-3 Minuten schütteln und aus 20-30 cm Entfernung auf die Oberfläche sprühen.`
+          }
+        ]
       },
       cleaning: {
         title: 'CLEANING',
@@ -372,7 +390,25 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         title: 'COLORS',
         subtitle: 'Painting & Varnishing',
         description: 'Bring color into your life. Professional painting and creative wall design.',
-        products: []
+        products: [
+          {
+            name: 'Wheel Silver M ONE',
+            image: '/products/colors/felgensilber-hell.webp',
+            description: `M-ONE Paint Spray Wheel Silver is a high-quality and quick-drying spray with high opacity which is used for painting rims, bodywork on cars, various decorative parts and much more. The product has excellent adhesion, is resistant to scratches and shocks as well as to the impact of gasoline, chemical substances, UV radiation and weathering. Protects against corrosion and rust.`
+          },
+          {
+            name: 'Primer M ONE',
+            image: '/products/colors/haftgrund-hell.webp',
+            description: `M-ONE Primer is a high-quality primer for various surfaces. It ensures optimal adhesion of the subsequent painting and reliably protects against corrosion. Ideal for metal, wood and many plastics.`
+          },
+          {
+            name: 'Paint Spray M ONE',
+            image: '/products/colors/lack-spray-hell.webp',
+            description: `M-ONE Paint Spray is a high-quality and quick-drying spray with high opacity which is used for painting different surfaces. The product has excellent adhesion, is durable and dries very quickly. 
+
+Application: Before use, the surface must be clean, dry and free from oily residues. Shake the can for 2-3 minutes and spray the surface from a distance of 20-30 cm.`
+          }
+        ]
       },
       cleaning: {
         title: 'CLEANING',
@@ -563,7 +599,25 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         title: 'NGJYRAT',
         subtitle: 'Lyerje & Bojaxhi',
         description: 'Sillni ngjyra në jetën tuaj. Lyerje profesionale dhe dizajn kreativ muresh.',
-        products: []
+        products: [
+          {
+            name: 'Felne Argjendi M ONE',
+            image: '/products/colors/felgensilber-hell.webp',
+            description: `M-ONE Llak-Spray Felne Argjendi është sprej me cilësi të lartë, terje të shpejtë dhe mbulueshmëri të mirë që përdoret për ngjyrosjen e felneve te veturat, karoserisë, pjesëve të ndryshme dekorative etj. Ky produkt ka ngjitje të mirë, është rezistent dhe i qëndrueshëm ndaj gërvishjeve dhe goditjeve gjithashtu ndaj ndikimit të benzinës, substancave të ndryshme kimike, rrezatimit UV, ndikimit të ambientit dhe motit. Mbron nga korrozioni dhe ndryshku.`
+          },
+          {
+            name: 'Bazë (Primer) M ONE',
+            image: '/products/colors/haftgrund-hell.webp',
+            description: `M-ONE Bazë (Primer) është një bazë me cilësi të lartë për sipërfaqe të ndryshme. Siguron ngjitje optimale të lyerjes vijuese dhe mbron në mënyrë të besueshme nga korrozioni. Ideale për metal, dru dhe shumë plastikë.`
+          },
+          {
+            name: 'Llak Sprej M ONE',
+            image: '/products/colors/lack-spray-hell.webp',
+            description: `M-ONE Llak Spray është sprej me cilësi të lartë, terje të shpejtë dhe mbulueshmëri të mirë që përdoret për ngjyrosje në sipërfaqe të ndryshme. Ky produkt ka ngjitje të mirë, është rezistent, i qëndrueshëm dhe teret shumë shpejt. 
+
+Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe pa mbetje vaji. Tundeni kanaçen për 2-3 minuta dhe spërkatni sipërfaqen nga një distancë rreth 20-30 cm.`
+          }
+        ]
       },
       cleaning: {
         title: 'PASTRIMI',

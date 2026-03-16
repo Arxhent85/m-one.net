@@ -3,6 +3,7 @@ import * as React from 'react';
 import { X, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import ImageWithFallback from './ImageWithFallback';
+import { useTheme } from './ThemeContext';
 import { motion } from 'motion/react';
 
 interface Product {
@@ -25,6 +26,7 @@ interface CategoryModalProps {
 
 const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   // Prevent scrolling on body when modal is open
   React.useEffect(() => {
@@ -87,7 +89,9 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                 >
                   <div className="relative overflow-hidden rounded-t-xl bg-gray-50 dark:bg-neutral-800 aspect-[4/3] shrink-0">
                     <ImageWithFallback
-                      src={product.image}
+                      src={product.image.includes('/products/colors/')
+                        ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
+                        : product.image}
                       alt={product.name}
                       className="w-full h-full object-cover p-4 transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
                       fallbackStrategy="picsum"

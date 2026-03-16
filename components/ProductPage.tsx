@@ -47,11 +47,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       ? NEUTRAL_SILIKON_COLORS[Math.min(selectedColorIndex, NEUTRAL_SILIKON_COLORS.length - 1)]
       : undefined;
 
+  const isColorProduct = product.image.includes('/products/colors/');
+
   const imageSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.webp`
     : isNeutralSilikon
       ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.webp`
-      : product.image;
+      : isColorProduct
+        ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
+        : product.image;
 
   const modelSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix} 3D.glb`
