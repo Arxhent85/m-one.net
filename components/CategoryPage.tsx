@@ -3,6 +3,7 @@ import * as React from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
+import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
 
@@ -28,6 +29,7 @@ interface CategoryPageProps {
 const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
   const { t } = useLanguage();
   const { goHome, navigateToProduct } = useNavigation();
+  const { theme } = useTheme();
 
   return (
     <motion.div
@@ -102,17 +104,19 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 <div className={`relative ${
                   category.title.toLowerCase().includes('bau') 
                     ? 'aspect-[1/2]' 
-                    : 'aspect-square'
+                    : 'aspect-[2/3]'
                 } md:aspect-[3/4] mb-3 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]`}>
                   <ImageWithFallback
-                    src={product.image}
+                    src={product.image.includes('/products/colors/')
+                      ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
+                      : product.image}
                     alt={product.name}
                     className={`w-full h-full ${
-                      category.title.toLowerCase().includes('bau') ? 'p-2' : 'p-0'
+                      category.title.toLowerCase().includes('bau') ? 'p-2' : 'p-3'
                     } md:p-12 origin-center ${
                       category.title.toLowerCase().includes('bau') 
                         ? 'scale-[1.05]' 
-                        : 'scale-[1.35]'
+                        : 'scale-[1.15]'
                     } md:scale-100`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
