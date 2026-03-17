@@ -4,6 +4,7 @@ import { CATEGORY_CONFIG } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
+import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -12,6 +13,8 @@ const SketchGrid: React.FC = () => {
   const [hoveredId, setHoveredId] = React.useState<string | null>(null);
   const { t, getCategoryData } = useLanguage();
   const { navigateToCategory } = useNavigation();
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
 
   const categoryKeys = Object.keys(CATEGORY_CONFIG);
 
@@ -79,7 +82,7 @@ const SketchGrid: React.FC = () => {
                   className="absolute inset-0 w-full h-full"
                   animate={{
                     scale: isActive ? 1 : 1.05,
-                    opacity: isActive ? 1 : 0.6
+                    opacity: isActive ? 1 : (isLight ? 0.85 : 0.6)
                   }}
                   whileHover={{ scale: isActive ? 1 : 1.1, opacity: isActive ? 1 : 0.7 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -96,8 +99,12 @@ const SketchGrid: React.FC = () => {
                 <motion.div
                   animate={{
                     background: isActive
-                      ? 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent)'
-                      : 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), rgba(0,0,0,0.4))'
+                      ? (isLight 
+                          ? 'linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.1), transparent)'
+                          : 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent)')
+                      : (isLight
+                          ? 'linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.25), rgba(0,0,0,0.1))'
+                          : 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), rgba(0,0,0,0.4))')
                   }}
                   className="absolute inset-0"
                 />
