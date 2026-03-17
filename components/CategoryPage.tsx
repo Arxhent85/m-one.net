@@ -88,7 +88,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
         </div>
 
         {category.products && category.products.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-6 md:gap-x-12">
             {category.products.map((product, index) => (
               <motion.div
                 key={index}
@@ -99,11 +99,11 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 onClick={() => navigateToProduct(product)}
                 className="group cursor-pointer flex flex-col will-change-transform"
               >
-                <div className="relative aspect-[4/5] mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
+                <div className="relative aspect-[4/5] mb-4 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full p-12"
+                    className="w-full h-full p-4 md:p-12"
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
                   />

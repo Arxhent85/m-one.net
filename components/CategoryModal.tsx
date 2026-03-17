@@ -78,7 +78,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
           </p>
 
           {category.products && category.products.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8">
               {category.products.map((product, index) => (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                         ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                         : product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover p-4 transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
+                      className="w-full h-full object-cover p-2 md:p-4 transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
                       fallbackStrategy="picsum"
                     />
                   </div>

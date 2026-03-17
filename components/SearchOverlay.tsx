@@ -132,7 +132,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                   variants={containerVariants}
                   initial="hidden"
                   animate="show"
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+                  className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-12"
                 >
                   {results.map((product, index) => (
                     <motion.div
@@ -148,7 +148,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                         <ImageWithFallback
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full p-4"
+                          className="w-full h-full p-2 md:p-4"
                           imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center"
                           fallbackStrategy="picsum"
                         />
