@@ -5,6 +5,7 @@ import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
+import { getProductScale, getProductPadding } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface Product {
@@ -152,7 +153,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                             ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                             : product.image}
                           alt={product.name}
-                          className="w-full h-full p-0 md:p-4 scale-[1.45] md:scale-100 origin-center"
+                          className={`w-full h-full ${getProductPadding(product.image, true)} md:${getProductPadding(product.image, false)} origin-center ${getProductScale(product.image, true)} md:${getProductScale(product.image, false)}`}
                           imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center"
                           fallbackStrategy="picsum"
                         />

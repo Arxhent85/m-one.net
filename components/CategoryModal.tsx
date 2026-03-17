@@ -4,6 +4,7 @@ import { X, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import ImageWithFallback from './ImageWithFallback';
 import { useTheme } from './ThemeContext';
+import { getProductScale, getProductPadding } from '../constants';
 import { motion } from 'motion/react';
 
 interface Product {
@@ -93,7 +94,8 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                         ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                         : product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain p-0 md:p-4 scale-[1.45] md:scale-100 origin-center transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
+                      className={`w-full h-full ${getProductPadding(product.image, true)} md:${getProductPadding(product.image, false)} origin-center ${getProductScale(product.image, true)} md:${getProductScale(product.image, false)}`}
+                      imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
                       fallbackStrategy="picsum"
                     />
                   </div>

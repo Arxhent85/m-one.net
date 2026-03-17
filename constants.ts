@@ -54,3 +54,50 @@ export const NEUTRAL_SILIKON_COLORS = [
   { id: 'schwarz', name: 'Schwarz', fileSuffix: 'schwarz' },
   { id: 'weiss', name: 'Weiss', fileSuffix: 'weiss' },
 ];
+
+/**
+ * Standardizes product scaling in grid views to match "Premium Silicon" visual size.
+ * Categorizes products by their type (Silicon, Acryl, Kleber, Sprays) and returns a scale factor.
+ */
+export const getProductScale = (imagePath: string = '', isMobile: boolean = false) => {
+  const path = imagePath.toLowerCase();
+  
+  // Non-Bau products (Sprays, Colors) usually need higher scaling for impact
+  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
+    return isMobile ? 'scale-[1.45]' : 'scale-100';
+  }
+
+  // Bau products (Cartridges) - Normalizing to Premium Silicon standard
+  if (path.includes('silikon')) {
+    return isMobile ? 'scale-[1.05]' : 'scale-100';
+  }
+  if (path.includes('acryl')) {
+    return isMobile ? 'scale-[1.18]' : 'scale-100';
+  }
+  if (path.includes('kleber') || path.includes('profimont')) {
+    return isMobile ? 'scale-[1.28]' : 'scale-100';
+  }
+
+  // Default fallback
+  return isMobile ? 'scale-[1.05]' : 'scale-100';
+};
+
+/**
+ * Standardizes padding for product containers to maintain visual balance.
+ */
+export const getProductPadding = (imagePath: string = '', isMobile: boolean = false) => {
+  const path = imagePath.toLowerCase();
+  
+  // Bau products (Cartridges) need some breathing room to avoid edge contact during scaling
+  if (path.includes('/premium-silikon/') || path.includes('/neutral-silikon/') || path.includes('/bau/')) {
+    return isMobile ? 'p-2' : 'p-12';
+  }
+  
+  if (path.includes('acryl') || path.includes('kleber')) {
+    return isMobile ? 'p-2' : 'p-12';
+  }
+
+  // Sprays can fill the box more aggressively
+  return isMobile ? 'p-0' : 'p-12';
+};
+

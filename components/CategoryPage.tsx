@@ -5,6 +5,7 @@ import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
+import { getProductScale, getProductPadding } from '../constants';
 import { motion } from 'motion/react';
 
 interface Product {
@@ -111,13 +112,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                       ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                       : product.image}
                     alt={product.name}
-                    className={`w-full h-full ${
-                      category.title.toLowerCase().includes('bau') ? 'p-2' : 'p-0'
-                    } md:p-12 origin-center ${
-                      category.title.toLowerCase().includes('bau') 
-                        ? 'scale-[1.05]' 
-                        : 'scale-[1.45]'
-                    } md:scale-100`}
+                    className={`w-full h-full ${getProductPadding(product.image, true)} md:${getProductPadding(product.image, false)} origin-center ${getProductScale(product.image, true)} md:${getProductScale(product.image, false)}`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
                   />
