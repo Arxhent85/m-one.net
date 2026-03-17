@@ -105,7 +105,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-white dark:bg-neutral-950 pt-16 lg:pt-32 pb-32"
+      className="min-h-screen bg-white dark:bg-neutral-950 pt-8 lg:pt-32 pb-32"
     >
       <div className="container mx-auto px-6">
         <motion.button
@@ -113,7 +113,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
           onClick={() => window.history.back()}
-          className="text-neutral-400 hover:text-brand-500 mb-6 lg:mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
+          className="text-neutral-400 hover:text-brand-500 mb-2 lg:mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
         >
           <ArrowLeft size={16} />
           {t.products.backToCategory}
@@ -124,10 +124,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-          className="mb-6 lg:mb-20"
+          className="mb-4 lg:mb-20"
         >
           {product.categoryName && (
-            <span className="text-brand-500 font-black tracking-[0.4em] uppercase text-[10px] mb-4 lg:mb-8 block">
+            <span className="text-brand-500 font-black tracking-[0.4em] uppercase text-[10px] mb-1 lg:mb-8 block">
               {product.categoryName}
             </span>
           )}
@@ -143,7 +143,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-              className="w-[65%] lg:w-full relative aspect-[3/4] lg:aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
+              className="w-[65%] lg:w-full relative aspect-[2/3] lg:aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
             >
               {/* 2D Image View */}
               <div
@@ -154,7 +154,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className="w-full h-full p-2 lg:p-20 object-contain scale-[1.15] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-4 lg:p-20 object-contain scale-[1.05] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -163,8 +163,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className="w-full h-full p-2 lg:p-20"
-                    imgClassName="object-contain scale-[1.15] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-4 lg:p-20"
+                    imgClassName="object-contain scale-[1.05] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     fallbackStrategy="picsum"
                   />
                 )}
