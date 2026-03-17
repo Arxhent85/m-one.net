@@ -29,17 +29,17 @@ const Hero: React.FC = () => {
         <img
           src={heroImage + "?v=2"}
           alt="M-ONE Hero"
-          className="w-full h-full object-cover object-center scale-105"
+          className="w-full h-full object-cover object-center scale-110"
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
       </motion.div>
 
       {/* Visual Background Mobile (static to prevent black bar jumping) */}
-      <div className="absolute inset-0 z-0 md:hidden">
+      <div className="absolute -inset-[2px] z-0 md:hidden overflow-hidden">
         <img
           src={heroImage + "?v=2"}
           alt="M-ONE Hero"
-          className="w-full h-full object-cover object-center scale-105"
+          className="w-full h-full object-cover object-center scale-110 origin-top"
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
       </div>
