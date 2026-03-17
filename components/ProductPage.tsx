@@ -138,12 +138,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           {/* Left Column: Visual Excellence + Mobile Color Selection */}
-          <div className="w-full lg:w-3/5 flex flex-col sm:flex-row lg:flex-col gap-8 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
+          <div className="w-full lg:w-3/5 flex flex-row lg:flex-col gap-6 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-              className="w-full sm:w-1/2 lg:w-full relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
+              className="w-1/2 lg:w-full relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
             >
               {/* 2D Image View */}
               <div
@@ -154,7 +154,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className="w-full h-full p-6 lg:p-20 object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-4 lg:p-20 object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -163,7 +163,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className="w-full h-full p-6 lg:p-20"
+                    className="w-full h-full p-4 lg:p-20"
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     fallbackStrategy="picsum"
                   />
@@ -193,17 +193,17 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
               {/* Gallery Toggle */}
               {has3D && (
-                <div className="absolute bottom-3 left-3 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-lg z-[60]">
+                <div className="absolute bottom-2 left-2 flex gap-1 p-0.5 glass-panel rounded-full border border-white/10 shadow-lg z-[60]">
                   {[0, 1].map((idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveMediaIndex(idx)}
-                      className={`px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-[0.15em] transition-all duration-500 ${activeMediaIndex === idx
+                      className={`px-2 py-0.5 rounded-full text-[7px] font-black uppercase tracking-[0.1em] transition-all duration-500 ${activeMediaIndex === idx
                         ? 'bg-brand-500 text-white shadow-lg'
                         : 'text-neutral-500 hover:text-neutral-950 dark:hover:text-white'
                         }`}
                     >
-                      {idx === 0 ? 'Image' : '3D View'}
+                      {idx === 0 ? 'IMG' : '3D'}
                     </button>
                   ))}
                 </div>
@@ -212,16 +212,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
             {/* Mobile Color Selection (Side-by-Side on small screens) */}
             {(isPremiumSilikon || isNeutralSilikon) && (
-              <div className="w-full sm:w-1/2 lg:hidden block">
-                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-4">
+              <div className="w-1/2 lg:hidden block">
+                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-600 mb-3">
                   Farbe
                 </h3>
-                <div className="grid grid-cols-4 sm:grid-cols-4 gap-3">
+                <div className="grid grid-cols-3 gap-2 pb-2">
                   {(isPremiumSilikon ? PREMIUM_SILIKON_COLORS : NEUTRAL_SILIKON_COLORS).map((color, idx) => (
-                    <div key={color.id} className="flex flex-col items-center gap-1.5">
+                    <div key={color.id} className="flex flex-col items-center">
                       <button
                         onClick={() => setSelectedColorIndex(idx)}
-                        className={`relative w-11 h-11 rounded-full overflow-hidden transition-all duration-300 ${
+                        className={`relative w-10 h-10 rounded-full overflow-hidden transition-all duration-300 ${
                           selectedColorIndex === idx 
                             ? 'ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-neutral-950 shadow-lg shadow-brand-500/30 scale-105' 
                             : 'border border-neutral-200 dark:border-neutral-800 opacity-60'
@@ -237,12 +237,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-[10px] font-black text-brand-500 uppercase tracking-widest">
-                  {activeColor!.name}
-                </p>
+                <div className="mt-2 pt-2 border-t border-neutral-100 dark:border-neutral-900">
+                  <p className="text-[9px] font-black text-brand-500 uppercase tracking-widest leading-none">
+                    {activeColor!.name}
+                  </p>
+                </div>
               </div>
             )}
           </div>
+
 
           {/* Right Column: Premium Engineering Details */}
           <div className="lg:w-2/5 w-full">
