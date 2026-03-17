@@ -144,27 +144,29 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                       }}
                       className="group flex flex-col h-full bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700 hover:border-brand-500/30 dark:hover:border-brand-500/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
                     >
-                      <div className="relative overflow-hidden rounded-t-xl bg-neutral-50 dark:bg-neutral-100 aspect-[4/3] shrink-0 border-b border-neutral-100 dark:border-neutral-700">
+                      <div className="relative overflow-hidden rounded-t-xl bg-neutral-50 dark:bg-neutral-100 aspect-[3/4] shrink-0 border-b border-neutral-100 dark:border-neutral-700">
                         <ImageWithFallback
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full p-2 md:p-4"
+                          className="w-full h-full p-1 md:p-4"
                           imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center"
                           fallbackStrategy="picsum"
                         />
                         {product.categoryName && (
-                          <div className="absolute top-2 right-2 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                          <div className="absolute top-2 right-2 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                             {product.categoryName}
                           </div>
                         )}
                       </div>
-                      <div className="p-5 flex flex-col flex-grow">
-                        <div className="flex justify-between items-start mb-3">
-                          <h3 className="text-xl font-bold text-brand-900 dark:text-white group-hover:text-brand-500 transition-colors">{product.name}</h3>
-                          <ArrowRight className="text-brand-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 shrink-0 mt-1" />
+                      <div className="p-3 md:p-5 flex flex-col flex-grow">
+                        <div className="flex justify-between items-start gap-2 mb-2">
+                          <h3 className="text-sm md:text-xl font-bold text-brand-900 dark:text-white group-hover:text-brand-500 transition-colors min-h-[2.5rem] md:min-h-0 line-clamp-2">
+                            {product.name}
+                          </h3>
+                          <ArrowRight size={16} className="text-brand-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 shrink-0 mt-1" />
                         </div>
                         {product.description && (
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line flex-grow line-clamp-3">
+                          <p className="text-xs md:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line flex-grow line-clamp-2">
                             {product.description}
                           </p>
                         )}

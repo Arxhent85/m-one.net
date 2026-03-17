@@ -99,11 +99,11 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 onClick={() => navigateToProduct(product)}
                 className="group cursor-pointer flex flex-col will-change-transform"
               >
-                <div className="relative aspect-[4/5] mb-4 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
+                <div className="relative aspect-[3/4] mb-3 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full p-4 md:p-12"
+                    className="w-full h-full p-1 md:p-12"
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
                   />
@@ -111,15 +111,15 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 </div>
 
                 <div className="flex flex-col flex-grow">
-                  <div className="flex justify-between items-end mb-4 group-hover:translate-x-2 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
-                    <h3 className="text-2xl font-bold text-neutral-950 dark:text-white leading-tight pr-4">
+                  <div className="flex justify-between items-start mb-2 group-hover:translate-x-1 md:group-hover:translate-x-2 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <h3 className="text-sm md:text-2xl font-bold text-neutral-950 dark:text-white leading-tight pr-2 min-h-[2.5rem] md:min-h-0 break-words line-clamp-2 md:line-clamp-none">
                       {product.name}
                     </h3>
                     <motion.div
-                      className="text-brand-500 mb-1"
+                      className="text-brand-500 shrink-0"
                       whileHover={{ scale: 1.2, x: 5 }}
                     >
-                      <ArrowRight size={24} />
+                      <ArrowRight size={18} className="md:w-6 md:h-6" />
                     </motion.div>
                   </div>
 
