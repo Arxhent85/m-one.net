@@ -148,7 +148,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                         <ImageWithFallback
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full p-2 md:p-4 scale-[1.05] md:scale-100 origin-center"
+                          className="w-full h-full p-2 md:p-4 scale-[1.15] md:scale-100 origin-center"
                           imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center"
                           fallbackStrategy="picsum"
                         />

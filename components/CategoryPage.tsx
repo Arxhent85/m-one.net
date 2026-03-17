@@ -35,16 +35,16 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-white dark:bg-neutral-950 pt-32"
+      className="min-h-screen bg-white dark:bg-neutral-950 pt-12 lg:pt-32"
     >
       {/* Header Section with Halo Influence */}
-      <div className="container mx-auto px-6 mb-32">
+      <div className="container mx-auto px-6 mb-12 lg:mb-32">
         <motion.button
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
           onClick={goHome}
-          className="text-neutral-400 hover:text-brand-500 mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
+          className="text-neutral-400 hover:text-brand-500 mb-6 lg:mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
         >
           <ArrowLeft size={16} />
           {t.modal.back}
@@ -55,7 +55,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-            className="text-brand-500 font-bold tracking-[0.3em] uppercase mb-6 text-xs"
+            className="text-brand-500 font-bold tracking-[0.3em] uppercase mb-2 lg:mb-6 text-xs"
           >
             {category.subtitle}
           </motion.h4>
@@ -63,7 +63,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-            className="text-5xl md:text-8xl font-black text-neutral-950 dark:text-white leading-[0.9] tracking-tighter mb-12"
+            className="text-5xl md:text-8xl font-black text-neutral-950 dark:text-white leading-[0.9] tracking-tighter mb-6 lg:mb-12"
           >
             {category.title}
           </motion.h1>
@@ -103,7 +103,11 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full p-2 md:p-12 scale-[1.05] md:scale-100 origin-center"
+                    className={`w-full h-full p-2 md:p-12 origin-center ${
+                      category.title.toLowerCase().includes('bau') 
+                        ? 'scale-[1.05]' 
+                        : 'scale-[1.25]'
+                    } md:scale-100`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
                   />
