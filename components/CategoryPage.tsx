@@ -102,7 +102,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 <div className={`relative ${
                   category.title.toLowerCase().includes('bau') 
                     ? 'aspect-[1/2]' 
-                    : 'aspect-[3/4]'
+                    : 'aspect-square'
                 } md:aspect-[3/4] mb-3 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]`}>
                   <ImageWithFallback
                     src={product.image}
@@ -112,7 +112,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                     } md:p-12 origin-center ${
                       category.title.toLowerCase().includes('bau') 
                         ? 'scale-[1.05]' 
-                        : 'scale-100'
+                        : 'scale-[1.35]'
                     } md:scale-100`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
