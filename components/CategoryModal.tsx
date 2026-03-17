@@ -93,13 +93,13 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                         ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                         : product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain p-1 md:p-4 transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
+                      className="w-full h-full object-contain p-1 md:p-4 scale-[1.12] md:scale-100 origin-center transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
                       fallbackStrategy="picsum"
                     />
                   </div>
                   <div className="p-3 md:p-5 flex flex-col flex-grow">
                     <div className="flex justify-between items-start gap-2">
-                      <h3 className="text-sm md:text-xl font-bold text-brand-900 dark:text-white group-hover:text-brand-500 transition-colors min-h-[2.5rem] md:min-h-0 line-clamp-2">
+                      <h3 className="text-sm md:text-xl font-bold text-brand-900 dark:text-white group-hover:text-brand-500 transition-colors min-h-[3.5rem] md:min-h-0 line-clamp-3">
                         {product.name}
                       </h3>
                       <ArrowRight size={16} className="text-brand-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 shrink-0 mt-1" />
