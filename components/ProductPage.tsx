@@ -154,7 +154,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className="w-full h-full p-0 lg:p-20 object-contain scale-[1.35] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-1 lg:p-20 object-contain scale-[1.28] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -163,8 +163,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className="w-full h-full p-0 lg:p-20"
-                    imgClassName="object-contain scale-[1.35] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-1 lg:p-20"
+                    imgClassName="object-contain scale-[1.28] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     fallbackStrategy="picsum"
                   />
                 )}
