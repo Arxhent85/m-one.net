@@ -93,7 +93,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                         ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                         : product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain p-2 md:p-4 scale-[1.15] md:scale-100 origin-center transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
+                      className="w-full h-full object-contain p-2 md:p-4 scale-[1.25] md:scale-100 origin-center transition-transform duration-500 group-hover:scale-105 object-center mix-blend-multiply dark:mix-blend-normal"
                       fallbackStrategy="picsum"
                     />
                   </div>

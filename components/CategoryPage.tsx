@@ -116,7 +116,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                     } md:p-12 origin-center ${
                       category.title.toLowerCase().includes('bau') 
                         ? 'scale-[1.05]' 
-                        : 'scale-[1.15]'
+                        : 'scale-[1.25]'
                     } md:scale-100`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"

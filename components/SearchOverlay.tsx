@@ -152,7 +152,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                             ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
                             : product.image}
                           alt={product.name}
-                          className="w-full h-full p-2 md:p-4 scale-[1.15] md:scale-100 origin-center"
+                          className="w-full h-full p-2 md:p-4 scale-[1.25] md:scale-100 origin-center"
                           imgClassName="object-contain transition-transform duration-500 group-hover:scale-105 object-center"
                           fallbackStrategy="picsum"
                         />
