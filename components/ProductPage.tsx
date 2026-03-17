@@ -47,7 +47,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       ? NEUTRAL_SILIKON_COLORS[Math.min(selectedColorIndex, NEUTRAL_SILIKON_COLORS.length - 1)]
       : undefined;
 
-  const isColorProduct = product.image.includes('/products/colors/');
+  const isBauProduct = product.image.toLowerCase().includes('/bau/');
+  const isColorProduct = product.image.toLowerCase().includes('/products/colors/');
 
   const imageSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.webp`
@@ -154,7 +155,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className="w-full h-full p-1 lg:p-20 object-contain scale-[1.28] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className={`w-full h-full ${isBauProduct ? 'p-2' : 'p-1'} lg:p-20 object-contain ${isBauProduct ? 'scale-[1.15]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -163,8 +164,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className="w-full h-full p-1 lg:p-20"
-                    imgClassName="object-contain scale-[1.28] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className={`w-full h-full ${isBauProduct ? 'p-2' : 'p-1'} lg:p-20`}
+                    imgClassName={`object-contain ${isBauProduct ? 'scale-[1.15]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
                     fallbackStrategy="picsum"
                   />
                 )}
