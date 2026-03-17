@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Search, X, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
+import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -23,6 +24,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const { t, getAllProducts } = useLanguage();
   const { navigateToProduct } = useNavigation();
+  const { theme } = useTheme();
 
   // Focus input when opened
   React.useEffect(() => {
