@@ -112,11 +112,11 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                       : product.image}
                     alt={product.name}
                     className={`w-full h-full ${
-                      category.title.toLowerCase().includes('bau') ? 'p-2' : 'p-3'
+                      category.title.toLowerCase().includes('bau') ? 'p-2' : 'p-0'
                     } md:p-12 origin-center ${
                       category.title.toLowerCase().includes('bau') 
                         ? 'scale-[1.05]' 
-                        : 'scale-[1.25]'
+                        : 'scale-[1.45]'
                     } md:scale-100`}
                     imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
                     fallbackStrategy="picsum"
