@@ -99,7 +99,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
                 onClick={() => navigateToProduct(product)}
                 className="group cursor-pointer flex flex-col will-change-transform"
               >
-                <div className="relative aspect-[3/4] mb-3 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
+                <div className="relative aspect-[2/3] md:aspect-[3/4] mb-3 md:mb-8 overflow-hidden bg-neutral-50 dark:bg-neutral-800 rounded-xl md:rounded-2xl border border-neutral-100 dark:border-neutral-700 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.45)]">
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}

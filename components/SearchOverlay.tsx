@@ -144,7 +144,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                       }}
                       className="group flex flex-col h-full bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700 hover:border-brand-500/30 dark:hover:border-brand-500/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
                     >
-                      <div className="relative overflow-hidden rounded-t-xl bg-neutral-50 dark:bg-neutral-100 aspect-[3/4] shrink-0 border-b border-neutral-100 dark:border-neutral-700">
+                      <div className="relative overflow-hidden rounded-t-xl bg-neutral-50 dark:bg-neutral-100 aspect-[2/3] md:aspect-[3/4] shrink-0 border-b border-neutral-100 dark:border-neutral-700">
                         <ImageWithFallback
                           src={product.image}
                           alt={product.name}

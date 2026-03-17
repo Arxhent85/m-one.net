@@ -87,7 +87,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ category, onClose }) => {
                   key={index}
                   className="group flex flex-col h-full bg-white dark:bg-neutral-800 rounded-xl border border-neutral-100 dark:border-neutral-700 hover:border-brand-500/30 dark:hover:border-brand-500/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="relative overflow-hidden rounded-t-xl bg-gray-50 dark:bg-neutral-800 aspect-[3/4] shrink-0">
+                  <div className="relative overflow-hidden rounded-t-xl bg-gray-50 dark:bg-neutral-800 aspect-[2/3] md:aspect-[3/4] shrink-0">
                     <ImageWithFallback
                       src={product.image.includes('/products/colors/')
                         ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
