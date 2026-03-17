@@ -137,13 +137,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-          {/* Left Column: Visual Excellence + Mobile Color Selection */}
-          <div className="w-full lg:w-3/5 flex flex-row lg:flex-col gap-6 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
+          {/* Left Column: Visual Excellence (65%) + Mobile Color Selection (35%) */}
+          <div className="w-full lg:w-3/5 flex flex-row lg:flex-col gap-3 sm:gap-6 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-              className="w-1/2 lg:w-full relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
+              className="w-[65%] lg:w-full relative aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
             >
               {/* 2D Image View */}
               <div
@@ -154,7 +154,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className="w-full h-full p-4 lg:p-20 object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-2 lg:p-20 object-contain scale-[1.15] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -163,8 +163,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className="w-full h-full p-4 lg:p-20"
-                    imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
+                    className="w-full h-full p-2 lg:p-20"
+                    imgClassName="object-contain scale-[1.15] lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110"
                     fallbackStrategy="picsum"
                   />
                 )}
@@ -210,13 +210,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               )}
             </motion.div>
 
-            {/* Mobile Color Selection (Side-by-Side on small screens) */}
+            {/* Mobile Color Selection (35% width, 2 columns) */}
             {(isPremiumSilikon || isNeutralSilikon) && (
-              <div className="w-1/2 lg:hidden block">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-600 mb-3">
+              <div className="w-[35%] lg:hidden block">
+                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-600 mb-2">
                   Farbe
                 </h3>
-                <div className="grid grid-cols-3 gap-2 pb-2">
+                <div className="grid grid-cols-2 gap-2 pb-2">
                   {(isPremiumSilikon ? PREMIUM_SILIKON_COLORS : NEUTRAL_SILIKON_COLORS).map((color, idx) => (
                     <div key={color.id} className="flex flex-col items-center">
                       <button
@@ -245,6 +245,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               </div>
             )}
           </div>
+
 
 
           {/* Right Column: Premium Engineering Details */}
