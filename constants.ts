@@ -67,19 +67,10 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
     return isMobile ? 'scale-[1.45]' : 'scale-100';
   }
 
-  // Bau products (Cartridges) - Normalizing to Premium Silicon standard
-  if (path.includes('silikon')) {
-    return isMobile ? 'scale-[1.05]' : 'scale-100';
-  }
-  if (path.includes('acryl')) {
-    return isMobile ? 'scale-[1.18]' : 'scale-100';
-  }
-  if (path.includes('kleber') || path.includes('profimont')) {
-    return isMobile ? 'scale-[1.28]' : 'scale-100';
-  }
-
-  // Default fallback
-  return isMobile ? 'scale-[1.05]' : 'scale-100';
+  // Bau products (Cartridges) - Normalizing to a safe uniform standard
+  // Silicon was too small (1.05), Acryl was too large/clipped (1.18)
+  // 1.10 is the universal sweet spot for 100% visibility and maximum size.
+  return isMobile ? 'scale-[1.10]' : 'scale-100';
 };
 
 /**
@@ -88,13 +79,9 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
 export const getProductPadding = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
   
-  // Bau products (Cartridges) need some breathing room to avoid edge contact during scaling
-  if (path.includes('/premium-silikon/') || path.includes('/neutral-silikon/') || path.includes('/bau/')) {
-    return isMobile ? 'p-2' : 'p-12';
-  }
-  
-  if (path.includes('acryl') || path.includes('kleber')) {
-    return isMobile ? 'p-2' : 'p-12';
+  // Bau products (Cartridges) need uniform padding
+  if (path.includes('/bau/') || path.includes('silikon') || path.includes('acryl') || path.includes('kleber')) {
+    return isMobile ? 'p-4' : 'p-12';
   }
 
   // Sprays can fill the box more aggressively
