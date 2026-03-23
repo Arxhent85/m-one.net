@@ -55,6 +55,19 @@ export const NEUTRAL_SILIKON_COLORS = [
   { id: 'weiss', name: 'Weiss', fileSuffix: 'weiss' },
 ];
 
+export const LACK_SPRAY_COLORS = [
+  { id: 'schwarz-matt', name: 'Schwarz Matt', fileSuffix: 'Schwarz Matt' },
+  { id: 'schwarz', name: 'Schwarz', fileSuffix: 'Schwarz' },
+  { id: 'weiss', name: 'Weiss', fileSuffix: 'Weiss' },
+  { id: 'grau', name: 'Grau', fileSuffix: 'Grau' },
+  { id: 'chrom', name: 'Chrom', fileSuffix: 'Chrom' },
+  { id: 'gold', name: 'Gold', fileSuffix: 'Gold' },
+  { id: 'gelb', name: 'Gelb', fileSuffix: 'Gelb' },
+  { id: 'rot', name: 'Rot', fileSuffix: 'Rot' },
+  { id: 'grun', name: 'Grün', fileSuffix: 'Grün' },
+  { id: 'braun', name: 'Braun', fileSuffix: 'Braun' },
+];
+
 /**
  * Standardizes product scaling in grid views to match "Premium Silicon" visual size.
  * Categorizes products by their type (Silicon, Acryl, Kleber, Sprays) and returns a scale factor.

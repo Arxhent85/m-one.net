@@ -5,7 +5,7 @@ import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
-import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS } from '../constants';
+import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS, LACK_SPRAY_COLORS } from '../constants';
 import '@google/model-viewer';
 
 // Add type declaration for the custom web component
@@ -32,59 +32,75 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
   const product = getProductByImage(initialProduct.image) || initialProduct;
   const [activeMediaIndex, setActiveMediaIndex] = React.useState(0);
-  const [selectedColorIndex, setSelectedColorIndex] = React.useState(0);
+  const isColorProduct = product.image.toLowerCase().includes('/products/colors/');
 
   const isPremiumSilikon = product.name.toLowerCase().includes('premium') && product.name.toLowerCase().includes('sili');
   const isNeutralSilikon = product.name.toLowerCase().includes('neutral') && product.name.toLowerCase().includes('sili');
+  const isLackSpray = product.name.toLowerCase().includes('lack spray') || product.name.toLowerCase().includes('paint spray') || product.name.toLowerCase().includes('llak sprej');
+  const isFelgensilber = product.image.includes('felgensilber');
+  const isHaftgrund = product.image.includes('haftgrund');
   const isStrukturAcryl = product.image.includes('/struktur-acryl/');
   const isUniversalAcryl = product.image.includes('/universal-acryl/');
   const isExtremKleber = product.image.includes('/extrem-kleber/');
   const isAcrylProduct = isStrukturAcryl || isUniversalAcryl;
 
+  const [selectedColorIndex, setSelectedColorIndex] = React.useState(() => {
+    if (isLackSpray && product.image.includes('rot')) {
+      return 7; // Rot is index 7 in LACK_SPRAY_COLORS
+    }
+    return 0;
+  });
+
   const activeColor = isPremiumSilikon 
     ? PREMIUM_SILIKON_COLORS[Math.min(selectedColorIndex, PREMIUM_SILIKON_COLORS.length - 1)] 
     : isNeutralSilikon
       ? NEUTRAL_SILIKON_COLORS[Math.min(selectedColorIndex, NEUTRAL_SILIKON_COLORS.length - 1)]
-      : undefined;
+      : isLackSpray
+        ? LACK_SPRAY_COLORS[Math.min(selectedColorIndex, LACK_SPRAY_COLORS.length - 1)]
+        : undefined;
 
   const isBauProduct = product.categoryName?.toLowerCase() === 'bau';
-  const isColorProduct = product.image.toLowerCase().includes('/products/colors/');
 
   const imageSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix}.webp`
     : isNeutralSilikon
       ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.webp`
-      : isColorProduct
-        ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
-        : product.image;
+      : isLackSpray
+        ? `/products/colors/lack-spray/LACK SPRAY M ONE ${activeColor!.fileSuffix}.webp`
+        : isColorProduct && product.image.includes('-hell.webp')
+          ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
+          : product.image;
 
   const modelSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix} 3D.glb`
     : isNeutralSilikon
       ? `/products/neutral-silikon/M-ONE BAU SILIKON ${activeColor!.fileSuffix}.glb`
-      : isStrukturAcryl
-        ? '/products/struktur-acryl/M-ONE ACRYL STRUKTUR 3D.glb'
-        : isUniversalAcryl
-          ? '/products/universal-acryl/M-ONE UNIVERSAL ACRYL.glb'
-          : isExtremKleber
-            ? '/products/extrem-kleber/profi mont extrem 3D.glb'
-            : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
+      : isLackSpray
+        ? `/products/colors/lack-spray/LACK SPRAY M ONE ${activeColor!.fileSuffix} 3D.glb`
+        : isFelgensilber
+          ? '/products/colors/felgensilber-3D.glb'
+          : isHaftgrund
+            ? '/products/colors/haftgrund-3D.glb'
+            : isStrukturAcryl
+              ? '/products/struktur-acryl/M-ONE ACRYL STRUKTUR 3D.glb'
+              : isUniversalAcryl
+                ? '/products/universal-acryl/M-ONE UNIVERSAL ACRYL.glb'
+                : isExtremKleber
+                  ? '/products/extrem-kleber/profi mont extrem 3D.glb'
+                  : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
 
-  const has3D = isPremiumSilikon || isNeutralSilikon || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
+  const has3D = isPremiumSilikon || isNeutralSilikon || isLackSpray || isFelgensilber || isHaftgrund || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
-  // Preload Silikon images for lightning-fast color switching
+  // Preload assets for lightning-fast switching
   React.useEffect(() => {
     if (isPremiumSilikon) {
       PREMIUM_SILIKON_COLORS.forEach((color) => {
-        // Preload high-res 2D image
         const img = new Image();
         img.src = `/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix}.webp`;
-        
-        // Background fetch 3D model for instant switching
         fetch(`/products/premium-silikon/PREMIUM SILIKON ${color.fileSuffix} 3D.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
       });
     } else if (isNeutralSilikon) {
@@ -93,12 +109,42 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
         img.src = `/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.webp`;
         fetch(`/products/neutral-silikon/M-ONE BAU SILIKON ${color.fileSuffix}.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
       });
+    } else if (isLackSpray) {
+      LACK_SPRAY_COLORS.forEach((color) => {
+        const img = new Image();
+        img.src = `/products/colors/lack-spray/LACK SPRAY M ONE ${color.fileSuffix}.webp`;
+        fetch(`/products/colors/lack-spray/LACK SPRAY M ONE ${color.fileSuffix} 3D.glb`, { priority: 'low' as RequestPriority }).catch(() => {});
+      });
+    } else if (isFelgensilber) {
+      const img = new Image();
+      img.src = '/products/colors/felgensilber-transparent.webp';
+      fetch('/products/colors/felgensilber-3D.glb', { priority: 'low' as RequestPriority }).catch(() => {});
+    } else if (isHaftgrund) {
+      const img = new Image();
+      img.src = '/products/colors/haftgrund-transparent.webp';
+      fetch('/products/colors/haftgrund-3D.glb', { priority: 'low' as RequestPriority }).catch(() => {});
     }
-  }, [isPremiumSilikon, isNeutralSilikon]);
+  }, [isPremiumSilikon, isNeutralSilikon, isLackSpray, isFelgensilber, isHaftgrund]);
 
   const handleDownload = (type: string) => {
     alert(`${type} ${t.products.downloadStarted}`);
   };
+
+  const getVariantFolder = () => {
+    if (isPremiumSilikon) return 'premium-silikon';
+    if (isNeutralSilikon) return 'neutral-silikon';
+    if (isLackSpray) return 'colors/lack-spray';
+    return '';
+  };
+
+  const getVariantList = () => {
+    if (isPremiumSilikon) return PREMIUM_SILIKON_COLORS;
+    if (isNeutralSilikon) return NEUTRAL_SILIKON_COLORS;
+    if (isLackSpray) return LACK_SPRAY_COLORS;
+    return [];
+  };
+
+  const hasVariants = isPremiumSilikon || isNeutralSilikon || isLackSpray;
 
   return (
     <motion.div
@@ -151,11 +197,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                 className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${activeMediaIndex === 0 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
                   }`}
               >
-                {isPremiumSilikon || isNeutralSilikon ? (
+                {hasVariants ? (
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className={`w-full h-full ${isBauProduct ? 'p-4' : 'p-1'} lg:p-20 object-contain ${isBauProduct ? 'scale-[1.10]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
+                    className={`w-full h-full ${isBauProduct || isLackSpray ? 'p-4' : 'p-1'} lg:p-20 object-contain ${isBauProduct || isLackSpray ? 'scale-[1.10]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -181,7 +227,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <model-viewer
                     key={modelSrc}
                     src={modelSrc}
-                    alt={`${product.name} ${isPremiumSilikon || isNeutralSilikon ? activeColor!.name : ''} 3D`}
+                    alt={`${product.name} ${hasVariants ? activeColor!.name : ''} 3D`}
                     shadow-intensity="1"
                     camera-controls
                     auto-rotate
@@ -212,13 +258,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
             </motion.div>
 
             {/* Mobile Color Selection (35% width, 2 columns) */}
-            {(isPremiumSilikon || isNeutralSilikon) && (
+            {hasVariants && (
               <div className="w-[35%] lg:hidden block">
                 <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-600 mb-2">
                   Farbe
                 </h3>
                 <div className="grid grid-cols-2 gap-2 pb-2">
-                  {(isPremiumSilikon ? PREMIUM_SILIKON_COLORS : NEUTRAL_SILIKON_COLORS).map((color, idx) => (
+                  {getVariantList().map((color, idx) => (
                     <div key={color.id} className="flex flex-col items-center">
                       <button
                         onClick={() => setSelectedColorIndex(idx)}
@@ -230,7 +276,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                         title={color.name}
                       >
                         <img 
-                          src={`/products/${isPremiumSilikon ? 'premium-silikon' : 'neutral-silikon'}/punkt ${color.fileSuffix}.webp`} 
+                          src={`/products/${getVariantFolder()}/punkt ${color.fileSuffix}.webp`} 
                           alt={color.name}
                           className="w-full h-full object-cover scale-110"
                         />
@@ -257,14 +303,14 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
             >
               {/* Desktop Color Selection */}
-              {(isPremiumSilikon || isNeutralSilikon) && (
+              {hasVariants && (
                 <div className="mb-12 hidden lg:block">
                   <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-6 flex items-center gap-4">
                     Farbe Auswählen
                     <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
                   </h3>
                   <div className="grid grid-cols-4 lg:grid-cols-6 gap-6">
-                    {(isPremiumSilikon ? PREMIUM_SILIKON_COLORS : NEUTRAL_SILIKON_COLORS).map((color, idx) => (
+                    {getVariantList().map((color, idx) => (
                       <div key={color.id} className="flex flex-col items-center gap-3">
                         <motion.button
                           whileHover={{ rotate: [0, -5, 5, -5, 5, 0], scale: 1.1 }}
@@ -278,7 +324,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                           title={color.name}
                         >
                           <img 
-                            src={`/products/${isPremiumSilikon ? 'premium-silikon' : 'neutral-silikon'}/punkt ${color.fileSuffix}.webp`} 
+                            src={`/products/${getVariantFolder()}/punkt ${color.fileSuffix}.webp`} 
                             alt={color.name}
                             className="w-full h-full object-cover scale-110"
                           />
