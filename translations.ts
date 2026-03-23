@@ -198,6 +198,11 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
             description: `M-ONE Lack-Spray ist ein hochwertiger und schnell trocknender Sprühlack mit hoher Deckkraft der zum Lackieren von verschiedenen Oberflächen verwendet wird. Das Produkt hat eine ausgezeichnete Haftung, ist widerstandsfähig und trocknet sehr schnell. 
 
 Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige Rückstände sein. Dose 2-3 Minuten schütteln und aus 20-30 cm Entfernung auf die Oberfläche sprühen.`
+          },
+          {
+            name: 'Hochtemperatur Lack M ONE',
+            image: '/products/colors/hochtemperatur-lack-transparent.webp',
+            description: `M ONE HOCHTEMPERATUR LACK: Schnelltrocknender, wetterbeständiger, silikonbasierter Acryl-Sprühlack für Innen- und Außenflächen, die hoher Hitze ausgesetzt sind, wie Öfen, Kamine und Auspuffanlagen. Schwarze/silberne Farben sind bis 690°C hitzebeständig. 400ml reichen für ca. 1,5 m². Trocknet in 1 Stunde; für eine härtere Oberfläche 1 Stunde lang auf 160°C erhitzen. Anwendung: Die Oberfläche muss sauber, trocken und frei von Öl, Staub, alter Farbe und Rost sein. Keine Grundierung verwenden. Dose 2 Minuten schütteln. Zuerst auf kleiner Fläche testen. Dünne Schichten aus 25 cm Entfernung im Abstand von 2 Minuten auftragen. Nicht über andere Acryllacke sprühen.`
           }
         ]
       },
@@ -407,6 +412,11 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
             description: `M-ONE Paint Spray is a high-quality and quick-drying spray with high opacity which is used for painting different surfaces. The product has excellent adhesion, is durable and dries very quickly. 
 
 Application: Before use, the surface must be clean, dry and free from oily residues. Shake the can for 2-3 minutes and spray the surface from a distance of 20-30 cm.`
+          },
+          {
+            name: 'High Temperature Paint M ONE',
+            image: '/products/colors/hochtemperatur-lack-transparent.webp',
+            description: `M ONE HOCHTEMPERATUR LACK: A fast-drying, weather-resistant, silicone-based acrylic spray paint for indoor and outdoor surfaces exposed to high heat like stoves, ovens, and exhausts. Black and silver colors are resistant to 690°C. 400ml covers approx. 1.5 m². It dries in 1 hour; for a harder surface, heat the paint to 160°C for one hour after application. Application: The surface must be clean, dry, and free of oil, dust, old paint, and rust. Do not use primer. Shake the can for 2 minutes before use. Always test on a small area first. Apply several thin coats from a distance of 25 cm, waiting 2 minutes between layers. Do not apply over other acrylic paints.`
           }
         ]
       },
@@ -616,6 +626,11 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
             description: `M-ONE Llak Spray është sprej me cilësi të lartë, terje të shpejtë dhe mbulueshmëri të mirë që përdoret për ngjyrosje në sipërfaqe të ndryshme. Ky produkt ka ngjitje të mirë, është rezistent, i qëndrueshëm dhe teret shumë shpejt. 
 
 Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe pa mbetje vaji. Tundeni kanaçen për 2-3 minuta dhe spërkatni sipërfaqen nga një distancë rreth 20-30 cm.`
+          },
+          {
+            name: 'Llak për Temperaturë të Lartë M ONE',
+            image: '/products/colors/hochtemperatur-lack-transparent.webp',
+            description: `M ONE LAK PËR TEMPERATURA TË LARTA: Bojë sprej akrilike me bazë silikoni, me tharje të shpejtë dhe rezistente ndaj motit, për sipërfaqe të brendshme/jashtme të ekspozuara ndaj nxehtësisë së lartë si soba, furra dhe marmita. Ngjyrat e zeza/argjendi janë rezistente deri në 690°C. 400ml mbulon afërsisht 1.5 m². Thahet për 1 orë; për një sipërfaqe më të fortë, ngroheni në 160°C për 1 orë pas aplikimit. Aplikimi: Sipërfaqja duhet të jetë e pastër, e thatë dhe pa vaj, pluhur, bojë të vjetër dhe ndryshk. Mos përdorni astar. Shkundeni kanan për 2 minuta. Provoni fillimisht në një zonë të vogël. Aplikoni shtresa të holla nga 25 cm distancë me intervale 2-minutëshe. Mos e aplikoni mbi bojëra të tjera akrilike.`
           }
         ]
       },

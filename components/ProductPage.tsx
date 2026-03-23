@@ -39,6 +39,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
   const isLackSpray = product.name.toLowerCase().includes('lack spray') || product.name.toLowerCase().includes('paint spray') || product.name.toLowerCase().includes('llak sprej');
   const isFelgensilber = product.image.includes('felgensilber');
   const isHaftgrund = product.image.includes('haftgrund');
+  const isHochtemperaturLack = product.image.includes('hochtemperatur-lack');
   const isStrukturAcryl = product.image.includes('/struktur-acryl/');
   const isUniversalAcryl = product.image.includes('/universal-acryl/');
   const isExtremKleber = product.image.includes('/extrem-kleber/');
@@ -81,7 +82,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
           ? '/products/colors/felgensilber-3D.glb'
           : isHaftgrund
             ? '/products/colors/haftgrund-3D.glb'
-            : isStrukturAcryl
+            : isHochtemperaturLack
+              ? '/products/colors/hochtemperatur-lack-3D.glb'
+              : isStrukturAcryl
               ? '/products/struktur-acryl/M-ONE ACRYL STRUKTUR 3D.glb'
               : isUniversalAcryl
                 ? '/products/universal-acryl/M-ONE UNIVERSAL ACRYL.glb'
@@ -89,7 +92,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   ? '/products/extrem-kleber/profi mont extrem 3D.glb'
                   : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
 
-  const has3D = isPremiumSilikon || isNeutralSilikon || isLackSpray || isFelgensilber || isHaftgrund || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
+  const has3D = isPremiumSilikon || isNeutralSilikon || isLackSpray || isFelgensilber || isHaftgrund || isHochtemperaturLack || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
