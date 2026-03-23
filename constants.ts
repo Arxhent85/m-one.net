@@ -75,15 +75,15 @@ export const LACK_SPRAY_COLORS = [
 export const getProductScale = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
   
-  // Non-Bau products (Sprays, Colors) usually need higher scaling for impact
+  // Non-Bau products (Sprays, Colors)
   if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
-    return isMobile ? 'scale-[1.45]' : 'scale-100';
+    // 1.25 on mobile and 1.10 on desktop ensures impact without clipping
+    return isMobile ? 'scale-[1.25]' : 'scale-[1.10]';
   }
 
-  // Bau products (Cartridges) - Normalizing to a safe uniform standard
-  // Silicon was too small (1.05), Acryl was too large/clipped (1.18)
-  // 1.10 is the universal sweet spot for 100% visibility and maximum size.
-  return isMobile ? 'scale-[1.10]' : 'scale-100';
+  // Bau products (Cartridges)
+  // 1.15 is the universal sweet spot for 100% visibility and maximum size.
+  return isMobile ? 'scale-[1.15]' : 'scale-[1.05]';
 };
 
 /**
@@ -92,12 +92,13 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
 export const getProductPadding = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
   
-  // Bau products (Cartridges) need uniform padding
-  if (path.includes('/bau/') || path.includes('silikon') || path.includes('acryl') || path.includes('kleber')) {
-    return isMobile ? 'p-4' : 'p-12';
+  // Normalizing padding for all products
+  // Service/Colors (Sprays) need a bit more edge room than cartridges
+  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
+    return isMobile ? 'p-4' : 'p-8';
   }
 
-  // Sprays can fill the box more aggressively
-  return isMobile ? 'p-0' : 'p-12';
+  // Bau products (Cartridges)
+  return isMobile ? 'p-4' : 'p-10';
 };
 
