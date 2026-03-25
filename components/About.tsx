@@ -37,29 +37,42 @@ const About: React.FC = () => {
             className="lg:w-1/2 relative"
           >
             <div className="grid grid-cols-2 gap-4">
-              <ImageWithFallback
-                src="https://picsum.photos/id/449/400/500"
-                alt="Team working"
-                className="rounded-2xl shadow-lg w-full h-full object-cover mt-8 hover:scale-[1.02] transition-transform duration-500"
-                fallbackStrategy="picsum"
-              />
-              <ImageWithFallback
-                src="https://picsum.photos/id/175/400/500"
-                alt="Architectural detail"
-                className="rounded-2xl shadow-lg w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500"
-                fallbackStrategy="picsum"
-              />
+              <div className="flex flex-col gap-4 mt-8">
+                {/* Kleines Bild oben links: Silikonstränge */}
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=400"
+                  alt="Silikonstränge"
+                  className="rounded-2xl shadow-lg w-full h-40 object-cover hover:scale-[1.02] transition-transform duration-500"
+                  fallbackStrategy="unsplash"
+                />
+                {/* Unteres Bild links: Handwerker */}
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356f12?auto=format&fit=crop&q=80&w=400"
+                  alt="Profi-Handwerker"
+                  className="rounded-2xl shadow-lg w-full h-64 object-cover hover:scale-[1.02] transition-transform duration-500"
+                  fallbackStrategy="unsplash"
+                />
+              </div>
+              <div className="flex flex-col gap-4">
+                {/* Großes Bild oben rechts: Abfüllanlage */}
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+                  alt="Industrielle Abfüllanlage"
+                  className="rounded-2xl shadow-lg w-full h-[28rem] object-cover hover:scale-[1.02] transition-transform duration-500"
+                  fallbackStrategy="unsplash"
+                />
+              </div>
             </div>
             <motion.div
               initial={{ scale: 0, rotate: -10 }}
               whileInView={{ scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: "spring", bounce: 0.4, duration: 0.8 }}
-              className="absolute -bottom-6 -right-6 bg-brand-500 text-white p-8 rounded-full shadow-lg hidden md:block"
+              className="absolute -bottom-6 -right-6 bg-brand-500 text-white p-6 rounded-full shadow-lg hidden md:block"
             >
-              <p className="font-sans font-bold text-3xl text-center leading-none drop-shadow-sm">
-                28+<br />
-                <span className="text-sm font-sans font-medium opacity-90">Jahre</span>
+              <p className="font-sans font-bold text-3xl text-center leading-tight drop-shadow-sm">
+                100%<br />
+                <span className="text-sm font-sans font-medium opacity-90">Premium</span>
               </p>
             </motion.div>
           </motion.div>

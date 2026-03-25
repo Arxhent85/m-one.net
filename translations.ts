@@ -2,35 +2,35 @@
 export const translations = {
   de: {
     nav: {
-      home: 'Start',
-      services: 'Leistungen',
+      home: 'Shop',
+      services: 'Produktlinien',
       about: 'Über Uns',
       contact: 'Kontakt',
-      requestQuote: 'Angebot anfordern',
+      requestQuote: 'Zum Shop',
       searchLabel: 'Suche öffnen',
     },
     hero: {
-      since: 'Seit 1995 Ihr Partner',
-      titleLine1: 'Wir bauen',
-      titleLine2: 'Ihre Zukunft',
-      subtitle: 'Von der Grundsteinlegung bis zum letzten Pinselstrich. Wir vereinen Handwerk, Service und Sauberkeit in einem Projekt.',
-      startProject: 'Projekt starten',
-      references: 'Unsere Referenzen',
+      since: 'PREMIUM BAUCHEMIE MADE IN GERMANY',
+      titleLine1: 'Dein Werk.',
+      titleLine2: 'Dein Maßstab.',
+      subtitle: 'Entwickelt für Meister ihres Fachs und Macher, die keine Kompromisse eingehen. Erlebe maximale Haftung, extreme Langlebigkeit und die größte Farbauswahl auf dem Markt.',
+      startProject: 'Produkte entdecken ->',
+      references: 'Unsere Qualitätsstandards',
     },
     sections: {
-      servicesTitle: 'Unsere Bereiche',
-      aboutTitle: 'Über Uns',
-      aboutHeading: 'Wir setzen Standards in Qualität und Design',
-      aboutText: 'M ONE ist mehr als nur ein Bauunternehmen. Wir sind ein Kollektiv aus Architekten, Handwerkern, Designern und Reinigungsspezialisten. Unser Ziel ist es, Immobilien nicht nur zu bauen, sondern sie über ihren gesamten Lebenszyklus zu begleiten und zu veredeln.',
+      servicesTitle: 'Unsere Produktlinien',
+      aboutTitle: 'MARKENQUALITÄT',
+      aboutHeading: 'Handwerk trifft auf Perfektion.',
+      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir vereinen industrielle Höchstleistung aus deutscher Produktion mit der Leidenschaft derjenigen, die echte Werte schaffen. Egal ob auf der anspruchsvollen Baustelle oder beim ambitionierten Projekt zu Hause: Wir liefern das Material, auf das du dich blind verlassen kannst. Höchste Standards, keine Kompromisse.',
       teamButton: 'Unser Team kennenlernen',
       aboutList: [
-        "Zertifizierte Meisterbetriebe in allen Gewerken",
-        "Nachhaltige Materialien und moderne Technik",
-        "Transparente Kostenplanung ohne Überraschungen"
+        "100 % Made in Germany: Garantierte Premium-Qualität direkt vom Hersteller.",
+        "Konkurrenzlose Farbvielfalt: Für makellose, unsichtbare Fugenbilder.",
+        "Für Meister & Macher: Profi-Rezepturen für maximale Langlebigkeit."
       ]
     },
     footer: {
-      text: 'Exzellenz im Bauwesen seit 1995. Wir schaffen Räume, die begeistern und Bestand haben.',
+      text: 'M ONE – Dein Maßstab. Premium-Bauchemie, technische Sprays und Pflegeprodukte für höchste Ansprüche im professionellen Handwerk und für ambitionierte Macher.',
       company: 'Unternehmen',
       services: 'Leistungen',
       projects: 'Projekte',
@@ -68,7 +68,7 @@ export const translations = {
       bau: {
         title: 'BAU',
         subtitle: 'Hoch- & Tiefbau',
-        description: 'Fundamente für die Ewigkeit. Wir realisieren Ihre Bauprojekte mit höchster Präzision und jahrzehntelanger Erfahrung.',
+        description: 'Höchste Präzision für fundamentale Verbindungen. Unsere Premium-Silikone, Acryle und Montagekleber bieten extreme Dauerelastizität und kompromisslosen Halt für jedes Gewerk.',
         products: [
           {
             name: 'Premium Silicon',
@@ -127,9 +127,9 @@ Features: Ohne Bohren, Dauerelastisch, Neutral und frei von Silikon und Isocyana
         ]
       },
       service: {
-        title: 'SERVICE',
+        title: 'SERVICE & KFZ',
         subtitle: 'Wartung',
-        description: 'Rund um die Uhr für Sie da. Unser technischer Service garantiert Langlebigkeit.',
+        description: 'Hochleistung für Maschinen und Motoren. Von technischen Wartungssprays bis zur professionellen Fahrzeugpflege – Zuverlässigkeit und Schutz, wenn es darauf ankommt.',
         products: [
           {
             name: 'M-ONE Bremsenreiniger',
@@ -180,7 +180,7 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
       colors: {
         title: 'COLORS',
         subtitle: 'Maler & Lackierer',
-        description: 'Bringen Sie Farbe in Ihr Leben. Professionelle Anstriche und kreative Wandgestaltung.',
+        description: 'Design bis tief in die Fuge. Entdecke unsere konkurrenzlose Farbpalette für Sanitärsilikone, die sich unsichtbar und perfekt in anspruchsvolle Architekturen und Natursteine einfügt.',
         products: [
           {
             name: 'Felgensilber M ONE',
@@ -209,7 +209,7 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
       cleaning: {
         title: 'CLEANING',
         subtitle: 'Reinigung',
-        description: 'Glänzende Ergebnisse für Fassaden, Büros und Baustellen.',
+        description: 'Die Basis für meisterhafte Arbeit. Hochwirksame Industrie- und Spezialreiniger, die hartnäckigste Rückstände lösen und Oberflächen optimal vorbereiten.',
         products: []
       }
     }
