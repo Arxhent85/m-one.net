@@ -271,7 +271,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                     <div key={color.id} className="flex flex-col items-center">
                       <button
                         onClick={() => setSelectedColorIndex(idx)}
-                        className={`relative w-10 h-10 rounded-full overflow-hidden transition-all duration-300 ${
+                        className={`relative w-12 h-12 rounded-full overflow-hidden transition-all duration-300 ${
                           selectedColorIndex === idx 
                             ? 'ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-neutral-950 shadow-lg shadow-brand-500/30 scale-105' 
                             : 'border border-neutral-200 dark:border-neutral-800 opacity-60'
@@ -312,14 +312,14 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                     Farbe Auswählen
                     <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
                   </h3>
-                  <div className="grid grid-cols-4 lg:grid-cols-6 gap-6">
+                  <div className={`grid grid-cols-4 ${isLackSpray ? 'lg:grid-cols-5' : 'lg:grid-cols-6'} gap-6`}>
                     {getVariantList().map((color, idx) => (
                       <div key={color.id} className="flex flex-col items-center gap-3">
                         <motion.button
                           whileHover={{ rotate: [0, -5, 5, -5, 5, 0], scale: 1.1 }}
                           transition={{ rotate: { duration: 0.5, ease: "easeInOut" }, scale: { duration: 0.2 } }}
                           onClick={() => setSelectedColorIndex(idx)}
-                          className={`relative w-[56px] h-[56px] rounded-full overflow-hidden transition-all duration-300 ${
+                          className={`relative w-[64px] h-[64px] rounded-full overflow-hidden transition-all duration-300 ${
                             selectedColorIndex === idx 
                               ? 'ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-neutral-950 shadow-lg shadow-brand-500/30' 
                               : 'border border-neutral-200 dark:border-neutral-800'
