@@ -82,15 +82,15 @@ const SketchGrid: React.FC = () => {
                   className="absolute inset-0 w-full h-full"
                   animate={{
                     scale: isActive ? 1 : 1.05,
-                    opacity: isActive ? 1 : (isLight ? 0.85 : 0.6)
+                    opacity: 1 // Always full opacity for vibrant look
                   }}
-                  whileHover={{ scale: isActive ? 1 : 1.1, opacity: isActive ? 1 : 0.7 }}
+                  whileHover={{ scale: isActive ? 1 : 1.1, opacity: 1 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <ImageWithFallback
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center saturate-[1.15] brightness-[1.05] contrast-[1.05]"
                     fallbackStrategy="picsum"
                   />
                 </motion.div>
@@ -99,12 +99,8 @@ const SketchGrid: React.FC = () => {
                 <motion.div
                   animate={{
                     background: isActive
-                      ? (isLight 
-                          ? 'linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.1), transparent)'
-                          : 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent)')
-                      : (isLight
-                          ? 'linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.25), rgba(0,0,0,0.1))'
-                          : 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), rgba(0,0,0,0.4))')
+                      ? 'linear-gradient(to top, rgba(0,0,0,0.4), transparent, transparent)'
+                      : 'linear-gradient(to top, rgba(0,0,0,0.3), transparent, transparent)'
                   }}
                   className="absolute inset-0"
                 />
