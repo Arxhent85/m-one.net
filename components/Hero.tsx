@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
         <img
           src={heroImage + "?v=2"}
           alt="M-ONE Hero"
-          className="w-full h-full object-cover object-center scale-110 origin-top"
+          className="w-full h-full object-cover object-right scale-110 origin-top"
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
       </div>
