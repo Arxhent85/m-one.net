@@ -37,11 +37,11 @@ const Hero: React.FC = () => {
       {/* Visual Background Mobile (static to prevent black bar jumping) */}
       <div className="absolute -inset-[2px] z-0 md:hidden overflow-hidden">
         <img
-          src={heroImage + "?v=3"}
+          src={heroImage + "?v=4"}
           alt="M-ONE Hero"
-          className="w-full h-full object-cover object-[85%_center] scale-[2.1] transition-transform duration-1000"
+          className="absolute top-0 right-[-10%] sm:right-0 h-full w-auto max-w-none"
         />
-        <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark' ? 'from-black/60 via-black/30 to-transparent' : 'from-white/40 via-white/10 to-transparent'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r ${theme === 'dark' ? 'from-black/90 via-black/40 to-transparent' : 'from-white/90 via-white/40 to-transparent'}`} />
       </div>
 
       {/* Content Container with Aggressive Whitespace */}
