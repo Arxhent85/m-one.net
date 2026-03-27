@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
           src={baseHeroImage}
           alt="M-ONE Hero"
           priority={true}
-          className="w-full h-full object-cover object-[70%_50%]"
-          imgClassName="transition-all duration-700 ease-out"
+          className="w-full h-full"
+          imgClassName="w-full h-full object-cover object-right transition-all duration-700 ease-out"
           style={{ filter: activeColor.filter }}
         />
         {/* Subtle bottom gradient to blend into the solid text area below */}
@@ -60,8 +60,8 @@ const Hero: React.FC = () => {
           src={baseHeroImage}
           alt="M-ONE Hero"
           priority={true}
-          className="w-full h-full object-cover object-center scale-105"
-          imgClassName="transition-all duration-700 ease-out"
+          className="w-full h-full"
+          imgClassName="w-full h-full object-cover object-right scale-105 transition-all duration-700 ease-out"
           style={{ filter: activeColor.filter }}
         />
         
