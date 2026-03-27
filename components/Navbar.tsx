@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="text-brand-500"
+              className="text-brand-500 p-2 -mr-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}

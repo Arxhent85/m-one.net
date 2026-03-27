@@ -6,6 +6,8 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
   fallbackStrategy?: 'picsum' | 'color' | 'custom';
   fallbackContent?: React.ReactNode;
   imgClassName?: string;
+  mobileSrc?: string;
+  priority?: boolean;
 }
 
 const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
@@ -16,6 +18,8 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   fallbackStrategy = 'picsum',
   fallbackContent,
   imgClassName,
+  mobileSrc,
+  priority = false,
   ...props
 }) => {
   const [imgSrc, setImgSrc] = useState<string | undefined>(src);
@@ -28,7 +32,6 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
     setHasError(false);
     setIsLoading(true);
 
-    // Check if image is already cached
     if (src) {
       const testImg = new Image();
       testImg.src = src;
@@ -70,23 +73,37 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
     );
   }
 
+  const imageElement = (
+    <img
+      {...props}
+      ref={imgRef}
+      src={imgSrc}
+      alt={alt}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      fetchPriority={priority ? "high" : "auto"}
+      onError={handleError}
+      onLoad={handleLoad}
+      className={`w-full h-full transition-opacity duration-300 ${imgClassName || 'object-cover'} ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+    />
+  );
+
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {isLoading && (
         <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 animate-pulse" />
       )}
-      <img
-        {...props}
-        ref={imgRef}
-        src={imgSrc}
-        alt={alt}
-        loading="eager"
-        decoding="async"
-        fetchPriority="high"
-        onError={handleError}
-        onLoad={handleLoad}
-        className={`w-full h-full transition-opacity duration-300 ${imgClassName || 'object-cover'} ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-      />
+      
+      {/* If mobileSrc is provided, use a <picture> tag for responsive loading */}
+      {mobileSrc ? (
+        <picture>
+          <source media="(max-width: 767px)" srcSet={mobileSrc} />
+          <source media="(min-width: 768px)" srcSet={imgSrc} />
+          {imageElement}
+        </picture>
+      ) : (
+        imageElement
+      )}
     </div>
   );
 };

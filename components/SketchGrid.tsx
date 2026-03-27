@@ -17,21 +17,22 @@ const SketchGrid: React.FC = () => {
   const categoryKeys = Object.keys(CATEGORY_CONFIG);
 
   return (
-    <section id="categories" className="py-20 md:py-24 bg-white dark:bg-neutral-950 transition-colors duration-300">
-      <div className="w-full max-w-[98%] mx-auto px-2 md:px-4">
-        <div className="mb-10 md:mb-12 container mx-auto px-4">
+    <section id="categories" className="py-20 md:py-28 bg-brand-50 dark:bg-neutral-950 transition-colors duration-300">
+      <div className="w-full max-w-[98%] mx-auto px-2 md:px-6">
+        <div className="mb-10 md:mb-16 container mx-auto px-4 max-w-7xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-sans font-bold text-brand-900 dark:text-white mb-4"
+            className="text-3xl md:text-5xl font-sans font-black text-brand-900 dark:text-white mb-4 tracking-tight"
           >
             {t.sections.servicesTitle}
           </motion.h2>
+          <div className="w-24 h-1 bg-brand-500 rounded-full" />
         </div>
 
         {/* ═══════════════ MOBILE: 2×2 Tile Dashboard ═══════════════ */}
-        <div className="lg:hidden grid grid-cols-2 gap-3 px-2">
+        <div className="lg:hidden grid grid-cols-2 gap-4 px-2">
           {categoryKeys.map((key) => {
             const category = getCategoryData(key);
             const config = CATEGORY_CONFIG[key as keyof typeof CATEGORY_CONFIG];
@@ -44,28 +45,29 @@ const SketchGrid: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 onClick={() => navigateToCategory(key)}
-                className="relative overflow-hidden rounded-xl cursor-pointer group active:scale-[0.98] transition-transform duration-200"
+                className={`relative flex flex-col overflow-hidden rounded-2xl cursor-pointer group active:scale-[0.97] transition-all duration-300 shadow-lg ${theme === 'dark' ? 'bg-neutral-900 shadow-black/40' : 'bg-white shadow-neutral-200/50'}`}
                 style={{ aspectRatio: '1 / 1.15' }}
               >
-                {/* Product Photography — 80% fill */}
-                <div className="absolute inset-0 w-full h-full">
+                {/* Unmasked Product Photography — Top 75% */}
+                <div className="relative h-[75%] w-full overflow-hidden bg-white dark:bg-neutral-800">
                   <ImageWithFallback
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover object-center saturate-[1.1] brightness-[1.05] contrast-[1.05]"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     fallbackStrategy="picsum"
+                    loading="lazy"
                   />
                 </div>
 
-                {/* Solid Dark Text Band at Bottom */}
-                <div className="absolute bottom-0 left-0 right-0 category-tile-band px-3 py-3 flex items-center justify-between">
+                {/* Solid White/Dark Content Area — Bottom 25% */}
+                <div className="flex-grow px-4 py-3 flex items-center justify-between border-t border-neutral-100 dark:border-white/5">
                   <div className="flex items-center gap-2">
-                    <config.icon size={16} className="text-brand-500" />
-                    <h3 className="text-sm font-sans font-bold text-white tracking-wider uppercase">
+                    <config.icon size={16} className={`${theme === 'dark' ? 'text-white' : 'text-neutral-900'} group-hover:text-brand-500 transition-colors`} />
+                    <h3 className={`text-xs font-sans font-bold tracking-[0.15em] uppercase ${theme === 'dark' ? 'text-white' : 'text-neutral-900'} group-hover:text-brand-500 transition-colors`}>
                       {category.title}
                     </h3>
                   </div>
-                  <ChevronRight size={16} className="text-white/50" />
+                  <ChevronRight size={16} className="text-neutral-400 group-hover:text-brand-500 transition-colors" />
                 </div>
               </motion.div>
             );
@@ -73,7 +75,7 @@ const SketchGrid: React.FC = () => {
         </div>
 
         {/* ═══════════════ DESKTOP: Dynamic 4-Column Display ═══════════════ */}
-        <div className="hidden lg:flex flex-row gap-3 h-[600px] w-full">
+        <div className="hidden lg:flex flex-row justify-center gap-6 h-[650px] w-full max-w-[1600px] mx-auto">
           {categoryKeys.map((key) => {
             const category = getCategoryData(key);
             const config = CATEGORY_CONFIG[key as keyof typeof CATEGORY_CONFIG];
@@ -89,68 +91,76 @@ const SketchGrid: React.FC = () => {
                 onPointerLeave={(e) => {
                   if (e.pointerType === 'mouse') setHoveredId(null);
                 }}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 animate={{
-                  flex: isHovered ? 1.5 : (hoveredId && !isHovered) ? 0.85 : 1
+                  flex: isHovered ? 1.6 : (hoveredId && !isHovered) ? 0.8 : 1
                 }}
                 className={`
                   relative 
+                  flex flex-col 
                   overflow-hidden 
                   cursor-pointer 
                   min-w-0
-                  rounded-2xl border border-neutral-200/30 dark:border-neutral-800
-                  bg-brand-900
-                  shadow-lg hover:shadow-2xl
+                  rounded-3xl border border-neutral-200/50 dark:border-white/5
+                  ${theme === 'dark' ? 'bg-neutral-900 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)]' : 'bg-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)]'}
                   group
                   will-change-[flex]
                 `}
                 style={{
-                  transition: 'box-shadow 0.5s cubic-bezier(0.16,1,0.3,1)'
+                  transition: 'flex 0.6s cubic-bezier(0.16,1,0.3,1), box-shadow 0.6s ease-out'
                 }}
               >
-                {/* Background Image — GPU-accelerated scale */}
-                <motion.div
-                  className="absolute inset-0 w-full h-full will-change-transform"
-                  animate={{
-                    scale: isHovered ? 1.05 : 1,
-                    filter: isHovered ? 'brightness(1.1) saturate(1.2)' : 'brightness(1.0) saturate(1.1)',
-                  }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <ImageWithFallback
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-full object-cover object-center"
-                    fallbackStrategy="picsum"
-                  />
-                </motion.div>
-
-                {/* Content — Frosted Glass at Bottom */}
-                <div className="absolute inset-0 flex flex-col justify-end overflow-hidden">
+                {/* Background Image — Unmasked, GPU-accelerated */}
+                <div className="relative flex-grow overflow-hidden bg-white dark:bg-neutral-800">
                   <motion.div
-                    className="category-glass-panel overflow-hidden"
+                    className="absolute inset-0 w-full h-full will-change-transform"
                     animate={{
-                      paddingTop: isHovered ? '1.5rem' : '0.875rem',
-                      paddingBottom: isHovered ? '1.5rem' : '0.875rem',
+                      scale: isHovered ? 1.05 : 1,
+                      filter: isHovered ? 'brightness(1.05) saturate(1.1)' : 'brightness(1.0) saturate(1.0)',
                     }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <div className="px-5 md:px-6">
-                      {/* Always visible: icon + title */}
-                      <div className="flex items-center gap-3 mb-0">
+                    <ImageWithFallback
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover object-center"
+                      fallbackStrategy="picsum"
+                      loading="lazy"
+                    />
+                  </motion.div>
+                </div>
+
+                {/* Content — Solid Block at Bottom (No Glassmorphism) */}
+                <div 
+                  className={`relative z-10 w-full border-t flex flex-col justify-end
+                  ${theme === 'dark' ? 'bg-neutral-900 border-white/5' : 'bg-white border-neutral-100'} 
+                  transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]`}
+                  style={{
+                    padding: isHovered ? '2rem' : '1.5rem',
+                    minHeight: isHovered ? '14rem' : '5rem'
+                  }}
+                >
+                  <div className="flex flex-col h-full justify-between">
+                    <div>
+                      {/* Always visible header */}
+                      <div className="flex items-center gap-3">
                         <config.icon
-                          size={isHovered ? 24 : 20}
-                          className="text-brand-500 transition-all duration-500"
+                          size={isHovered ? 28 : 22}
+                          className={`transition-all duration-500 ${isHovered ? 'text-brand-500' : (theme === 'dark' ? 'text-white' : 'text-neutral-900')}`}
                         />
-                        <h3 className={`font-sans font-bold text-white tracking-wider uppercase transition-all duration-500 ${isHovered ? 'text-xl' : 'text-base'}`}>
+                        <h3 className={`font-sans font-bold tracking-[0.15em] uppercase transition-all duration-500 
+                          ${isHovered ? 'text-xl text-brand-500' : (theme === 'dark' ? 'text-base text-white' : 'text-base text-neutral-900')}`
+                        }>
                           {category.title}
                         </h3>
                         <ArrowUpRight
-                          size={16}
-                          className={`ml-auto text-white/40 group-hover:text-brand-400 transition-all duration-500 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'}`}
+                          size={20}
+                          className={`ml-auto transition-all duration-500 
+                            ${isHovered ? 'text-brand-500 opacity-100 translate-x-0' : 'text-neutral-400 opacity-0 -translate-x-4'}`
+                          }
                         />
                       </div>
 
@@ -159,17 +169,23 @@ const SketchGrid: React.FC = () => {
                         {isHovered && (
                           <motion.p
                             initial={{ opacity: 0, height: 0, marginTop: 0 }}
-                            animate={{ opacity: 1, height: 'auto', marginTop: 12 }}
+                            animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
                             exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                            className="text-neutral-300 text-sm leading-relaxed border-l-2 border-brand-500 pl-4 max-w-sm"
+                            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                            className={`text-sm leading-relaxed max-w-sm ${theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500'}`}
                           >
                             {category.description}
                           </motion.p>
                         )}
                       </AnimatePresence>
                     </div>
-                  </motion.div>
+
+                    {/* Animated Orange Line bottom border */}
+                    <div 
+                      className="absolute bottom-0 left-0 h-1 bg-brand-500 transition-all duration-700 ease-out" 
+                      style={{ width: isHovered ? '100%' : '0%' }} 
+                    />
+                  </div>
                 </div>
               </motion.div>
             );
