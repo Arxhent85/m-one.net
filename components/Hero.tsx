@@ -2,8 +2,7 @@ import * as React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useTheme } from './ThemeContext';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import ImageWithFallback from './ImageWithFallback';
+import { motion, useScroll, useTransform } from 'motion/react';
 
 const THEME_COLORS = [
   { id: 'default', name: 'M ONE Orange', hex: '#FF6B00', filter: 'hue-rotate(0deg)' },
@@ -21,7 +20,8 @@ const Hero: React.FC = () => {
   const { theme } = useTheme();
   const [activeColor, setActiveColor] = React.useState(THEME_COLORS[0]);
 
-  const baseHeroImage = theme === 'dark' 
+  const videoSrc = '/videos/hero.mp4';
+  const posterImage = theme === 'dark' 
     ? '/images/hero/hero_dark.webp' 
     : '/images/hero/hero_light.webp';
 
@@ -29,41 +29,40 @@ const Hero: React.FC = () => {
     <section id="hero" className={`relative flex flex-col md:block min-h-[100dvh] w-full overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
       
       {/* ── MOBILE: STACKED LAYOUT (Top Half) ── */}
-      {/* 
-        On mobile, the image sits at the top, perfectly brilliant and unmasked.
-        It does not take 100vh, but rather an aspect ratio or specific height, 
-        leaving room for the solid text area below.
-      */}
-      <div className="md:hidden relative w-full h-[55vh] mt-16 bg-neutral-900 border-b border-white/5 overflow-hidden">
-        <ImageWithFallback
-          src={baseHeroImage}
-          alt="M-ONE Hero"
-          priority={true}
-          className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-right transition-all duration-700 ease-out"
+      <div className="md:hidden relative w-full h-[55vh] mt-16 bg-neutral-950 border-b border-white/5 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={posterImage}
+          className="w-full h-full object-cover object-right transition-all duration-700 ease-out"
           style={{ filter: activeColor.filter }}
-        />
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
         {/* Subtle bottom gradient to blend into the solid text area below */}
         <div className={`absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white'} to-transparent`} />
       </div>
 
-      {/* ── DESKTOP: FULL BACKGROUND IMAGE ── */}
-      {/* 
-        On desktop, the image is absolute full screen.
-        The right side remains 100% brilliant and unmasked.
-      */}
+      {/* ── DESKTOP: FULL BACKGROUND VIDEO ── */}
       <motion.div
         style={{ y: yDesktop, opacity }}
         className="hidden md:block absolute inset-0 w-full h-full z-0 will-change-transform"
       >
-        <ImageWithFallback
-          src={baseHeroImage}
-          alt="M-ONE Hero"
-          priority={true}
-          className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-right scale-105 transition-all duration-700 ease-out"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={posterImage}
+          className="w-full h-full object-cover object-right scale-105 transition-all duration-700 ease-out"
           style={{ filter: activeColor.filter }}
-        />
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
         
         {/* Linear Gradient for Text Readability - ONLY ON LEFT SIDE */}
         <div 
@@ -78,7 +77,6 @@ const Hero: React.FC = () => {
 
 
       {/* ── CONTENT CONTAINER ── */}
-      {/* Mobile: solid bottom block | Desktop: absolute over left side */}
       <div className={`relative z-20 flex-grow flex flex-col justify-center px-6 py-10 md:absolute md:inset-0 md:container md:mx-auto md:py-0 md:pt-20 ${theme === 'dark' ? 'bg-neutral-950 md:bg-transparent' : 'bg-white md:bg-transparent'}`}>
         
         <div className="w-full max-w-2xl text-left">
@@ -152,7 +150,9 @@ const Hero: React.FC = () => {
             </button>
           </motion.div>
 
-          {/* ── Interactive Swatches (Farbvielfalt) ── */}
+          {/* Swatches disabled for video background to keep it premium and clean, 
+              or kept if we want to allow tinting the video. 
+              Let's keep them as it's a cool feature, and the user didn't say to remove them. */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -173,7 +173,6 @@ const Hero: React.FC = () => {
                   aria-label={`Show ${color.name} variant`}
                   title={color.name}
                 >
-                  {/* Subtle inner shadow for pill effect */}
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)] pointer-events-none" />
                 </button>
               ))}
