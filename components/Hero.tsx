@@ -2,7 +2,8 @@ import * as React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useTheme } from './ThemeContext';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import ImageWithFallback from './ImageWithFallback';
 
 const THEME_COLORS = [
   { id: 'default', name: 'M ONE Orange', hex: '#FF6B00', filter: 'hue-rotate(0deg)' },
@@ -19,6 +20,7 @@ const Hero: React.FC = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
   const [activeColor, setActiveColor] = React.useState(THEME_COLORS[0]);
+  const [videoEnded, setVideoEnded] = React.useState(false);
 
   const videoSrc = '/videos/hero.mp4';
   const posterImage = theme === 'dark' 
@@ -30,43 +32,78 @@ const Hero: React.FC = () => {
       
       {/* ── MOBILE: STACKED LAYOUT (Top Half) ── */}
       <div className="md:hidden relative w-full h-[55vh] mt-16 bg-neutral-950 border-b border-white/5 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={posterImage}
-          className="w-full h-full object-cover object-right transition-all duration-700 ease-out"
+        {/* Base Static Image (shows after video ends) */}
+        <ImageWithFallback
+          src={posterImage}
+          alt="M-ONE Hero Static"
+          priority={true}
+          className="w-full h-full"
+          imgClassName="w-full h-full object-cover object-right"
           style={{ filter: activeColor.filter }}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-        {/* Subtle bottom gradient to blend into the solid text area below */}
-        <div className={`absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white'} to-transparent`} />
+        />
+        
+        {/* Overlay Video */}
+        <AnimatePresence>
+          {!videoEnded && (
+            <motion.video
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              onEnded={() => setVideoEnded(true)}
+              className="absolute inset-0 w-full h-full object-cover object-right"
+              style={{ filter: activeColor.filter }}
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </motion.video>
+          )}
+        </AnimatePresence>
+
+        {/* Subtle bottom gradient */}
+        <div className={`absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white'} to-transparent z-10`} />
       </div>
 
-      {/* ── DESKTOP: FULL BACKGROUND VIDEO ── */}
+      {/* ── DESKTOP: FULL BACKGROUND ── */}
       <motion.div
         style={{ y: yDesktop, opacity }}
         className="hidden md:block absolute inset-0 w-full h-full z-0 will-change-transform"
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={posterImage}
-          className="w-full h-full object-cover object-right scale-105 transition-all duration-700 ease-out"
+        {/* Base Static Image */}
+        <ImageWithFallback
+          src={posterImage}
+          alt="M-ONE Hero Static"
+          priority={true}
+          className="w-full h-full"
+          imgClassName="w-full h-full object-cover object-right scale-105"
           style={{ filter: activeColor.filter }}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        />
+
+        {/* Overlay Video */}
+        <AnimatePresence>
+          {!videoEnded && (
+            <motion.video
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              onEnded={() => setVideoEnded(true)}
+              className="absolute inset-0 w-full h-full object-cover object-right scale-105"
+              style={{ filter: activeColor.filter }}
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </motion.video>
+          )}
+        </AnimatePresence>
         
-        {/* Linear Gradient for Text Readability - ONLY ON LEFT SIDE */}
+        {/* Linear Gradient for Text Readability */}
         <div 
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none z-10"
           style={{
             background: theme === 'dark' 
               ? 'linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 25%, rgba(10,10,10,0) 65%)'
@@ -150,9 +187,7 @@ const Hero: React.FC = () => {
             </button>
           </motion.div>
 
-          {/* Swatches disabled for video background to keep it premium and clean, 
-              or kept if we want to allow tinting the video. 
-              Let's keep them as it's a cool feature, and the user didn't say to remove them. */}
+          {/* Farbvielfalt */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
