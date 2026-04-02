@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           alt="M-ONE Hero Static"
           priority={true}
           className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-center"
+          imgClassName="w-full h-full object-cover object-right"
           style={{ filter: activeColor.filter }}
         />
         
