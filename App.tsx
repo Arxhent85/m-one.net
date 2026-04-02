@@ -48,7 +48,7 @@ const MainContent: React.FC = () => {
           <main className="flex-grow pt-24">
             <CategoryPage category={getCategoryData(selectedCategoryId)} />
           </main>
-          <Footer />
+          <Footer variant="compact" />
         </motion.div>
       )}
 

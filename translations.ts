@@ -69,6 +69,10 @@ export const translations = {
         title: 'BAU',
         subtitle: 'Hoch- & Tiefbau',
         description: 'Höchste Präzision für fundamentale Verbindungen. Unsere Premium-Silikone, Acryle und Montagekleber bieten extreme Dauerelastizität und kompromisslosen Halt für jedes Gewerk.',
+        applications: 'Anwendungsbereiche',
+        projects: 'Kundenprojekte',
+        madeInGermany: 'Qualität Made in Germany',
+        learnMore: 'Mehr erfahren',
         products: [
           {
             name: 'Premium Silicon',
@@ -130,6 +134,10 @@ Features: Ohne Bohren, Dauerelastisch, Neutral und frei von Silikon und Isocyana
         title: 'SERVICE & KFZ',
         subtitle: 'Wartung',
         description: 'Hochleistung für Maschinen und Motoren. Von technischen Wartungssprays bis zur professionellen Fahrzeugpflege – Zuverlässigkeit und Schutz, wenn es darauf ankommt.',
+        applications: 'Anwendungsbereiche',
+        projects: 'Referenzprojekte',
+        madeInGermany: 'Qualität Made in Germany',
+        learnMore: 'Mehr erfahren',
         products: [
           {
             name: 'M-ONE Bremsenreiniger',
@@ -181,6 +189,10 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         title: 'COLORS',
         subtitle: 'Maler & Lackierer',
         description: 'Design bis tief in die Fuge. Entdecke unsere konkurrenzlose Farbpalette für Sanitärsilikone, die sich unsichtbar und perfekt in anspruchsvolle Architekturen und Natursteine einfügt.',
+        applications: 'Anwendungsbereiche',
+        projects: 'Referenzen & Design',
+        madeInGermany: 'Qualität Made in Germany',
+        learnMore: 'Mehr erfahren',
         products: [
           {
             name: 'Felgensilber M ONE',
@@ -210,6 +222,10 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
         title: 'CLEANING',
         subtitle: 'Reinigung',
         description: 'Die Basis für meisterhafte Arbeit. Hochwirksame Industrie- und Spezialreiniger, die hartnäckigste Rückstände lösen und Oberflächen optimal vorbereiten.',
+        applications: 'Anwendungsbereiche',
+        projects: 'Industrie-Referenzen',
+        madeInGermany: 'Qualität Made in Germany',
+        learnMore: 'Mehr erfahren',
         products: []
       }
     }
@@ -283,6 +299,10 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
         title: 'CONSTRUCTION',
         subtitle: 'Civil Engineering',
         description: 'Foundations for eternity. We realize your construction projects with the highest precision and decades of experience.',
+        applications: 'Application Areas',
+        projects: 'Client Projects',
+        madeInGermany: 'Quality Made in Germany',
+        learnMore: 'Learn more',
         products: [
           {
             name: 'Premium Silicon',
@@ -344,6 +364,10 @@ Features: No drilling, permanently elastic, neutral and free of silicone and Iso
         title: 'SERVICE',
         subtitle: 'Maintenance',
         description: 'Available for you around the clock. Our technical service guarantees longevity.',
+        applications: 'Application Areas',
+        projects: 'Reference Projects',
+        madeInGermany: 'Quality Made in Germany',
+        learnMore: 'Learn more',
         products: [
           {
             name: 'M-ONE Brake & Parts Cleaner',
@@ -395,6 +419,10 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         title: 'COLORS',
         subtitle: 'Painting & Varnishing',
         description: 'Bring color into your life. Professional painting and creative wall design.',
+        applications: 'Application Areas',
+        projects: 'References & Design',
+        madeInGermany: 'Quality Made in Germany',
+        learnMore: 'Learn more',
         products: [
           {
             name: 'Wheel Silver M ONE',
@@ -424,6 +452,10 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         title: 'CLEANING',
         subtitle: 'Cleaning',
         description: 'Shining results for facades, offices, and construction sites.',
+        applications: 'Application Areas',
+        projects: 'Industry References',
+        madeInGermany: 'Quality Made in Germany',
+        learnMore: 'Learn more',
         products: []
       }
     }
@@ -497,6 +529,10 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         title: 'NDËRTIM',
         subtitle: 'Ndërtim i Lartë & i Ulët',
         description: 'Themele për përjetësi. Ne realizojmë projektet tuaja të ndërtimit me saktësinë më të lartë dhe përvojë dekadash.',
+        applications: 'Zonat e Aplikimit',
+        projects: 'Projektet e Klientëve',
+        madeInGermany: 'Cilësi Made in Germany',
+        learnMore: 'Mëso më shumë',
         products: [
           {
             name: 'Silikon Premium',
@@ -558,6 +594,10 @@ Karakteristika: Pa shpim, Përgjithmonë elastik, Pa silikon dhe Izocianat.`
         title: 'SHËRBIM',
         subtitle: 'Mirëmbajtja',
         description: 'Në dispozicion për ju gjatë gjithë kohës. Shërbimi ynë teknik garanton jetëgjatësi.',
+        applications: 'Zonat e Aplikimit',
+        projects: 'Projektet Referencë',
+        madeInGermany: 'Cilësi Made in Germany',
+        learnMore: 'Mëso më shumë',
         products: [
           {
             name: 'M-ONE Pastrues Frenash Dhe Pjesësh',
@@ -609,6 +649,10 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         title: 'NGJYRAT',
         subtitle: 'Lyerje & Bojaxhi',
         description: 'Sillni ngjyra në jetën tuaj. Lyerje profesionale dhe dizajn kreativ muresh.',
+        applications: 'Zonat e Aplikimit',
+        projects: 'Referencat & Dizajni',
+        madeInGermany: 'Cilësi Made in Germany',
+        learnMore: 'Mëso më shumë',
         products: [
           {
             name: 'Felne Argjendi M ONE',
@@ -638,6 +682,10 @@ Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe p
         title: 'PASTRIMI',
         subtitle: 'Pastrim',
         description: 'Rezultate të shkëlqyera për fasada, zyra dhe kantiere ndërtimi.',
+        applications: 'Zonat e Aplikimit',
+        projects: 'Referencat Industriale',
+        madeInGermany: 'Cilësi Made in Germany',
+        learnMore: 'Mëso më shumë',
         products: []
       }
     }
