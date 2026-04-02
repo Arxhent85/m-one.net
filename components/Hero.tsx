@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
   const [activeColor, setActiveColor] = React.useState(THEME_COLORS[0]);
   const [videoEnded, setVideoEnded] = React.useState(false);
 
-  const videoSrc = '/videos/hero.mp4';
+  const videoSrc = '/videos/HeroSection_Video_1.mp4';
   const posterImage = theme === 'dark' 
     ? '/images/hero/hero_dark.webp' 
     : '/images/hero/hero_light.webp';
@@ -102,23 +102,37 @@ const Hero: React.FC = () => {
         </AnimatePresence>
         
         {/* Linear Gradient for Text Readability */}
-        <div 
-          className="absolute inset-0 pointer-events-none z-10"
-          style={{
-            background: theme === 'dark' 
-              ? 'linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 25%, rgba(10,10,10,0) 65%)'
-              : 'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0) 65%)'
-          }}
-        />
+        <AnimatePresence>
+          {videoEnded && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0 pointer-events-none z-10"
+              style={{
+                background: theme === 'dark' 
+                  ? 'linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 25%, rgba(10,10,10,0) 65%)'
+                  : 'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0) 65%)'
+              }}
+            />
+          )}
+        </AnimatePresence>
       </motion.div>
 
 
       {/* ── CONTENT CONTAINER ── */}
       <div className={`relative z-20 flex-grow flex flex-col justify-center px-6 py-10 md:absolute md:inset-0 md:container md:mx-auto md:py-0 md:pt-20 ${theme === 'dark' ? 'bg-neutral-950 md:bg-transparent' : 'bg-white md:bg-transparent'}`}>
         
-        <div className="w-full max-w-2xl text-left">
-          
-          {/* Badge */}
+        <AnimatePresence>
+          {videoEnded && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
+              className="w-full max-w-2xl text-left"
+            >
+              
+              {/* Badge */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -214,7 +228,9 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-        </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
