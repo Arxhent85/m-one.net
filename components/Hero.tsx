@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           alt="M-ONE Hero Static"
           priority={true}
           className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-right"
+          imgClassName="w-full h-full object-cover object-center"
           style={{ filter: activeColor.filter }}
         />
         
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
               playsInline
               preload="auto"
               onEnded={() => setVideoEnded(true)}
-              className="absolute inset-0 w-full h-full object-cover object-right"
+              className="absolute inset-0 w-full h-full object-cover object-center"
               style={{ filter: activeColor.filter }}
             >
               <source src={videoSrc} type="video/mp4" />
