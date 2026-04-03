@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BrickWall, Wrench, SprayCan, Sparkles } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useTheme } from './ThemeContext';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import ImageWithFallback from './ImageWithFallback';
 
-const THEME_COLORS = [
-  { id: 'default', name: 'M ONE Orange', hex: '#FF6B00', filter: 'hue-rotate(0deg)' },
-  { id: 'schwarz', name: 'Schwarz', hex: '#111111', filter: 'grayscale(100%) brightness(0.7)' },
-  { id: 'grau', name: 'Grau', hex: '#666666', filter: 'grayscale(100%) brightness(1.2)' },
-  { id: 'weiss', name: 'Weiß', hex: '#EEEEEE', filter: 'grayscale(100%) brightness(2.0)' },
+const SLIDES = [
+  { id: 'bau', name: 'Bau', icon: BrickWall, darkImg: '/images/hero/slideshow/HeroSilikonDunkel.png', lightImg: '/images/hero/slideshow/HeroSilikonHell.PNG' },
+  { id: 'service', name: 'Service & KFZ', icon: Wrench, darkImg: '/images/hero/slideshow/HeroServiceDunkel.PNG', lightImg: '/images/hero/slideshow/HeroServiceHell.PNG' },
+  { id: 'colors', name: 'Colors', icon: SprayCan, darkImg: '/images/hero/slideshow/HeroColorDunkel.png', lightImg: '/images/hero/slideshow/HeroColorHell.png' },
+  { id: 'cleaning', name: 'Cleaning', icon: Sparkles, darkImg: '/images/hero/slideshow/HeroCleanDunkel.PNG', lightImg: '/images/hero/slideshow/HeroCleanHell.PNG' },
 ];
 
 const Hero: React.FC = () => {
@@ -19,47 +19,40 @@ const Hero: React.FC = () => {
   
   const { t } = useLanguage();
   const { theme } = useTheme();
-  const [activeColor, setActiveColor] = React.useState(THEME_COLORS[0]);
-  const [videoEnded, setVideoEnded] = React.useState(false);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  const videoSrc = '/videos/HeroVideoFinal.mp4';
-  const posterImage = theme === 'dark' 
-    ? '/images/hero/hero_dark.webp' 
-    : '/images/hero/hero_light.webp';
+  // Auto-advance slideshow
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slide = SLIDES[currentSlide];
 
   return (
     <section id="hero" className={`relative flex flex-col md:block min-h-[100dvh] w-full overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
       
       {/* ── MOBILE: STACKED LAYOUT (Top Half) ── */}
       <div className="md:hidden relative w-full h-[55vh] mt-16 bg-neutral-950 border-b border-white/5 overflow-hidden">
-        {/* Base Static Image (shows after video ends) */}
-        <ImageWithFallback
-          src={posterImage}
-          alt="M-ONE Hero Static"
-          priority={true}
-          className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-right"
-          style={{ filter: activeColor.filter }}
-        />
-        
-        {/* Overlay Video */}
-        <AnimatePresence>
-          {!videoEnded && (
-            <motion.video
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              onEnded={() => setVideoEnded(true)}
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              style={{ filter: activeColor.filter }}
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </motion.video>
-          )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide + theme}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.0, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <ImageWithFallback
+              src={theme === 'dark' ? slide.darkImg : slide.lightImg}
+              alt={`M-ONE ${slide.name}`}
+              priority={true}
+              className="w-full h-full"
+              imgClassName="w-full h-full object-cover object-right"
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Subtle bottom gradient */}
@@ -71,68 +64,46 @@ const Hero: React.FC = () => {
         style={{ y: yDesktop, opacity }}
         className="hidden md:block absolute inset-0 w-full h-full z-0 will-change-transform"
       >
-        {/* Base Static Image */}
-        <ImageWithFallback
-          src={posterImage}
-          alt="M-ONE Hero Static"
-          priority={true}
-          className="w-full h-full"
-          imgClassName="w-full h-full object-cover object-right scale-105"
-          style={{ filter: activeColor.filter }}
-        />
-
-        {/* Overlay Video */}
-        <AnimatePresence>
-          {!videoEnded && (
-            <motion.video
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              onEnded={() => setVideoEnded(true)}
-              className="absolute inset-0 w-full h-full object-cover object-right scale-105"
-              style={{ filter: activeColor.filter }}
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </motion.video>
-          )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide + theme}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.0, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <ImageWithFallback
+              src={theme === 'dark' ? slide.darkImg : slide.lightImg}
+              alt={`M-ONE ${slide.name}`}
+              priority={true}
+              className="w-full h-full"
+              imgClassName="w-full h-full object-cover object-right scale-105"
+            />
+          </motion.div>
         </AnimatePresence>
         
         {/* Linear Gradient for Text Readability */}
-        <AnimatePresence>
-          {videoEnded && (
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="absolute inset-0 pointer-events-none z-10"
-              style={{
-                background: theme === 'dark' 
-                  ? 'linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 25%, rgba(10,10,10,0) 65%)'
-                  : 'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0) 65%)'
-              }}
-            />
-          )}
-        </AnimatePresence>
+        <div 
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{
+            background: theme === 'dark' 
+              ? 'linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 25%, rgba(10,10,10,0) 65%)'
+              : 'linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0) 65%)'
+          }}
+        />
       </motion.div>
-
 
       {/* ── CONTENT CONTAINER ── */}
       <div className={`relative z-20 flex-grow flex flex-col justify-center px-6 py-10 md:absolute md:inset-0 md:container md:mx-auto md:py-0 md:pt-20 ${theme === 'dark' ? 'bg-neutral-950 md:bg-transparent' : 'bg-white md:bg-transparent'}`}>
         
-        <AnimatePresence>
-          {videoEnded && (
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.0, ease: "easeInOut" }}
-              className="w-full max-w-2xl text-left"
-            >
-              
-              {/* Badge */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.0, ease: "easeInOut" }}
+          className="w-full max-w-2xl text-left"
+        >
+          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -201,7 +172,7 @@ const Hero: React.FC = () => {
             </button>
           </motion.div>
 
-          {/* Farbvielfalt */}
+          {/* Produktvielfalt */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -209,28 +180,34 @@ const Hero: React.FC = () => {
             className="flex items-center gap-4 border-t border-neutral-200 dark:border-white/10 pt-6"
           >
             <span className={`text-xs font-bold tracking-widest uppercase ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-400'}`}>
-              Farbvielfalt entdecken:
+              Produktvielfalt entdecken:
             </span>
             <div className="flex items-center gap-3">
-              {THEME_COLORS.map((color) => (
-                <button
-                  key={color.id}
-                  onClick={() => setActiveColor(color)}
-                  onMouseEnter={() => setActiveColor(color)}
-                  className={`relative w-8 h-8 rounded-full shadow-inner transition-transform duration-300 ${activeColor.id === color.id ? 'scale-110 ring-2 ring-offset-2 ring-brand-500 dark:ring-offset-neutral-950' : 'hover:scale-110'}`}
-                  style={{ backgroundColor: color.hex }}
-                  aria-label={`Show ${color.name} variant`}
-                  title={color.name}
-                >
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)] pointer-events-none" />
-                </button>
-              ))}
+              {SLIDES.map((slideItem, index) => {
+                const Icon = slideItem.icon;
+                const isActive = currentSlide === index;
+                return (
+                  <button
+                    key={slideItem.id}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`relative w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-brand-500 text-white scale-110 shadow-lg' 
+                        : theme === 'dark'
+                          ? 'bg-white/5 text-white/50 hover:bg-white/10 hover:text-white'
+                          : 'bg-black/5 text-black/50 hover:bg-black/10 hover:text-black'
+                    }`}
+                    aria-label={`Show ${slideItem.name} variant`}
+                    title={slideItem.name}
+                  >
+                    <Icon size={18} />
+                  </button>
+                );
+              })}
             </div>
           </motion.div>
 
-            </motion.div>
-          )}
-        </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
