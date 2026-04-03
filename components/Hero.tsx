@@ -145,7 +145,48 @@ const Hero: React.FC = () => {
         </AnimatePresence>
 
         {/* Subtle bottom gradient */}
-        <div className={`absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white'} to-transparent z-10`} />
+        <div className={`absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t ${theme === 'dark' ? 'from-neutral-950' : 'from-white/60'} to-transparent z-10 pointer-events-none`} />
+
+        {/* ── PAGINATION DOTS (MOBILE) ── */}
+        <AnimatePresence>
+          {videoEnded && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="absolute bottom-6 left-0 right-0 z-30 flex flex-col items-center justify-center gap-2 pointer-events-none"
+            >
+              {/* Optional: we omit the text "Produktvielfalt..." on mobile to keep it cleaner, as requested for a subtle look. */}
+              <div className="flex items-center gap-3 bg-black/20 dark:bg-black/60 shadow-[0_4px_24px_rgba(0,0,0,0.15)] backdrop-blur-xl px-3 py-1.5 rounded-full border border-white/10 pointer-events-auto">
+                {SLIDES.map((slideItem, index) => {
+                  const Icon = slideItem.icon;
+                  const isActive = currentSlide === index;
+                  return (
+                    <button
+                      key={slideItem.id}
+                      onClick={() => {
+                        setDirection(index > currentSlide ? 1 : -1);
+                        setCurrentSlide(index);
+                        setHasInteracted(true);
+                      }}
+                      className={`relative w-10 h-10 flex items-center justify-center rounded-full transition-all duration-500 ease-out flex-shrink-0 ${
+                        isActive 
+                          ? 'bg-brand-500 text-white scale-110 shadow-[0_4px_16px_-4px_rgba(255,107,0,0.6)]' 
+                          : theme === 'dark'
+                            ? 'bg-transparent text-white/60 hover:bg-white/10 hover:text-white'
+                            : 'bg-transparent text-white/80 hover:bg-black/20 hover:text-white'
+                      }`}
+                      aria-label={`Show ${slideItem.name} variant`}
+                    >
+                      <Icon size={isActive ? 18 : 16} strokeWidth={isActive ? 2.5 : 2} className="transition-all duration-500" />
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
 
       {/* ── DESKTOP: FULL BACKGROUND ── */}
@@ -397,14 +438,14 @@ const Hero: React.FC = () => {
         </AnimatePresence>
       </div>
 
-      {/* ── PAGINATION DOTS (BOTTOM CENTER) ── */}
+      {/* ── PAGINATION DOTS (DESKTOP) ── */}
       <AnimatePresence>
         {videoEnded && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="absolute bottom-8 left-0 right-0 z-30 flex flex-col items-center justify-center gap-3 pointer-events-none"
+            className="hidden md:flex absolute bottom-8 left-0 right-0 z-30 flex-col items-center justify-center gap-3 pointer-events-none"
           >
             <span className={`text-[10px] font-bold tracking-[0.2em] uppercase blur-[0.3px] ${theme === 'dark' ? 'text-white/60' : 'text-neutral-500'} ${hasInteracted ? 'opacity-0' : 'opacity-100'} transition-opacity duration-[2000ms]`}>
               Produktvielfalt entdecken
