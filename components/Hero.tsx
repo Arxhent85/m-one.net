@@ -233,9 +233,88 @@ const Hero: React.FC = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* ── CONTENT CONTAINER ── */}
-      <div className={`relative z-20 flex-grow flex flex-col justify-center px-6 py-10 md:absolute md:inset-0 md:container md:mx-auto md:py-0 md:pt-20 pointer-events-none ${theme === 'dark' ? 'bg-neutral-950 md:bg-transparent' : 'bg-white md:bg-transparent'}`}>
-        
+      {/* ── CONTENT CONTAINER (MOBILE - Always Visible) ── */}
+      <div className={`relative z-20 flex-grow flex md:hidden flex-col justify-center px-6 py-10 pointer-events-none ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.0, ease: "easeInOut" }}
+          className="w-full max-w-2xl text-left pointer-events-auto"
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className={`inline-block px-4 py-1.5 mb-6 border rounded-full text-[10px] font-bold tracking-[0.25em] uppercase ${theme === 'dark'
+              ? 'border-white/10 bg-white/5 text-white/60'
+              : 'border-black/10 bg-black/5 text-neutral-500'
+              }`}
+          >
+            {t.hero.since}
+          </motion.div>
+
+          {/* Headline */}
+          <h1 className={`text-5xl sm:text-6xl font-sans font-black leading-[0.95] mb-6 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'}`}>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+              className="block"
+            >
+              {t.hero.titleLine1}
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-brand-400 py-1"
+            >
+              {t.hero.titleLine2}
+            </motion.span>
+          </h1>
+
+          {/* Subtext */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className={`text-base mb-10 leading-relaxed font-light ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}
+          >
+            {t.hero.subtitle}
+          </motion.p>
+
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col gap-4 mb-12 border-b border-transparent pb-6" 
+          >
+            {/* Primary CTA */}
+            <button className="group relative bg-brand-500 text-white px-8 py-4 rounded-full font-bold text-sm overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] active:scale-95">
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                {t.hero.startProject}
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            </button>
+
+            {/* Secondary CTA */}
+            <button className={`px-8 py-4 rounded-full font-bold text-sm border transition-all duration-300 active:scale-95 ${theme === 'dark'
+                ? 'border-white/20 text-white/90 hover:bg-white/10'
+                : 'border-black/20 text-neutral-800 hover:bg-black/5'
+                }`}
+            >
+              {t.hero.references}
+            </button>
+          </motion.div>
+
+        </motion.div>
+      </div>
+
+      {/* ── CONTENT CONTAINER (DESKTOP - Visible After Video) ── */}
+      <div className={`hidden md:flex absolute inset-0 z-20 container flex-col justify-center mx-auto pointer-events-none`}>
         <AnimatePresence>
           {videoEnded && (
             <motion.div 
@@ -258,7 +337,7 @@ const Hero: React.FC = () => {
               </motion.div>
 
               {/* Headline */}
-              <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-sans font-black leading-[0.95] mb-6 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'}`}>
+              <h1 className={`md:text-7xl lg:text-[5.5rem] font-sans font-black leading-[0.95] mb-6 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'}`}>
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -282,7 +361,7 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className={`text-base md:text-lg lg:text-xl mb-10 leading-relaxed font-light ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}
+                className={`md:text-lg lg:text-xl mb-10 leading-relaxed font-light ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}
               >
                 {t.hero.subtitle}
               </motion.p>
@@ -292,10 +371,10 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 mb-12 border-b border-transparent pb-6 md:pb-0" 
+                className="flex flex-row gap-4 mb-12" 
               >
                 {/* Primary CTA */}
-                <button className="group relative bg-brand-500 text-white px-8 py-4 md:py-5 rounded-full font-bold text-sm md:text-base overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] hover:shadow-[0_16px_36px_-8px_rgba(255,107,0,0.6)] hover:-translate-y-0.5">
+                <button className="group relative bg-brand-500 text-white px-8 py-5 rounded-full font-bold text-base overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] hover:shadow-[0_16px_36px_-8px_rgba(255,107,0,0.6)] hover:-translate-y-0.5">
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {t.hero.startProject}
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -304,7 +383,7 @@ const Hero: React.FC = () => {
                 </button>
 
                 {/* Secondary CTA */}
-                <button className={`px-8 py-4 md:py-5 rounded-full font-bold text-sm md:text-base border transition-all duration-300 ${theme === 'dark'
+                <button className={`px-8 py-5 rounded-full font-bold text-base border transition-all duration-300 ${theme === 'dark'
                     ? 'border-white/20 text-white/90 hover:bg-white/10'
                     : 'border-black/20 text-neutral-800 hover:bg-black/5'
                     }`}
