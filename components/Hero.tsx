@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
   const [activeColor, setActiveColor] = React.useState(THEME_COLORS[0]);
   const [videoEnded, setVideoEnded] = React.useState(false);
 
-  const videoSrc = '/videos/HeroSection_Video_1.mp4';
+  const videoSrc = '/videos/HeroVideoFinal.mp4';
   const posterImage = theme === 'dark' 
     ? '/images/hero/hero_dark.webp' 
     : '/images/hero/hero_light.webp';
