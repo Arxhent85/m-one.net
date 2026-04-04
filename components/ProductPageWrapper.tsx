@@ -10,16 +10,16 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 interface ProductPageWrapperProps {
-  productName: string;
+  productIndex: number;
   categoryId: string;
 }
 
-export default function ProductPageWrapper({ productName, categoryId }: ProductPageWrapperProps) {
+export default function ProductPageWrapper({ productIndex, categoryId }: ProductPageWrapperProps) {
   const { getCategoryData, t } = useLanguage();
   
   // Find the product in the category
   const category = getCategoryData(categoryId);
-  const product = category.products?.find(p => p.name === productName);
+  const product = category.products?.[productIndex];
 
   if (!product) {
     return (

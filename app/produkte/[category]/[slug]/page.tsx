@@ -37,9 +37,9 @@ export default async function ProductPage({ params }: PageProps) {
   
   if (!categoryData) return <div>Kategorie nicht gefunden</div>;
   
-  const product = categoryData.products?.find((p: any) => slugify(p.name) === resolvedParams.slug);
+  const productIndex = categoryData.products?.findIndex((p: any) => slugify(p.name) === resolvedParams.slug);
 
-  if (!product) return <div>Produkt nicht gefunden</div>;
+  if (productIndex === undefined || productIndex === -1) return <div>Produkt nicht gefunden</div>;
 
-  return <ProductPageWrapper productName={product.name} categoryId={categoryId} />;
+  return <ProductPageWrapper productIndex={productIndex} categoryId={categoryId} />;
 }
