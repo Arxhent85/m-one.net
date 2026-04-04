@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .tmp/
 execution/
+.next  
+build_err*.txt  
+node_modules 

@@ -1,0 +1,22 @@
+
+> m-one-webpage-1.4@0.0.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.9s
+  Running TypeScript ...
+Failed to type check.
+
+./components/ProductPage.tsx:15:7
+Type error: Subsequent property declarations must have the same type.  Property ''model-viewer'' must be of type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & { src?: string; alt?: string; cameraControls?: boolean; ... 4 more ...; loading?: string; }', but here has type 'any'.
+
+  [90m13 |[0m   namespace [33mJSX[0m {
+  [90m14 |[0m     [36minterface[0m [33mIntrinsicElements[0m {
+[31m[1m>[0m [90m15 |[0m       [32m'model-viewer'[0m: any;
+  [90m   |[0m       [31m[1m^[0m
+  [90m16 |[0m     }
+  [90m17 |[0m   }
+  [90m18 |[0m }
+Next.js build worker exited with code: 1 and signal: null

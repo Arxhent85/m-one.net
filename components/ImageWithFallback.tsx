@@ -22,19 +22,19 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   priority = false,
   ...props
 }) => {
-  const [imgSrc, setImgSrc] = useState<string | undefined>(src);
+  const [imgSrc, setImgSrc] = useState<string | undefined>(src as string | undefined);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    setImgSrc(src);
+    setImgSrc(src as string | undefined);
     setHasError(false);
     setIsLoading(true);
 
     if (src) {
       const testImg = new Image();
-      testImg.src = src;
+      testImg.src = src as string;
       if (testImg.complete && testImg.naturalWidth > 0) {
         setIsLoading(false);
       }

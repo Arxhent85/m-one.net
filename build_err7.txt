@@ -1,0 +1,22 @@
+
+> m-one-webpage-1.4@0.0.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.9s
+  Running TypeScript ...
+  Finished TypeScript in 3.0s ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/3) ...
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: self is not defined
+    at module evaluation (C:\Users\arxhe\Desktop\NEW WEB M ONE 2026\m-one-webpage-1.4\.next\server\chunks\ssr\app_page_tsx_0es_sk2._.js:24:7557)
+    at instantiateModule (C:\Users\arxhe\Desktop\NEW WEB M ONE 2026\m-one-webpage-1.4\.next\server\chunks\ssr\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\Users\arxhe\Desktop\NEW WEB M ONE 2026\m-one-webpage-1.4\.next\server\chunks\ssr\[turbopack]_runtime.js:877:12)
+    at Context.commonJsRequire [as r] (C:\Users\arxhe\Desktop\NEW WEB M ONE 2026\m-one-webpage-1.4\.next\server\chunks\ssr\[turbopack]_runtime.js:302:12) {
+  digest: '3585184965'
+}
+Export encountered an error on /page: /, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

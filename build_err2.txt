@@ -1,0 +1,37 @@
+
+> m-one-webpage-1.4@0.0.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.0s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you. Strict-mode is set to false by default.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- strict was set to false
+  	- incremental was set to true
+  	- include was set to ['next-env.d.ts', '.next/types/**/*.ts', '.next/dev/types/**/*.ts', '**/*.mts', '**/*.ts', '**/*.tsx']
+  	- plugins was updated to add { name: 'next' }
+  	- exclude was set to ['node_modules']
+
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- esModuleInterop was set to true (requirement for SWC / babel)
+  	- resolveJsonModule was set to true (to match webpack resolution)
+
+Failed to type check.
+
+./components/About.tsx:50:15
+Type error: Type '"unsplash"' is not assignable to type '"color" | "picsum" | "custom"'.
+
+  [90m48 |[0m               alt=[32m"Precision Craftsmanship"[0m
+  [90m49 |[0m               className=[32m"w-full h-full object-cover hover:scale-[1.03] transition-transfor...[0m
+[31m[1m>[0m [90m50 |[0m               fallbackStrategy=[32m"unsplash"[0m
+  [90m   |[0m               [31m[1m^[0m
+  [90m51 |[0m             />
+  [90m52 |[0m           </div>
+  [90m53 |[0m           {[90m/* Image 2 — Automotive Premium Finish */[0m}
+Next.js build worker exited with code: 1 and signal: null

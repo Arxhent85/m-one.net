@@ -1,20 +1,30 @@
+"use client";
 
-import * as React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import SketchGrid from './components/SketchGrid';
-import About from './components/About';
-import Footer from './components/Footer';
-import CategoryPage from './components/CategoryPage';
-import ProductPage from './components/ProductPage';
-import { LanguageProvider, useLanguage } from './components/LanguageContext';
-import { ThemeProvider } from './components/ThemeContext';
-import { NavigationProvider, useNavigation } from './components/NavigationContext';
-import { AnimatePresence, motion } from 'motion/react';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import SketchGrid from "../components/SketchGrid";
+import About from "../components/About";
+import Footer from "../components/Footer";
+import CategoryPage from "../components/CategoryPage";
+import ProductPage from "../components/ProductPage";
+import { useLanguage } from "../components/LanguageContext";
+import { useNavigation } from "../components/NavigationContext";
+import { AnimatePresence, motion } from "motion/react";
 
-const MainContent: React.FC = () => {
+export default function HomePage() {
   const { currentPage, selectedCategoryId, selectedProduct } = useNavigation();
   const { getCategoryData } = useLanguage();
+  
+  // To avoid hydration mismatch if accessing localstorage during initial render (e.g., Theme/Language),
+  // we ensure the app only renders purely after mounting in client, though navigation defaults usually match.
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence mode="wait">
@@ -72,20 +82,4 @@ const MainContent: React.FC = () => {
       )}
     </AnimatePresence>
   );
-};
-
-const App: React.FC = () => {
-  return (
-    <LanguageProvider>
-      <ThemeProvider>
-        <NavigationProvider>
-          <div className="font-sans text-neutral-900 dark:text-white bg-white dark:bg-neutral-950 min-h-screen flex flex-col transition-colors duration-300">
-            <MainContent />
-          </div>
-        </NavigationProvider>
-      </ThemeProvider>
-    </LanguageProvider>
-  );
-};
-
-export default App;
+}

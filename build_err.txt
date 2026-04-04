@@ -1,0 +1,1582 @@
+
+> m-one-webpage-1.4@0.0.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 45 errors:
+./node_modules/@google/model-viewer/lib/features/animation.js:22:1
+Module not found: Can't resolve 'three'
+  [90m20 |[0m };
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m { [33mLoopOnce[0m, [33mLoopPingPong[0m, [33mLoopRepeat[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m { $getModelIsVisible, $needsRender, $onModelLoad, $renderer, $scene, $tick } [36mfrom[0m [32m'...[0m
+  [90m24 |[0m [36mconst[0m [33mMILLISECONDS_PER_SECOND[0m = [35m1000.0[0m;
+  [90m25 |[0m [36mconst[0m $changeAnimation = [33mSymbol[0m([32m'changeAnimation'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/animation.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/animation.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/annotation.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mMatrix4[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m { $needsRender, $onModelLoad, $scene, $tick, toVector2D, toVector3D } [36mfrom[0m [32m'../mode...[0m
+  [90m17 |[0m [36mimport[0m { [33mHotspot[0m } [36mfrom[0m [32m'../three-components/Hotspot.js'[0m;
+  [90m18 |[0m [36mconst[0m $hotspotMap = [33mSymbol[0m([32m'hotspotMap'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/controls.js:22:1
+Module not found: Can't resolve 'three'
+  [90m20 |[0m };
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m { [33mSpherical[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m { style } [36mfrom[0m [32m'../decorators.js'[0m;
+  [90m24 |[0m [36mimport[0m { $ariaLabel, $container, $getModelIsVisible, $loadedTime, $needsRender, $onModelLo...
+  [90m25 |[0m [36mimport[0m { degreesToRadians, normalizeUnit } [36mfrom[0m [32m'../styles/conversions.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/controls.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/controls.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/environment.js:22:1
+Module not found: Can't resolve 'three'
+  [90m20 |[0m ...
+  [90m21 |[0m ...[32mators.js'[0m;
+[31m[1m>[0m [90m22 |[0m ...[33mToneMapping[0m, [33mCineonToneMapping[0m, [33mLinearToneMapping[0m, [33mNeutralToneMapping[0m, [33mNoToneMapping[0m, [33mR...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m ...cker, $renderer, $scene, $shouldAttemptPreload } [36mfrom[0m [32m'../model-viewer-base.js'[0m;
+  [90m24 |[0m ...[36mom[0m [32m'../utilities.js'[0m;
+  [90m25 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/environment.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/environment.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/loading.js:22:1
+Module not found: Can't resolve 'three'
+  [90m20 |[0m };
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m { [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m { $altDefaulted, $announceModelVisibility, $getModelIsVisible, $isElementInViewport...
+  [90m24 |[0m [36mimport[0m { $loader, [33mCachingGLTFLoader[0m } [36mfrom[0m [32m'../three-components/CachingGLTFLoader.js'[0m;
+  [90m25 |[0m [36mimport[0m { [33mRenderer[0m } [36mfrom[0m [32m'../three-components/Renderer.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/loading.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/loading.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph.js:22:1
+Module not found: Can't resolve 'three'
+  [90m20 |[0m };
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m { [33mCanvasTexture[0m, [33mRepeatWrapping[0m, [33mSRGBColorSpace[0m, [33mVideoTexture[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m { [33mGLTFExporter[0m } [36mfrom[0m [32m'three/examples/jsm/exporters/GLTFExporter.js'[0m;
+  [90m24 |[0m [36mimport[0m { $needsRender, $onModelLoad, $progressTracker, $renderer, $scene } [36mfrom[0m [32m'../model-...[0m
+  [90m25 |[0m [36mimport[0m [33mGLTFExporterMaterialsVariantsExtension[0m [36mfrom[0m [32m'../three-components/gltf-instance/Vari...[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/image.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...ons under the [33mLicense[0m.
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33msh[0m, [33mMeshBasicMaterial[0m, [33mOrthographicCamera[0m, [33mPlaneGeometry[0m, [33mScene[0m, [33mWebGLRenderTarget[0m } [36mfr..[0m.
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...obCanvas } [36mfrom[0m [32m'../../model-viewer-base.js'[0m;
+  [90m17 |[0m ...[33mnderer[0m } [36mfrom[0m [32m'../../three-components/Renderer.js'[0m;
+  [90m18 |[0m ...orrelatedObjects, $onUpdate, [33mThreeDOMElement[0m } [36mfrom[0m [32m'./three-dom-element.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/image.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/image.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/material.js:16:1
+Module not found: Can't resolve 'three'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mvar[0m _a, _b;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mColor[0m, [33mDoubleSide[0m, [33mFrontSide[0m, [33mVector2[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { [33mPBRMetallicRoughness[0m } [36mfrom[0m [32m'./pbr-metallic-roughness.js'[0m;
+  [90m18 |[0m [36mimport[0m { [33mTextureInfo[0m, [33mTextureUsage[0m } [36mfrom[0m [32m'./texture-info.js'[0m;
+  [90m19 |[0m [36mimport[0m { $correlatedObjects, $onUpdate, [33mThreeDOMElement[0m } [36mfrom[0m [32m'./three-dom-element.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/model.js:16:1
+Module not found: Can't resolve 'three'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mvar[0m _a, _b, _c, _d, _e, _f;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mMesh[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { $setActive, $variantIndices, [33mMaterial[0m } [36mfrom[0m [32m'./material.js'[0m;
+  [90m18 |[0m [36mimport[0m { [33mNode[0m, [33mPrimitiveNode[0m } [36mfrom[0m [32m'./nodes/primitive-node.js'[0m;
+  [90m19 |[0m [36mimport[0m { $correlatedObjects } [36mfrom[0m [32m'./three-dom-element.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/pbr-metallic-roughness.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mColor[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m { [33mTextureInfo[0m, [33mTextureUsage[0m } [36mfrom[0m [32m'./texture-info.js'[0m;
+  [90m17 |[0m [36mimport[0m { $correlatedObjects, $onUpdate, [33mThreeDOMElement[0m } [36mfrom[0m [32m'./three-dom-element.js'[0m;
+  [90m18 |[0m [36mconst[0m $threeMaterial = [33mSymbol[0m([32m'threeMaterial'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/pbr-metallic-roughness.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/pbr-metallic-roughness.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/sampler.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33mnearMipmapNearestFilter[0m, [33mMirroredRepeatWrapping[0m, [33mNearestFilter[0m, [33mNearestMipmapLinearFilt..[0m.
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...
+  [90m17 |[0m ...[32m2.0.js'[0m;
+  [90m18 |[0m ...[32mdom-element.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/sampler.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/sampler.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph/texture-info.js:16:1
+Module not found: Can't resolve 'three'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mvar[0m _a, _b, _c;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mLinearSRGBColorSpace[0m, [33mSRGBColorSpace[0m, [33mVector2[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { $threeTexture } [36mfrom[0m [32m'./image.js'[0m;
+  [90m18 |[0m [36mimport[0m { [33mTexture[0m } [36mfrom[0m [32m'./texture.js'[0m;
+  [90m19 |[0m [36mconst[0m $texture = [33mSymbol[0m([32m'texture'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture-info.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/texture-info.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/material.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph/model.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/model-viewer.js:26:1
+Module not found: Can't resolve 'three'
+  [90m24 |[0m [90m// Export these to allow lazy-loaded LottieLoader.js to find what it needs.[0m
+  [90m25 |[0m [90m// Requires an import map - "three": "path/to/model-viewer.min.js".[0m
+[31m[1m>[0m [90m26 |[0m [36mexport[0m { [33mCanvasTexture[0m, [33mFileLoader[0m, [33mLoader[0m, [33mNearestFilter[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m [36mexport[0m [36mconst[0m [33mModelViewerElement[0m = [33mAnnotationMixin[0m([33mSceneGraphMixin[0m([33mStagingMixin[0m([33mEnvironment...[0m
+  [90m28 |[0m customElements.define([32m'model-viewer'[0m, [33mModelViewerElement[0m);
+  [90m29 |[0m [90m//# sourceMappingURL=model-viewer.js.map[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...he [33mLicense[0m.
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33mBufferGeometry[0m, [33mEventDispatcher[0m, [33mLine[0m, [33mMatrix4[0m, [33mMesh[0m, [33mPerspectiveCamera[0m, [33mQuaternion[0m, [33mVe...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...[33mght[0m } [36mfrom[0m [32m'three/examples/jsm/webxr/XREstimatedLight.js'[0m;
+  [90m17 |[0m ...round, $currentEnvironmentMap } [36mfrom[0m [32m'../features/environment.js'[0m;
+  [90m18 |[0m ...didate } [36mfrom[0m [32m'../utilities.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js:16:1
+Module not found: Can't resolve 'three'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mvar[0m _a, _b;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mEventDispatcher[0m, [33mTexture[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { [33mMeshoptDecoder[0m } [36mfrom[0m [32m'three/examples/jsm/libs/meshopt_decoder.module.js'[0m;
+  [90m18 |[0m [36mimport[0m { [33mDRACOLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/DRACOLoader.js'[0m;
+  [90m19 |[0m [36mimport[0m { [33mGLTFLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/GLTFLoader.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/EnvironmentScene.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...s under the [33mLicense[0m.
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33mSide[0m, [33mBoxGeometry[0m, [33mMesh[0m, [33mMeshBasicMaterial[0m, [33mMeshStandardMaterial[0m, [33mPointLight[0m, [33mScene[0m } [36mf...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...= {
+  [90m17 |[0m ... {
+  [90m18 |[0m ...sity: [35m500[0m,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/EnvironmentScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/EnvironmentScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mTexture[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m * [36mas[0m [33mSkeletonUtils[0m [36mfrom[0m [32m'three/examples/jsm/utils/SkeletonUtils.js'[0m;
+  [90m17 |[0m [36mexport[0m [36mconst[0m $prepared = [33mSymbol[0m([32m'prepared'[0m);
+  [90m18 |[0m [36mexport[0m [36mconst[0m $prepare = [33mSymbol[0m([32m'prepare'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/GroundedSkybox.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mMesh[0m, [33mMeshBasicMaterial[0m, [33mSphereGeometry[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mexport[0m [36mclass[0m [33mGroundedSkybox[0m [36mextends[0m [33mMesh[0m {
+  [90m17 |[0m     constructor() {
+  [90m18 |[0m         [36msuper[0m([36mundefined[0m, [36mnew[0m [33mMeshBasicMaterial[0m({ depthWrite: [36mfalse[0m }));
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/GroundedSkybox.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/GroundedSkybox.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Hotspot.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mMatrix3[0m, [33mQuaternion[0m, [33mTriangle[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m { [33mCSS2DObject[0m } [36mfrom[0m [32m'three/examples/jsm/renderers/CSS2DRenderer.js'[0m;
+  [90m17 |[0m [36mimport[0m { normalizeUnit } [36mfrom[0m [32m'../styles/conversions.js'[0m;
+  [90m18 |[0m [36mimport[0m { parseExpressions } [36mfrom[0m [32m'../styles/parsers.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Hotspot.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Hotspot.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/ModelScene.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33mong[0m, [33mLoopRepeat[0m, [33mMatrix3[0m, [33mNeutralToneMapping[0m, [33mObject3D[0m, [33mPerspectiveCamera[0m, [33mRaycaster[0m, [33mS...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...[32mrs/CSS2DRenderer.js'[0m;
+  [90m17 |[0m ...[32mSceneUtils.js'[0m;
+  [90m18 |[0m ...[32m../features/scene-graph.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/PlacementBox.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...nder the [33mLicense[0m.
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33metry[0m, [33mBufferGeometry[0m, [33mDoubleSide[0m, [33mFloat32BufferAttribute[0m, [33mMesh[0m, [33mPlaneGeometry[0m, [33mVector2[0m ..[36m.[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...} [36mfrom[0m [32m'./Damper.js'[0m;
+  [90m17 |[0m ...[35m.2[0m;
+  [90m18 |[0m ... = [35m0.03[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/PlacementBox.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/PlacementBox.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Renderer.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mEventDispatcher[0m, [33mNeutralToneMapping[0m, [33mVector2[0m, [33mWebGLRenderer[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m { $updateEnvironment } [36mfrom[0m [32m'../features/environment.js'[0m;
+  [90m17 |[0m [36mimport[0m { $canvas, $tick, $updateSize } [36mfrom[0m [32m'../model-viewer-base.js'[0m;
+  [90m18 |[0m [36mimport[0m { clamp, isDebugMode } [36mfrom[0m [32m'../utilities.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Shadow.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m ...
+  [90m14 |[0m ...
+[31m[1m>[0m [90m15 |[0m ...[33merial[0m, [33mMeshDepthMaterial[0m, [33mObject3D[0m, [33mOrthographicCamera[0m, [33mPlaneGeometry[0m, [33mRGBAFormat[0m, [33mShad...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m ...[32mm/shaders/HorizontalBlurShader.js'[0m;
+  [90m17 |[0m ...[32mshaders/VerticalBlurShader.js'[0m;
+  [90m18 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/SmoothControls.js:14:1
+Module not found: Can't resolve 'three'
+  [90m12 |[0m  * limitations under the [33mLicense[0m.
+  [90m13 |[0m  */
+[31m[1m>[0m [90m14 |[0m [36mimport[0m { [33mEuler[0m, [33mEventDispatcher[0m, [33mMatrix3[0m, [33mSpherical[0m, [33mVector2[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m15 |[0m [36mimport[0m { $panElement } [36mfrom[0m [32m'../features/controls.js'[0m;
+  [90m16 |[0m [36mimport[0m { clamp } [36mfrom[0m [32m'../utilities.js'[0m;
+  [90m17 |[0m [36mimport[0m { [33mDamper[0m, [33mSETTLING_TIME[0m } [36mfrom[0m [32m'./Damper.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/SmoothControls.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/controls.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/SmoothControls.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/controls.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js:16:1
+Module not found: Can't resolve 'three'
+  [90m14 |[0m ...
+  [90m15 |[0m ...
+[31m[1m>[0m [90m16 |[0m ...[33mType[0m, [33mLinearSRGBColorSpace[0m, [33mMesh[0m, [33mNoBlending[0m, [33mNoToneMapping[0m, [33mRGBAFormat[0m, [33mScene[0m, [33mShaderM...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m ...
+  [90m18 |[0m ...
+  [90m19 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js:15:1
+Module not found: Can't resolve 'three'
+  [90m13 |[0m  * limitations under the [33mLicense[0m.
+  [90m14 |[0m  */
+[31m[1m>[0m [90m15 |[0m [36mimport[0m { [33mFrontSide[0m, [33mSphere[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m { $clone, $prepare, $preparedGLTF, [33mGLTFInstance[0m } [36mfrom[0m [32m'../GLTFInstance.js'[0m;
+  [90m17 |[0m [36mimport[0m { [33mCorrelatedSceneGraph[0m } [36mfrom[0m [32m'./correlated-scene-graph.js'[0m;
+  [90m18 |[0m [36mconst[0m $correlatedSceneGraph = [33mSymbol[0m([32m'correlatedSceneGraph'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/gltf-instance/correlated-scene-graph.js:1:1
+Module not found: Can't resolve 'three'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mMaterial[0m } [36mfrom[0m [32m'three'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mconst[0m $threeGLTF = [33mSymbol[0m([32m'threeGLTF'[0m);
+  [90m3 |[0m [36mconst[0m $gltf = [33mSymbol[0m([32m'gltf'[0m);
+  [90m4 |[0m [36mconst[0m $gltfElementMap = [33mSymbol[0m([32m'gltfElementMap'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/correlated-scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/correlated-scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@monogrid/gainmap-js/dist/Loader-DLI-_JDP.js:6:1
+Module not found: Can't resolve 'three'
+  [90m4 |[0m ...
+  [90m5 |[0m ...
+[31m[1m>[0m [90m6 |[0m ... [33mLoader[0m, [33mLoadingManager[0m, [33mTexture[0m, [33mUVMapping[0m, [33mClampToEdgeWrapping[0m, [33mLinearFilter[0m, [33mLinearMi...[0m
+  [90m  |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m ...
+  [90m8 |[0m ...
+  [90m9 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@monogrid/gainmap-js/dist/Loader-DLI-_JDP.js [Client Component Browser]
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@monogrid/gainmap-js/dist/Loader-DLI-_JDP.js [Client Component SSR]
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@monogrid/gainmap-js/dist/QuadRenderer-Bj1xl_EK.js:6:1
+Module not found: Can't resolve 'three'
+  [90m4 |[0m ...
+  [90m5 |[0m ...
+[31m[1m>[0m [90m6 |[0m ...[33mLRenderTarget[0m, [33mRGBAFormat[0m, [33mUVMapping[0m, [33mWebGLRenderer[0m, [33mDataTexture[0m, [33mLinearSRGBColorSpace[0m, [33m...[0m
+  [90m  |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m ...
+  [90m8 |[0m ...
+  [90m9 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@monogrid/gainmap-js/dist/QuadRenderer-Bj1xl_EK.js [Client Component Browser]
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@monogrid/gainmap-js/dist/QuadRenderer-Bj1xl_EK.js [Client Component SSR]
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@monogrid/gainmap-js/dist/decode.js:9:1
+Module not found: Can't resolve 'three'
+  [90m 7 |[0m [36mimport[0m { c [36mas[0m createDecodeFunction, [33mL[0m [36mas[0m [33mLoaderBaseShared[0m, e [36mas[0m extractGainmapFromJPEG, [33mX[0m [36m..[0m.
+  [90m 8 |[0m [36mexport[0m { [33mM[0m [36mas[0m [33mMPFExtractor[0m, a [36mas[0m extractXMP } [36mfrom[0m [32m'./Loader-DLI-_JDP.js'[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m { [33mShaderMaterial[0m, [33mNoBlending[0m, [33mVector3[0m, [33mWebGLRenderer[0m, [33mFileLoader[0m } [36mfrom[0m [32m'three'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m
+  [90m11 |[0m [36mconst[0m vertexShader = [90m/* glsl */[0m [32m`[0m
+  [90m12 |[0m [32mvarying vec2 vUv;[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@monogrid/gainmap-js/dist/decode.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/scene-graph.js:23:1
+Module not found: Can't resolve 'three/examples/jsm/exporters/GLTFExporter.js'
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+  [90m22 |[0m [36mimport[0m { [33mCanvasTexture[0m, [33mRepeatWrapping[0m, [33mSRGBColorSpace[0m, [33mVideoTexture[0m } [36mfrom[0m [32m'three'[0m;
+[31m[1m>[0m [90m23 |[0m [36mimport[0m { [33mGLTFExporter[0m } [36mfrom[0m [32m'three/examples/jsm/exporters/GLTFExporter.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m24 |[0m [36mimport[0m { $needsRender, $onModelLoad, $progressTracker, $renderer, $scene } [36mfrom[0m [32m'../model-...[0m
+  [90m25 |[0m [36mimport[0m [33mGLTFExporterMaterialsVariantsExtension[0m [36mfrom[0m [32m'../three-components/gltf-instance/Vari...[0m
+  [90m26 |[0m [36mimport[0m { $availableVariants, $materialFromPoint, $prepareVariantsForExport, $switchVariant..[33m.[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/scene-graph.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/features/ar.js:22:1
+Module not found: Can't resolve 'three/examples/jsm/exporters/USDZExporter.js'
+  [90m20 |[0m };
+  [90m21 |[0m [36mimport[0m { property } [36mfrom[0m [32m'lit/decorators.js'[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m { [33mUSDZExporter[0m } [36mfrom[0m [32m'three/examples/jsm/exporters/USDZExporter.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m { [33mIS_AR_QUICKLOOK_CANDIDATE[0m, [33mIS_SCENEVIEWER_CANDIDATE[0m, [33mIS_WEBXR_AR_CANDIDATE[0m } [36mfrom[0m.[32m..[0m
+  [90m24 |[0m [36mimport[0m { $needsRender, $progressTracker, $renderer, $scene, $shouldAttemptPreload, $update...
+  [90m25 |[0m [36mimport[0m { enumerationDeserializer } [36mfrom[0m [32m'../styles/deserializers.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js:17:1
+Module not found: Can't resolve 'three/examples/jsm/libs/meshopt_decoder.module.js'
+  [90m15 |[0m [36mvar[0m _a, _b;
+  [90m16 |[0m [36mimport[0m { [33mEventDispatcher[0m, [33mTexture[0m } [36mfrom[0m [32m'three'[0m;
+[31m[1m>[0m [90m17 |[0m [36mimport[0m { [33mMeshoptDecoder[0m } [36mfrom[0m [32m'three/examples/jsm/libs/meshopt_decoder.module.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m { [33mDRACOLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/DRACOLoader.js'[0m;
+  [90m19 |[0m [36mimport[0m { [33mGLTFLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/GLTFLoader.js'[0m;
+  [90m20 |[0m [36mimport[0m { [33mKTX2Loader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/KTX2Loader.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js:18:1
+Module not found: Can't resolve 'three/examples/jsm/loaders/DRACOLoader.js'
+  [90m16 |[0m [36mimport[0m { [33mEventDispatcher[0m, [33mTexture[0m } [36mfrom[0m [32m'three'[0m;
+  [90m17 |[0m [36mimport[0m { [33mMeshoptDecoder[0m } [36mfrom[0m [32m'three/examples/jsm/libs/meshopt_decoder.module.js'[0m;
+[31m[1m>[0m [90m18 |[0m [36mimport[0m { [33mDRACOLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/DRACOLoader.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m [36mimport[0m { [33mGLTFLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/GLTFLoader.js'[0m;
+  [90m20 |[0m [36mimport[0m { [33mKTX2Loader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/KTX2Loader.js'[0m;
+  [90m21 |[0m [36mimport[0m { [33mCacheEvictionPolicy[0m } [36mfrom[0m [32m'../utilities/cache-eviction-policy.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js:19:1
+Module not found: Can't resolve 'three/examples/jsm/loaders/GLTFLoader.js'
+  [90m17 |[0m [36mimport[0m { [33mMeshoptDecoder[0m } [36mfrom[0m [32m'three/examples/jsm/libs/meshopt_decoder.module.js'[0m;
+  [90m18 |[0m [36mimport[0m { [33mDRACOLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/DRACOLoader.js'[0m;
+[31m[1m>[0m [90m19 |[0m [36mimport[0m { [33mGLTFLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/GLTFLoader.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m20 |[0m [36mimport[0m { [33mKTX2Loader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/KTX2Loader.js'[0m;
+  [90m21 |[0m [36mimport[0m { [33mCacheEvictionPolicy[0m } [36mfrom[0m [32m'../utilities/cache-eviction-policy.js'[0m;
+  [90m22 |[0m [36mimport[0m [33mGLTFMaterialsVariantsExtension[0m [36mfrom[0m [32m'./gltf-instance/VariantMaterialLoaderPlugin.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js:20:1
+Module not found: Can't resolve 'three/examples/jsm/loaders/KTX2Loader.js'
+  [90m18 |[0m [36mimport[0m { [33mDRACOLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/DRACOLoader.js'[0m;
+  [90m19 |[0m [36mimport[0m { [33mGLTFLoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/GLTFLoader.js'[0m;
+[31m[1m>[0m [90m20 |[0m [36mimport[0m { [33mKTX2Loader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/KTX2Loader.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m [36mimport[0m { [33mCacheEvictionPolicy[0m } [36mfrom[0m [32m'../utilities/cache-eviction-policy.js'[0m;
+  [90m22 |[0m [36mimport[0m [33mGLTFMaterialsVariantsExtension[0m [36mfrom[0m [32m'./gltf-instance/VariantMaterialLoaderPlugin.js'[0m;
+  [90m23 |[0m [33mTexture[0m.[33mDEFAULT_ANISOTROPY[0m = [35m4[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/CachingGLTFLoader.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js:17:1
+Module not found: Can't resolve 'three/examples/jsm/loaders/RGBELoader.js'
+  [90m15 |[0m [36mimport[0m { [33mHDRJPGLoader[0m } [36mfrom[0m [32m'@monogrid/gainmap-js'[0m;
+  [90m16 |[0m [36mimport[0m { [33mBackSide[0m, [33mBoxGeometry[0m, [33mCubeCamera[0m, [33mEquirectangularReflectionMapping[0m, [33mHalfFloatTyp.[0m..
+[31m[1m>[0m [90m17 |[0m [36mimport[0m { [33mRGBELoader[0m } [36mfrom[0m [32m'three/examples/jsm/loaders/RGBELoader.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m { deserializeUrl, timePasses } [36mfrom[0m [32m'../utilities.js'[0m;
+  [90m19 |[0m [36mimport[0m [33mEnvironmentScene[0m [36mfrom[0m [32m'./EnvironmentScene.js'[0m;
+  [90m20 |[0m [36mconst[0m [33mGENERATED_SIGMA[0m = [35m0.04[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/TextureUtils.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Hotspot.js:16:1
+Module not found: Can't resolve 'three/examples/jsm/renderers/CSS2DRenderer.js'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mimport[0m { [33mMatrix3[0m, [33mQuaternion[0m, [33mTriangle[0m, [33mVector3[0m } [36mfrom[0m [32m'three'[0m;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mCSS2DObject[0m } [36mfrom[0m [32m'three/examples/jsm/renderers/CSS2DRenderer.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { normalizeUnit } [36mfrom[0m [32m'../styles/conversions.js'[0m;
+  [90m18 |[0m [36mimport[0m { parseExpressions } [36mfrom[0m [32m'../styles/parsers.js'[0m;
+  [90m19 |[0m [36mconst[0m a = [36mnew[0m [33mVector3[0m();
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Hotspot.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Hotspot.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/annotation.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/ModelScene.js:16:1
+Module not found: Can't resolve 'three/examples/jsm/renderers/CSS2DRenderer.js'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mimport[0m { [33mAnimationMixer[0m, [33mBox3[0m, [33mEuler[0m, [33mLoopOnce[0m, [33mLoopPingPong[0m, [33mLoopRepeat[0m, [33mMatrix3[0m, [33mNeutral...[0m
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mCSS2DRenderer[0m } [36mfrom[0m [32m'three/examples/jsm/renderers/CSS2DRenderer.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { reduceVertices } [36mfrom[0m [32m'three/examples/jsm/utils/SceneUtils.js'[0m;
+  [90m18 |[0m [36mimport[0m { $currentGLTF, $model, $originalGltfJson } [36mfrom[0m [32m'../features/scene-graph.js'[0m;
+  [90m19 |[0m [36mimport[0m { $nodeFromIndex, $nodeFromPoint } [36mfrom[0m [32m'../features/scene-graph/model.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Shadow.js:16:1
+Module not found: Can't resolve 'three/examples/jsm/shaders/HorizontalBlurShader.js'
+  [90m14 |[0m .../
+  [90m15 |[0m ...[36mport[0m { [33mBackSide[0m, [33mDoubleSide[0m, [33mBox3[0m, [33mMesh[0m, [33mMeshBasicMaterial[0m, [33mMeshDepthMaterial[0m, [33mObject3D[0m..[33m.[0m
+[31m[1m>[0m [90m16 |[0m ...[36mport[0m { [33mHorizontalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/HorizontalBlurShader.js'[0m;
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m ...[36mport[0m { [33mVerticalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/VerticalBlurShader.js'[0m;
+  [90m18 |[0m ...[36mport[0m { lerp } [36mfrom[0m [32m'three/src/math/MathUtils.js'[0m;
+  [90m19 |[0m ...[90m The softness [0, 1] of the shadow is mapped to a resolution between[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Shadow.js:17:1
+Module not found: Can't resolve 'three/examples/jsm/shaders/VerticalBlurShader.js'
+  [90m15 |[0m [36mimport[0m { [33mBackSide[0m, [33mDoubleSide[0m, [33mBox3[0m, [33mMesh[0m, [33mMeshBasicMaterial[0m, [33mMeshDepthMaterial[0m, [33mObject3D[0m,.[33m..[0m
+  [90m16 |[0m [36mimport[0m { [33mHorizontalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/HorizontalBlurShader.js'[0m;
+[31m[1m>[0m [90m17 |[0m [36mimport[0m { [33mVerticalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/VerticalBlurShader.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m { lerp } [36mfrom[0m [32m'three/src/math/MathUtils.js'[0m;
+  [90m19 |[0m [90m// The softness [0, 1] of the shadow is mapped to a resolution between[0m
+  [90m20 |[0m [90m// 2^LOG_MAX_RESOLUTION and 2^LOG_MIN_RESOLUTION.[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/ModelScene.js:17:1
+Module not found: Can't resolve 'three/examples/jsm/utils/SceneUtils.js'
+  [90m15 |[0m [36mimport[0m { [33mAnimationMixer[0m, [33mBox3[0m, [33mEuler[0m, [33mLoopOnce[0m, [33mLoopPingPong[0m, [33mLoopRepeat[0m, [33mMatrix3[0m, [33mNeutral...[0m
+  [90m16 |[0m [36mimport[0m { [33mCSS2DRenderer[0m } [36mfrom[0m [32m'three/examples/jsm/renderers/CSS2DRenderer.js'[0m;
+[31m[1m>[0m [90m17 |[0m [36mimport[0m { reduceVertices } [36mfrom[0m [32m'three/examples/jsm/utils/SceneUtils.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m { $currentGLTF, $model, $originalGltfJson } [36mfrom[0m [32m'../features/scene-graph.js'[0m;
+  [90m19 |[0m [36mimport[0m { $nodeFromIndex, $nodeFromPoint } [36mfrom[0m [32m'../features/scene-graph/model.js'[0m;
+  [90m20 |[0m [36mimport[0m { $renderer, $scene } [36mfrom[0m [32m'../model-viewer-base.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js:16:1
+Module not found: Can't resolve 'three/examples/jsm/utils/SkeletonUtils.js'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mimport[0m { [33mTexture[0m } [36mfrom[0m [32m'three'[0m;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m * [36mas[0m [33mSkeletonUtils[0m [36mfrom[0m [32m'three/examples/jsm/utils/SkeletonUtils.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mexport[0m [36mconst[0m $prepared = [33mSymbol[0m([32m'prepared'[0m);
+  [90m18 |[0m [36mexport[0m [36mconst[0m $prepare = [33mSymbol[0m([32m'prepare'[0m);
+  [90m19 |[0m [36mexport[0m [36mconst[0m $preparedGLTF = [33mSymbol[0m([32m'preparedGLTF'[0m);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/GLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/Renderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js:16:1
+Module not found: Can't resolve 'three/examples/jsm/webxr/XREstimatedLight.js'
+  [90m14 |[0m  */
+  [90m15 |[0m [36mimport[0m { [33mBoxGeometry[0m, [33mBufferGeometry[0m, [33mEventDispatcher[0m, [33mLine[0m, [33mMatrix4[0m, [33mMesh[0m, [33mPerspectiveCam...[0m
+[31m[1m>[0m [90m16 |[0m [36mimport[0m { [33mXREstimatedLight[0m } [36mfrom[0m [32m'three/examples/jsm/webxr/XREstimatedLight.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m { $currentBackground, $currentEnvironmentMap } [36mfrom[0m [32m'../features/environment.js'[0m;
+  [90m18 |[0m [36mimport[0m { assertIsArCandidate } [36mfrom[0m [32m'../utilities.js'[0m;
+  [90m19 |[0m [36mimport[0m { [33mDamper[0m } [36mfrom[0m [32m'./Damper.js'[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/ARRenderer.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/features/ar.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/@google/model-viewer/lib/three-components/Shadow.js:18:1
+Module not found: Can't resolve 'three/src/math/MathUtils.js'
+  [90m16 |[0m [36mimport[0m { [33mHorizontalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/HorizontalBlurShader.js'[0m;
+  [90m17 |[0m [36mimport[0m { [33mVerticalBlurShader[0m } [36mfrom[0m [32m'three/examples/jsm/shaders/VerticalBlurShader.js'[0m;
+[31m[1m>[0m [90m18 |[0m [36mimport[0m { lerp } [36mfrom[0m [32m'three/src/math/MathUtils.js'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m [90m// The softness [0, 1] of the shadow is mapped to a resolution between[0m
+  [90m20 |[0m [90m// 2^LOG_MAX_RESOLUTION and 2^LOG_MIN_RESOLUTION.[0m
+  [90m21 |[0m [36mconst[0m [33mLOG_MAX_RESOLUTION[0m = [35m9[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component Browser]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component Browser]
+    ./components/ProductPage.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/@google/model-viewer/lib/three-components/Shadow.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/three-components/ModelScene.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer-base.js [Client Component SSR]
+    ./node_modules/@google/model-viewer/lib/model-viewer.js [Client Component SSR]
+    ./components/ProductPage.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at ./node_modules/ (google/model-viewer/lib/features/animation.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/annotation.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/controls.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/environment.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/loading.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/image.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/material.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/model.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/pbr-metallic-roughness.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/sampler.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph/texture-info.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/model-viewer.js:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/ARRenderer.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/CachingGLTFLoader.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/EnvironmentScene.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/GLTFInstance.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/GroundedSkybox.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Hotspot.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/ModelScene.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/PlacementBox.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Renderer.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Shadow.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/SmoothControls.js:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/TextureUtils.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/gltf-instance/ModelViewerGLTFInstance.js:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/gltf-instance/correlated-scene-graph.js:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (monogrid/gainmap-js/dist/Loader-DLI-_JDP.js:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (monogrid/gainmap-js/dist/QuadRenderer-Bj1xl_EK.js:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (monogrid/gainmap-js/dist/decode.js:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/scene-graph.js:23:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/features/ar.js:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/CachingGLTFLoader.js:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/CachingGLTFLoader.js:18:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/CachingGLTFLoader.js:19:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/CachingGLTFLoader.js:20:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/TextureUtils.js:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Hotspot.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/ModelScene.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Shadow.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Shadow.js:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/ModelScene.js:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/GLTFInstance.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/ARRenderer.js:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at ./node_modules/ (google/model-viewer/lib/three-components/Shadow.js:18:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

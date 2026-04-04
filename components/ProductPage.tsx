@@ -6,16 +6,8 @@ import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
 import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS, LACK_SPRAY_COLORS } from '../constants';
-import '@google/model-viewer';
 
-// Add type declaration for the custom web component
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': any;
-    }
-  }
-}
+
 
 interface ProductPageProps {
   product: {
@@ -93,6 +85,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   : product.image.replace('-3D-4K-Transparent.webp', '-3D.glb');
 
   const has3D = isPremiumSilikon || isNeutralSilikon || isLackSpray || isFelgensilber || isHaftgrund || isHochtemperaturLack || isAcrylProduct || isExtremKleber || product.image.includes('3D-4K');
+
+  // Load @google/model-viewer only on client (it uses 'self' which doesn't exist in SSR)
+  React.useEffect(() => {
+    import('@google/model-viewer');
+  }, []);
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });

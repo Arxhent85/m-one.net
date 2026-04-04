@@ -1,0 +1,22 @@
+
+> m-one-webpage-1.4@0.0.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+Failed to type check.
+
+./components/ProductPage.tsx:240:20
+Type error: Property 'model-viewer' does not exist on type 'JSX.IntrinsicElements'.
+
+  [90m238 |[0m                     loading=[32m"eager"[0m
+  [90m239 |[0m                     style={{ width: [32m'100%'[0m, height: [32m'100%'[0m, backgroundColor: [32m'transparent.[0m..
+[31m[1m>[0m [90m240 |[0m                   ></model-viewer>
+  [90m    |[0m                    [31m[1m^[0m
+  [90m241 |[0m                 </div>
+  [90m242 |[0m               )}
+  [90m243 |[0m
+Next.js build worker exited with code: 1 and signal: null

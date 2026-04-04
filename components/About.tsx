@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 const About: React.FC = () => {
   const { t } = useLanguage();
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 16 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] } }
   };
@@ -47,7 +47,7 @@ const About: React.FC = () => {
               src="https://images.unsplash.com/photo-1504307651254-35680f356f12?auto=format&fit=crop&q=80&w=600"
               alt="Precision Craftsmanship"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
-              fallbackStrategy="unsplash"
+              fallbackStrategy="picsum"
             />
           </div>
           {/* Image 2 — Automotive Premium Finish */}
@@ -56,7 +56,7 @@ const About: React.FC = () => {
               src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600"
               alt="Premium Automotive Finish"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
-              fallbackStrategy="unsplash"
+              fallbackStrategy="picsum"
             />
           </div>
           {/* Image 3 — High-Tech Factory / hidden on mobile */}
@@ -65,7 +65,7 @@ const About: React.FC = () => {
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
               alt="High-Tech Manufacturing"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
-              fallbackStrategy="unsplash"
+              fallbackStrategy="picsum"
             />
           </div>
         </motion.div>
