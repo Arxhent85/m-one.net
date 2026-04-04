@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 export const metadata: Metadata = {
   title: "M ONE | Premium Silikon und Dichtstoffe",
@@ -158,9 +161,14 @@ export default function RootLayout({
       <body className="bg-light text-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-accent selection:text-white transition-colors duration-300">
         <Providers>
           <div className="font-sans text-neutral-900 dark:text-white bg-white dark:bg-neutral-950 min-h-screen flex flex-col transition-colors duration-300">
-            {children}
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
           </div>
         </Providers>
+
       </body>
     </html>
   );

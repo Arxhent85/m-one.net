@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Sun, Star, ExternalLink, Award, Hexagon } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
@@ -107,16 +108,13 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
       </div>
 
       <div className="relative z-10 container mx-auto px-6 mb-24 lg:mb-40">
-        <motion.button
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-          onClick={goHome}
+        <Link
+          href="/"
           className="text-neutral-300 hover:text-white mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
         >
           <ArrowLeft size={16} />
           {t.modal.back}
-        </motion.button>
+        </Link>
 
         <div className="flex flex-col lg:flex-row gap-12 justify-between items-start">
           <div className="max-w-5xl">
@@ -172,71 +170,77 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
       <div className="relative z-10 container mx-auto px-6 pb-32">
         {category.products && category.products.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
-            {category.products.map((product, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                onClick={() => navigateToProduct(product)}
-                className="group cursor-pointer flex flex-col will-change-transform"
-              >
-                {/* Glassmorphism Card */}
-                <div className={`relative ${
-                  category.title.toLowerCase().includes('bau') 
-                    ? 'aspect-[4/5]' 
-                    : 'aspect-[3/4]'
-                } mb-6 overflow-hidden bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-white/10 transition-all duration-700 group-hover:bg-neutral-800/80 group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8`}>
-                  
-                  {/* Subtle Background Radial Glow for Depth */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
-                  
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            {category.products.map((product, index) => {
+              const slug = product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
+              const categorySlug = category.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
+              
+              return (
+                <Link
+                  key={index}
+                  href={`/produkte/${categorySlug}/${slug}`}
+                  className="group cursor-pointer flex flex-col will-change-transform"
+                >
+                  {/* Glassmorphism Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
+                    className={`relative ${category.title.toLowerCase().includes('bau')
+                      ? 'aspect-[4/5]'
+                      : 'aspect-[3/4]'
+                      } mb-6 overflow-hidden bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-white/10 transition-all duration-700 group-hover:bg-neutral-800/80 group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8`}
+                  >
 
-                  {/* PROPORTIONEN & SCALING: Balanced product size inside the container */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <ImageWithFallback
-                      src={product.image.includes('/products/colors/')
-                        ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
-                        : product.image}
-                      alt={product.name}
-                      className={`w-full h-full ${getProductPadding(product.image, false)} origin-center ${getProductScale(product.image, false)}`}
-                      imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
-                      fallbackStrategy="picsum"
-                    />
-                  </div>
+                    {/* Subtle Background Radial Glow for Depth */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
 
-                  {/* Badges Overlay */}
-                  <div className="absolute top-6 left-6 right-6 flex flex-col items-start gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0 delay-100">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                    {/* PROPORTIONEN & SCALING: Balanced product size inside the container */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <ImageWithFallback
+                        src={product.image.includes('/products/colors/')
+                          ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
+                          : product.image}
+                        alt={product.name}
+                        className={`w-full h-full ${getProductPadding(product.image, false)} origin-center ${getProductScale(product.image, false)}`}
+                        imgClassName="object-contain transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
+                        fallbackStrategy="picsum"
+                      />
+                    </div>
+
+                    {/* Badges Overlay */}
+                    <div className="absolute top-6 left-6 right-6 flex flex-col items-start gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0 delay-100">
                       <div className="bg-black/40 backdrop-blur-md border border-white/10 p-2 text-white/70 rounded-md">
                         <ShieldCheck size={16} />
                       </div>
                       <div className="bg-black/40 backdrop-blur-md border border-white/10 p-2 text-white/70 rounded-md">
                         <Zap size={16} />
                       </div>
-                  </div>
-
-                  {/* Gradient Overlay for Text Readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent pointer-events-none" />
-                  
-                  {/* DETAIL-VERBESSERUNGEN: Dezentere "Details" Buttons */}
-                  <div className="relative z-10 w-full flex justify-between items-end">
-                    <div className="flex flex-col">
-                      <span className="text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
-                      <h3 className="text-xl md:text-2xl font-bold text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
-                        {product.name}
-                      </h3>
                     </div>
-                    
-                    <button className="flex items-center gap-2 text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500">
-                      <span>Details</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+
+                    {/* Gradient Overlay for Text Readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent pointer-events-none" />
+
+                    {/* DETAIL-VERBESSERUNGEN: Dezentere "Details" Buttons */}
+                    <div className="relative z-10 w-full flex justify-between items-end">
+                      <div className="flex flex-col">
+                        <span className="text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
+                        <h3 className="text-xl md:text-2xl font-bold text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
+                          {product.name}
+                        </h3>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500">
+                        <span>Details</span>
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
+              );
+            })}
           </div>
         ) : (
           <div className="py-40 text-center border border-dashed border-neutral-800 rounded-2xl backdrop-blur-sm bg-neutral-900/30">

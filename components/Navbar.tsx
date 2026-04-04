@@ -1,4 +1,7 @@
+"use client";
+
 import * as React from 'react';
+import Link from 'next/link';
 import { Menu, X, Search, Globe, Moon, Sun } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 import SearchOverlay from './SearchOverlay';
@@ -7,6 +10,7 @@ import { useTheme } from './ThemeContext';
 import { useNavigation } from './NavigationContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion, AnimatePresence } from 'motion/react';
+import { usePathname } from 'next/navigation';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -14,7 +18,8 @@ const Navbar: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
-  const { currentPage, goHome } = useNavigation();
+  const { goHome } = useNavigation();
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -25,24 +30,12 @@ const Navbar: React.FC = () => {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent, id: string) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-
-    if (currentPage !== 'home') {
-      goHome();
-      // Delay scrolling to allow render
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    // If it's the home page, we use scroll. Otherwise we navigate home then scroll.
+    if (pathname !== '/') {
+      // Navigation is already handled by Link if we use it, but here we might want scroll.
+      // If we use Link href="/#id", Next.js handles it.
     }
+    setIsMobileMenuOpen(false);
   };
 
   const LanguageSwitcher = () => (
@@ -73,12 +66,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || currentPage !== 'home' ? 'glass-panel py-2 md:py-4' : 'bg-transparent py-2 md:py-6'
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || pathname !== '/' ? 'glass-panel py-2 md:py-4' : 'bg-transparent py-2 md:py-6'
           }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0 cursor-pointer" onClick={goHome}>
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
             <img
               src={theme === 'light'
                 ? "/logos/M-ONE_logo_Lang_schwarz.webp"
@@ -87,19 +80,19 @@ const Navbar: React.FC = () => {
               style={{ height: '40px', width: 'auto' }}
               className="object-contain block transition-all duration-300"
             />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.id}
-                href={`#${link.id}`}
+                href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                 onClick={(e) => handleNavClick(e, link.id)}
                 className={`font-medium transition-colors hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white/90'}`}
               >
                 {t.nav[link.id as keyof typeof t.nav]}
-              </a>
+              </Link>
             ))}
 
             <div className="flex items-center gap-4 ml-4">
@@ -170,14 +163,14 @@ const Navbar: React.FC = () => {
               className="absolute top-full left-0 w-full glass-panel flex flex-col p-6 gap-6 md:hidden overflow-hidden"
             >
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.id}
-                  href={`#${link.id}`}
+                  href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                   onClick={(e) => handleNavClick(e, link.id)}
                   className="text-lg font-medium text-brand-900 dark:text-brand-200 hover:text-brand-500 dark:hover:text-brand-400"
                 >
                   {t.nav[link.id as keyof typeof t.nav]}
-                </a>
+                </Link>
               ))}
 
               <div className="border-t border-neutral-200 dark:border-neutral-800 pt-4 flex items-center justify-between">

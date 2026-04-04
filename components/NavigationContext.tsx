@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 
 export type PageType = 'home' | 'category' | 'product';
 
@@ -15,53 +16,39 @@ interface NavigationContextType {
 const NavigationContext = React.createContext<NavigationContextType | undefined>(undefined);
 
 export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  
   const [currentPage, setCurrentPage] = React.useState<PageType>('home');
   const [selectedCategoryId, setSelectedCategoryId] = React.useState<string | null>(null);
   const [selectedProduct, setSelectedProduct] = React.useState<any | null>(null);
 
+  // Sync state with pathname
   React.useEffect(() => {
-    // Initialize current state on mount so it's not null when we pop back to it
-    if (!window.history.state) {
-      window.history.replaceState({ page: 'home', categoryId: null, product: null }, '');
+    if (pathname === '/') {
+      setCurrentPage('home');
+      setSelectedCategoryId(null);
+      setSelectedProduct(null);
+    } else if (pathname.startsWith('/produkte/')) {
+      const parts = pathname.split('/');
+      // /produkte/[catId]
+      const catId = parts[2];
+      setCurrentPage('category');
+      setSelectedCategoryId(catId || null);
     }
-
-    const handlePopState = (event: PopStateEvent) => {
-      const state = event.state;
-      if (state && state.page) {
-        setCurrentPage(state.page);
-        setSelectedCategoryId(state.categoryId || null);
-        setSelectedProduct(state.product || null);
-      } else {
-        // Fallback
-        setCurrentPage('home');
-        setSelectedCategoryId(null);
-        setSelectedProduct(null);
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [pathname]);
 
   const goHome = () => {
-    if (currentPage !== 'home') {
-      window.history.pushState({ page: 'home', categoryId: null, product: null }, '');
-    }
-    setCurrentPage('home');
-    setSelectedCategoryId(null);
-    setSelectedProduct(null);
-    window.scrollTo(0, 0);
+    router.push('/');
   };
 
   const navigateToCategory = (categoryId: string) => {
-    window.history.pushState({ page: 'category', categoryId, product: null }, '');
-    setSelectedCategoryId(categoryId);
-    setCurrentPage('category');
-    window.scrollTo(0, 0);
+    router.push(`/produkte/${categoryId}`);
   };
 
   const navigateToProduct = (product: any) => {
-    window.history.pushState({ page: 'product', categoryId: selectedCategoryId, product }, '');
+    // Keep internal state for product modal/view within category for now 
+    // unless we want separate URLs for each product too.
     setSelectedProduct(product);
     setCurrentPage('product');
     window.scrollTo(0, 0);

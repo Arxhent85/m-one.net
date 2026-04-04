@@ -1,4 +1,7 @@
+"use client";
+
 import * as React from 'react';
+import Link from 'next/link';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import ImageWithFallback from './ImageWithFallback';
@@ -77,11 +80,11 @@ const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-bold mb-6 font-sans tracking-wide text-brand-500">{t.footer.company}</h3>
             <ul className="space-y-3 text-neutral-400">
-              <li><a href="#about" className="hover:text-white transition-colors">{t.nav.about}</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">{t.nav.services}</a></li>
-              <li><a href="#projects" className="hover:text-white transition-colors">{t.footer.projects}</a></li>
-              <li><a href="#career" className="hover:text-white transition-colors">{t.footer.career}</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">{t.nav.contact}</a></li>
+              <li><Link href="/#about" className="hover:text-white transition-colors">{t.nav.about}</Link></li>
+              <li><Link href="/#categories" className="hover:text-white transition-colors">{t.nav.services}</Link></li>
+              <li><Link href="/#projects" className="hover:text-white transition-colors">{t.footer.projects}</Link></li>
+              <li><Link href="/#career" className="hover:text-white transition-colors">{t.footer.career}</Link></li>
+              <li><Link href="/#contact" className="hover:text-white transition-colors">{t.nav.contact}</Link></li>
             </ul>
           </motion.div>
 
