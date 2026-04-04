@@ -15,6 +15,8 @@ interface Product {
   image: string;
   description?: string;
   categoryName?: string;
+  colors?: string[];
+  tags?: string[];
 }
 
 interface SearchOverlayProps {
@@ -62,26 +64,47 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
     const searchTerm = query.toLowerCase();
     const allProducts = getAllProducts();
 
-    return allProducts
-      .map((product) => {
-        let score = 0;
-        const productName = product.name.toLowerCase();
-        // Remove "m-one" Variations for cleaner matching
-        const cleanName = productName.replace(/m-one/g, '').replace(/m one/g, '').trim();
-        
-        if (cleanName === searchTerm) score += 100;
-        else if (cleanName.startsWith(searchTerm)) score += 80;
-        else if (cleanName.includes(searchTerm)) score += 60;
-        else if (productName.includes(searchTerm)) score += 40;
-        
-        if (product.description && product.description.toLowerCase().includes(searchTerm)) {
-          score += 20;
-        }
+    const resultsWithScore = allProducts.map(product => {
+      let score = 0;
+      const name = product.name.toLowerCase();
+      const description = (product.description || '').toLowerCase();
+      const colors = (product.colors || []).map((c: string) => c.toLowerCase());
+      const tags = (product.tags || []).map((t: string) => t.toLowerCase());
 
-        return { ...product, score };
-      })
-      .filter((product) => product.score > 0)
-      .sort((a, b) => b.score - a.score);
+      // 1. Name Match (Highest priority)
+      if (name.includes(searchTerm)) {
+        score += 150;
+        if (name.startsWith(searchTerm)) score += 50;
+      }
+
+      // 2. Tag Match (High priority)
+      const tagMatch = tags.some((tag: string) => tag.includes(searchTerm));
+      if (tagMatch) {
+        score += 100;
+        // Exact tag match bonus
+        if (tags.includes(searchTerm)) score += 30;
+      }
+
+      // 3. Color Match (High priority)
+      const colorMatch = colors.some((color: string) => color.includes(searchTerm));
+      if (colorMatch) {
+        score += 90;
+        // Exact color match bonus
+        if (colors.includes(searchTerm)) score += 40;
+      }
+
+      // 4. Description Match (Lower priority)
+      if (description.includes(searchTerm)) {
+        score += 40;
+      }
+
+      return { ...product, score };
+    });
+
+    return resultsWithScore
+      .filter(p => p.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8);
   }, [query, getAllProducts]);
 
   const containerVariants = {
