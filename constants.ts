@@ -75,11 +75,13 @@ export const LACK_SPRAY_COLORS = [
 export const getProductScale = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
   
-  // Non-Bau products (Sprays, Colors)
-  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
+  // Non-Bau products (Sprays, Colors, Service)
+  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray') || path.includes('starter') || path.includes('ubs') || path.includes('zink')) {
     const isServiceProduct = path.includes('/service/') || (!path.includes('/colors/') && (path.includes('spray') || path.includes('reiniger') || path.includes('fett') || path.includes('starter') || path.includes('rost') || path.includes('ubs') || path.includes('zink')));
     
     if (isServiceProduct) {
+      // Motorstarter often has even more transparency, so we push it slightly more
+      if (path.includes('starter')) return isMobile ? 'scale-[1.55]' : 'scale-[1.48]';
       return isMobile ? 'scale-[1.45]' : 'scale-[1.40]';
     }
     // Colors and other sprays
