@@ -23,10 +23,11 @@ interface Category {
 
 interface CategoryPageProps {
   category: Category;
+  categoryId: string;
 }
 
-const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
-  return <PremiumCategoryView category={category} />;
+const CategoryPage: React.FC<CategoryPageProps> = ({ category, categoryId }) => {
+  return <PremiumCategoryView category={category} categoryId={categoryId} />;
 };
 
 export default CategoryPage;

@@ -37,7 +37,7 @@ export default function CategoryPageWrapper({ categoryId }: CategoryPageWrapperP
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <CategoryPage category={getCategoryData(categoryId)} />
+            <CategoryPage category={getCategoryData(categoryId)} categoryId={categoryId} />
           </motion.div>
         )}
       </AnimatePresence>

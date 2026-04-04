@@ -7,8 +7,9 @@ import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
-import { getProductPadding, getProductScale } from '../constants';
+import { getProductPadding, getProductScale, slugify } from '../constants';
 import { motion } from 'motion/react';
+import { translations } from '../translations';
 
 interface Product {
   name: string;
@@ -31,6 +32,7 @@ interface Category {
 
 interface PremiumCategoryViewProps {
   category: Category;
+  categoryId: string;
 }
 
 const getProjectsForCategory = (title: string) => {
@@ -78,13 +80,17 @@ const getProjectsForCategory = (title: string) => {
   }
 };
 
-const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) => {
+const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, categoryId }) => {
   const { t } = useLanguage();
   const { goHome } = useNavigation();
   const { theme } = useTheme();
 
   const referenceData = getProjectsForCategory(category.title);
 
+  // Map internal categoryId to the URL slug used in filesystem routes
+  const categoryUrlSlug = categoryId === 'service' ? 'service--kfz' : categoryId;
+  // Get German products for canonical slug generation
+  const deProducts = (translations.de.categories as any)[categoryId]?.products || [];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -169,13 +175,14 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
         {category.products && category.products.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
             {category.products.map((product, index) => {
-              const slug = product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
-              const categorySlug = category.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
+              // Always use German product names for URL slugs to match filesystem routes
+              const deProduct = deProducts[index];
+              const slug = deProduct ? slugify(deProduct.name) : slugify(product.name);
               
               return (
                 <Link
                   key={index}
-                  href={`/produkte/${categorySlug}/${slug}`}
+                  href={`/produkte/${categoryUrlSlug}/${slug}`}
                   className="group cursor-pointer flex flex-col will-change-transform"
                 >
                   <motion.div
