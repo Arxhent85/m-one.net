@@ -342,7 +342,7 @@ Technical Data:
 • Features: For stairs, low odor, weather-resistant`
           },
           {
-            name: 'Structure Acrylic',
+            name: 'Struktur Acryl',
             image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
             description: `M-ONE Structure Acrylic is an elastoplastic sealant with a plaster-like surface structure that provides easy and universal filling of joints, cracks and holes. Universally applicable (indoor and outdoor), paintable, non-aging, odorless and non-corrosive to metals.
 
@@ -351,7 +351,7 @@ Adheres well to: Concrete, aerated concrete, masonry, plaster, wood, brick. Also
 Features: Decorative, Paintable, Plaster structure.`
           },
           {
-            name: 'Universal Acrylic',
+            name: 'Universal Acryl',
             image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
             description: `M-ONE Universal Acrylic is a one-component polyacrylate-based joint sealant. Universally applicable (inside and outside), paintable, non-aging, odorless and non-corrosive to metals.
 
@@ -360,7 +360,7 @@ Suitable for: Connecting joints and cracks between concrete, masonry, wood, stai
 Features: Wall cracks, facade cracks, paintable, quickly rain-resistant.`
           },
           {
-            name: 'Extreme Adhesive',
+            name: 'Extrem Kleber',
             image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
             description: `M-ONE PROFIMONT EXTREM is a permanently elastic and flexible adhesive with high initial tack that generally does not require the adhesive unit to be fixed. After application, the product hardens with humidity.
 
@@ -380,7 +380,7 @@ Features: No drilling, permanently elastic, neutral and free of silicone and Iso
         learnMore: 'Learn more',
         products: [
           {
-            name: 'M-ONE Brake & Parts Cleaner',
+            name: 'M-ONE Bremsenreiniger',
             image: '/products/Bremsen und Teile Reiniger Spray M ONE-3D-4K-Transparent.webp',
             description: `The ideal cleaning agent for industry and trade. It is used for the repair and assembly of oily and greasy machine parts. Due to the high content of active ingredients, intensive and fast-acting cleaning is achieved. It reduces noise, works residue-free, is non-corrosive, and does not attack rubber or plastic parts. Ideal for use on brakes, clutches, engine parts, etc.
 
@@ -388,12 +388,12 @@ Application:
 Spray onto the contaminated surface from a distance of approx. 20 cm and allow to drain. Then process the parts with a dry cloth. For heavy soiling, repeat the process several times.`
           },
           {
-            name: 'M-ONE Grease Spray',
+            name: 'M-ONE Fettspray',
             image: '/products/FettSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE FETTSPRAY is a transparent high-performance grease, ideal for lubricating roller and ball bearings, gear and worm gears, and all types of joints and couplings. Even in inaccessible places, M-ONE FETTSPRAY penetrates effectively due to its excellent creeping properties. It is also well-suited for door locks, door hinges, sliding rails, brake rods, bellcranks, etc. Chains and wire ropes can be treated very effectively with M-ONE FETTSPRAY, providing reliable lubrication and rust protection after application.`
           },
           {
-            name: 'M-ONE Engine Starter',
+            name: 'M-ONE Motorstarter',
             image: '/products/MotorStarter M ONE-3D-4K-Transparent.webp',
             description: `M-ONE MOTORSTARTER facilitates the starting of gasoline and diesel engines while protecting both the engine and the battery. It is used for cars, trucks, and all types of engines (chainsaws, lawnmowers, construction site generators, etc.). The product works quickly and reliably, ensuring a safe start even in cold and damp weather conditions.
 
@@ -401,17 +401,17 @@ Application:
 Spray directly into the air filter or air intake and start the engine immediately. Starting is made easier with the help of a second person, as the product can be sprayed during the ignition process.`
           },
           {
-            name: 'M-ONE Rust Solvent Spray',
+            name: 'M-ONE Rostlöser Spray',
             image: '/products/RostlöserSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Rust Solvent is a fast-acting spray that releases rusted screws, nuts, and joints. It is also ideal for use as a lubricant, contact spray, and corrosion protection. It lubricates reliably, protects against corrosion, displaces moisture, and stops squeaking noises. Contains MoS2.`
           },
           {
-            name: 'M-ONE Silicone Spray',
+            name: 'M-ONE Silikonspray',
             image: '/products/SilikonSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Silicone Spray is a universal lubricant, protection, and release agent for plastics, wood, metals, and rubber. It can be used wherever oils and greases are unsuitable. M-ONE Silicone Spray is water-repellent, antistatic, lubricates invisibly and stain-free, eliminates squeaking noises, and remains stable against weather and temperature influences from -30°C to +480°C.`
           },
           {
-            name: 'M-ONE Underbody Protection (UBS) Spray',
+            name: 'M-ONE Unterbodenschutz (UBS) Spray',
             image: '/products/UBS Spray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE UBS Spray is a bitumen-free underbody protection based on rubber-resin. After drying, the coating forms a permanently elastic, high-adhesion protective layer with high abrasion resistance. M-ONE UBS Spray reliably protects against stone chips and corrosion. Once fully dried, the underbody protection can be painted over.
 
@@ -419,7 +419,7 @@ Application:
 Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 minutes after the mixing balls are clearly audible. The parts to be treated must be clean, dry, and free of grease, oil, and rust. Can be overpainted with standard paints after approx. 8 hours.`
           },
           {
-            name: 'M-ONE Zinc Spray',
+            name: 'M-ONE Zinkspray',
             image: '/products/ZinkSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Zinc Spray is used in industry, trade, and vehicle body construction, especially where metals are exposed to corrosion. M-ONE Zinc Spray offers reliable protection for drilling, cutting, and joint areas. It can also be used as a primer for equipment and machine parts that are permanently exposed to the weather.`
           }
@@ -435,17 +435,17 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         learnMore: 'Learn more',
         products: [
           {
-            name: 'Wheel Silver M ONE',
+            name: 'Felgensilber M ONE',
             image: '/products/colors/felgensilber-transparent.webp',
             description: `M-ONE Paint Spray Wheel Silver is a high-quality and quick-drying spray with high opacity which is used for painting rims, bodywork on cars, various decorative parts and much more. The product has excellent adhesion, is resistant to scratches and shocks as well as to the impact of gasoline, chemical substances, UV radiation and weathering. Protects against corrosion and rust.`
           },
           {
-            name: 'Primer M ONE',
+            name: 'Haftgrund M ONE',
             image: '/products/colors/haftgrund-transparent.webp',
             description: `M-ONE Primer is a high-quality primer for various surfaces. It ensures optimal adhesion of the subsequent painting and reliably protects against corrosion. Ideal for metal, wood and many plastics.`
           },
           {
-            name: 'Paint Spray M ONE',
+            name: 'Lack Spray M ONE',
             image: '/products/colors/lack-spray-rot-transparent.webp',
             colors: ['Black Matt', 'Black', 'White', 'Grey', 'Chrome', 'Gold', 'Yellow', 'Red', 'Green', 'Brown'],
             tags: ['Paint', 'Color', 'Spray Paint', 'Metal', 'Wood', 'Plastic', 'Quick Drying', 'High Coverage'],
@@ -454,7 +454,7 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
 Application: Before use, the surface must be clean, dry and free from oily residues. Shake the can for 2-3 minutes and spray the surface from a distance of 20-30 cm.`
           },
           {
-            name: 'High Temperature Paint M ONE',
+            name: 'Hochtemperatur Lack M ONE',
             image: '/products/colors/hochtemperatur-lack-transparent.webp',
             description: `M ONE HOCHTEMPERATUR LACK: A fast-drying, weather-resistant, silicone-based acrylic spray paint for indoor and outdoor surfaces exposed to high heat like stoves, ovens, and exhausts. Black and silver colors are resistant to 690°C. 400ml covers approx. 1.5 m². It dries in 1 hour; for a harder surface, heat the paint to 160°C for one hour after application. Application: The surface must be clean, dry, and free of oil, dust, old paint, and rust. Do not use primer. Shake the can for 2 minutes before use. Always test on a small area first. Apply several thin coats from a distance of 25 cm, waiting 2 minutes between layers. Do not apply over other acrylic paints.`
           }
@@ -547,7 +547,7 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         learnMore: 'Mëso më shumë',
         products: [
           {
-            name: 'Silikon Premium',
+            name: 'Premium Silicon',
             image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             colors: ['Transparent', 'Antracit', 'Bahama', 'Kafe', 'Karamel', 'Gri', 'Gri e hapur', 'Jasmin', 'Manhattan', 'Zi', 'Argjend', 'Bardhë'],
             tags: ['Sanitar', 'Silikon', 'Acetat', 'Banjë', 'Kuzhinë', 'Rezistent ndaj mykut', 'Antibakterial', 'Izolues'],
@@ -578,7 +578,7 @@ Të Dhënat Teknike:
 • Karakteristika: Për shkallë, erë e lehtë, rezistent ndaj motit`
           },
           {
-            name: 'Akril Strukturor',
+            name: 'Struktur Acryl',
             image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
             description: `M-ONE Acryl Struktural është masë ngjitëse me një strukturë sipërfaqësore të ngjajshme me atë të fasades, siguron mbushje të lehtë të fugave-nyjeve, çarjeve dhe vrimave me strukturë të vrazhdë. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
@@ -587,7 +587,7 @@ Ngjitet mirë në: Beton, gur, dru, tulla, muraturrë dhe sipërfaqe të tjera. 
 Karakteristika: Dekorativ, I lyyeshëm, Strukturë suvaje.`
           },
           {
-            name: 'Akril Universal',
+            name: 'Universal Acryl',
             image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
             description: `M-ONE Universal Acryl është masa njëkomponentëshe me bazë të Polyacrylit. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
@@ -596,7 +596,7 @@ I përshtatshëm për: Nyjet dhe çarjet midis betonit, muret, lajsnet, dyert, d
 Karakteristika: Çarje muri, çarje fasade, i lyyeshëm, shpejt rezistent ndaj shiut.`
           },
           {
-            name: 'Ngjitës Ekstrem',
+            name: 'Extrem Kleber',
             image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
             description: `M-ONE PROFIMONT EXTREM është një ngjitës elastik dhe përherë fleksibël, me një ngjitje të lartë fillestare e cila zakonisht nuk kërkon që njësia ngjitëse të rregullohet. Pas aplikimit, produkti ngurtësohet nga lagështia e ajrit.
 
@@ -616,7 +616,7 @@ Karakteristika: Pa shpim, Përgjithmonë elastik, Pa silikon dhe Izocianat.`
         learnMore: 'Mëso më shumë',
         products: [
           {
-            name: 'M-ONE Pastrues Frenash Dhe Pjesësh',
+            name: 'M-ONE Bremsenreiniger',
             image: '/products/Bremsen und Teile Reiniger Spray M ONE-3D-4K-Transparent.webp',
             description: `Pastrues ideal për përdorim në industri dhe metej. Përdoret gjatë montimit, riparimit dhe mirëmbajtjes së pjesëve makinerike të ndotura me vajra apo yndyrëra. Përmbajtja e lartë e përbërësve aktivë mundëson një pastrim intensiv dhe me veprim të shpejtë. Redukton zhurmën, punon pa lënë mbetje, nuk është korroziv dhe nuk dëmton pjesët prej gome apo plastike. Ideal për përdorim në: frena, embrejazh, pjesë të motorit etj.
 
@@ -624,12 +624,12 @@ Aplikimi:
 Spërkateni sipërfaqen e ndotur nga një distancë prej rreth 20 cm dhe lëreni të rrjedhë. Pastaj fshini pjesët me një leckë të tharë. Në rast ndotjeje të rëndë, përsëriteni procesin disa herë.`
           },
           {
-            name: 'M-ONE Fettspray (Yndyrë Spërkatëse)',
+            name: 'M-ONE Fettspray',
             image: '/products/FettSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE FETTSPRAY është një graso (yndyrë) transparente me performancë të lartë, ideale për lubrifikimin e kushinetave me rula dhe sfera, ingranazheve, si dhe të gjitha llojeve të nyjeve dhe bashkimeve. Edhe në vende të paarritshme, M-ONE FETTSPRAY depërton shumë mirë falë vetive të tij të shkëlqyera depërtuese. Gjithashtu, është i përshtatshëm për bravat e dyerve, menteshat, shinat rrëshqitëse, shufrat e frenave, levat e devijimit etj. Zinxhirët dhe telat mund të trajtohen shumë mirë me M-ONE FETTSPRAY, duke siguruar mbrojtje të mjaftueshme kundër ndryshkjes dhe fërkimit pas trajtimit.`
           },
           {
-            name: 'M-ONE Motorstarter (Ndezës Motori)',
+            name: 'M-ONE Motorstarter',
             image: '/products/MotorStarter M ONE-3D-4K-Transparent.webp',
             description: `M-ONE MOTORSTARTER lehtëson ndezjen e motorëve me benzinë dhe dizel, duke mbrojtur motorin dhe baterinë. Përdoret për makina, kamionë dhe motorë të të gjitha llojeve (sharrë zinxhiri, kositëse bari, gjeneratorë kantieri, etj.). Produkti vepron shpejt dhe në mënyrë të besueshme, duke mundësuar një ndezje të sigurt edhe në mot të ftohtë dhe të lagësht.
 
@@ -637,17 +637,17 @@ Aplikimi:
 Spërkateni direkt në filtrin e ajrit ose në tubacionin e thithjes së ajrit dhe ndizni motorin menjëherë. Ndihma e një personi të dytë e bën procesin më të lehtë, pasi spërkatja mund të bëhet gjatë kohës që motori po ndizet.`
           },
           {
-            name: 'M-ONE Largues Ndryshku',
+            name: 'M-ONE Rostlöser Spray',
             image: '/products/RostlöserSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Rostlöser është një sprej me veprim të shpejtë që liron bulonat, dadot dhe nyjet e bllokuara nga ndryshku. Ideal për përdorim edhe në rolin e lubrifikuesit, si sprej kontaktesh apo si mbrojtës ndaj korrozionit. Lubrifikon në mënyrë të besueshme, mbron nga korrozioni, largon lagështinë dhe ndalon zhurmat kërcitëse. Përmban MoS2.`
           },
           {
-            name: 'M-ONE Sprej Silikoni',
+            name: 'M-ONE Silikonspray',
             image: '/products/SilikonSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Sprej Silikoni është një lubrifikant universal, agjent mbrojtës dhe rrëshqitës për plastikën, drurin, metalet dhe gomën. Mund të përdoret kudo ku vajrat dhe yndyrat janë të papërshtatshme. M-ONE Sprej Silikoni është papërshkues nga uji, antistatik, lubrifikon në mënyrë të padukshme dhe pa njolla, eliminon zhurmat e kërcitjes dhe është i qëndrueshëm ndaj ndikimeve të motit dhe temperaturave nga -30°C deri në +480°C.`
           },
           {
-            name: 'M-ONE Mbrojtës i Pjesës Së Poshtme (UBS)',
+            name: 'M-ONE Unterbodenschutz (UBS) Spray',
             image: '/products/UBS Spray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE UBS Spray është një mbrojtës i pjesës së poshtme pa përmbajtje bitumi, me bazë rrëshirë-kautshuku. Pas tharjes, veshja formon një shtresë mbrojtëse elastike dhe ngjitëse me rezistencë të lartë ndaj gërryerjes. M-ONE UBS Spray mbron në mënyrë të besueshme nga goditjet e gurëve dhe korrozioni. Pas tharjes së plotë, produkti mund të lyhet me bojë.
 
@@ -655,7 +655,7 @@ Përdorimi:
 Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen për të paktën 2 minuta pasi të dëgjoni lëvizjen e goglave përzierëse. Pjesët që do të trajtohen duhet të jenë të pastra, të thata dhe pa yndyrë, vaj ose ndryshk. Mund të lyhet me bojëra të zakonshme pas rreth 8 orësh.`
           },
           {
-            name: 'M-ONE Sprej Zinku',
+            name: 'M-ONE Zinkspray',
             image: '/products/ZinkSpray M ONE-3D-4K-Transparent.webp',
             description: `M-ONE Sprej Zinku përdoret në industri, artizanat si dhe në ndërtimin e karoserive, veçanërisht aty ku metalet janë të ekspozuara ndaj korrozionit. M-ONE Sprej Zinku ofron mbrojtje të besueshme në pikat e shpimit, prerjes dhe në pikat e bashkimit. Gjithashtu, mund të përdoret si shtresë bazë (primer) për pajisjet dhe pjesët e makinerive që janë vazhdimisht të ekspozuara ndaj ndikimit të motit.`
           }
@@ -671,17 +671,17 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         learnMore: 'Mëso më shumë',
         products: [
           {
-            name: 'Felne Argjendi M ONE',
+            name: 'Felgensilber M ONE',
             image: '/products/colors/felgensilber-transparent.webp',
             description: `M-ONE Llak-Spray Felne Argjendi është sprej me cilësi të lartë, terje të shpejtë dhe mbulueshmëri të mirë që përdoret për ngjyrosjen e felneve te veturat, karoserisë, pjesëve të ndryshme dekorative etj. Ky produkt ka ngjitje të mirë, është rezistent dhe i qëndrueshëm ndaj gërvishjeve dhe goditjeve gjithashtu ndaj ndikimit të benzinës, substancave të ndryshme kimike, rrezatimit UV, ndikimit të ambientit dhe motit. Mbron nga korrozioni dhe ndryshku.`
           },
           {
-            name: 'Bazë (Primer) M ONE',
+            name: 'Haftgrund M ONE',
             image: '/products/colors/haftgrund-transparent.webp',
             description: `M-ONE Bazë (Primer) është një bazë me cilësi të lartë për sipërfaqe të ndryshme. Siguron ngjitje optimale të lyerjes vijuese dhe mbron në mënyrë të besueshme nga korrozioni. Ideale për metal, dru dhe shumë plastikë.`
           },
           {
-            name: 'Llak Sprej M ONE',
+            name: 'Lack Spray M ONE',
             image: '/products/colors/lack-spray-rot-transparent.webp',
             colors: ['E zezë mat', 'E zezë', 'Bardhë', 'Gri', 'Krom', 'Arit', 'Verdhë', 'Kuqe', 'Gjelbër', 'Kafe'],
             tags: ['Llak', 'Ngjyrë', 'Sprej lyerje', 'Metal', 'Dru', 'Plastikë', 'Tharje e shpejtë', 'Mbulim i lartë'],
@@ -690,7 +690,7 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
 Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe pa mbetje vaji. Tundeni kanaçen për 2-3 minuta dhe spërkatni sipërfaqen nga një distancë rreth 20-30 cm.`
           },
           {
-            name: 'Llak për Temperaturë të Lartë M ONE',
+            name: 'Hochtemperatur Lack M ONE',
             image: '/products/colors/hochtemperatur-lack-transparent.webp',
             description: `M ONE LAK PËR TEMPERATURA TË LARTA: Bojë sprej akrilike me bazë silikoni, me tharje të shpejtë dhe rezistente ndaj motit, për sipërfaqe të brendshme/jashtme të ekspozuara ndaj nxehtësisë së lartë si soba, furra dhe marmita. Ngjyrat e zeza/argjendi janë rezistente deri në 690°C. 400ml mbulon afërsisht 1.5 m². Thahet për 1 orë; për një sipërfaqe më të fortë, ngroheni në 160°C për 1 orë pas aplikimit. Aplikimi: Sipërfaqja duhet të jetë e pastër, e thatë dhe pa vaj, pluhur, bojë të vjetër dhe ndryshk. Mos përdorni astar. Shkundeni kanan për 2 minuta. Provoni fillimisht në një zonë të vogël. Aplikoni shtresa të holla nga 25 cm distancë me intervale 2-minutëshe. Mos e aplikoni mbi bojëra të tjera akrilike.`
           }
