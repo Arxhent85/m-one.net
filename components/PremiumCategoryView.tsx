@@ -188,10 +188,7 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                    className={`relative ${category.title.toLowerCase().includes('bau')
-                      ? 'aspect-[4/5]'
-                      : 'aspect-[3/4]'
-                      } mb-6 overflow-hidden bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-white/10 transition-all duration-700 group-hover:bg-neutral-800/80 group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8`}
+                    className="relative aspect-[3/4] mb-6 overflow-hidden bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-white/10 transition-all duration-700 group-hover:bg-neutral-800/80 group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8"
                   >
 
                     {/* Subtle Background Radial Glow for Depth */}

@@ -77,20 +77,18 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
   
   // Non-Bau products (Sprays, Colors)
   if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
-    // Service products are stored in /products/ directly, while colors are in /products/colors/
-    // We need to identify them correctly to apply the higher scale
     const isServiceProduct = path.includes('/service/') || (!path.includes('/colors/') && (path.includes('spray') || path.includes('reiniger') || path.includes('fett') || path.includes('starter') || path.includes('rost') || path.includes('ubs') || path.includes('zink')));
     
     if (isServiceProduct) {
-      return isMobile ? 'scale-[1.50]' : 'scale-[1.45]';
+      return isMobile ? 'scale-[1.45]' : 'scale-[1.40]';
     }
     // Colors and other sprays
-    return isMobile ? 'scale-[1.35]' : 'scale-[1.25]';
+    return isMobile ? 'scale-[1.35]' : 'scale-[1.30]';
   }
 
   // Bau products (Cartridges)
-  // 1.15 is the universal sweet spot for 100% visibility and maximum size.
-  return isMobile ? 'scale-[1.15]' : 'scale-[1.05]';
+  // Standardizing cartridges to fill the 3:4 container properly
+  return isMobile ? 'scale-[1.20]' : 'scale-[1.10]';
 };
 
 /**
@@ -99,15 +97,13 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
 export const getProductPadding = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
   
-  // Normalizing padding for all products
-  // Service/Colors (Sprays) need very little padding to maximize visual impact
-  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
-    return isMobile ? 'p-2' : 'p-2';
+  // Standardized padding for almost all products to ensure consistent card fill
+  if (path.includes('/products/') || path.includes('spray') || path.includes('silikon') || path.includes('kleber')) {
+    return isMobile ? 'p-4' : 'p-6';
   }
 
-
-  // Bau products (Cartridges)
-  return isMobile ? 'p-4' : 'p-10';
+  // Fallback
+  return isMobile ? 'p-4' : 'p-8';
 };
 
 /**
