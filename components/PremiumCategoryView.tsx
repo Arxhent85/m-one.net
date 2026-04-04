@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Sun, Star, ExternalLink, Award, Hexagon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Star, Award } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
@@ -66,7 +66,6 @@ const getProjectsForCategory = (title: string) => {
       ]
     };
   } else {
-    // Cleaning or fallback
     return {
       description: 'Strahlende Ergebnisse für Industrie und Werterhalt. Kompromisslose Sauberkeit.',
       items: [
@@ -81,7 +80,7 @@ const getProjectsForCategory = (title: string) => {
 
 const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) => {
   const { t } = useLanguage();
-  const { goHome, navigateToProduct } = useNavigation();
+  const { goHome } = useNavigation();
   const { theme } = useTheme();
 
   const referenceData = getProjectsForCategory(category.title);
@@ -92,27 +91,27 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="relative min-h-screen bg-neutral-950 text-white overflow-hidden pt-12 lg:pt-32"
+      className="relative min-h-screen bg-white dark:bg-neutral-950 text-slate-900 dark:text-white overflow-hidden pt-12 lg:pt-32 transition-colors duration-500"
     >
-      {/* HINTERGRUND-DYNAMIK: Dezentes Grid-Muster (Technische Zeichnung Style) */}
+      {/* BACKGROUND DYNAMICS: Technical grid pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-30">
         <div 
           className="absolute inset-0" 
           style={{ 
-            backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)', 
+            backgroundImage: theme === 'dark'
+              ? 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)'
+              : 'linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px)', 
             backgroundSize: '40px 40px' 
           }}
         ></div>
         {/* Radial Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,10,0.8)_100%)]"></div>
-        {/* Glow Effects */}
-        <div className="absolute top-1/4 left-1/4 w-[50vw] h-[50vw] bg-brand-500/5 rounded-full blur-[150px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,10,0.4)_100%)] dark:bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,10,0.8)_100%)]"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-6 mb-24 lg:mb-40">
         <Link
           href="/"
-          className="text-neutral-300 hover:text-white mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
+          className="text-slate-500 dark:text-neutral-300 hover:text-brand-500 dark:hover:text-white mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
         >
           <ArrowLeft size={16} />
           {t.modal.back}
@@ -126,41 +125,38 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
               transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
               className="flex items-center gap-4 mb-6"
             >
-              <h4 className="text-white/80 font-bold tracking-[0.3em] uppercase text-xs">
+              <h4 className="text-slate-600 dark:text-white/80 font-bold tracking-[0.3em] uppercase text-xs">
                 {category.subtitle}
               </h4>
-              <div className="h-[1px] w-12 bg-white/20"></div>
+              <div className="h-[1px] w-12 bg-slate-200 dark:bg-white/20"></div>
             </motion.div>
             
-            {/* PROPORTIONEN & SCALING: Fettere, modernere Sans-Serif Typografie */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-              className="text-7xl md:text-[8rem] lg:text-[11rem] font-black text-white leading-[0.8] tracking-tighter mb-10 [text-shadow:_0_4px_24px_rgb(0_0_0_/_40%)]"
+              className="text-7xl md:text-[8rem] lg:text-[11rem] font-black text-slate-900 dark:text-white leading-[0.8] tracking-tighter mb-10 drop-shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:[text-shadow:_0_4px_24px_rgb(0_0_0_/_40%)]"
             >
               {category.title}
             </motion.h1>
             
-            {/* FARBKONTRAST: Hellere Beschreibungs-Texte */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-xl md:text-2xl text-neutral-300 font-light leading-relaxed max-w-3xl mb-10"
+              className="text-xl md:text-2xl text-slate-600 dark:text-neutral-300 font-light leading-relaxed max-w-3xl mb-10"
             >
               {category.description}
             </motion.p>
 
-            {/* DETAIL-VERBESSERUNGEN: Made In Germany dezenter */}
             <motion.div
                initial={{ opacity: 0 }}
                animate={{ opacity: 1 }}
                transition={{ duration: 1, delay: 0.6 }}
-               className="inline-flex items-center gap-2 bg-neutral-900/50 border border-white/5 px-3 py-1.5 rounded-md backdrop-blur-md"
+               className="inline-flex items-center gap-2 bg-slate-100 dark:bg-neutral-900/50 border border-slate-200 dark:border-white/5 px-3 py-1.5 rounded-md backdrop-blur-md"
             >
-              <Award size={14} className="text-neutral-400" />
-              <span className="text-xs font-semibold tracking-wide text-neutral-400 uppercase">
+              <Award size={14} className="text-slate-400 dark:text-neutral-400" />
+              <span className="text-xs font-semibold tracking-wide text-slate-500 dark:text-neutral-400 uppercase">
                 {category.madeInGermany || 'Qualität Made in Germany'}
               </span>
             </motion.div>
@@ -182,21 +178,16 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
                   href={`/produkte/${categorySlug}/${slug}`}
                   className="group cursor-pointer flex flex-col will-change-transform"
                 >
-                  {/* Glassmorphism Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                    className="relative aspect-[3/4] mb-6 overflow-hidden bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-white/10 transition-all duration-700 group-hover:bg-neutral-800/80 group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8"
+                    className="relative aspect-[3/4] mb-6 overflow-hidden bg-slate-50/80 dark:bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-slate-200 dark:border-white/10 transition-all duration-700 group-hover:bg-white dark:group-hover:bg-neutral-800/80 group-hover:border-brand-500/30 dark:group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8"
                   >
-
-                    {/* Subtle Background Radial Glow for Depth */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
-
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-                    {/* PROPORTIONEN & SCALING: Balanced product size inside the container */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <ImageWithFallback
                         src={product.image.includes('/products/colors/')
@@ -209,29 +200,26 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
                       />
                     </div>
 
-                    {/* Badges Overlay */}
                     <div className="absolute top-6 left-6 right-6 flex flex-col items-start gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0 delay-100">
-                      <div className="bg-black/40 backdrop-blur-md border border-white/10 p-2 text-white/70 rounded-md">
+                      <div className="bg-white/40 dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-2 text-slate-700 dark:text-white/70 rounded-md">
                         <ShieldCheck size={16} />
                       </div>
-                      <div className="bg-black/40 backdrop-blur-md border border-white/10 p-2 text-white/70 rounded-md">
+                      <div className="bg-white/40 dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-2 text-slate-700 dark:text-white/70 rounded-md">
                         <Zap size={16} />
                       </div>
                     </div>
 
-                    {/* Gradient Overlay for Text Readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/90 via-transparent to-transparent pointer-events-none opacity-60 dark:opacity-100" />
 
-                    {/* DETAIL-VERBESSERUNGEN: Dezentere "Details" Buttons */}
                     <div className="relative z-10 w-full flex justify-between items-end">
                       <div className="flex flex-col">
-                        <span className="text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
-                        <h3 className="text-xl md:text-2xl font-bold text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
+                        <span className="text-slate-400 dark:text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
                           {product.name}
                         </h3>
                       </div>
 
-                      <div className="flex items-center gap-2 text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500">
+                      <div className="flex items-center gap-2 text-slate-500 dark:text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500">
                         <span>Details</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -242,8 +230,8 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
             })}
           </div>
         ) : (
-          <div className="py-40 text-center border border-dashed border-neutral-800 rounded-2xl backdrop-blur-sm bg-neutral-900/30">
-             <p className="text-neutral-400 font-bold uppercase tracking-widest text-xs mb-8">{t.modal.noProducts}</p>
+          <div className="py-40 text-center border border-dashed border-slate-200 dark:border-neutral-800 rounded-2xl backdrop-blur-sm bg-slate-50/50 dark:bg-neutral-900/30">
+             <p className="text-slate-400 dark:text-neutral-400 font-bold uppercase tracking-widest text-xs mb-8">{t.modal.noProducts}</p>
              <button
                onClick={goHome}
                className="text-brand-500 font-black uppercase tracking-widest text-xs hover:tracking-[0.2em] transition-all"
@@ -254,23 +242,22 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
         )}
       </div>
 
-      {/* REFERENZ-PROJEKTE: Größere Projekt-Bilder, sauberes Raster mit 8px-12px Rundung und subtilen Schatten */}
-      <div className="relative z-10 py-32 lg:py-48 bg-neutral-950 border-t border-white/5">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900/50 pointer-events-none"></div>
+      {/* REFERENCE PROJECTS SECTION */}
+      <div className="relative z-10 py-32 lg:py-48 bg-slate-50 dark:bg-neutral-950 border-t border-slate-200 dark:border-white/5">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-200/50 dark:to-neutral-900/50 pointer-events-none"></div>
         <div className="container mx-auto px-6 relative z-10">
            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 lg:mb-24">
              <div>
-               <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-4">
+               <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">
                   {category.projects || 'Referenzprojekte'}
                 </h2>
-                <div className="h-[2px] w-16 bg-white/20"></div>
+                <div className="h-[2px] w-16 bg-brand-500/40 dark:bg-white/20"></div>
              </div>
-             <p className="text-neutral-300 max-w-sm mt-6 md:mt-0 font-light text-lg">
+             <p className="text-slate-600 dark:text-neutral-300 max-w-sm mt-6 md:mt-0 font-light text-lg">
                 {referenceData.description}
              </p>
            </div>
 
-           {/* Clean 4-Column Grid */}
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {referenceData.items.map((project, idx) => (
                 <motion.div
@@ -279,14 +266,12 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                  className="group relative overflow-hidden flex flex-col bg-neutral-900 rounded-[10px] border border-white/5 shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+                  className="group relative overflow-hidden flex flex-col bg-white dark:bg-neutral-900 rounded-[10px] border border-slate-200 dark:border-white/5 shadow-[0_8px_30px_rgba(0,0,0,0.05)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
                 >
-                   {/* Größere, prominentere Bilder (`aspect-[4/3]`) */}
                    <div className="relative aspect-[4/3] w-full overflow-hidden">
                       <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
                       
-                      {/* Rating Overlay */}
                       <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md flex gap-1 items-center">
                         <Star size={12} fill="#FF6B00" className="text-brand-500" />
                         <span className="text-white text-xs font-bold leading-none mt-0.5">{project.rating}.0</span>
@@ -301,15 +286,14 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category }) =
                            </span>
                         ))}
                       </div>
-                      <h4 className="text-white text-lg font-bold mb-1 leading-snug">{project.title}</h4>
-                      <p className="text-neutral-400 text-sm">{project.standard}</p>
+                      <h4 className="text-slate-900 dark:text-white text-lg font-bold mb-1 leading-snug">{project.title}</h4>
+                      <p className="text-slate-500 dark:text-neutral-400 text-sm">{project.standard}</p>
                    </div>
                 </motion.div>
               ))}
            </div>
         </div>
       </div>
-
     </motion.div>
   );
 };

@@ -34,19 +34,30 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const getAllProducts = () => {
     const allProducts: any[] = [];
+    const deCategories = translations.de.categories;
+
     Object.keys(CATEGORY_CONFIG).forEach(key => {
-      const catData = t.categories[key as keyof typeof t.categories];
-      if (catData && catData.products) {
-        // Generate category slug from title (e.g., "SERVICE & KFZ" -> "service--kfz")
-        const categorySlug = slugify(catData.title);
+      const catKey = key as keyof typeof deCategories;
+      const catData = t.categories[catKey];
+      const deCatData = deCategories[catKey];
+
+      if (catData && catData.products && deCatData && deCatData.products) {
+        // Map internal category key to URL slug (e.g., 'service' -> 'service--kfz')
+        // This must match the keys in CATEGORY_SLUG_MAP in constants.ts
+        const categorySlug = key === 'service' ? 'service--kfz' : key;
         
-        catData.products.forEach(p => {
+        catData.products.forEach((p, index) => {
+          // Always use the German product name to generate the URL slug
+          // so it matches the Next.js routing patterns.
+          const deProduct = deCatData.products[index];
+          const productSlug = slugify(deProduct.name);
+
           allProducts.push({
             ...p,
             categoryId: key,
             categorySlug: categorySlug,
             categoryName: catData.title,
-            slug: slugify(p.name)
+            slug: productSlug
           });
         });
       }
