@@ -98,7 +98,27 @@ export const getProductPadding = (imagePath: string = '', isMobile: boolean = fa
     return isMobile ? 'p-4' : 'p-8';
   }
 
+
   // Bau products (Cartridges)
   return isMobile ? 'p-4' : 'p-10';
 };
+
+/**
+ * Standardizes slug generation across the application.
+ */
+export const slugify = (text: string) => 
+  text.toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]/g, '');
+
+/**
+ * Maps URL category slugs to internal translation keys.
+ */
+export const CATEGORY_SLUG_MAP: Record<string, string> = {
+  'service--kfz': 'service',
+  'bau': 'bau',
+  'colors': 'colors',
+  'cleaning': 'cleaning'
+};
+
 

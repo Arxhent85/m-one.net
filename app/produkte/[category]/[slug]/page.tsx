@@ -1,8 +1,8 @@
-
 import React from "react";
 import ProductPageWrapper from "../../../../components/ProductPageWrapper";
 import { Metadata } from "next";
 import { translations } from "../../../../translations";
+import { CATEGORY_SLUG_MAP, slugify } from "../../../../constants";
 
 interface PageProps {
   params: Promise<{
@@ -11,12 +11,10 @@ interface PageProps {
   }>;
 }
 
-// Function to slugify names for comparison
-const slugify = (text: string) => text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
-  const categoryId = resolvedParams.category as keyof typeof translations.de.categories;
+  const categorySlug = resolvedParams.category;
+  const categoryId = (CATEGORY_SLUG_MAP[categorySlug] || categorySlug) as keyof typeof translations.de.categories;
   const categoryData = (translations.de.categories as any)[categoryId];
   
   if (!categoryData) return { title: "Projekt M ONE" };
@@ -33,7 +31,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ProductPage({ params }: PageProps) {
   const resolvedParams = await params;
-  const categoryId = resolvedParams.category as keyof typeof translations.de.categories;
+  const categorySlug = resolvedParams.category;
+  const categoryId = (CATEGORY_SLUG_MAP[categorySlug] || categorySlug) as keyof typeof translations.de.categories;
   const categoryData = (translations.de.categories as any)[categoryId];
   
   if (!categoryData) return <div>Kategorie nicht gefunden</div>;
@@ -42,5 +41,5 @@ export default async function ProductPage({ params }: PageProps) {
 
   if (!product) return <div>Produkt nicht gefunden</div>;
 
-  return <ProductPageWrapper productName={product.name} categoryId={resolvedParams.category} />;
+  return <ProductPageWrapper productName={product.name} categoryId={categoryId} />;
 }

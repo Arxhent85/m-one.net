@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import { translations } from '../translations';
-import { CATEGORY_CONFIG } from '../constants';
+import { CATEGORY_CONFIG, slugify } from '../constants';
 
 type Language = 'de' | 'en' | 'sq';
 
@@ -36,11 +36,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const allProducts: any[] = [];
     Object.keys(CATEGORY_CONFIG).forEach(key => {
       const catData = t.categories[key as keyof typeof t.categories];
-      if (catData.products) {
+      if (catData && catData.products) {
+        // Generate category slug from title (e.g., "SERVICE & KFZ" -> "service--kfz")
+        const categorySlug = slugify(catData.title);
+        
         catData.products.forEach(p => {
           allProducts.push({
             ...p,
-            categoryName: catData.title
+            categoryId: key,
+            categorySlug: categorySlug,
+            categoryName: catData.title,
+            slug: slugify(p.name)
           });
         });
       }

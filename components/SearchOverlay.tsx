@@ -8,6 +8,7 @@ import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { getProductScale, getProductPadding } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
+import Link from 'next/link';
 
 interface Product {
   name: string;
@@ -61,12 +62,26 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
     const searchTerm = query.toLowerCase();
     const allProducts = getAllProducts();
 
-    return allProducts.filter((product) => {
-      return (
-        product.name.toLowerCase().includes(searchTerm) ||
-        (product.description && product.description.toLowerCase().includes(searchTerm))
-      );
-    });
+    return allProducts
+      .map((product) => {
+        let score = 0;
+        const productName = product.name.toLowerCase();
+        // Remove "m-one" Variations for cleaner matching
+        const cleanName = productName.replace(/m-one/g, '').replace(/m one/g, '').trim();
+        
+        if (cleanName === searchTerm) score += 100;
+        else if (cleanName.startsWith(searchTerm)) score += 80;
+        else if (cleanName.includes(searchTerm)) score += 60;
+        else if (productName.includes(searchTerm)) score += 40;
+        
+        if (product.description && product.description.toLowerCase().includes(searchTerm)) {
+          score += 20;
+        }
+
+        return { ...product, score };
+      })
+      .filter((product) => product.score > 0)
+      .sort((a, b) => b.score - a.score);
   }, [query, getAllProducts]);
 
   const containerVariants = {
@@ -139,15 +154,16 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                   className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-12"
                 >
                   {results.map((product, index) => (
-                    <motion.div
-                      variants={itemVariants}
+                    <Link
                       key={index}
-                      onClick={() => {
-                        navigateToProduct(product);
-                        onClose();
-                      }}
+                      href={`/produkte/${product.categorySlug}/${product.slug}`}
+                      onClick={() => onClose()}
                       className="group flex flex-col h-full bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-neutral-100 dark:border-neutral-700 hover:border-brand-500/30 dark:hover:border-brand-500/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
                     >
+                      <motion.div
+                        variants={itemVariants}
+                        className="flex flex-col h-full"
+                      >
                       <div className="relative overflow-hidden rounded-t-xl bg-neutral-50 dark:bg-neutral-100 aspect-[2/3] md:aspect-[3/4] shrink-0 border-b border-neutral-100 dark:border-neutral-700">
                         <ImageWithFallback
                           src={product.image.includes('/products/colors/')
@@ -178,8 +194,9 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                         )}
                       </div>
                     </motion.div>
-                  ))}
-                </motion.div>
+                  </Link>
+                ))}
+              </motion.div>
               ) : (
                 <motion.div
                   key="no-results"
