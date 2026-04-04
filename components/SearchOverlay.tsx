@@ -1,3 +1,4 @@
+"use client";
 
 import * as React from 'react';
 import { Search, X, ArrowRight } from 'lucide-react';

@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from 'react';
 import { ArrowRight, BrickWall, Wrench, SprayCan, Sparkles, Hand } from 'lucide-react';
 import { useLanguage } from './LanguageContext';

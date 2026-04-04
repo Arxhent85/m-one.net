@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Sun, Star, ExternalLink, Award, Hexagon } from 'lucide-react';
