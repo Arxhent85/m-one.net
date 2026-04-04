@@ -2,7 +2,8 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { CATEGORY_CONFIG } from '../constants';
+import { CATEGORY_CONFIG, getCategoryHref } from '../constants';
+
 import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
@@ -39,7 +40,8 @@ const SketchGrid: React.FC = () => {
             const config = CATEGORY_CONFIG[key as keyof typeof CATEGORY_CONFIG];
 
             return (
-              <Link key={key} href={`/produkte/${key}`}>
+              <Link key={key} href={getCategoryHref(key)}>
+
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +85,7 @@ const SketchGrid: React.FC = () => {
             const isHovered = hoveredId === key;
 
             return (
-              <Link key={key} href={`/produkte/${key}`} className="block h-full" style={{ flex: isHovered ? 1.6 : (hoveredId && !isHovered) ? 0.8 : 1, transition: 'flex 0.6s cubic-bezier(0.16,1,0.3,1)' }}>
+              <Link key={key} href={getCategoryHref(key)} className="block h-full" style={{ flex: isHovered ? 1.6 : (hoveredId && !isHovered) ? 0.8 : 1, transition: 'flex 0.6s cubic-bezier(0.16,1,0.3,1)' }}>
                 <motion.div
                   onPointerEnter={(e) => {
                     if (e.pointerType === 'mouse') setHoveredId(key);

@@ -1,7 +1,8 @@
 
 import * as React from 'react';
 import { translations } from '../translations';
-import { CATEGORY_CONFIG, slugify } from '../constants';
+import { CATEGORY_CONFIG, slugify, getCategoryHref } from '../constants';
+
 
 type Language = 'de' | 'en' | 'sq';
 
@@ -42,9 +43,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const deCatData = deCategories[catKey];
 
       if (catData && catData.products && deCatData && deCatData.products) {
-        // Map internal category key to URL slug (e.g., 'service' -> 'service--kfz')
-        // This must match the keys in CATEGORY_SLUG_MAP in constants.ts
-        const categorySlug = key === 'service' ? 'service--kfz' : key;
+        // Use centralized helper to generate category URL
+        const categoryHref = getCategoryHref(key);
+        const categorySlug = categoryHref.split('/').pop() || key;
         
         catData.products.forEach((p, index) => {
           // Always use the German product name to generate the URL slug

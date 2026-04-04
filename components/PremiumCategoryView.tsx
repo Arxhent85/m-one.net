@@ -7,7 +7,7 @@ import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
-import { getProductPadding, getProductScale, slugify } from '../constants';
+import { CATEGORY_CONFIG, getCategoryHref, getProductPadding, getProductScale, slugify } from '../constants';
 import { motion } from 'motion/react';
 import { translations } from '../translations';
 
@@ -179,10 +179,13 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
               const deProduct = deProducts[index];
               const slug = deProduct ? slugify(deProduct.name) : slugify(product.name);
               
+              // Use centralized helper to get correct category segment (e.g., 'service--kfz')
+              const categoryHref = getCategoryHref(categoryId);
+              
               return (
                 <Link
                   key={index}
-                  href={`/produkte/${categoryUrlSlug}/${slug}`}
+                  href={`${categoryHref}/${slug}`}
                   className="group cursor-pointer flex flex-col will-change-transform"
                 >
                   <motion.div

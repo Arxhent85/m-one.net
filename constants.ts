@@ -109,12 +109,13 @@ export const getProductPadding = (imagePath: string = '', isMobile: boolean = fa
 };
 
 /**
- * Standardizes slug generation across the application.
+ * Standardizes category slug generation across the application.
+ * Maps internal category keys (e.g., 'service') to the desired URL slugs.
  */
-export const slugify = (text: string) => 
-  text.toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/[^\w-]/g, '');
+export const getCategoryHref = (categoryId: string) => {
+  const slug = categoryId === 'service' ? 'service--kfz' : categoryId;
+  return `/produkte/${slug}`;
+};
 
 /**
  * Maps URL category slugs to internal translation keys.
@@ -126,4 +127,10 @@ export const CATEGORY_SLUG_MAP: Record<string, string> = {
   'cleaning': 'cleaning'
 };
 
-
+/**
+ * Standardizes slug generation across the application.
+ */
+export const slugify = (text: string) => 
+  text.toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]/g, '');
