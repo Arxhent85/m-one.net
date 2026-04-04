@@ -242,20 +242,30 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
               {/* Gallery Toggle */}
               {has3D && (
-                <div className="absolute bottom-2 left-2 flex gap-1 p-0.5 glass-panel rounded-full border border-white/10 shadow-lg z-[60]">
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="absolute bottom-4 left-4 flex gap-1.5 p-1 glass-panel rounded-full border border-white/10 shadow-2xl z-[60]"
+                >
                   {[0, 1].map((idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveMediaIndex(idx)}
-                      className={`px-2 py-0.5 rounded-full text-[7px] font-black uppercase tracking-[0.1em] transition-all duration-500 ${activeMediaIndex === idx
-                        ? 'bg-brand-500 text-white shadow-lg'
+                      className={`px-3 py-1.5 rounded-full text-[9px] lg:text-[11px] font-black uppercase tracking-[0.15em] transition-all duration-500 ${activeMediaIndex === idx
+                        ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20'
                         : 'text-neutral-500 hover:text-neutral-950 dark:hover:text-white'
                         }`}
                     >
                       {idx === 0 ? 'IMG' : '3D'}
                     </button>
                   ))}
-                </div>
+                  {/* Subtle attention pulse */}
+                  <motion.div
+                    animate={{ opacity: [0, 0.4, 0] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                    className="absolute inset-0 rounded-full bg-brand-500/20 blur-md pointer-events-none -z-10"
+                  />
+                </motion.div>
               )}
             </motion.div>
 

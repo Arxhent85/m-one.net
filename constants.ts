@@ -77,6 +77,10 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
   
   // Non-Bau products (Sprays, Colors)
   if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
+    // Service products need to be even larger to fill the field better
+    if (path.includes('/service/')) {
+      return isMobile ? 'scale-[1.40]' : 'scale-[1.30]';
+    }
     // 1.25 on mobile and 1.10 on desktop ensures impact without clipping
     return isMobile ? 'scale-[1.25]' : 'scale-[1.10]';
   }
