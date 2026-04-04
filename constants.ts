@@ -77,12 +77,15 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
   
   // Non-Bau products (Sprays, Colors)
   if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
-    // Service products need to be even larger to fill the field better
-    if (path.includes('/service/')) {
-      return isMobile ? 'scale-[1.40]' : 'scale-[1.30]';
+    // Service products are stored in /products/ directly, while colors are in /products/colors/
+    // We need to identify them correctly to apply the higher scale
+    const isServiceProduct = path.includes('/service/') || (!path.includes('/colors/') && (path.includes('spray') || path.includes('reiniger') || path.includes('fett') || path.includes('starter') || path.includes('rost') || path.includes('ubs') || path.includes('zink')));
+    
+    if (isServiceProduct) {
+      return isMobile ? 'scale-[1.50]' : 'scale-[1.45]';
     }
-    // 1.25 on mobile and 1.10 on desktop ensures impact without clipping
-    return isMobile ? 'scale-[1.25]' : 'scale-[1.10]';
+    // Colors and other sprays
+    return isMobile ? 'scale-[1.35]' : 'scale-[1.25]';
   }
 
   // Bau products (Cartridges)
@@ -97,9 +100,9 @@ export const getProductPadding = (imagePath: string = '', isMobile: boolean = fa
   const path = imagePath.toLowerCase();
   
   // Normalizing padding for all products
-  // Service/Colors (Sprays) need a bit more edge room than cartridges
+  // Service/Colors (Sprays) need very little padding to maximize visual impact
   if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray')) {
-    return isMobile ? 'p-4' : 'p-8';
+    return isMobile ? 'p-2' : 'p-2';
   }
 
 
