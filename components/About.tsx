@@ -45,7 +45,7 @@ const About: React.FC = () => {
           {/* Image 1 — Precision Silicone Application */}
           <div className="relative overflow-hidden rounded-xl aspect-[4/3] col-span-1">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1504307651254-35680f356f12?auto=format&fit=crop&q=80&w=600"
+              src="/images/about/service.png"
               alt="Precision Craftsmanship"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
               fallbackStrategy="picsum"
@@ -54,7 +54,7 @@ const About: React.FC = () => {
           {/* Image 2 — Automotive Premium Finish */}
           <div className="relative overflow-hidden rounded-xl aspect-[4/3] col-span-1">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600"
+              src="/images/about/quality.png"
               alt="Premium Automotive Finish"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
               fallbackStrategy="picsum"
@@ -63,7 +63,7 @@ const About: React.FC = () => {
           {/* Image 3 — High-Tech Factory / hidden on mobile */}
           <div className="relative overflow-hidden rounded-xl aspect-[4/3] col-span-2 md:col-span-1">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
+              src="/images/about/architecture.png"
               alt="High-Tech Manufacturing"
               className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
               fallbackStrategy="picsum"

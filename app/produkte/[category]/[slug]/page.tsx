@@ -13,6 +13,29 @@ interface PageProps {
 }
 
 /**
+ * Generates all possible product/category combinations for static rendering.
+ * Focused on canonical German slugs.
+ */
+export async function generateStaticParams() {
+  const paths: { category: string; slug: string }[] = [];
+  
+  Object.keys(translations.de.categories).forEach((catId) => {
+    const categoryData = (translations.de.categories as any)[catId];
+    if (categoryData && categoryData.products) {
+      const categorySlug = catId === 'service' ? 'service--kfz' : catId;
+      categoryData.products.forEach((product: any) => {
+        paths.push({
+          category: categorySlug,
+          slug: slugify(product.name),
+        });
+      });
+    }
+  });
+
+  return paths;
+}
+
+/**
  * Finds a product index and categoryId by searching across all languages if necessary.
  */
 async function findProduct(categorySlug: string, productSlug: string) {

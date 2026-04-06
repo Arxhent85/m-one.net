@@ -5,6 +5,8 @@ type Theme = 'light' | 'dark';
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  isHeroVideoActive: boolean;
+  setIsHeroVideoActive: (v: boolean) => void;
 }
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
@@ -12,16 +14,14 @@ const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = React.useState<Theme>(() => {
     if (typeof window === 'undefined') return 'dark';
-    // Check localStorage first
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) return savedTheme;
-    
-    // Fallback to system preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
     return 'light';
   });
+  const [isHeroVideoActive, setIsHeroVideoActive] = React.useState(true);
 
   React.useEffect(() => {
     const root = document.documentElement;
@@ -38,7 +38,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isHeroVideoActive, setIsHeroVideoActive }}>
       {children}
     </ThemeContext.Provider>
   );

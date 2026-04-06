@@ -17,9 +17,14 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, isHeroVideoActive, setIsHeroVideoActive } = useTheme();
   const { goHome } = useNavigation();
   const pathname = usePathname();
+
+  // Determine if we should force white contrast (e.g. during dark Hero video playback)
+  const isHomepage = pathname === '/' || ['/de', '/en', '/sq'].some(lang => pathname === lang || pathname === `${lang}/`);
+  const forceWhite = isHeroVideoActive && isHomepage && !isScrolled;
+  const navTheme = forceWhite ? 'dark' : theme;
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +71,14 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || pathname !== '/' ? 'glass-panel py-2 md:py-4' : 'bg-transparent py-2 md:py-6'
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navTheme === 'dark' ? 'dark' : ''} ${isScrolled || pathname !== '/' ? 'glass-panel py-2 md:py-4' : 'bg-transparent py-2 md:py-6'
           }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
             <img
-              src={theme === 'light'
+              src={navTheme === 'light'
                 ? "/logos/M-ONE_logo_Lang_schwarz.webp"
                 : "/logos/M-ONE_logo_Lang_weiss.webp"}
               alt="M-ONE Logo"
@@ -89,7 +94,7 @@ const Navbar: React.FC = () => {
                 key={link.id}
                 href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`font-medium transition-colors hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white/90'}`}
+                className={`font-medium transition-colors hover:text-brand-500 ${navTheme === 'light' ? 'text-brand-900' : 'text-white/90'}`}
               >
                 {t.nav[link.id as keyof typeof t.nav]}
               </Link>
@@ -102,7 +107,7 @@ const Navbar: React.FC = () => {
               {/* Theme Toggle Desktop */}
               <button
                 onClick={toggleTheme}
-                className={`transition-colors hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white'}`}
+                className={`transition-colors hover:text-brand-500 ${navTheme === 'light' ? 'text-brand-900' : 'text-white'}`}
                 aria-label="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -112,7 +117,7 @@ const Navbar: React.FC = () => {
             {/* Search Button Desktop */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className={`transition-colors p-2 hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white'}`}
+              className={`transition-colors p-2 hover:text-brand-500 ${navTheme === 'light' ? 'text-brand-900' : 'text-white'}`}
               aria-label={t.nav.searchLabel}
             >
               <Search size={22} />
@@ -128,7 +133,7 @@ const Navbar: React.FC = () => {
             {/* Theme Toggle Mobile */}
             <button
               onClick={toggleTheme}
-              className={`transition-colors hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white'}`}
+              className={`transition-colors hover:text-brand-500 ${navTheme === 'light' ? 'text-brand-900' : 'text-white'}`}
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -137,7 +142,7 @@ const Navbar: React.FC = () => {
             {/* Search Button Mobile */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className={`transition-colors hover:text-brand-500 ${theme === 'light' ? 'text-brand-900' : 'text-white'}`}
+              className={`transition-colors hover:text-brand-500 ${navTheme === 'light' ? 'text-brand-900' : 'text-white'}`}
               aria-label={t.nav.searchLabel}
             >
               <Search size={24} />

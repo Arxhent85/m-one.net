@@ -232,7 +232,23 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
         projects: 'Industrie-Referenzen',
         madeInGermany: 'Qualität Made in Germany',
         learnMore: 'Mehr erfahren',
-        products: []
+        products: [
+          {
+            name: 'M-ONE Montagereiniger (Extra Stark)',
+            image: '/images/products/cleaning/montagereiniger.png',
+            description: `M-ONE Montagereiniger ist ein hochwirksamer Spezialreiniger für die schnelle Entfettung und Reinigung von Metallen, Glas und vielen Kunststoffen. Er verdunstet absolut rückstandsfrei und sorgt für eine optimale Haftung bei nachfolgenden Klebe- und Dichtungsarbeiten. Entfernt mühelos Öle, Fette, Harze und verkrusteten Schmutz.`
+          },
+          {
+            name: 'M-ONE Industrie-Schnellreiniger',
+            image: '/images/products/cleaning/industriereiniger.png',
+            description: `Unser Industrie-Schnellreiniger wurde speziell für höchste Ansprüche in Werkstatt und Produktion entwickelt. Die kraftvolle Formel löst selbst hartnäckige Verschmutzungen wie Schmierstoffe, Teer und Klebereste in Sekunden. Er schützt das Material und hinterlässt eine perfekt vorbereitete Oberfläche.`
+          },
+          {
+            name: 'M-ONE Universalreiniger (Premium)',
+            image: '/images/products/cleaning/universalreiniger.png',
+            description: `Der M-ONE Universalreiniger ist der Allrounder für die moderne Gebäudereinigung. Er vereint höchste Reinigungskraft mit Materialschonung und einem angenehmen Frischeduft. Ideal für alle abwaschbaren Oberflächen in Büro, Industrie und Sanitärbereichen.`
+          }
+        ]
       }
     }
   },
@@ -468,7 +484,23 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         projects: 'Industry References',
         madeInGermany: 'Quality Made in Germany',
         learnMore: 'Learn more',
-        products: []
+        products: [
+          {
+            name: 'M-ONE Mounting Cleaner (Extra Strong)',
+            image: '/images/products/cleaning/montagereiniger.png',
+            description: `M-ONE Mounting Cleaner is a highly effective special cleaner for the rapid degreasing and cleaning of metals, glass, and many plastics. It evaporates completely residue-free and ensures optimal adhesion for subsequent bonding and sealing work. Effortlessly removes oils, greases, resins, and encrusted dirt.`
+          },
+          {
+            name: 'M-ONE Industrial Quick Cleaner',
+            image: '/images/products/cleaning/industriereiniger.png',
+            description: `Our Industrial Quick Cleaner was specially developed for the highest demands in workshops and production. The powerful formula dissolves even stubborn dirt such as lubricants, tar, and adhesive residues in seconds. It protects the material and leaves a perfectly prepared surface.`
+          },
+          {
+            name: 'M-ONE Universal Cleaner (Premium)',
+            image: '/images/products/cleaning/universalreiniger.png',
+            description: `The M-ONE Universal Cleaner is the all-rounder for modern building cleaning. It combines maximum cleaning power with material protection and a pleasant fresh scent. Ideal for all washable surfaces in offices, industry, and sanitary areas.`
+          }
+        ]
       }
     }
   },
@@ -704,7 +736,23 @@ Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe p
         projects: 'Referencat Industriale',
         madeInGermany: 'Cilësi Made in Germany',
         learnMore: 'Mëso më shumë',
-        products: []
+        products: [
+          {
+            name: 'M-ONE Montagereiniger (Ekstra i Fortë)',
+            image: '/images/products/cleaning/montagereiniger.png',
+            description: `Pastruesi i Montimit M-ONE është një pastrues special shumë efektiv për shkrirjen e shpejtë të yndyrës dhe pastrimin e metaleve, qelqit dhe shumë plastikave. Ai avullon plotësisht pa mbetje dhe siguron ngjitje optimale për punët vijuese të ngjitjes dhe izolimit. Largon pa mundim vajrat, yndyrat, rrëshirat dhe papastërtitë e forta.`
+          },
+          {
+            name: 'M-ONE Pastrues i Shpejtë Industrial',
+            image: '/images/products/cleaning/industriereiniger.png',
+            description: `Pastruesi ynë i Shpejtë Industrial është zhvilluar posaçërisht për kërkesat më të larta në punëtori dhe prodhim. Formula e fuqishme tret edhe papastërtitë më të forta si lubrifikantët, katrani dhe mbetjet e ngjitësit në pak sekonda. Ai mbron materialin dhe lë një sipërfaqe të përgatitur në mënyrë perfekte.`
+          },
+          {
+            name: 'M-ONE Pastrues Universal (Premium)',
+            image: '/images/products/cleaning/universalreiniger.png',
+            description: `Pastruesi Universal M-ONE është zgjidhja gjithëpërfshirëse për pastrimin modern të ndërtesave. Ai kombinon fuqinë maksimale të pastrimit me mbrojtjen e materialit dhe një aromë të këndshme freskie. Ideal për të gjitha sipërfaqet që mund të lahen në zyrë, industri dhe zona sanitare.`
+          }
+        ]
       }
     }
   }

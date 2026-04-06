@@ -25,11 +25,18 @@ const Hero: React.FC = () => {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
   
   const { t } = useLanguage();
-  const { theme } = useTheme();
+  const { theme, setIsHeroVideoActive } = useTheme();
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [direction, setDirection] = React.useState(0);
   const [videoEnded, setVideoEnded] = React.useState(false);
   const [hasInteracted, setHasInteracted] = React.useState(false);
+
+  // Sync internal video state with global theme context
+  React.useEffect(() => {
+    setIsHeroVideoActive(!videoEnded);
+    // Cleanup on unmount to reset global video state
+    return () => setIsHeroVideoActive(false);
+  }, [videoEnded, setIsHeroVideoActive]);
 
   // Restore the video variables.
   const videoSrc = '/videos/HeroVideoFinal.mp4';
@@ -54,6 +61,15 @@ const Hero: React.FC = () => {
   };
 
   const slide = SLIDES[currentSlide];
+  
+  const handleHeroClick = (e: React.MouseEvent) => {
+    // Only scroll if we clicked the background, not buttons or specific interactive elements
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('a')) return;
+    
+    document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   // Variants for desktop & mobile
   const variants = {
@@ -78,7 +94,25 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className={`relative flex flex-col md:block min-h-[100dvh] w-full overflow-hidden ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
+    <section 
+      id="hero" 
+      onClick={handleHeroClick}
+      className={`relative flex flex-col md:block min-h-[100dvh] w-full overflow-hidden cursor-pointer ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}
+    >
+      {/* ── IMAGE PRELOADER (Hidden) ── */}
+      <div className="hidden pointer-events-none" aria-hidden="true">
+        {SLIDES.map((s, idx) => (
+          <React.Fragment key={s.id}>
+            {/* We render next/previous images to trigger browser cache */}
+            {idx !== currentSlide && (
+              <>
+                <img src={s.darkImg} alt="" />
+                <img src={s.lightImg} alt="" />
+              </>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
       
       {/* ── MOBILE: STACKED LAYOUT (Top Half) ── */}
       <div className="md:hidden relative w-full h-[55vh] mt-16 bg-neutral-950 border-b border-white/5 overflow-hidden">
