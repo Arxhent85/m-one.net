@@ -2,7 +2,6 @@
 import { BrickWall, SprayCan, Sparkles, Wrench } from 'lucide-react';
 
 export const NAV_LINKS = [
-  { id: 'home', href: '#hero' },
   { id: 'services', href: '#categories' },
   { id: 'about', href: '#about' },
   { id: 'contact', href: '#contact' },
