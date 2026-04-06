@@ -2,11 +2,11 @@
 export const translations = {
   de: {
     nav: {
-      home: 'Shop',
+      home: 'M ONE',
       services: 'Produktlinien',
       about: 'Über Uns',
       contact: 'Kontakt',
-      requestQuote: 'Zum Shop',
+      requestQuote: 'Anfrage',
       searchLabel: 'Suche öffnen',
     },
     hero: {
@@ -255,10 +255,10 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
   en: {
     nav: {
       home: 'Home',
-      services: 'Services',
+      services: 'Products',
       about: 'About Us',
       contact: 'Contact',
-      requestQuote: 'Request Quote',
+      requestQuote: 'Inquiry',
       searchLabel: 'Open Search',
     },
     hero: {
@@ -507,7 +507,7 @@ Application: Before use, the surface must be clean, dry and free from oily resid
   sq: {
     nav: {
       home: 'Kreu',
-      services: 'Shërbimet',
+      services: 'Produktet',
       about: 'Rreth Nesh',
       contact: 'Kontakt',
       requestQuote: 'Kërkoni Ofertë',
