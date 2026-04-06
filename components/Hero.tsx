@@ -4,14 +4,15 @@ import * as React from 'react';
 import { ArrowRight, BrickWall, Wrench, SprayCan, Sparkles, Hand } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useTheme } from './ThemeContext';
+import { useRouter } from 'next/navigation';
 import { motion, useScroll, useTransform, AnimatePresence, PanInfo } from 'motion/react';
 import ImageWithFallback from './ImageWithFallback';
 
 const SLIDES = [
-  { id: 'bau', name: 'Bau', icon: BrickWall, darkImg: '/images/hero/slideshow/HeroSilikonDunkel.png', lightImg: '/images/hero/slideshow/HeroSilikonHell.PNG' },
-  { id: 'service', name: 'Service & KFZ', icon: Wrench, darkImg: '/images/hero/slideshow/HeroServiceDunkel.PNG', lightImg: '/images/hero/slideshow/HeroServiceHell.PNG' },
-  { id: 'colors', name: 'Colors', icon: SprayCan, darkImg: '/images/hero/slideshow/HeroColorDunkel.png', lightImg: '/images/hero/slideshow/HeroColorHell.png' },
-  { id: 'cleaning', name: 'Cleaning', icon: Sparkles, darkImg: '/images/hero/slideshow/HeroCleanDunkel.PNG', lightImg: '/images/hero/slideshow/HeroCleanHell.PNG' },
+  { id: 'bau', name: 'Bau', icon: BrickWall, darkImg: '/images/hero/slideshow/HeroSilikonDunkel.png', lightImg: '/images/hero/slideshow/HeroSilikonHell.PNG', slug: '/produkte/bau' },
+  { id: 'service', name: 'Service & KFZ', icon: Wrench, darkImg: '/images/hero/slideshow/HeroServiceDunkel.PNG', lightImg: '/images/hero/slideshow/HeroServiceHell.PNG', slug: '/produkte/service--kfz' },
+  { id: 'colors', name: 'Colors', icon: SprayCan, darkImg: '/images/hero/slideshow/HeroColorDunkel.png', lightImg: '/images/hero/slideshow/HeroColorHell.png', slug: '/produkte/colors' },
+  { id: 'cleaning', name: 'Cleaning', icon: Sparkles, darkImg: '/images/hero/slideshow/HeroCleanDunkel.PNG', lightImg: '/images/hero/slideshow/HeroCleanHell.PNG', slug: '/produkte/cleaning' },
 ];
 
 const swipeConfidenceThreshold = 10000;
@@ -60,14 +61,19 @@ const Hero: React.FC = () => {
     }
   };
 
+  const router = useRouter();
   const slide = SLIDES[currentSlide];
-  
+
   const handleHeroClick = (e: React.MouseEvent) => {
-    // Only scroll if we clicked the background, not buttons or specific interactive elements
+    // Only navigate if we clicked the background, not buttons or specific interactive elements
     const target = e.target as HTMLElement;
     if (target.closest('button') || target.closest('a')) return;
-    
-    document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+
+    if (videoEnded) {
+      router.push(slide.slug);
+    } else {
+      document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
 
