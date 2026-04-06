@@ -5,6 +5,7 @@ import { Search, X, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
+import { translations } from '../translations';
 import ImageWithFallback from './ImageWithFallback';
 import { getProductScale, getProductPadding } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
@@ -64,39 +65,42 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
     const searchTerm = query.toLowerCase();
     const allProducts = getAllProducts();
 
-    const resultsWithScore = allProducts.map(product => {
+    const resultsWithScore = allProducts.map((product, index) => {
       let score = 0;
-      const name = product.name.toLowerCase();
-      const description = (product.description || '').toLowerCase();
+      
+      // Get all translated versions of this product to search against
+      const deProduct = translations.de.categories[product.categoryId as keyof typeof translations.de.categories]?.products[index];
+      const enProduct = translations.en.categories[product.categoryId as keyof typeof translations.en.categories]?.products[index];
+      const sqProduct = translations.sq.categories[product.categoryId as keyof typeof translations.sq.categories]?.products[index];
+
+      // Collect all names, descriptions, and tags
+      const searchData = [
+        { name: deProduct?.name, desc: deProduct?.description },
+        { name: enProduct?.name, desc: enProduct?.description },
+        { name: sqProduct?.name, desc: sqProduct?.description },
+        { name: product.name, desc: product.description } // Current language
+      ];
+
+      searchData.forEach(data => {
+        if (!data.name) return;
+        const name = data.name.toLowerCase();
+        const desc = (data.desc || '').toLowerCase();
+
+        if (name.includes(searchTerm)) {
+          score += 150;
+          if (name.startsWith(searchTerm)) score += 50;
+        }
+        if (desc.includes(searchTerm)) {
+          score += 40;
+        }
+      });
+
+      // Color and Tag match (current language)
       const colors = (product.colors || []).map((c: string) => c.toLowerCase());
       const tags = (product.tags || []).map((t: string) => t.toLowerCase());
 
-      // 1. Name Match (Highest priority)
-      if (name.includes(searchTerm)) {
-        score += 150;
-        if (name.startsWith(searchTerm)) score += 50;
-      }
-
-      // 2. Tag Match (High priority)
-      const tagMatch = tags.some((tag: string) => tag.includes(searchTerm));
-      if (tagMatch) {
-        score += 100;
-        // Exact tag match bonus
-        if (tags.includes(searchTerm)) score += 30;
-      }
-
-      // 3. Color Match (High priority)
-      const colorMatch = colors.some((color: string) => color.includes(searchTerm));
-      if (colorMatch) {
-        score += 90;
-        // Exact color match bonus
-        if (colors.includes(searchTerm)) score += 40;
-      }
-
-      // 4. Description Match (Lower priority)
-      if (description.includes(searchTerm)) {
-        score += 40;
-      }
+      if (tags.some((tag: string) => tag.includes(searchTerm))) score += 100;
+      if (colors.some((color: string) => color.includes(searchTerm))) score += 90;
 
       return { ...product, score };
     });
