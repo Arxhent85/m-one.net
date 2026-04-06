@@ -122,8 +122,13 @@ export const getCategoryHref = (categoryId: string) => {
  */
 export const CATEGORY_SLUG_MAP: Record<string, string> = {
   'service--kfz': 'service',
+  'service': 'service',
+  'shërbim': 'service',
   'bau': 'bau',
+  'construction': 'bau',
+  'ndërtim': 'bau',
   'colors': 'colors',
+  'ngjyrat': 'colors',
   'cleaning': 'cleaning'
 };
 
