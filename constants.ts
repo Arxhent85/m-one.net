@@ -79,8 +79,13 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
     return isMobile ? 'scale-[1.55]' : 'scale-[1.50]';
   }
 
-  // Non-Bau products (Sprays, Colors, Service) — all standardized to the same size
-  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray') || path.includes('starter') || path.includes('zink')) {
+  // Colors products specifically — adjusted to visually match Service 400ml sizes
+  if (path.includes('/colors/')) {
+    return isMobile ? 'scale-[1.30]' : 'scale-[1.25]';
+  }
+
+  // Non-Bau products (Sprays, Service) — all standardized to the same size
+  if (path.includes('/service/') || path.includes('spray') || path.includes('starter') || path.includes('zink')) {
     // All standard 400ml service sprays get the same scale
     return isMobile ? 'scale-[1.40]' : 'scale-[1.35]';
   }
