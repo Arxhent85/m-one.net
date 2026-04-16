@@ -73,22 +73,19 @@ export const LACK_SPRAY_COLORS = [
  */
 export const getProductScale = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
-  
-  // Non-Bau products (Sprays, Colors, Service)
-  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray') || path.includes('starter') || path.includes('ubs') || path.includes('zink')) {
-    const isServiceProduct = path.includes('/service/') || (!path.includes('/colors/') && (path.includes('spray') || path.includes('reiniger') || path.includes('fett') || path.includes('starter') || path.includes('rost') || path.includes('ubs') || path.includes('zink')));
-    
-    if (isServiceProduct) {
-      // Motorstarter often has even more transparency, so we push it slightly more
-      if (path.includes('starter')) return isMobile ? 'scale-[1.55]' : 'scale-[1.48]';
-      return isMobile ? 'scale-[1.45]' : 'scale-[1.40]';
-    }
-    // Colors and other sprays
-    return isMobile ? 'scale-[1.35]' : 'scale-[1.30]';
+
+  // 500ml products (UBS and Bremsenreiniger) — slightly larger than standard 400ml sprays
+  if (path.includes('ubs') || path.includes('bremsen')) {
+    return isMobile ? 'scale-[1.55]' : 'scale-[1.50]';
+  }
+
+  // Non-Bau products (Sprays, Colors, Service) — all standardized to the same size
+  if (path.includes('/service/') || path.includes('/colors/') || path.includes('spray') || path.includes('starter') || path.includes('zink')) {
+    // All standard 400ml service sprays get the same scale
+    return isMobile ? 'scale-[1.40]' : 'scale-[1.35]';
   }
 
   // Bau products (Cartridges)
-  // Standardizing cartridges to fill the 3:4 container properly
   return isMobile ? 'scale-[1.20]' : 'scale-[1.10]';
 };
 
@@ -97,7 +94,7 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
  */
 export const getProductPadding = (imagePath: string = '', isMobile: boolean = false) => {
   const path = imagePath.toLowerCase();
-  
+
   // Standardized padding for almost all products to ensure consistent card fill
   if (path.includes('/products/') || path.includes('spray') || path.includes('silikon') || path.includes('kleber')) {
     return isMobile ? 'p-4' : 'p-6';

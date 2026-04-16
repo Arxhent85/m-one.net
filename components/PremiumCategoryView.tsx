@@ -193,7 +193,7 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                    className="relative aspect-[3/4] mb-6 overflow-hidden bg-slate-50/80 dark:bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-slate-200 dark:border-white/10 transition-all duration-700 group-hover:bg-white dark:group-hover:bg-neutral-800/80 group-hover:border-brand-500/30 dark:group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)] flex flex-col justify-end p-8"
+                    className="relative aspect-[3/4] overflow-hidden bg-slate-50/80 dark:bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-slate-200 dark:border-white/10 transition-all duration-700 group-hover:bg-white dark:group-hover:bg-neutral-800/80 group-hover:border-brand-500/30 dark:group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)]"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -218,23 +218,22 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
                         <Zap size={16} />
                       </div>
                     </div>
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black/90 via-transparent to-transparent pointer-events-none opacity-60 dark:opacity-100" />
-
-                    <div className="relative z-10 w-full flex justify-between items-end">
-                      <div className="flex flex-col">
-                        <span className="text-slate-400 dark:text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
-                        <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
-                          {product.name}
-                        </h3>
-                      </div>
-
-                      <div className="flex items-center gap-2 text-slate-500 dark:text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500">
-                        <span>Details</span>
-                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
                   </motion.div>
+
+                  {/* Product label — rendered BELOW the card, never over the image */}
+                  <div className="w-full flex justify-between items-end pt-4">
+                    <div className="flex flex-col">
+                      <span className="text-slate-400 dark:text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
+                        {product.name}
+                      </h3>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-slate-500 dark:text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500 shrink-0 ml-4">
+                      <span>Details</span>
+                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
                 </Link>
               );
             })}
