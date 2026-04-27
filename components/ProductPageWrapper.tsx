@@ -35,16 +35,8 @@ export default function ProductPageWrapper({ productIndex, categoryId }: Product
   }
 
   return (
-    <div className="pt-24 min-h-screen">
-      <div className="container mx-auto px-6 mb-8">
-        <Link 
-          href={getCategoryHref(categoryId)} 
-          className="text-neutral-500 hover:text-white transition-colors flex items-center gap-2 uppercase tracking-widest text-[10px] font-bold"
-        >
-          <ArrowLeft size={14} /> {t.products.backToCategory}
-        </Link>
-      </div>
-      <ProductPage product={product} />
-    </div>
+    <>
+      <ProductPage product={product} categoryId={categoryId} />
+    </>
   );
 }

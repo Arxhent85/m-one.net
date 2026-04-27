@@ -17,7 +17,7 @@ export default function CategoryPageWrapper({ categoryId }: CategoryPageWrapperP
   const { currentPage, selectedProduct } = useNavigation();
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="min-h-screen">
       <AnimatePresence mode="wait">
         {currentPage === 'product' && selectedProduct ? (
           <motion.div

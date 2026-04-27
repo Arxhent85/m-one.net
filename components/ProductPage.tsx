@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { ArrowLeft, ArrowRight, Download, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Download, ShieldCheck, FileText, CheckCircle2, ChevronDown, Package, Star, MessageSquare } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
@@ -13,6 +13,14 @@ import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS, LACK_SPRAY_COLORS } fro
 
 interface ProductPageProps {
   product: {
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+    categoryName?: string;
+  };
+  categoryId?: string;
+}
     name: string;
     image: string;
     description?: string;
@@ -39,6 +47,14 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
   const isUniversalAcryl = product.image.includes('/universal-acryl/');
   const isExtremKleber = product.image.includes('/extrem-kleber/');
   const isAcrylProduct = isStrukturAcryl || isUniversalAcryl;
+
+  const [openAccordions, setOpenAccordions] = React.useState<string[]>(['details']);
+
+  const toggleAccordion = (id: string) => {
+    setOpenAccordions(prev => 
+      prev.includes(id) ? prev.filter(a => a !== id) : [...prev, id]
+    );
+  };
 
   const [selectedColorIndex, setSelectedColorIndex] = React.useState(() => {
     if (isLackSpray && product.image.includes('rot')) {
@@ -77,8 +93,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
     if (isCleaningProduct) {
       const path = imageSrc.toLowerCase();
       if (path.includes('-4l')) return 'scale-[1.35]';
-      if (path.includes('universal-750ml')) return 'scale-[2.30]';
-      if (path.includes('kamin-750ml')) return 'scale-[0.90]';
       return 'scale-[1.00]';
     }
     return '';
@@ -177,45 +191,35 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-white dark:bg-neutral-950 pt-8 lg:pt-32 pb-32"
+      className="min-h-screen bg-white dark:bg-neutral-950 pt-28 lg:pt-32 pb-32"
     >
       <div className="container mx-auto px-6">
-        <motion.button
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-          onClick={() => window.history.back()}
-          className="text-neutral-400 hover:text-brand-500 mb-2 lg:mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
-        >
-          <ArrowLeft size={16} />
-          {t.products.backToCategory}
-        </motion.button>
+        {categoryId ? (
+          <Link
+            href={`/produkte/${categoryId === 'service' ? 'service-kfz' : categoryId}`}
+            className="text-neutral-400 hover:text-brand-500 mb-6 lg:mb-10 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
+          >
+            <ArrowLeft size={16} />
+            {t.products.backToCategory}
+          </Link>
+        ) : (
+          <button
+            onClick={() => window.history.back()}
+            className="text-neutral-400 hover:text-brand-500 mb-6 lg:mb-10 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
+          >
+            <ArrowLeft size={16} />
+            {t.products.backToCategory}
+          </button>
+        )}
 
-        {/* Header Section: Title & Category (Moved to top for mobile flow) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-          className="mb-4 lg:mb-20"
-        >
-          {product.categoryName && (
-            <span className="text-brand-500 font-black tracking-[0.4em] uppercase text-[10px] mb-1 lg:mb-8 block">
-              {product.categoryName}
-            </span>
-          )}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-neutral-950 dark:text-white leading-[0.9] tracking-tighter">
-            {product.name}
-          </h1>
-        </motion.div>
-
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-          {/* Left Column: Visual Excellence (65%) + Mobile Color Selection (35%) */}
-          <div className="w-full lg:w-3/5 flex flex-row lg:flex-col gap-3 sm:gap-6 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start lg:mt-4">
+          {/* Left Column: Visual Excellence (35%) + Mobile Color Selection */}
+          <div className="w-full lg:w-[35%] flex flex-row lg:flex-col gap-3 sm:gap-6 lg:gap-0 lg:sticky lg:top-32 h-auto lg:h-min">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-              className="w-[65%] lg:w-full relative aspect-[2/3] lg:aspect-square rounded-[2.5rem] bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
+              className="w-[65%] lg:w-full relative aspect-[2/3] lg:aspect-[3/4] rounded-[2.5rem] bg-[#F9F9F9] dark:bg-neutral-900/40 border border-neutral-100 dark:border-neutral-900 flex items-center justify-center overflow-hidden group/visual shadow-2xl shadow-black/5 dark:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.4)]"
             >
               {/* 2D Image View */}
               <div
@@ -331,18 +335,59 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
 
 
           {/* Right Column: Premium Engineering Details */}
-          <div className="lg:w-2/5 w-full">
+          <div className="w-full lg:w-[65%] flex flex-col lg:pl-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
             >
+              {/* Breadcrumbs */}
+              <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-black text-neutral-400 mb-6 mt-2">
+                <span className="hover:text-brand-500 cursor-pointer transition-colors">Produkte</span>
+                <span className="text-neutral-300">/</span>
+                {product.categoryName && (
+                  <>
+                    <span className="hover:text-brand-500 cursor-pointer transition-colors">{product.categoryName}</span>
+                    <span className="text-neutral-300">/</span>
+                  </>
+                )}
+                <span className="text-brand-500">{product.name}</span>
+              </div>
+
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-neutral-950 dark:text-white leading-[0.95] tracking-tighter mb-6">
+                {product.name}
+              </h1>
+              
+              {/* Trust Elements */}
+              <div className="flex flex-wrap items-center gap-4 text-xs font-bold mb-10">
+                <div className="flex items-center gap-1 text-yellow-500">
+                  <Star size={14} className="fill-current" />
+                  <Star size={14} className="fill-current" />
+                  <Star size={14} className="fill-current" />
+                  <Star size={14} className="fill-current" />
+                  <Star size={14} className="fill-current" />
+                  <span className="text-neutral-500 dark:text-neutral-400 ml-1">4.9/5</span>
+                </div>
+                <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800 hidden sm:block"></div>
+                <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-500">
+                  <CheckCircle2 size={14} />
+                  <span>Sofort verfügbar</span>
+                </div>
+                <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800 hidden sm:block"></div>
+                <div className="flex items-center gap-1.5 text-neutral-400">
+                  <Package size={14} />
+                  <span>SKU: MO-{(product.name.length * 1024).toString().substring(0, 5).padEnd(5, '0')}</span>
+                </div>
+              </div>
+
+              </div>
+
               {/* Desktop Color Selection */}
               {hasVariants && (
                 <div className="mb-12 hidden lg:block">
-                  <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-6 flex items-center gap-4">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-6 flex items-center gap-4">
                     Farbe Auswählen
-                    <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
                   </h3>
                   <div className={`grid grid-cols-4 ${isLackSpray ? 'lg:grid-cols-5' : 'lg:grid-cols-6'} gap-6`}>
                     {getVariantList().map((color, idx) => (
@@ -372,73 +417,105 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                       </div>
                     ))}
                   </div>
-                  <motion.p 
-                    key={activeColor!.name}
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="mt-6 text-sm font-bold text-neutral-800 dark:text-neutral-200"
-                  >
-                    Ausgewählte Variante: <span className="text-brand-500 tracking-wide uppercase font-black">{activeColor!.name}</span>
-                  </motion.p>
                 </div>
               )}
 
-              <p className="text-lg text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed mb-12 whitespace-pre-line">
-                {product.description}
-              </p>
-
-              {/* Technical Features */}
-              <div className="mb-16">
-                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-8 flex items-center gap-4">
-                  {t.products.featuresTitle}
-                  <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
-                </h3>
-                <div className="space-y-4">
-                  {['Profi-Qualität', 'Nach DIN Norm', 'Lange Haltbarkeit', 'Sofort verfügbar'].map((feature, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.5 + (idx * 0.1) }}
-                      className="flex items-center gap-4 text-sm font-bold text-neutral-700 dark:text-neutral-300 group/feat cursor-default"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-brand-500 transition-transform duration-300 group-hover/feat:scale-150"></div>
-                      {feature}
-                    </motion.div>
-                  ))}
+              {/* Accordions */}
+              <div className="space-y-4 border-t border-neutral-100 dark:border-neutral-900 pt-8">
+                
+                {/* Accordion 1: Details */}
+                <div className="border border-neutral-100 dark:border-neutral-900 rounded-2xl overflow-hidden bg-white dark:bg-neutral-950 transition-shadow hover:shadow-lg hover:shadow-black/5">
+                  <button 
+                    onClick={() => toggleAccordion('details')}
+                    className="w-full px-6 py-5 flex items-center justify-between bg-neutral-50/50 dark:bg-neutral-900/20"
+                  >
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-neutral-950 dark:text-white">
+                      Produktdetails
+                    </span>
+                    <ChevronDown size={18} className={`text-neutral-400 transition-transform duration-300 ${openAccordions.includes('details') ? 'rotate-180' : ''}`} />
+                  </button>
+                  <motion.div 
+                    initial={false}
+                    animate={{ height: openAccordions.includes('details') ? 'auto' : 0, opacity: openAccordions.includes('details') ? 1 : 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-6 text-sm text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed whitespace-pre-line">
+                      {product.description}
+                    </div>
+                  </motion.div>
                 </div>
-              </div>
 
-              {/* Downloads */}
-              <div>
-                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400 dark:text-neutral-600 mb-8 flex items-center gap-4">
-                  {t.products.downloads}
-                  <div className="h-[1px] flex-grow bg-neutral-100 dark:bg-neutral-900"></div>
-                </h3>
-                <div className="grid grid-cols-1 gap-4">
-                  {[
-                    { label: t.products.technicalSheet, icon: FileText, type: 'TDB' },
-                    { label: t.products.safetySheet, icon: ShieldCheck, type: 'SDB' }
-                  ].map((doc, idx) => (
-                    <motion.button
-                      key={idx}
-                      whileHover={{ x: 10 }}
-                      onClick={() => handleDownload(doc.type)}
-                      className="group flex items-center justify-between py-6 border-b border-neutral-100 dark:border-neutral-900 hover:border-brand-500/30 transition-all duration-500 text-left"
-                    >
-                      <div className="flex items-center gap-6">
-                        <doc.icon className="text-neutral-300 dark:text-neutral-700 group-hover:text-brand-500 transition-colors" size={24} />
-                        <div>
-                          <p className="font-bold text-neutral-950 dark:text-white uppercase tracking-wider text-xs">{doc.label}</p>
-                          <p className="text-[10px] text-neutral-400 font-black tracking-widest mt-1">PDF • 1.2 MB</p>
+                {/* Accordion 2: Features */}
+                <div className="border border-neutral-100 dark:border-neutral-900 rounded-2xl overflow-hidden bg-white dark:bg-neutral-950 transition-shadow hover:shadow-lg hover:shadow-black/5">
+                  <button 
+                    onClick={() => toggleAccordion('features')}
+                    className="w-full px-6 py-5 flex items-center justify-between bg-neutral-50/50 dark:bg-neutral-900/20"
+                  >
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-neutral-950 dark:text-white">
+                      Technische Daten
+                    </span>
+                    <ChevronDown size={18} className={`text-neutral-400 transition-transform duration-300 ${openAccordions.includes('features') ? 'rotate-180' : ''}`} />
+                  </button>
+                  <motion.div 
+                    initial={false}
+                    animate={{ height: openAccordions.includes('features') ? 'auto' : 0, opacity: openAccordions.includes('features') ? 1 : 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-6 space-y-4">
+                      {['Profi-Qualität', 'Nach DIN Norm', 'Lange Haltbarkeit', 'Sofort verfügbar'].map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-4 text-sm font-bold text-neutral-700 dark:text-neutral-300 group/feat cursor-default">
+                          <div className="w-1.5 h-1.5 rounded-full bg-brand-500 transition-transform duration-300 group-hover/feat:scale-150"></div>
+                          {feature}
                         </div>
-                      </div>
-                      <Download size={20} className="text-neutral-200 dark:text-neutral-800 group-hover:text-brand-500 group-hover:-translate-y-1 transition-all" />
-                    </motion.button>
-                  ))}
+                      ))}
+                    </div>
+                  </motion.div>
                 </div>
+
+                {/* Accordion 3: Downloads */}
+                <div className="border border-neutral-100 dark:border-neutral-900 rounded-2xl overflow-hidden bg-white dark:bg-neutral-950 transition-shadow hover:shadow-lg hover:shadow-black/5">
+                  <button 
+                    onClick={() => toggleAccordion('downloads')}
+                    className="w-full px-6 py-5 flex items-center justify-between bg-neutral-50/50 dark:bg-neutral-900/20"
+                  >
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-neutral-950 dark:text-white">
+                      Datenblätter & Downloads
+                    </span>
+                    <ChevronDown size={18} className={`text-neutral-400 transition-transform duration-300 ${openAccordions.includes('downloads') ? 'rotate-180' : ''}`} />
+                  </button>
+                  <motion.div 
+                    initial={false}
+                    animate={{ height: openAccordions.includes('downloads') ? 'auto' : 0, opacity: openAccordions.includes('downloads') ? 1 : 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-2">
+                      {[
+                        { label: t.products.technicalSheet, icon: FileText, type: 'TDB' },
+                        { label: t.products.safetySheet, icon: ShieldCheck, type: 'SDB' }
+                      ].map((doc, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => handleDownload(doc.type)}
+                          className="w-full group flex items-center justify-between p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/40 rounded-xl transition-all duration-300 text-left"
+                        >
+                          <div className="flex items-center gap-5">
+                            <div className="p-3 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-400 group-hover:text-brand-500 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/10 transition-colors">
+                              <doc.icon size={20} />
+                            </div>
+                            <div>
+                              <p className="font-bold text-neutral-950 dark:text-white uppercase tracking-wider text-xs">{doc.label}</p>
+                              <p className="text-[10px] text-neutral-400 font-black tracking-widest mt-1">PDF • 1.2 MB</p>
+                            </div>
+                          </div>
+                          <Download size={18} className="text-neutral-300 dark:text-neutral-700 group-hover:text-brand-500 transition-colors" />
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                </div>
+
               </div>
+
             </motion.div>
           </div>
         </div>
