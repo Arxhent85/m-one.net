@@ -21,12 +21,6 @@ interface ProductPageProps {
   };
   categoryId?: string;
 }
-    name: string;
-    image: string;
-    description?: string;
-    categoryName?: string;
-  };
-}
 
 const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) => {
   const { t, getProductByImage } = useLanguage();
@@ -191,7 +185,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-white dark:bg-neutral-950 pt-28 lg:pt-32 pb-32"
+      className="min-h-screen bg-white dark:bg-neutral-950 pt-24 lg:pt-24 pb-32"
     >
       <div className="container mx-auto px-6">
         {categoryId ? (
@@ -380,9 +374,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <span>SKU: MO-{(product.name.length * 1024).toString().substring(0, 5).padEnd(5, '0')}</span>
                 </div>
               </div>
-
-              </div>
-
               {/* Desktop Color Selection */}
               {hasVariants && (
                 <div className="mb-12 hidden lg:block">
