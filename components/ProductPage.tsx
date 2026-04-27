@@ -27,6 +27,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
   const product = getProductByImage(initialProduct.image) || initialProduct;
   const [activeMediaIndex, setActiveMediaIndex] = React.useState(0);
   const isColorProduct = product.image.toLowerCase().includes('/products/colors/');
+  const isCleaningProduct = product.image.toLowerCase().includes('/cleaning/');
 
   const isPremiumSilikon = product.name.toLowerCase().includes('premium') && product.name.toLowerCase().includes('sili');
   const isNeutralSilikon = product.name.toLowerCase().includes('neutral') && product.name.toLowerCase().includes('sili');
@@ -65,6 +66,28 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
         : isColorProduct && product.image.includes('-hell.webp')
           ? product.image.replace('-hell.webp', `-${theme === 'light' ? 'hell' : 'dunkel'}.webp`)
           : product.image;
+
+  const getPaddingClass = () => {
+    if (isCleaningProduct) return 'p-4 lg:p-12';
+    if (isBauProduct || isLackSpray) return 'p-4 lg:p-20';
+    return 'p-1 lg:p-20';
+  };
+
+  const getBaseScaleClass = () => {
+    if (isCleaningProduct) {
+      const path = imageSrc.toLowerCase();
+      if (path.includes('-4l')) return 'scale-[1.35]';
+      if (path.includes('universal-750ml')) return 'scale-[1.70]';
+      if (path.includes('kamin-750ml')) return 'scale-[0.90]';
+      return 'scale-[1.00]';
+    }
+    return '';
+  };
+
+  const getImgScaleClasses = () => {
+    if (isCleaningProduct) return 'scale-100'; // Base scale handled by wrapper
+    return isBauProduct || isLackSpray ? 'scale-[1.10] lg:scale-100' : 'scale-[1.28] lg:scale-100';
+  };
 
   const modelSrc = isPremiumSilikon
     ? `/products/premium-silikon/PREMIUM SILIKON ${activeColor!.fileSuffix} 3D.glb`
@@ -197,13 +220,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
               {/* 2D Image View */}
               <div
                 className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${activeMediaIndex === 0 ? 'opacity-100 z-50' : 'opacity-0 z-0 pointer-events-none'
-                  }`}
+                  } ${getBaseScaleClass()}`}
               >
                 {hasVariants ? (
                   <img
                     src={imageSrc}
                     alt={`${product.name} ${activeColor!.name}`}
-                    className={`w-full h-full ${isBauProduct || isLackSpray ? 'p-4' : 'p-1'} lg:p-20 object-contain ${isBauProduct || isLackSpray ? 'scale-[1.10]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
+                    className={`w-full h-full ${getPaddingClass()} object-contain ${getImgScaleClasses()} origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
                     loading="eager"
                     decoding="sync"
                     fetchPriority="high"
@@ -212,8 +235,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) =>
                   <ImageWithFallback
                     src={imageSrc}
                     alt={product.name}
-                    className={`w-full h-full ${isBauProduct ? 'p-4' : 'p-1'} lg:p-20`}
-                    imgClassName={`object-contain ${isBauProduct ? 'scale-[1.10]' : 'scale-[1.28]'} lg:scale-100 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
+                    className={`w-full h-full ${getPaddingClass()}`}
+                    imgClassName={`object-contain ${getImgScaleClasses()} origin-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover/visual:scale-110`}
                     fallbackStrategy="picsum"
                   />
                 )}
