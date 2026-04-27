@@ -234,19 +234,50 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
         learnMore: 'Mehr erfahren',
         products: [
           {
-            name: 'M-ONE Montagereiniger (Extra Stark)',
-            image: '/images/products/cleaning/montagereiniger.png',
-            description: `M-ONE Montagereiniger ist ein hochwirksamer Spezialreiniger für die schnelle Entfettung und Reinigung von Metallen, Glas und vielen Kunststoffen. Er verdunstet absolut rückstandsfrei und sorgt für eine optimale Haftung bei nachfolgenden Klebe- und Dichtungsarbeiten. Entfernt mühelos Öle, Fette, Harze und verkrusteten Schmutz.`
+            name: 'M ONE Universal Cleaner 750ml',
+            image: '/products/cleaning/universal-750ml.png',
+            description: `BioBlic Universalreiniger ist ein vielseitig einsetzbarer Reiniger und Entfetter. Das Produkt wurde speziell für die Industrie und den Großküchenbereich entwickelt. Es verfügt über eine hervorragende Öl- und Fettlösekraft, eliminiert 99,99 % aller Bakterien und eignet sich zudem ideal für Herde, Edelstahl, Arbeitsplatten, Kühlschränke und Sanitäranlagen.
+
+Anwendung: Den Reiniger direkt auf die verschmutzte Oberfläche aufsprühen, ca. 10 Sekunden einwirken lassen und anschließend mit einem trockenen Tuch oder Küchenpapier abwischen.
+Zusammensetzung: Biologisch abbaubare anionische und nichtionische Tenside, Lösungsvermittler, Phosphate, Inhibitoren, Duftstoffe, Farbstoffe, Wasser.
+Gefährliche Inhaltsstoffe: Keine.`
           },
           {
-            name: 'M-ONE Industrie-Schnellreiniger',
-            image: '/images/products/cleaning/industriereiniger.png',
-            description: `Unser Industrie-Schnellreiniger wurde speziell für höchste Ansprüche in Werkstatt und Produktion entwickelt. Die kraftvolle Formel löst selbst hartnäckige Verschmutzungen wie Schmierstoffe, Teer und Klebereste in Sekunden. Er schützt das Material und hinterlässt eine perfekt vorbereitete Oberfläche.`
+            name: 'M ONE Antikalk POWER 750ml',
+            image: '/products/cleaning/antikalk-750ml.png',
+            description: `BioBlic Antikalk POWER entfernt Kalk in Duschkabinen, Badezimmern, auf Arbeitsplatten, Waschbecken und Toiletten gründlich und schnell – und hinterlässt einen strahlenden Glanz!
+
+Anwendung: BioBlic Antikalk POWER auf die zu reinigende Oberfläche aufsprühen und einwirken lassen. Bei Metalloberflächen bitte direkt nach der Anwendung gründlich mit Wasser abspülen, bis keine Rückstände mehr vorhanden sind.`
           },
           {
-            name: 'M-ONE Universalreiniger (Premium)',
-            image: '/images/products/cleaning/universalreiniger.png',
-            description: `Der M-ONE Universalreiniger ist der Allrounder für die moderne Gebäudereinigung. Er vereint höchste Reinigungskraft mit Materialschonung und einem angenehmen Frischeduft. Ideal für alle abwaschbaren Oberflächen in Büro, Industrie und Sanitärbereichen.`
+            name: 'M ONE Auto-Innenreiniger 750ml',
+            image: '/products/cleaning/auto-innen-750ml.png',
+            description: `BioBlic Auto-Innenreiniger entfernt mühelos sämtliche Verschmutzungen auf Polstern und Armaturen. Er eignet sich zudem hervorragend für vergleichbare Anwendungsbereiche im Haushalt.
+
+Anwendung: Den Reiniger einfach auf die zu behandelnde Fläche auftragen, kurz einwirken lassen und den Schmutz anschließend mit einem trockenen Tuch abwischen.
+Zusammensetzung: Biologisch abbaubare anionische und nichtionische Tenside, Lösungsvermittler, Phosphate, Inhibitoren, Duftstoffe, Farbstoffe, Wasser.
+Gefährliche Inhaltsstoffe: Keine.`
+          },
+          {
+            name: 'M ONE Kamin Cleaner 750ml',
+            image: '/products/cleaning/kamin-750ml.png',
+            description: `M ONE BioBlic Kamin Cleaner befreit die Glasscheiben von Kaminen, Öfen und Herden im Handumdrehen zuverlässig von Ruß, Fett und Teer. Zudem eignet er sich hervorragend, um hartnäckigen Ruß von Ziegelsteinen und Kaminumrandungen zu entfernen.
+
+Anwendung: Den Reiniger direkt auf die verschmutzte Oberfläche aufsprühen, ca. 10 Sekunden einwirken lassen und anschließend mit einem trockenen Tuch oder Küchenpapier abwischen.
+Zusammensetzung: Biologisch abbaubare anionische und nichtionische Tenside, Lösungsvermittler, Phosphate, Inhibitoren, Duftstoffe, Farbstoffe, Wasser.
+Gefährliche Inhaltsstoffe: Keine.`
+          },
+          {
+            name: 'M ONE Betriebs- und Flächenreiniger 4 Liter',
+            image: '/products/cleaning/betriebs-4l.png',
+            description: `M ONE Betriebs- und Flächenreiniger für unterschiedlichste Anwendungen. Flüssiges Reinigungskonzentrat mit hoher Entfettungsleistung. Ideal zur Betriebs- und Werkstattreinigung (Wände, Böden, Oberflächen aus Beton, Kunststoff, Keramik, lackierte oder emaillierte Flächen usw.). Hochkonzentriert, pH-Wert 9,5, selbstentemulgierend, selbstneutralisierend, ohne organische Komplexbildner.`
+          },
+          {
+            name: 'M ONE Laminatreiniger 4 Liter',
+            image: '/products/cleaning/laminat-4l.png',
+            description: `M ONE Laminatreiniger sorgt für eine schonende und streifenfreie Pflege. Das flüssige Reinigungskonzentrat bietet eine optimale Schmutzlösekraft und eignet sich ideal zur regelmäßigen Unterhaltsreinigung von Laminatböden und versiegelten Holzoberflächen.
+
+Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schnelltrocknend. Erhält den natürlichen Glanz – ganz ohne schichtbildende Zusätze.`
           }
         ]
       }
@@ -486,19 +517,50 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         learnMore: 'Learn more',
         products: [
           {
-            name: 'M-ONE Mounting Cleaner (Extra Strong)',
-            image: '/images/products/cleaning/montagereiniger.png',
-            description: `M-ONE Mounting Cleaner is a highly effective special cleaner for the rapid degreasing and cleaning of metals, glass, and many plastics. It evaporates completely residue-free and ensures optimal adhesion for subsequent bonding and sealing work. Effortlessly removes oils, greases, resins, and encrusted dirt.`
+            name: 'M ONE Universal Cleaner 750ml',
+            image: '/products/cleaning/universal-750ml.png',
+            description: `BioBlic Universal Cleaner is a highly versatile cleaner and degreaser. Specially developed for industry and the commercial kitchen sector, it offers excellent oil and fat dissolving power, eliminates 99.99% of all bacteria, and is also ideal for stoves, stainless steel, countertops, refrigerators, and sanitary facilities.
+
+Application: Spray the cleaner directly onto the soiled surface, allow it to take effect for about 10 seconds, and then wipe clean with a dry cloth or paper towel.
+Composition: Biodegradable anionic and non-ionic surfactants, solubilizers, phosphates, inhibitors, fragrances, dyes, water.
+Hazardous ingredients: None.`
           },
           {
-            name: 'M-ONE Industrial Quick Cleaner',
-            image: '/images/products/cleaning/industriereiniger.png',
-            description: `Our Industrial Quick Cleaner was specially developed for the highest demands in workshops and production. The powerful formula dissolves even stubborn dirt such as lubricants, tar, and adhesive residues in seconds. It protects the material and leaves a perfectly prepared surface.`
+            name: 'M ONE Antikalk POWER 750ml',
+            image: '/products/cleaning/antikalk-750ml.png',
+            description: `BioBlic Antikalk POWER thoroughly and quickly removes limescale in shower cubicles, bathrooms, on countertops, washbasins, and toilets, leaving behind a brilliant shine!
+
+Application: Spray BioBlic Antikalk POWER onto the surface to be cleaned and allow it to take effect. For metal surfaces, please rinse thoroughly with water immediately after use until no residue remains.`
           },
           {
-            name: 'M-ONE Universal Cleaner (Premium)',
-            image: '/images/products/cleaning/universalreiniger.png',
-            description: `The M-ONE Universal Cleaner is the all-rounder for modern building cleaning. It combines maximum cleaning power with material protection and a pleasant fresh scent. Ideal for all washable surfaces in offices, industry, and sanitary areas.`
+            name: 'M ONE Car Interior Cleaner 750ml',
+            image: '/products/cleaning/auto-innen-750ml.png',
+            description: `BioBlic Car Interior Cleaner effortlessly removes dirt from upholstery and dashboards. It is also highly suitable for similar cleaning tasks around the household.
+
+Application: Simply apply the cleaner to the surface, allow it to take effect for a short time, and wipe away the dirt with a dry cloth.
+Composition: Biodegradable anionic and non-ionic surfactants, solubilizers, phosphates, inhibitors, fragrance, dye, water.
+Hazardous ingredients: None.`
+          },
+          {
+            name: 'M ONE Fireplace Cleaner 750ml',
+            image: '/products/cleaning/kamin-750ml.png',
+            description: `M ONE BioBlic Kamin Cleaner effortlessly and quickly removes soot, grease, and tar from the glass panes of fireplaces, stoves, and ovens. It is also highly effective at removing stubborn soot from bricks and hearths.
+
+Application: Spray the cleaner directly onto the soiled surface, allow it to take effect for about 10 seconds, and then wipe it off with a dry cloth or paper towel.
+Composition: Biodegradable anionic and non-ionic surfactants, solubilizers, phosphates, inhibitors, fragrances, dyes, water.
+Hazardous ingredients: None.`
+          },
+          {
+            name: 'M ONE Industrial and Surface Cleaner 4 Liter',
+            image: '/products/cleaning/betriebs-4l.png',
+            description: `M ONE Industrial and Surface Cleaner for a wide range of applications. Liquid cleaning concentrate with high degreasing power. Ideal for industrial and workshop cleaning (walls, floors, surfaces made of concrete, plastic, ceramics, painted or enamelled surfaces, etc.). Highly concentrated, pH 9.5, self-demulsifying, self-neutralizing, without organic complexing agents.`
+          },
+          {
+            name: 'M ONE Laminate Cleaner 4 Liter',
+            image: '/products/cleaning/laminat-4l.png',
+            description: `M ONE Laminate Cleaner ensures gentle and streak-free care. This liquid cleaning concentrate offers optimal dirt-dissolving power and is ideal for the regular maintenance of laminate floors and sealed wood surfaces.
+
+Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), and fast-drying. Preserves the natural shine without any layer-forming additives.`
           }
         ]
       }
@@ -738,19 +800,50 @@ Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe p
         learnMore: 'Mëso më shumë',
         products: [
           {
-            name: 'M-ONE Montagereiniger (Ekstra i Fortë)',
-            image: '/images/products/cleaning/montagereiniger.png',
-            description: `Pastruesi i Montimit M-ONE është një pastrues special shumë efektiv për shkrirjen e shpejtë të yndyrës dhe pastrimin e metaleve, qelqit dhe shumë plastikave. Ai avullon plotësisht pa mbetje dhe siguron ngjitje optimale për punët vijuese të ngjitjes dhe izolimit. Largon pa mundim vajrat, yndyrat, rrëshirat dhe papastërtitë e forta.`
+            name: 'M ONE Pastrues Universal 750ml',
+            image: '/products/cleaning/universal-750ml.png',
+            description: `BioBlic Pastrues Universal është një pastrues dhe degresues (heqës yndyre) i gjithanshëm. I zhvilluar posaçërisht për industrinë dhe kuzhinat profesionale, ai ofron fuqi të shkëlqyer për tretjen e vajit dhe yndyrës, eliminon 99.99% të të gjitha baktereve dhe është gjithashtu ideal për soba, inoks, tavolina pune, frigoriferë dhe pajisje sanitare.
+
+Përdorimi: Spërkateni pastruesin direkt në sipërfaqen e ndotur, lëreni të veprojë për rreth 10 sekonda dhe më pas fshijeni me një leckë të thatë ose letër kuzhine.
+Përbërja: Tenside biologjikisht të degradueshme anionike dhe jo-jonike, fosfate, parfum, ngjyrues, ujë.
+Përbërës të rrezikshëm: Asnjë.`
           },
           {
-            name: 'M-ONE Pastrues i Shpejtë Industrial',
-            image: '/images/products/cleaning/industriereiniger.png',
-            description: `Pastruesi ynë i Shpejtë Industrial është zhvilluar posaçërisht për kërkesat më të larta në punëtori dhe prodhim. Formula e fuqishme tret edhe papastërtitë më të forta si lubrifikantët, katrani dhe mbetjet e ngjitësit në pak sekonda. Ai mbron materialin dhe lë një sipërfaqe të përgatitur në mënyrë perfekte.`
+            name: 'M ONE Antikalk POWER 750ml',
+            image: '/products/cleaning/antikalk-750ml.png',
+            description: `BioBlic Antikalk POWER heq shpejt dhe plotësisht mbetjet gëlqerore në kabinat e dushit, banjat, banakët, lavamanët dhe tualetet, duke lënë pas vetëm një shkëlqim rrezatues!
+
+Përdorimi: Spërkateni BioBlic Antikalk POWER në sipërfaqen që do të pastrohet dhe lëreni të veprojë. Për sipërfaqet metalike, ju lutemi shpëlajeni menjëherë dhe tërësisht me ujë pas aplikimit derisa të mos mbetet asnjë gjurmë.`
           },
           {
-            name: 'M-ONE Pastrues Universal (Premium)',
-            image: '/images/products/cleaning/universalreiniger.png',
-            description: `Pastruesi Universal M-ONE është zgjidhja gjithëpërfshirëse për pastrimin modern të ndërtesave. Ai kombinon fuqinë maksimale të pastrimit me mbrojtjen e materialit dhe një aromë të këndshme freskie. Ideal për të gjitha sipërfaqet që mund të lahen në zyrë, industri dhe zona sanitare.`
+            name: 'M ONE Pastrues për Brendësinë e Automjetit 750ml',
+            image: '/products/cleaning/auto-innen-750ml.png',
+            description: `BioBlic Pastrues për Brendësinë e Automjetit pastron pa kurrfarë mundimi të gjitha njollat në tekstil, lëkurë dhe tavanin e automjetit tuaj.
+
+Përdorimi: Spërkateni BioBlic direkt në sipërfaqe, lëreni të veprojë për pak sekonda, dhe më pas fshijeni me një leckë të thatë për të arritur pastrimin e dëshiruar.
+Përbërja: Tenside biologjikisht të degradueshme anionike dhe jo-jonike, fosfate, parfum, ngjyrues, ujë.
+Përbërës të rrezikshëm: Asnjë.`
+          },
+          {
+            name: 'M ONE Pastrues Kaminash 750ml',
+            image: '/products/cleaning/kamin-750ml.png',
+            description: `M ONE BioBlic Kamin Cleaner është një pastrues efikas për xhamat dhe brendësinë e oxhaqeve (kaminëve). Pastron menjëherë yndyrnat, vajrat dhe blozën nga xhamat dhe furrat. Gjithashtu është shumë i përshtatshëm për heqjen e blozës nga tullat dhe strukturat e oxhakut.
+
+Përdorimi: Spërkateni BioBlic direkt në sipërfaqen e ndotur, lëreni të veprojë për rreth 10 sekonda dhe më pas fshijeni me një leckë të thatë ose letër kuzhine.
+Përbërja: Tenside biologjikisht të degradueshme anionike dhe jo-jonike, fosfate, parfum, ngjyrues, ujë.
+Përbërës të rrezikshëm: Asnjë.`
+          },
+          {
+            name: 'M ONE Pastrues Industrial dhe për Sipërfaqe 4 Litra',
+            image: '/products/cleaning/betriebs-4l.png',
+            description: `M ONE Pastrues Industrial dhe për Sipërfaqe për një gamë të gjerë aplikimesh. Koncentrat i lëngshëm pastrues me fuqi të lartë degresuese. Për pastrim industrial dhe në punishte (mure, dysheme, sipërfaqe prej betoni, plastike, qeramike, sipërfaqe të lyera ose të emaluara, etj.). Shumë i përqendruar, pH 9.5, vetëdemulsifikues, vetë-neutralizues, pa agjentë kompleksues organikë.`
+          },
+          {
+            name: 'M ONE Pastrues Laminati 4 Litra',
+            image: '/products/cleaning/laminat-4l.png',
+            description: `M ONE Pastrues Laminati ofron pastrim të butë dhe pa lënë shenja. Ky koncentrat i lëngshëm ka një fuqi optimale për heqjen e papastërtive dhe është ideal për pastrimin e rregullt të dyshemeve laminat dhe sipërfaqeve të drurit të lustruara.
+
+Karakteristikat: Shumë i përqendruar, mbron materialin, me pH-neutral (rreth 7.5) dhe thahet shpejt. Ruan shkëlqimin natyral pa përdorur aditivë që krijojnë shtresa.`
           }
         ]
       }

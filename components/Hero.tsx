@@ -179,6 +179,7 @@ const Hero: React.FC = () => {
               playsInline
               preload="auto"
               onEnded={() => setVideoEnded(true)}
+              onCanPlay={(e) => { (e.target as HTMLVideoElement).playbackRate = 2.0; }}
               className="absolute inset-0 w-full h-full object-cover object-center z-20 pointer-events-none"
             >
               <source src={videoSrc} type="video/mp4" />
@@ -276,6 +277,7 @@ const Hero: React.FC = () => {
               playsInline
               preload="auto"
               onEnded={() => setVideoEnded(true)}
+              onCanPlay={(e) => { (e.target as HTMLVideoElement).playbackRate = 2.0; }}
               className="absolute inset-0 w-full h-full object-cover object-right scale-105 z-20 pointer-events-none"
             >
               <source src={videoSrc} type="video/mp4" />

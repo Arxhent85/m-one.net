@@ -84,6 +84,15 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
     return isMobile ? 'scale-[1.30]' : 'scale-[1.25]';
   }
 
+  // Cleaning products
+  if (path.includes('/cleaning/')) {
+    // 4 Liter canisters are quite large, so we scale them slightly less than 750ml bottles
+    if (path.includes('-4l')) {
+      return isMobile ? 'scale-[1.20]' : 'scale-[1.10]';
+    }
+    return isMobile ? 'scale-[1.30]' : 'scale-[1.25]';
+  }
+
   // Non-Bau products (Sprays, Service) — all standardized to the same size
   if (path.includes('/service/') || path.includes('spray') || path.includes('starter') || path.includes('zink')) {
     // All standard 400ml service sprays get the same scale
