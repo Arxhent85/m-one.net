@@ -86,17 +86,17 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
 
   // Cleaning products
   if (path.includes('/cleaning/')) {
-    // 4 Liter canisters - need a larger scale as they are visually shorter in the image files
+    // 4 Liter canisters
     if (path.includes('-4l')) {
-      return isMobile ? 'scale-[1.55]' : 'scale-[1.50]';
+      return isMobile ? 'scale-[1.15]' : 'scale-[1.10]';
     }
-    // Granular adjustments for 750ml bottles to compensate for inconsistent whitespace
-    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.75]' : 'scale-[1.70]';
-    if (path.includes('antikalk-750ml')) return isMobile ? 'scale-[1.25]' : 'scale-[1.20]';
-    if (path.includes('auto-innen-750ml')) return isMobile ? 'scale-[1.25]' : 'scale-[1.20]';
-    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
+    // Granular adjustments for 750ml bottles to match the "smaller" visual size of the first one
+    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.35]' : 'scale-[1.30]';
+    if (path.includes('antikalk-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
+    if (path.includes('auto-innen-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
+    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[0.85]' : 'scale-[0.80]';
 
-    return isMobile ? 'scale-[1.30]' : 'scale-[1.25]';
+    return isMobile ? 'scale-[1.10]' : 'scale-[1.05]';
   }
 
   // Non-Bau products (Sprays, Service) — all standardized to the same size
