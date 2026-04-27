@@ -88,13 +88,13 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
   if (path.includes('/cleaning/')) {
     // 4 Liter canisters
     if (path.includes('-4l')) {
-      return isMobile ? 'scale-[1.15]' : 'scale-[1.10]';
+      return isMobile ? 'scale-[1.40]' : 'scale-[1.35]';
     }
-    // Granular adjustments for 750ml bottles to match the "smaller" visual size of the first one
-    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.35]' : 'scale-[1.30]';
+    // Granular adjustments to match the visual size of Antikalk and Auto-Innenreiniger
+    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.85]' : 'scale-[1.80]';
     if (path.includes('antikalk-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
     if (path.includes('auto-innen-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
-    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[0.85]' : 'scale-[0.80]';
+    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
 
     return isMobile ? 'scale-[1.10]' : 'scale-[1.05]';
   }
