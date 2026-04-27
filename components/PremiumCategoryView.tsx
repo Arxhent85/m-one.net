@@ -97,77 +97,143 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="relative min-h-screen bg-white dark:bg-neutral-950 text-slate-900 dark:text-white overflow-hidden pt-12 lg:pt-32 transition-colors duration-500"
+      className="relative min-h-screen bg-white dark:bg-neutral-950 text-slate-900 dark:text-white overflow-hidden pt-6 lg:pt-10 transition-colors duration-500"
     >
+      {/* 1. ATMOSPHERIC GHOST TITLE (2026 CONCEPT - ASYMMETRIC) */}
+      <div className="absolute top-[-5%] left-[-10%] w-[120%] h-[60vh] pointer-events-none overflow-hidden z-0 select-none flex items-start justify-start">
+        <motion.span 
+          initial={{ opacity: 0, x: -100, rotate: -2 }}
+          animate={{ opacity: 0.08, x: 0, rotate: -2 }}
+          transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-[30vw] font-black uppercase tracking-tighter text-slate-950 dark:text-white whitespace-nowrap leading-none select-none blur-[2px]"
+        >
+          {category.title}
+        </motion.span>
+      </div>
+
       {/* BACKGROUND DYNAMICS: Technical grid pattern */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-30">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-20">
         <div 
           className="absolute inset-0" 
           style={{ 
             backgroundImage: theme === 'dark'
               ? 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)'
               : 'linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px)', 
-            backgroundSize: '40px 40px' 
+            backgroundSize: '80px 80px' 
           }}
         ></div>
-        {/* Radial Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,10,0.4)_100%)] dark:bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,10,0.8)_100%)]"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 mb-24 lg:mb-40">
-        <Link
-          href="/"
-          className="text-slate-500 dark:text-neutral-300 hover:text-brand-500 dark:hover:text-white mb-12 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
-        >
-          <ArrowLeft size={16} />
-          {t.modal.back}
-        </Link>
+      <div className="relative z-10 container mx-auto px-6 mb-10">
+        {/* BREADCRUMBS COMPACT */}
+        <div className="flex items-center gap-2 mb-8 lg:mb-12">
+          <Link
+            href="/"
+            className="text-slate-400 dark:text-neutral-500 hover:text-brand-500 transition-colors uppercase tracking-widest text-[9px] font-black"
+          >
+            M ONE
+          </Link>
+          <span className="text-slate-300 dark:text-neutral-800 text-[9px]">/</span>
+          <span className="text-slate-900 dark:text-white uppercase tracking-widest text-[9px] font-black">
+            {category.title}
+          </span>
+        </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 justify-between items-start">
-          <div className="max-w-5xl">
+        {/* 2. BENTO HEADER STRUCTURE */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start justify-between mb-10">
+          <div className="max-w-4xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-              className="flex items-center gap-4 mb-6"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex items-center gap-4 mb-4"
             >
-              <h4 className="text-slate-600 dark:text-white/80 font-bold tracking-[0.3em] uppercase text-xs">
-                {category.subtitle}
-              </h4>
-              <div className="h-[1px] w-12 bg-slate-200 dark:bg-white/20"></div>
+              <div className="px-3 py-1 bg-brand-500/10 border border-brand-500/20 rounded-full">
+                <h4 className="text-brand-500 font-black tracking-[0.2em] uppercase text-[9px]">
+                  {category.subtitle}
+                </h4>
+              </div>
+              <div className="h-[1px] w-8 bg-slate-200 dark:bg-white/10"></div>
+              <span className="text-slate-400 dark:text-neutral-500 text-[9px] font-bold uppercase tracking-widest">
+                Professional Series
+              </span>
             </motion.div>
             
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-              className="text-7xl md:text-[8rem] lg:text-[11rem] font-black text-slate-900 dark:text-white leading-[0.8] tracking-tighter mb-10 drop-shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:[text-shadow:_0_4px_24px_rgb(0_0_0_/_40%)]"
+              transition={{ duration: 1, delay: 0.2 }}
+              className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter mb-6"
             >
-              {category.title}
+              {category.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-orange-400">Engineering</span>
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-600 dark:text-neutral-300 font-light leading-relaxed max-w-3xl mb-10"
+              className="text-base md:text-lg text-slate-600 dark:text-neutral-400 font-medium max-w-2xl leading-relaxed"
             >
               {category.description}
             </motion.p>
-
-            <motion.div
-               initial={{ opacity: 0 }}
-               animate={{ opacity: 1 }}
-               transition={{ duration: 1, delay: 0.6 }}
-               className="inline-flex items-center gap-2 bg-slate-100 dark:bg-neutral-900/50 border border-slate-200 dark:border-white/5 px-3 py-1.5 rounded-md backdrop-blur-md"
-            >
-              <Award size={14} className="text-slate-400 dark:text-neutral-400" />
-              <span className="text-xs font-semibold tracking-wide text-slate-500 dark:text-neutral-400 uppercase">
-                {category.madeInGermany || 'Qualität Made in Germany'}
-              </span>
-            </motion.div>
           </div>
+
+          {/* BENTO LIVE STATS BADGES */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="grid grid-cols-2 gap-3 min-w-[280px]"
+          >
+            {[
+              { label: `${category.products?.length || 0} Products`, icon: Zap, sub: "Available now" },
+              { label: "Premium Grade", icon: Award, sub: "Certified quality" },
+              { label: "Express Delivery", icon: ShieldCheck, sub: "Within 24h" },
+              { label: "Technical Support", icon: Star, sub: "24/7 Access" }
+            ].map((badge, i) => (
+              <div key={i} className="flex flex-col gap-2 p-4 rounded-2xl bg-slate-50/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 backdrop-blur-md hover:bg-white dark:hover:bg-white/10 transition-all duration-500">
+                <badge.icon size={16} className="text-brand-500" />
+                <div>
+                   <div className="text-[11px] font-black uppercase tracking-tight text-slate-900 dark:text-white">
+                     {badge.label}
+                   </div>
+                   <div className="text-[9px] font-medium text-slate-400 dark:text-neutral-500 uppercase tracking-widest">
+                     {badge.sub}
+                   </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
+
+        {/* 3. CATEGORY ACTION BAR (GLASSMORPHISM) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="sticky top-20 z-50 p-1.5 bg-white/40 dark:bg-black/40 backdrop-blur-2xl rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl flex items-center justify-between mb-16"
+        >
+          <div className="flex items-center gap-1">
+            <button className="px-4 py-2.5 rounded-xl bg-brand-500 text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-brand-500/20">
+              Overview
+            </button>
+            <button className="px-4 py-2.5 rounded-xl text-slate-500 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/5 text-[10px] font-black uppercase tracking-widest transition-all">
+              Technical Data
+            </button>
+            <button className="px-4 py-2.5 rounded-xl text-slate-500 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/5 text-[10px] font-black uppercase tracking-widest transition-all">
+              Reference
+            </button>
+          </div>
+          <div className="h-6 w-[1px] bg-slate-200 dark:bg-white/10 mx-2 hidden lg:block"></div>
+          <div className="flex items-center gap-3 pr-4">
+             <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-neutral-600 hidden lg:block">
+               Filter by series
+             </span>
+             <div className="flex gap-1.5">
+               <div className="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></div>
+               <div className="w-2.5 h-2.5 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+               <div className="w-2.5 h-2.5 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+             </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Floating Cards Grid Section */}
@@ -193,11 +259,11 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                    className="relative aspect-[3/4] overflow-hidden bg-slate-50/80 dark:bg-neutral-900/60 backdrop-blur-2xl rounded-xl border border-slate-200 dark:border-white/10 transition-all duration-700 group-hover:bg-white dark:group-hover:bg-neutral-800/80 group-hover:border-brand-500/30 dark:group-hover:border-white/20 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_20px_50px_-10px_rgba(255,107,0,0.1)]"
+                    className="relative aspect-[3/4] overflow-hidden bg-neutral-50 dark:bg-neutral-900/40 rounded-3xl border border-slate-200/50 dark:border-white/5 transition-all duration-700 group-hover:bg-white dark:group-hover:bg-neutral-800/80 group-hover:border-brand-500/30 group-hover:-translate-y-3 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.04)] dark:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.2)] group-hover:shadow-[0_40px_80px_-20px_rgba(255,107,0,0.12)]"
                   >
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-
+                    {/* MESH GRADIENT HOVER EFFECT (2026 CONCEPT) */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-1000 bg-[radial-gradient(circle_at_50%_50%,#FF6B00_0%,transparent_50%),radial-gradient(circle_at_100%_0%,#FF8C00_0%,transparent_50%)]"></div>
+                    
                     <div className="absolute inset-0 flex items-center justify-center">
                       <ImageWithFallback
                         src={product.image.includes('/products/colors/')
@@ -210,29 +276,21 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
                       />
                     </div>
 
-                    <div className="absolute top-6 left-6 right-6 flex flex-col items-start gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0 delay-100">
-                      <div className="bg-white/40 dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-2 text-slate-700 dark:text-white/70 rounded-md">
-                        <ShieldCheck size={16} />
-                      </div>
-                      <div className="bg-white/40 dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-2 text-slate-700 dark:text-white/70 rounded-md">
-                        <Zap size={16} />
-                      </div>
+                    <div className="absolute top-6 left-6 flex flex-col gap-2">
+                       <div className="w-8 h-8 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md border border-white/20 dark:border-white/5 flex items-center justify-center text-brand-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-500">
+                          <Zap size={14} fill="currentColor" />
+                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Product label — rendered BELOW the card, never over the image */}
-                  <div className="w-full flex justify-between items-end pt-4">
-                    <div className="flex flex-col">
-                      <span className="text-slate-400 dark:text-white/50 uppercase tracking-widest text-[10px] font-bold mb-1">M ONE Premium</span>
-                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight group-hover:text-brand-500 transition-colors duration-500">
-                        {product.name}
-                      </h3>
-                    </div>
-
-                    <div className="flex items-center gap-2 text-slate-500 dark:text-white/70 group-hover:text-brand-500 font-bold text-xs uppercase tracking-widest transition-colors duration-500 shrink-0 ml-4">
-                      <span>Details</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
+                  {/* Compact Product Label */}
+                  <div className="w-full pt-6 flex flex-col items-center text-center">
+                    <span className="text-brand-500 font-black uppercase tracking-[0.3em] text-[8px] mb-1 opacity-60">
+                      Series M1
+                    </span>
+                    <h3 className="text-lg font-black text-slate-900 dark:text-white leading-tight tracking-tight group-hover:text-brand-500 transition-colors duration-500">
+                      {product.name}
+                    </h3>
                   </div>
                 </Link>
               );
