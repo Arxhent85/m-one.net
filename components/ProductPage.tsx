@@ -7,6 +7,7 @@ import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { PREMIUM_SILIKON_COLORS, NEUTRAL_SILIKON_COLORS, LACK_SPRAY_COLORS } from '../constants';
 
 
@@ -22,7 +23,7 @@ interface ProductPageProps {
   categoryId?: string;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct }) => {
+const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, categoryId }) => {
   const { t, getProductByImage } = useLanguage();
   const { theme } = useTheme();
 
