@@ -90,11 +90,11 @@ export const getProductScale = (imagePath: string = '', isMobile: boolean = fals
     if (path.includes('-4l')) {
       return isMobile ? 'scale-[1.40]' : 'scale-[1.35]';
     }
-    // Granular adjustments to match the visual size of Antikalk and Auto-Innenreiniger
-    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.85]' : 'scale-[1.80]';
+    // Granular adjustments to precisely match the visual size of Antikalk and Auto-Innenreiniger
+    if (path.includes('universal-750ml')) return isMobile ? 'scale-[1.75]' : 'scale-[1.70]';
     if (path.includes('antikalk-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
     if (path.includes('auto-innen-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
-    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[1.05]' : 'scale-[1.00]';
+    if (path.includes('kamin-750ml')) return isMobile ? 'scale-[0.95]' : 'scale-[0.90]';
 
     return isMobile ? 'scale-[1.10]' : 'scale-[1.05]';
   }
