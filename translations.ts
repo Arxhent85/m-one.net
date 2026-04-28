@@ -10,23 +10,23 @@ export const translations = {
       searchLabel: 'Suche öffnen',
     },
     hero: {
-      since: 'PREMIUM BAUCHEMIE MADE IN GERMANY',
-      titleLine1: 'Dein Werk.',
-      titleLine2: 'Dein Maßstab.',
-      subtitle: 'Entwickelt für Meister ihres Fachs und Macher, die keine Kompromisse eingehen. Erlebe maximale Haftung, extreme Langlebigkeit und die größte Farbauswahl auf dem Markt.',
-      startProject: 'Produkte entdecken ->',
+      since: 'PREMIUM-SILIKON & TECHNISCHE CHEMIE | MADE IN GERMANY',
+      titleLine1: 'Kompromisslose Chemie.',
+      titleLine2: 'Für Meister und Macher.',
+      subtitle: 'Von dauerelastischem Premium-Sanitärsilikon in der Kartusche bis hin zu technischen Hochleistungssprays: M ONE liefert die chemisch-technischen Lösungen, auf die sich Profis verlassen. Maximale Haftung, extreme Langlebigkeit und die größte Farbauswahl auf dem Markt.',
+      startProject: 'Sortiment entdecken',
       references: 'Unsere Qualitätsstandards',
     },
     sections: {
       servicesTitle: 'Unsere Produktlinien',
       aboutTitle: 'MARKENQUALITÄT',
-      aboutHeading: 'Handwerk trifft auf Perfektion.',
-      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir vereinen industrielle Höchstleistung aus deutscher Produktion mit der Leidenschaft derjenigen, die echte Werte schaffen. Egal ob auf der anspruchsvollen Baustelle oder beim ambitionierten Projekt zu Hause: Wir liefern das Material, auf das du dich blind verlassen kannst. Höchste Standards, keine Kompromisse.',
+      aboutHeading: 'Hightech-Chemie trifft auf echtes Handwerk.',
+      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir sind dein Partner für professionelle, technische Chemie. Unser Kernprodukt – das Premium-Sanitärsilikon – steht stellvertretend für alles, was wir tun: 100 % Leistung, dauerelastische Zuverlässigkeit und absolute Präzision. Entwickelt in und für die DACH-Region, gemacht für Meister ihres Fachs, die Werte schaffen und sich blind auf ihr Material verlassen müssen.',
       teamButton: 'Unser Team kennenlernen',
       aboutList: [
-        "100 % Made in Germany: Garantierte Premium-Qualität direkt vom Hersteller.",
-        "Konkurrenzlose Farbvielfalt: Für makellose, unsichtbare Fugenbilder.",
-        "Für Meister & Macher: Profi-Rezepturen für maximale Langlebigkeit."
+        "100 % Made in Germany: Zertifizierte Premium-Qualität direkt vom Hersteller. Für höchste industrielle Standards.",
+        "Dauerelastisch & Extrem haftend: Chemisch-technische Perfektion für langlebige Fugen und Verbindungen ohne Kompromisse.",
+        "Von Profis für Profis: Maßgeschneiderte Rezepturen für Handwerker, Meister und ambitionierte Macher."
       ]
     },
     footer: {
@@ -66,9 +66,9 @@ export const translations = {
     },
     categories: {
       bau: {
-        title: 'BAU',
+        title: 'BAU (Dichtstoffe)',
         subtitle: 'Kleben und Dichten',
-        description: 'Höchste Präzision für fundamentale Verbindungen. Unsere Premium-Silikone, Acryle und Montagekleber bieten extreme Dauerelastizität und kompromisslosen Halt für jedes Gewerk.',
+        description: 'Premium-Silikone, Acryl und Spezial-Dichtstoffe für perfekte Fugen. Dauerelastisch, UV-beständig und extrem belastbar.',
         applications: 'Anwendungsbereiche',
         projects: 'Kundenprojekte',
         madeInGermany: 'Qualität Made in Germany',
@@ -137,7 +137,7 @@ Features: Ohne Bohren, Dauerelastisch, Neutral und frei von Silikon und Isocyana
       service: {
         title: 'SERVICE & KFZ',
         subtitle: 'Wartung',
-        description: 'Hochleistung für Maschinen und Motoren. Von technischen Wartungssprays bis zur professionellen Fahrzeugpflege – Zuverlässigkeit und Schutz, wenn es darauf ankommt.',
+        description: 'Technische Aerosole, Schmiermittel und Rostlöser. Chemische Präzision für Werkstatt, Industrie und Fuhrpark.',
         applications: 'Anwendungsbereiche',
         projects: 'Referenzprojekte',
         madeInGermany: 'Qualität Made in Germany',
@@ -190,9 +190,9 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         ]
       },
       colors: {
-        title: 'COLORS',
+        title: 'SPRAYS / INDUSTRIE',
         subtitle: 'Maler & Lackierer',
-        description: 'Design bis tief in die Fuge. Entdecke unsere konkurrenzlose Farbpalette für Sanitärsilikone, die sich unsichtbar und perfekt in anspruchsvolle Architekturen und Natursteine einfügt.',
+        description: 'Spezialsprays und technischer Oberflächenschutz. Maximale Performance für hochanspruchsvolle Anwendungen.',
         applications: 'Anwendungsbereiche',
         projects: 'Referenzen & Design',
         madeInGermany: 'Qualität Made in Germany',
@@ -227,7 +227,7 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
       cleaning: {
         title: 'CLEANING',
         subtitle: 'Reinigung',
-        description: 'Die Basis für meisterhafte Arbeit. Hochwirksame Industrie- und Spezialreiniger, die hartnäckigste Rückstände lösen und Oberflächen optimal vorbereiten.',
+        description: 'Hochwirksame Reinigungsmittel für Baustelle, KFZ und Werkstatt. Löst hartnäckigsten Schmutz kompromisslos.',
         applications: 'Anwendungsbereiche',
         projects: 'Industrie-Referenzen',
         madeInGermany: 'Qualität Made in Germany',
