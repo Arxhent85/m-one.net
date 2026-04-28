@@ -178,31 +178,6 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
             </motion.p>
           </div>
 
-          {/* BENTO LIVE STATS BADGES */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="grid grid-cols-2 gap-3 min-w-[280px]"
-          >
-            {[
-              { label: `${category.products?.length || 0} Products`, icon: Zap, sub: "Available now" },
-              { label: "Premium Grade", icon: Award, sub: "Certified quality" },
-              { label: "Express Delivery", icon: ShieldCheck, sub: "Within 24h" },
-              { label: "Technical Support", icon: Star, sub: "24/7 Access" }
-            ].map((badge, i) => (
-              <div key={i} className="flex flex-col gap-2 p-4 rounded-2xl bg-slate-50/50 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 backdrop-blur-md hover:bg-white dark:hover:bg-white/10 transition-all duration-500">
-                <badge.icon size={16} className="text-brand-500" />
-                <div>
-                   <div className="text-[11px] font-black uppercase tracking-tight text-slate-900 dark:text-white">
-                     {badge.label}
-                   </div>
-                   <div className="text-[9px] font-medium text-slate-400 dark:text-neutral-500 uppercase tracking-widest">
-                     {badge.sub}
-                   </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
         </div>
 
         {/* 3. CATEGORY ACTION BAR (GLASSMORPHISM) */}
