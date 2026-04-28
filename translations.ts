@@ -10,10 +10,10 @@ export const translations = {
       searchLabel: 'Suche öffnen',
     },
     hero: {
-      since: 'PREMIUM-SILIKON & TECHNISCHE CHEMIE | MADE IN GERMANY',
+      since: 'PREMIUM-SILIKON & TECHNISCHE CHEMIE | GEFERTIGT IN DEUTSCHLAND & DEN NIEDERLANDEN',
       titleLine1: 'Kompromisslose Chemie.',
       titleLine2: 'Für Meister und Macher.',
-      subtitle: 'Von dauerelastischem Premium-Sanitärsilikon in der Kartusche bis hin zu technischen Hochleistungssprays: M ONE liefert die chemisch-technischen Lösungen, auf die sich Profis verlassen. Maximale Haftung, extreme Langlebigkeit und die größte Farbauswahl auf dem Markt.',
+      subtitle: 'Von dauerelastischem Premium-Sanitärsilikon in der Kartusche bis hin zu technischen Hochleistungssprays: M ONE liefert normgeprüfte chemisch-technische Lösungen, auf die sich Profis verlassen. Maximale Haftung, extreme Langlebigkeit und streng zertifizierte Qualität.',
       startProject: 'Sortiment entdecken',
       references: 'Unsere Qualitätsstandards',
     },
@@ -21,12 +21,12 @@ export const translations = {
       servicesTitle: 'Unsere Produktlinien',
       aboutTitle: 'MARKENQUALITÄT',
       aboutHeading: 'Hightech-Chemie trifft auf echtes Handwerk.',
-      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir sind dein Partner für professionelle, technische Chemie. Unser Kernprodukt – das Premium-Sanitärsilikon – steht stellvertretend für alles, was wir tun: 100 % Leistung, dauerelastische Zuverlässigkeit und absolute Präzision. Entwickelt in und für die DACH-Region, gemacht für Meister ihres Fachs, die Werte schaffen und sich blind auf ihr Material verlassen müssen.',
+      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir sind dein Partner für professionelle, technische Chemie. Unser Kernprodukt – das Premium-Sanitärsilikon – steht stellvertretend für alles, was wir tun: 100 % Leistung, dauerelastische Zuverlässigkeit und absolute Präzision. Wir fertigen kompromisslos nach strengsten deutschen und europäischen Industrienormen. Gemacht für Meister ihres Fachs, die Werte schaffen und sich auf der Baustelle blind auf ihr Material verlassen müssen.',
       teamButton: 'Unser Team kennenlernen',
       aboutList: [
-        "100 % Made in Germany: Zertifizierte Premium-Qualität direkt vom Hersteller. Für höchste industrielle Standards.",
+        "Zertifizierte Produktion in D & NL: Höchste Qualitätsstandards aus hochmodernen Produktionsanlagen in Deutschland und den Niederlanden. Vollständig konform mit strengen DIN- und EU-Normen.",
         "Dauerelastisch & Extrem haftend: Chemisch-technische Perfektion für langlebige Fugen und Verbindungen ohne Kompromisse.",
-        "Von Profis für Profis: Maßgeschneiderte Rezepturen für Handwerker, Meister und ambitionierte Macher."
+        "Industriequalität für Meister: Maßgeschneiderte, industriell erprobte Rezepturen, die den extremen Anforderungen von Handwerkern und kompromisslosen Machern standhalten."
       ]
     },
     footer: {
@@ -293,10 +293,10 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       searchLabel: 'Open Search',
     },
     hero: {
-      since: 'PREMIUM SILICONE & TECHNICAL CHEMISTRY | MADE IN GERMANY',
+      since: 'PREMIUM SILICONE & TECHNICAL CHEMISTRY | MANUFACTURED IN GERMANY & THE NETHERLANDS',
       titleLine1: 'Uncompromising Chemistry.',
       titleLine2: 'For Masters and Doers.',
-      subtitle: 'From permanently elastic premium sanitary silicone in the cartridge to technical high-performance sprays: M ONE delivers the chemical-technical solutions that professionals rely on. Maximum adhesion, extreme durability, and the largest color selection on the market.',
+      subtitle: 'From permanently elastic premium sanitary silicone in the cartridge to technical high-performance sprays: M ONE delivers standard-tested chemical-technical solutions that professionals rely on. Maximum adhesion, extreme durability, and strictly certified quality.',
       startProject: 'Discover Range',
       references: 'Our Quality Standards',
     },
@@ -304,12 +304,12 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       servicesTitle: 'Our Sectors',
       aboutTitle: 'About Us',
       aboutHeading: 'High-tech chemistry meets real craftsmanship.',
-      aboutText: 'M ONE is more than just a name on a cartridge. We are your partner for professional, technical chemistry. Our core product – the premium sanitary silicone – stands for everything we do: 100% performance, permanently elastic reliability, and absolute precision. Developed in and for the DACH region, made for masters of their trade who create value and need to rely blindly on their material.',
+      aboutText: 'M ONE is more than just a name on a cartridge. We are your partner for professional, technical chemistry. Our core product – the premium sanitary silicone – stands for everything we do: 100% performance, permanently elastic reliability, and absolute precision. We manufacture uncompromisingly according to the strictest German and European industrial standards. Made for masters of their trade who create value and must rely blindly on their material on the construction site.',
       teamButton: 'Meet Our Team',
       aboutList: [
-        "100 % Made in Germany: Certified premium quality directly from the manufacturer. For the highest industrial standards.",
+        "Certified Production in D & NL: Highest quality standards from state-of-the-art production facilities in Germany and the Netherlands. Fully compliant with strict DIN and EU standards.",
         "Permanently Elastic & Extremely Adhesive: Chemical-technical perfection for durable joints and connections without compromises.",
-        "From Professionals for Professionals: Tailored formulations for craftsmen, masters, and ambitious doers."
+        "Industrial Quality for Masters: Tailored, industrially proven formulations that withstand the extreme demands of craftsmen and uncompromising doers."
       ]
     },
     footer: {
@@ -576,10 +576,10 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       searchLabel: 'Hap Kërkimin',
     },
     hero: {
-      since: 'SILIKON PREMIUM & KIMI TEKNIKE | PRODHUAR NË GJERMANI',
+      since: 'SILIKON PREMIUM & KIMI TEKNIKE | PRODHUAR NË GJERMANI DHE HOLANDË',
       titleLine1: 'Kimi e pakompromis.',
       titleLine2: 'Për mjeshtra dhe veprues.',
-      subtitle: 'Nga silikoni sanitar premium vazhdimisht elastik në kartushë deri te sprejt teknikë me performancë të lartë: M ONE ofron zgjidhjet kimiko-teknike tek të cilat mbështeten profesionistët. Ngjitje maksimale, qëndrueshmëri ekstreme dhe përzgjedhja më e madhe e ngjyrave në treg.',
+      subtitle: 'Nga silikoni sanitar premium vazhdimisht elastik në kartushë deri te sprejt teknikë me performancë të lartë: M ONE ofron zgjidhje kimiko-teknike të testuara sipas standardeve tek të cilat mbështeten profesionistët. Ngjitje maksimale, jetëgjatësi ekstreme dhe cilësi e certifikuar rreptësisht.',
       startProject: 'Zbuloni Gamën',
       references: 'Standardet Tona të Cilësisë',
     },
@@ -587,12 +587,12 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       servicesTitle: 'Sektorët Tanë',
       aboutTitle: 'Rreth Nesh',
       aboutHeading: 'Kimia e teknologjisë së lartë takon mjeshtërinë e vërtetë.',
-      aboutText: 'M ONE është më shumë se thjesht një emër në një kartushë. Ne jemi partneri juaj për kimi profesionale dhe teknike. Produkti ynë kryesor – silikoni sanitar premium – përfaqëson gjithçka që bëjmë: performancë 100%, besueshmëri vazhdimisht elastike dhe saktësi absolute. Zhvilluar në dhe për rajonin DACH, prodhuar për mjeshtra të zanatit të tyre që krijojnë vlera dhe duhet t\'i besojnë verbërisht materialit të tyre.',
+      aboutText: 'M ONE është më shumë se thjesht një emër në një kartushë. Ne jemi partneri juaj për kimi profesionale dhe teknike. Produkti ynë kryesor – silikoni sanitar premium – përfaqëson gjithçka që bëjmë: performancë 100%, besueshmëri vazhdimisht elastike dhe saktësi absolute. Ne prodhojmë pa kompromis sipas standardeve më të rrepta industriale gjermane dhe evropiane. Prodhuar për mjeshtra të zanatit të tyre që krijojnë vlera dhe duhet t\'i besojnë verbërisht materialit të tyre në kantier.',
       teamButton: 'Njihuni me Ekipin',
       aboutList: [
-        "100% Prodhuar në Gjermani: Cilësi premium e certifikuar direkt nga prodhuesi. Për standardet më të larta industriale.",
+        "Prodhimi i Certifikuar në Gjermani dhe Holandë: Standardet më të larta të cilësisë nga impiantet moderne të prodhimit në Gjermani dhe Holandë. Plotësisht në përputhje me standardet e rrepta DIN dhe BE.",
         "Vazhdimisht Elastik & Ngjitje Ekstreme: Perfeksion kimiko-teknik për fuga dhe bashkime afatgjata pa kompromise.",
-        "Nga Profesionistët për Profesionistët: Formula të përshtatura për zejtarë, mjeshtra dhe njerëz ambiciozë të veprimit."
+        "Cilësi Industriale për Mjeshtra: Formula të përshtatura dhe të provuara në industri që përballojnë kërkesat ekstreme të zejtarëve dhe njerëzve të pakompromis të veprimit."
       ]
     },
     footer: {
