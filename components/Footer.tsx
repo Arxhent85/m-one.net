@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
   };
 
   return (
-    <footer className={`${variant === 'compact' ? 'bg-neutral-900 border-t border-white/5 text-white/80 pt-12 pb-6' : 'bg-brand-900 border-t border-brand-800 text-white pt-20 pb-10'}`}>
+    <footer id="contact" className={`${variant === 'compact' ? 'bg-neutral-900 border-t border-white/5 text-white/80 pt-12 pb-6' : 'bg-brand-900 border-t border-brand-800 text-white pt-20 pb-10'}`}>
       <div className="container mx-auto px-6">
         <motion.div
           variants={containerVariants}
