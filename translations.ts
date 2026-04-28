@@ -75,7 +75,7 @@ export const translations = {
         learnMore: 'Mehr erfahren',
         products: [
           {
-            name: 'Premium Silicon',
+            name: 'M-ONE Premium Silicon',
             image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             colors: ['Transparent', 'Anthrazit', 'Bahama', 'Braun', 'Caramel', 'Grau', 'Hellgrau', 'Jasmin', 'Manhatten', 'Schwarz', 'Silber', 'Weiss'],
             tags: ['Sanitär', 'Silicon', 'Acetat', 'Bad', 'Küche', 'Schimmelresistent', 'Antibakteriell', 'Dichtstoff'],
@@ -92,7 +92,7 @@ Technische Daten:
 • Features: Anti Pilz, UV-Beständig`
           },
           {
-            name: 'Neutral Silicon',
+            name: 'M-ONE Neutral Silicon',
             image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             colors: ['Transparent', 'Grau', 'Schwarz', 'Weiß'],
             tags: ['Bau', 'Fenster', 'Beton', 'Marmor', 'Dichtstoff', 'Dauerelastisch', 'Fensterbau'],
@@ -106,7 +106,7 @@ Technische Daten:
 • Features: Für Treppen, Geruchsarm, Witterungsbeständig`
           },
           {
-            name: 'Struktur Acryl',
+            name: 'M-ONE Struktur Acryl',
             image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
             description: `M-ONE Struktur Acryl ist ein plastischer Dichtstoff mit putzähnlicher Oberflächenstruktur, der eine einfache und universelle Füllarbeit an Fugen, Rissen und Löchern darstellt. Es ist universell verwendbar (Innen- und Außenbereich), überstreichbar, alterungsbeständig, geruchlos und nicht korrosiv gegenüber Metallen.
 
@@ -115,7 +115,7 @@ Haftet gut auf: Beton, Gasbeton, Mauerwerk, Putz, Holz, Ziegel. Ideal für Türe
 Features: Dekorativ, Überstreichbar, Putzstruktur.`
           },
           {
-            name: 'Universal Acryl',
+            name: 'M-ONE Universal Acryl',
             image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
             description: `M-ONE Universal Acryl ist ein einkomponentiger Fugendichtstoff auf Polyacrylatbasis. Universell verwendbar (Innen- und Außenbereich), überstreichbar, alterungsbeständig, geruchlos und nicht korrosiv gegenüber Metallen.
 
@@ -124,7 +124,7 @@ Geeignet für: Anschlussfugen und Risse zwischen Beton, Mauerwerk, Holz, Treppen
 Features: Mauerrisse, Fassadenrisse, Überstreichbar, Schnell regenbeständig.`
           },
           {
-            name: 'Extrem Kleber',
+            name: 'M-ONE Extrem Kleber',
             image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
             description: `M-ONE PROFIMONT EXTREM ist ein Dauerelastischer und flexibler Klebstoff mit hoher Anfangshaftung der im Allgemeinen keine Fixierung der Klebeinheit erfordert. Nach dem Auftragen härtet das Produkt mit Luftfeuchtigkeit aus.
 
@@ -358,7 +358,7 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
         learnMore: 'Learn more',
         products: [
           {
-            name: 'Premium Silicon',
+            name: 'M-ONE Premium Silicon',
             image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             colors: ['Transparent', 'Anthracite', 'Bahama', 'Brown', 'Caramel', 'Grey', 'Light Grey', 'Jasmin', 'Manhattan', 'Black', 'Silver', 'White'],
             tags: ['Sanitary', 'Silicone', 'Acetate', 'Bathroom', 'Kitchen', 'Mold Resistant', 'Antibacterial', 'Sealant'],
@@ -375,7 +375,7 @@ Technical Data:
 • Features: Anti-fungal, UV-resistant`
           },
           {
-            name: 'Neutral Silicon',
+            name: 'M-ONE Neutral Silicon',
             image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             colors: ['Transparent', 'Grey', 'Black', 'White'],
             tags: ['Construction', 'Window', 'Concrete', 'Marble', 'Sealant', 'Permanently Elastic', 'Window Construction'],
@@ -389,7 +389,7 @@ Technical Data:
 • Features: For stairs, low odor, weather-resistant`
           },
           {
-            name: 'Struktur Acryl',
+            name: 'M-ONE Struktur Acryl',
             image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
             description: `M-ONE Structure Acrylic is an elastoplastic sealant with a plaster-like surface structure that provides easy and universal filling of joints, cracks and holes. Universally applicable (indoor and outdoor), paintable, non-aging, odorless and non-corrosive to metals.
 
@@ -398,7 +398,7 @@ Adheres well to: Concrete, aerated concrete, masonry, plaster, wood, brick. Also
 Features: Decorative, Paintable, Plaster structure.`
           },
           {
-            name: 'Universal Acryl',
+            name: 'M-ONE Universal Acryl',
             image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
             description: `M-ONE Universal Acrylic is a one-component polyacrylate-based joint sealant. Universally applicable (inside and outside), paintable, non-aging, odorless and non-corrosive to metals.
 
@@ -407,7 +407,7 @@ Suitable for: Connecting joints and cracks between concrete, masonry, wood, stai
 Features: Wall cracks, facade cracks, paintable, quickly rain-resistant.`
           },
           {
-            name: 'Extrem Kleber',
+            name: 'M-ONE Extrem Kleber',
             image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
             description: `M-ONE PROFIMONT EXTREM is a permanently elastic and flexible adhesive with high initial tack that generally does not require the adhesive unit to be fixed. After application, the product hardens with humidity.
 
@@ -641,7 +641,7 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
         learnMore: 'Mëso më shumë',
         products: [
           {
-            name: 'Premium Silicon',
+            name: 'M-ONE Premium Silicon',
             image: '/products/premium-silikon/PREMIUM SILIKON weiss.webp',
             colors: ['Transparent', 'Antracit', 'Bahama', 'Kafe', 'Karamel', 'Gri', 'Gri e hapur', 'Jasmin', 'Manhattan', 'Zi', 'Argjend', 'Bardhë'],
             tags: ['Sanitar', 'Silikon', 'Acetat', 'Banjë', 'Kuzhinë', 'Rezistent ndaj mykut', 'Antibakterial', 'Izolues'],
@@ -658,7 +658,7 @@ Të Dhënat Teknike:
 • Karakteristika: Anti-kërpudhat, rezistent ndaj UV`
           },
           {
-            name: 'Neutral Silicon',
+            name: 'M-ONE Neutral Silicon',
             image: '/products/neutral-silikon/M-ONE BAU SILIKON weiss.webp',
             colors: ['Transparent', 'Gri', 'Zi', 'Bardhë'],
             tags: ['Ndërtim', 'Dritare', 'Beton', 'Mermer', 'Izolues', 'Përgjithmonë elastik', 'Ndërtim dritaresh'],
@@ -672,7 +672,7 @@ Të Dhënat Teknike:
 • Karakteristika: Për shkallë, erë e lehtë, rezistent ndaj motit`
           },
           {
-            name: 'Struktur Acryl',
+            name: 'M-ONE Struktur Acryl',
             image: '/products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp',
             description: `M-ONE Acryl Struktural është masë ngjitëse me një strukturë sipërfaqësore të ngjajshme me atë të fasades, siguron mbushje të lehtë të fugave-nyjeve, çarjeve dhe vrimave me strukturë të vrazhdë. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
@@ -681,7 +681,7 @@ Ngjitet mirë në: Beton, gur, dru, tulla, muraturrë dhe sipërfaqe të tjera. 
 Karakteristika: Dekorativ, I lyyeshëm, Strukturë suvaje.`
           },
           {
-            name: 'Universal Acryl',
+            name: 'M-ONE Universal Acryl',
             image: '/products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp',
             description: `M-ONE Universal Acryl është masa njëkomponentëshe me bazë të Polyacrylit. Ka përdorim universal (brenda dhe jashtë), pas terjes mund të ngjyroset, ka jetëgjatësi të madhe, është pa erë dhe anti-korroziv.
 
@@ -690,7 +690,7 @@ I përshtatshëm për: Nyjet dhe çarjet midis betonit, muret, lajsnet, dyert, d
 Karakteristika: Çarje muri, çarje fasade, i lyyeshëm, shpejt rezistent ndaj shiut.`
           },
           {
-            name: 'Extrem Kleber',
+            name: 'M-ONE Extrem Kleber',
             image: '/products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp',
             description: `M-ONE PROFIMONT EXTREM është një ngjitës elastik dhe përherë fleksibël, me një ngjitje të lartë fillestare e cila zakonisht nuk kërkon që njësia ngjitëse të rregullohet. Pas aplikimit, produkti ngurtësohet nga lagështia e ajrit.
 
