@@ -81,8 +81,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
   const getPaddingClass = () => {
     if (isCleaningProduct) return 'p-4 lg:p-12';
-    if (isBauProduct || isLackSpray) return 'p-4 lg:p-20';
-    if (isServiceProduct) return 'p-4 lg:p-6';
+    if (isBauProduct) return 'p-4 lg:p-20';
+    if (isServiceProduct || isColorProduct || isLackSpray) return 'p-4 lg:p-6';
     return 'p-1 lg:p-20';
   };
 
@@ -98,8 +98,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
   const getImgScaleClasses = () => {
     if (isCleaningProduct) return 'scale-100'; // Base scale handled by wrapper
-    if (isServiceProduct) return 'scale-[1.35] lg:scale-[1.30]';
-    return isBauProduct || isLackSpray ? 'scale-[1.10] lg:scale-100' : 'scale-[1.28] lg:scale-100';
+    if (isServiceProduct || isColorProduct || isLackSpray) return 'scale-[1.35] lg:scale-[1.30]';
+    return isBauProduct ? 'scale-[1.10] lg:scale-100' : 'scale-[1.28] lg:scale-100';
   };
 
   const modelSrc = isPremiumSilikon
