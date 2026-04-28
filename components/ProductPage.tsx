@@ -192,7 +192,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
       <div className="container mx-auto px-6">
         {categoryId ? (
           <Link
-            href={`/produkte/${categoryId === 'service' ? 'service-kfz' : categoryId}`}
+            href={`/produkte/${categoryId === 'service' ? 'service--kfz' : categoryId}`}
             className="text-neutral-400 hover:text-brand-500 mb-6 lg:mb-10 flex items-center gap-2 transition-colors font-bold uppercase tracking-widest text-xs"
           >
             <ArrowLeft size={16} />
@@ -339,11 +339,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
             >
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-black text-neutral-400 mb-6 mt-2">
-                <span className="hover:text-brand-500 cursor-pointer transition-colors">Produkte</span>
+                <Link href="/" className="hover:text-brand-500 transition-colors">Produkte</Link>
                 <span className="text-neutral-300">/</span>
                 {product.categoryName && (
                   <>
-                    <span className="hover:text-brand-500 cursor-pointer transition-colors">{product.categoryName}</span>
+                    <Link 
+                      href={`/produkte/${categoryId === 'service' ? 'service--kfz' : categoryId}`} 
+                      className="hover:text-brand-500 transition-colors"
+                    >
+                      {product.categoryName}
+                    </Link>
                     <span className="text-neutral-300">/</span>
                   </>
                 )}
