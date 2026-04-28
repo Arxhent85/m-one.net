@@ -232,9 +232,6 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
 
                   {/* Compact Product Label */}
                   <div className="w-full pt-6 flex flex-col items-center text-center">
-                    <span className="text-brand-500 font-black uppercase tracking-[0.3em] text-[8px] mb-1 opacity-60">
-                      Series M1
-                    </span>
                     <h3 className="text-lg font-black text-slate-900 dark:text-white leading-tight tracking-tight group-hover:text-brand-500 transition-colors duration-500">
                       {product.name}
                     </h3>
