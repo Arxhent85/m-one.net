@@ -293,23 +293,23 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       searchLabel: 'Open Search',
     },
     hero: {
-      since: 'Your Partner Since 1995',
-      titleLine1: 'We Build',
-      titleLine2: 'Your Future',
-      subtitle: 'From the foundation stone to the final brushstroke. We combine craftsmanship, service, and cleanliness in one project.',
-      startProject: 'Start Project',
-      references: 'Our References',
+      since: 'PREMIUM SILICONE & TECHNICAL CHEMISTRY | MADE IN GERMANY',
+      titleLine1: 'Uncompromising Chemistry.',
+      titleLine2: 'For Masters and Doers.',
+      subtitle: 'From permanently elastic premium sanitary silicone in the cartridge to technical high-performance sprays: M ONE delivers the chemical-technical solutions that professionals rely on. Maximum adhesion, extreme durability, and the largest color selection on the market.',
+      startProject: 'Discover Range',
+      references: 'Our Quality Standards',
     },
     sections: {
       servicesTitle: 'Our Sectors',
       aboutTitle: 'About Us',
-      aboutHeading: 'We Set Standards in Quality and Design',
-      aboutText: 'M ONE is more than just a construction company. We are a collective of architects, craftsmen, designers, and cleaning specialists. Our goal is not only to build properties but to accompany and refine them throughout their entire life cycle.',
+      aboutHeading: 'High-tech chemistry meets real craftsmanship.',
+      aboutText: 'M ONE is more than just a name on a cartridge. We are your partner for professional, technical chemistry. Our core product – the premium sanitary silicone – stands for everything we do: 100% performance, permanently elastic reliability, and absolute precision. Developed in and for the DACH region, made for masters of their trade who create value and need to rely blindly on their material.',
       teamButton: 'Meet Our Team',
       aboutList: [
-        "Certified master craftsmen in all trades",
-        "Sustainable materials and modern technology",
-        "Transparent cost planning without surprises"
+        "100 % Made in Germany: Certified premium quality directly from the manufacturer. For the highest industrial standards.",
+        "Permanently Elastic & Extremely Adhesive: Chemical-technical perfection for durable joints and connections without compromises.",
+        "From Professionals for Professionals: Tailored formulations for craftsmen, masters, and ambitious doers."
       ]
     },
     footer: {
@@ -349,9 +349,9 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
     },
     categories: {
       bau: {
-        title: 'CONSTRUCTION',
+        title: 'BAU (Sealants)',
         subtitle: 'Civil Engineering',
-        description: 'Foundations for eternity. We realize your construction projects with the highest precision and decades of experience.',
+        description: 'Premium silicones, acrylics, and special sealants for perfect joints. Permanently elastic, UV-resistant, and extremely resilient.',
         applications: 'Application Areas',
         projects: 'Client Projects',
         madeInGermany: 'Quality Made in Germany',
@@ -418,9 +418,9 @@ Features: No drilling, permanently elastic, neutral and free of silicone and Iso
         ]
       },
       service: {
-        title: 'SERVICE',
+        title: 'SERVICE & KFZ',
         subtitle: 'Maintenance',
-        description: 'Available for you around the clock. Our technical service guarantees longevity.',
+        description: 'Technical aerosols, lubricants, and rust removers. Chemical precision for workshop, industry, and fleet.',
         applications: 'Application Areas',
         projects: 'Reference Projects',
         madeInGermany: 'Quality Made in Germany',
@@ -473,9 +473,9 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         ]
       },
       colors: {
-        title: 'COLORS',
+        title: 'SPRAYS / INDUSTRY',
         subtitle: 'Painting & Varnishing',
-        description: 'Bring color into your life. Professional painting and creative wall design.',
+        description: 'Specialty sprays and technical surface protection. Maximum performance for highly demanding applications.',
         applications: 'Application Areas',
         projects: 'References & Design',
         madeInGermany: 'Quality Made in Germany',
@@ -510,7 +510,7 @@ Application: Before use, the surface must be clean, dry and free from oily resid
       cleaning: {
         title: 'CLEANING',
         subtitle: 'Cleaning',
-        description: 'Shining results for facades, offices, and construction sites.',
+        description: 'Highly effective cleaning agents for construction site, automotive, and workshop. Dissolves the most stubborn dirt without compromise.',
         applications: 'Application Areas',
         projects: 'Industry References',
         madeInGermany: 'Quality Made in Germany',
@@ -576,23 +576,23 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       searchLabel: 'Hap Kërkimin',
     },
     hero: {
-      since: 'Partneri Juaj Që Nga 1995',
-      titleLine1: 'Ne Ndërtojmë',
-      titleLine2: 'Të Ardhmen Tuaj',
-      subtitle: 'Nga guri i themelit deri tek penelata e fundit. Ne kombinojmë mjeshtërinë, shërbimin dhe pastërtinë në një projekt.',
-      startProject: 'Fillo Projektin',
-      references: 'Referencat Tona',
+      since: 'SILIKON PREMIUM & KIMI TEKNIKE | PRODHUAR NË GJERMANI',
+      titleLine1: 'Kimi e pakompromis.',
+      titleLine2: 'Për mjeshtra dhe veprues.',
+      subtitle: 'Nga silikoni sanitar premium vazhdimisht elastik në kartushë deri te sprejt teknikë me performancë të lartë: M ONE ofron zgjidhjet kimiko-teknike tek të cilat mbështeten profesionistët. Ngjitje maksimale, qëndrueshmëri ekstreme dhe përzgjedhja më e madhe e ngjyrave në treg.',
+      startProject: 'Zbuloni Gamën',
+      references: 'Standardet Tona të Cilësisë',
     },
     sections: {
       servicesTitle: 'Sektorët Tanë',
       aboutTitle: 'Rreth Nesh',
-      aboutHeading: 'Ne Vendosim Standarde në Cilësi dhe Dizajn',
-      aboutText: 'M ONE është më shumë se thjesht një kompani ndërtimi. Ne jemi një kolektiv arkitektësh, zejtarësh, dizajnerësh dhe specialistësh pastrimi. Qëllimi ynë nuk është vetëm të ndërtojmë prona, por t\'i shoqërojmë dhe t\'i rafinojmë ato gjatë gjithë ciklit të tyre jetësor.',
+      aboutHeading: 'Kimia e teknologjisë së lartë takon mjeshtërinë e vërtetë.',
+      aboutText: 'M ONE është më shumë se thjesht një emër në një kartushë. Ne jemi partneri juaj për kimi profesionale dhe teknike. Produkti ynë kryesor – silikoni sanitar premium – përfaqëson gjithçka që bëjmë: performancë 100%, besueshmëri vazhdimisht elastike dhe saktësi absolute. Zhvilluar në dhe për rajonin DACH, prodhuar për mjeshtra të zanatit të tyre që krijojnë vlera dhe duhet t\'i besojnë verbërisht materialit të tyre.',
       teamButton: 'Njihuni me Ekipin',
       aboutList: [
-        "Mjeshtra të çertifikuar në të gjitha tregtitë",
-        "Materiale të qëndrueshme dhe teknologji moderne",
-        "Planifikim transparent i kostos pa surpriza"
+        "100% Prodhuar në Gjermani: Cilësi premium e certifikuar direkt nga prodhuesi. Për standardet më të larta industriale.",
+        "Vazhdimisht Elastik & Ngjitje Ekstreme: Perfeksion kimiko-teknik për fuga dhe bashkime afatgjata pa kompromise.",
+        "Nga Profesionistët për Profesionistët: Formula të përshtatura për zejtarë, mjeshtra dhe njerëz ambiciozë të veprimit."
       ]
     },
     footer: {
@@ -632,9 +632,9 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
     },
     categories: {
       bau: {
-        title: 'NDËRTIM',
+        title: 'BAU (Izolues)',
         subtitle: 'Ndërtim i Lartë & i Ulët',
-        description: 'Themele për përjetësi. Ne realizojmë projektet tuaja të ndërtimit me saktësinë më të lartë dhe përvojë dekadash.',
+        description: 'Silikon premium, akrilikë dhe izolues specialë për fuga perfekte. Vazhdimisht elastikë, rezistentë ndaj rrezeve UV dhe jashtëzakonisht rezistentë.',
         applications: 'Zonat e Aplikimit',
         projects: 'Projektet e Klientëve',
         madeInGermany: 'Cilësi Made in Germany',
@@ -701,9 +701,9 @@ Karakteristika: Pa shpim, Përgjithmonë elastik, Pa silikon dhe Izocianat.`
         ]
       },
       service: {
-        title: 'SHËRBIM',
+        title: 'SHËRBIMI & AUTOMJETET',
         subtitle: 'Mirëmbajtja',
-        description: 'Në dispozicion për ju gjatë gjithë kohës. Shërbimi ynë teknik garanton jetëgjatësi.',
+        description: 'Aerosolë teknikë, lubrifikantë dhe pastrues ndryshku. Saktësi kimike për punishte, industri dhe flota automjetesh.',
         applications: 'Zonat e Aplikimit',
         projects: 'Projektet Referencë',
         madeInGermany: 'Cilësi Made in Germany',
@@ -756,9 +756,9 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         ]
       },
       colors: {
-        title: 'NGJYRAT',
+        title: 'SPREJT / INDUSTRIA',
         subtitle: 'Lyerje & Bojaxhi',
-        description: 'Sillni ngjyra në jetën tuaj. Lyerje profesionale dhe dizajn kreativ muresh.',
+        description: 'Sprej të veçantë dhe mbrojtje teknike e sipërfaqes. Performancë maksimale për aplikime shumë kërkuese.',
         applications: 'Zonat e Aplikimit',
         projects: 'Referencat & Dizajni',
         madeInGermany: 'Cilësi Made in Germany',
@@ -793,7 +793,7 @@ Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe p
       cleaning: {
         title: 'PASTRIMI',
         subtitle: 'Pastrim',
-        description: 'Rezultate të shkëlqyera për fasada, zyra dhe kantiere ndërtimi.',
+        description: 'Agjentë pastrimi shumë efektivë për kantier ndërtimi, automjete dhe punishte. Shpërbën pa kompromis papastërtitë më kokëforta.',
         applications: 'Zonat e Aplikimit',
         projects: 'Referencat Industriale',
         madeInGermany: 'Cilësi Made in Germany',
