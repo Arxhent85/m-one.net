@@ -190,7 +190,7 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         ]
       },
       colors: {
-        title: 'SPRAYS / INDUSTRIE',
+        title: 'LACKE & BESCHICHTUNG',
         subtitle: 'Maler & Lackierer',
         description: 'Spezialsprays und technischer Oberflächenschutz. Maximale Performance für hochanspruchsvolle Anwendungen.',
         applications: 'Anwendungsbereiche',
@@ -473,7 +473,7 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         ]
       },
       colors: {
-        title: 'SPRAYS / INDUSTRY',
+        title: 'PAINTS & COATINGS',
         subtitle: 'Painting & Varnishing',
         description: 'Specialty sprays and technical surface protection. Maximum performance for highly demanding applications.',
         applications: 'Application Areas',
@@ -756,7 +756,7 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         ]
       },
       colors: {
-        title: 'SPREJT / INDUSTRIA',
+        title: 'LLAK & VESHJE',
         subtitle: 'Lyerje & Bojaxhi',
         description: 'Sprej të veçantë dhe mbrojtje teknike e sipërfaqes. Performancë maksimale për aplikime shumë kërkuese.',
         applications: 'Zonat e Aplikimit',
