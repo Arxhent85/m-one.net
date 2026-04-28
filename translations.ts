@@ -67,7 +67,7 @@ export const translations = {
     categories: {
       bau: {
         title: 'BAU',
-        subtitle: 'Hoch- & Tiefbau',
+        subtitle: 'Kleben und Dichten',
         description: 'Höchste Präzision für fundamentale Verbindungen. Unsere Premium-Silikone, Acryle und Montagekleber bieten extreme Dauerelastizität und kompromisslosen Halt für jedes Gewerk.',
         applications: 'Anwendungsbereiche',
         projects: 'Kundenprojekte',

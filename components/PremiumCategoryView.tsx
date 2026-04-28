@@ -180,35 +180,7 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
 
         </div>
 
-        {/* 3. CATEGORY ACTION BAR (GLASSMORPHISM) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="sticky top-20 z-50 p-1.5 bg-white/40 dark:bg-black/40 backdrop-blur-2xl rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl flex items-center justify-between mb-16"
-        >
-          <div className="flex items-center gap-1">
-            <button className="px-4 py-2.5 rounded-xl bg-brand-500 text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-brand-500/20">
-              Overview
-            </button>
-            <button className="px-4 py-2.5 rounded-xl text-slate-500 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/5 text-[10px] font-black uppercase tracking-widest transition-all">
-              Technical Data
-            </button>
-            <button className="px-4 py-2.5 rounded-xl text-slate-500 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/5 text-[10px] font-black uppercase tracking-widest transition-all">
-              Reference
-            </button>
-          </div>
-          <div className="h-6 w-[1px] bg-slate-200 dark:bg-white/10 mx-2 hidden lg:block"></div>
-          <div className="flex items-center gap-3 pr-4">
-             <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-neutral-600 hidden lg:block">
-               Filter by series
-             </span>
-             <div className="flex gap-1.5">
-               <div className="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></div>
-               <div className="w-2.5 h-2.5 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
-               <div className="w-2.5 h-2.5 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
-             </div>
-          </div>
-        </motion.div>
+
       </div>
 
       {/* Floating Cards Grid Section */}
