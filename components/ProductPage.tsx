@@ -343,7 +343,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
             >
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-black text-neutral-400 mb-6 mt-2">
-                <Link href="/" className="hover:text-brand-500 transition-colors">Produkte</Link>
+                <Link href="/#categories" className="hover:text-brand-500 transition-colors">Produkte</Link>
                 <span className="text-neutral-300">/</span>
                 {product.categoryName && (
                   <>
