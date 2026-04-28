@@ -98,7 +98,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
   const getImgScaleClasses = () => {
     if (isCleaningProduct) return 'scale-100'; // Base scale handled by wrapper
-    if (isServiceProduct) return 'scale-[1.50] lg:scale-[1.42]';
+    if (isServiceProduct) return 'scale-[1.65] lg:scale-[1.56]';
     if (isColorProduct || isLackSpray) return 'scale-[1.35] lg:scale-[1.30]';
     return isBauProduct ? 'scale-[1.10] lg:scale-100' : 'scale-[1.28] lg:scale-100';
   };
