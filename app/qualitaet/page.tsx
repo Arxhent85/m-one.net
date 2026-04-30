@@ -206,7 +206,7 @@ export default function QualitaetPage() {
           {/* Location Cards */}
           <motion.div custom={1} variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {[
-              { country: '🇩🇪', name: 'Deutschland', city: 'Eibelstadt' },
+              { country: '🇩🇪', name: 'Deutschland', city: 'Produktionsstandort' },
               { country: '🇳🇱', name: 'Niederlande', city: 'Produktionsstandort' },
             ].map((loc, i) => (
               <div
