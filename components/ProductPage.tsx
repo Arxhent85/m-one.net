@@ -89,8 +89,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
   const getBaseScaleClass = () => {
     if (isCleaningProduct) {
       const path = imageSrc.toLowerCase();
-      if (path.includes('-4l')) return 'scale-[1.35]';
-      if (path.includes('universal-750ml')) return 'scale-[1.58]';
+      if (path.includes('-4l')) return 'scale-100 lg:scale-[1.35]';
+      if (path.includes('universal-750ml')) return 'scale-100 lg:scale-[1.58]';
       return 'scale-[1.00]';
     }
     return '';
@@ -98,9 +98,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
   const getImgScaleClasses = () => {
     if (isCleaningProduct) return 'scale-100'; // Base scale handled by wrapper
-    if (isServiceProduct) return 'scale-[1.65] lg:scale-[1.56]';
-    if (isColorProduct || isLackSpray) return 'scale-[1.35] lg:scale-[1.30]';
-    return isBauProduct ? 'scale-[1.10] lg:scale-100' : 'scale-[1.28] lg:scale-100';
+    if (isServiceProduct) return 'scale-100 lg:scale-[1.56]';
+    if (isColorProduct || isLackSpray) return 'scale-100 lg:scale-[1.30]';
+    return isBauProduct ? 'scale-[0.90] lg:scale-100' : 'scale-[0.90] lg:scale-100';
   };
 
   const modelSrc = isPremiumSilikon
