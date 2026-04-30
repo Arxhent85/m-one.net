@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Star, Award } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ShieldCheck, Zap, Award } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
@@ -35,57 +35,14 @@ interface PremiumCategoryViewProps {
   categoryId: string;
 }
 
-const getProjectsForCategory = (title: string) => {
-  const t = title.toLowerCase();
-  if (t.includes('bau') || t.includes('construction') || t.includes('ndërtim')) {
-    return {
-      description: 'Referenzen, die Beständigkeit beweisen. Einblicke in Bauprojekte mit M ONE Premium Systemen.',
-      items: [
-        { title: 'Residential Tower, Berlin', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80', rating: 5, tags: ['Fassade', 'Dichtung'], standard: 'Industrial Standard' },
-        { title: 'Commercial Estate, Munich', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80', rating: 5, tags: ['Verklebung'], standard: 'Industrial Standard' },
-        { title: 'Luxury Villa, Hamburg', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80', rating: 5, tags: ['Sanitär', 'Naturstein'], standard: 'Premium Standard' },
-        { title: 'Boutique Hotel, Frankfurt', img: 'https://images.unsplash.com/photo-1582719478250-c89402bb802b?auto=format&fit=crop&q=80', rating: 5, tags: ['Innenausbau'], standard: 'Premium Standard' },
-      ]
-    };
-  } else if (t.includes('service') || t.includes('shërbim')) {
-    return {
-      description: 'Maschinen am Limit. Sehen Sie selbst, wie M ONE Service-Produkte die Lebensdauer maximieren.',
-      items: [
-        { title: 'Porsche GT3 Engine Bay', img: 'https://images.unsplash.com/photo-1610647752706-3bb12232b311?auto=format&fit=crop&q=80', rating: 5, tags: ['Motor', 'Reinigung'], standard: 'Performance Standard' },
-        { title: 'Heavy Machinery, Ruhr', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', rating: 5, tags: ['Schmierung', 'Rost'], standard: 'Industrial Standard' },
-        { title: 'Classic Car Restoration', img: 'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&q=80', rating: 5, tags: ['Wartung'], standard: 'Premium Standard' },
-        { title: 'Race Track Pit Stop', img: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80', rating: 5, tags: ['Bremsen', 'Teile'], standard: 'Professional' },
-      ]
-    };
-  } else if (t.includes('color') || t.includes('ngjyrat')) {
-    return {
-      description: 'Farbbrillanz und makellose Finishes. Von Felgenrestauration bis hin zu Spezialarchitekturen.',
-      items: [
-        { title: 'Custom Alloy Wheels', img: 'https://images.unsplash.com/photo-1558222218-b7b54eede3f3?auto=format&fit=crop&q=80', rating: 5, tags: ['Felgen', 'Lack'], standard: 'Design Edition' },
-        { title: 'Industrial Coating', img: 'https://images.unsplash.com/photo-1581092580497-a0d24cb5f533?auto=format&fit=crop&q=80', rating: 5, tags: ['Korrosionsschutz'], standard: 'Industrial Standard' },
-        { title: 'Exhaust Heat Paint', img: 'https://images.unsplash.com/photo-1587560699334-bea93391dcef?auto=format&fit=crop&q=80', rating: 5, tags: ['Hitze', 'Versiegelung'], standard: 'Performance Standard' },
-        { title: 'Vintage Restauration', img: 'https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&q=80', rating: 5, tags: ['Restauration'], standard: 'Premium Standard' },
-      ]
-    };
-  } else {
-    return {
-      description: 'Strahlende Ergebnisse für Industrie und Werterhalt. Kompromisslose Sauberkeit.',
-      items: [
-        { title: 'Industrial Floor', img: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80', rating: 5, tags: ['Industrie'], standard: 'Industrial Standard' },
-        { title: 'Corporate Facade', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80', rating: 5, tags: ['Fassade'], standard: 'Premium Standard' },
-        { title: 'Hygiene Standards', img: 'https://images.unsplash.com/photo-1584820927505-df6b88b22b78?auto=format&fit=crop&q=80', rating: 5, tags: ['Hygiene'], standard: 'Sanitary Standard' },
-        { title: 'Workshop Clean', img: 'https://images.unsplash.com/photo-1621259457635-4299e5251662?auto=format&fit=crop&q=80', rating: 5, tags: ['Werkstatt'], standard: 'Professional' },
-      ]
-    };
-  }
-};
+
 
 const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, categoryId }) => {
   const { t } = useLanguage();
   const { goHome } = useNavigation();
   const { theme } = useTheme();
 
-  const referenceData = getProjectsForCategory(category.title);
+
 
   // Map internal categoryId to the URL slug used in filesystem routes
   const categoryUrlSlug = categoryId === 'service' ? 'service--kfz' : categoryId;
@@ -253,58 +210,6 @@ const PremiumCategoryView: React.FC<PremiumCategoryViewProps> = ({ category, cat
         )}
       </div>
 
-      {/* REFERENCE PROJECTS SECTION */}
-      <div className="relative z-10 py-32 lg:py-48 bg-slate-50 dark:bg-neutral-950 border-t border-slate-200 dark:border-white/5">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-200/50 dark:to-neutral-900/50 pointer-events-none"></div>
-        <div className="container mx-auto px-6 relative z-10">
-           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 lg:mb-24">
-             <div>
-               <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">
-                  {category.projects || 'Referenzprojekte'}
-                </h2>
-                <div className="h-[2px] w-16 bg-brand-500/40 dark:bg-white/20"></div>
-             </div>
-             <p className="text-slate-600 dark:text-neutral-300 max-w-sm mt-6 md:mt-0 font-light text-lg">
-                {referenceData.description}
-             </p>
-           </div>
-
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {referenceData.items.map((project, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.25, 1, 0.5, 1] }}
-                  className="group relative overflow-hidden flex flex-col bg-white dark:bg-neutral-900 rounded-[10px] border border-slate-200 dark:border-white/5 shadow-[0_8px_30px_rgba(0,0,0,0.05)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
-                >
-                   <div className="relative aspect-[4/3] w-full overflow-hidden">
-                      <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
-                      
-                      <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md flex gap-1 items-center">
-                        <Star size={12} fill="#FF6B00" className="text-brand-500" />
-                        <span className="text-white text-xs font-bold leading-none mt-0.5">{project.rating}.0</span>
-                      </div>
-                   </div>
-
-                   <div className="p-6">
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {project.tags.map(tag => (
-                           <span key={tag} className="text-[10px] font-bold uppercase tracking-wider text-brand-500 bg-brand-500/10 px-2 py-1 rounded-sm">
-                             {tag}
-                           </span>
-                        ))}
-                      </div>
-                      <h4 className="text-slate-900 dark:text-white text-lg font-bold mb-1 leading-snug">{project.title}</h4>
-                      <p className="text-slate-500 dark:text-neutral-400 text-sm">{project.standard}</p>
-                   </div>
-                </motion.div>
-              ))}
-           </div>
-        </div>
-      </div>
     </motion.div>
   );
 };
