@@ -31,10 +31,7 @@ export default function ImpressumPage() {
             <div className="space-y-4">
               <h2 className="text-lg font-bold text-brand-500 uppercase tracking-wider">Zweigstelle Deutschland</h2>
               <div className="text-brand-900 dark:text-neutral-200">
-                <p className="font-bold">M-ONE</p>
-                <p>Am Kapellenberg 11</p>
-                <p>Deutschland</p>
-                <p>Deutschland</p>
+                <p>Deutschland & Niederlande</p>
               </div>
             </div>
           </section>

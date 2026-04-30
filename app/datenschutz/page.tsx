@@ -24,7 +24,7 @@ export default function DatenschutzPage() {
               <p>Diese Datenschutz-Information gilt für die Datenverarbeitung durch:</p>
               <div className="mt-4 space-y-2 text-brand-900 dark:text-neutral-200">
                 <p><span className="font-bold">Verantwortlicher:</span> M ONE SH.P.K., Veternik Z. Industriale, 10000 Prishtinë, Kosovë</p>
-                <p><span className="font-bold">Zweigstelle Deutschland:</span> Deutschland</p>
+                <p><span className="font-bold">Zweigstelle:</span> Deutschland & Niederlande</p>
                 <p><span className="font-bold">Vertreten durch:</span> Arxhent Latifi, Arjeta Latifi</p>
                 <p><span className="font-bold">E-Mail:</span> <a href="mailto:info@m-one.net" className="text-brand-500 hover:underline">info@m-one.net</a></p>
                 <p><span className="font-bold">Telefon:</span> +49 170 4 695 306 (DE) / +383 49 819 877 (KS)</p>

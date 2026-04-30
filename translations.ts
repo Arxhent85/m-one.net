@@ -45,7 +45,7 @@ export const translations = {
       locations: [
         {
           title: 'Standort Deutschland',
-          address: 'Deutschland'
+          address: 'Deutschland & Niederlande'
         },
         {
           title: 'Standort Kosovo',
@@ -342,7 +342,7 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       locations: [
         {
           title: 'Location Germany',
-          address: 'Germany'
+          address: 'Germany & Netherlands'
         },
         {
           title: 'Location Kosovo',
@@ -639,7 +639,7 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       locations: [
         {
           title: 'Lokacioni Gjermani',
-          address: 'Gjermani'
+          address: 'Gjermani & Holandë'
         },
         {
           title: 'Lokacioni Kosovë',
