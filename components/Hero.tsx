@@ -399,7 +399,7 @@ const Hero: React.FC = () => {
 
             {/* Secondary CTA */}
             <button 
-              onClick={scrollToAbout}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); router.push('/qualitaet'); }}
               className={`px-8 py-4 rounded-full font-bold text-sm border transition-all duration-300 active:scale-95 ${theme === 'dark'
                 ? 'border-white/20 text-white/90 hover:bg-white/10'
                 : 'border-black/20 text-neutral-800 hover:bg-black/5'
@@ -486,7 +486,7 @@ const Hero: React.FC = () => {
 
                 {/* Secondary CTA */}
                 <button 
-                  onClick={scrollToAbout}
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); router.push('/qualitaet'); }}
                   className={`px-8 py-5 rounded-full font-bold text-base border transition-all duration-300 ${theme === 'dark'
                     ? 'border-white/20 text-white/90 hover:bg-white/10'
                     : 'border-black/20 text-neutral-800 hover:bg-black/5'
