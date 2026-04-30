@@ -33,7 +33,7 @@ export default function ImpressumPage() {
               <div className="text-brand-900 dark:text-neutral-200">
                 <p className="font-bold">M-ONE</p>
                 <p>Am Kapellenberg 11</p>
-                <p>97246 Eibelstadt</p>
+                <p>Deutschland</p>
                 <p>Deutschland</p>
               </div>
             </div>

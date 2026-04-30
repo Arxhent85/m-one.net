@@ -45,7 +45,7 @@ export const translations = {
       locations: [
         {
           title: 'Standort Deutschland',
-          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nDeutschland'
+          address: 'Deutschland'
         },
         {
           title: 'Standort Kosovo',
@@ -342,7 +342,7 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       locations: [
         {
           title: 'Location Germany',
-          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nGermany'
+          address: 'Germany'
         },
         {
           title: 'Location Kosovo',
@@ -639,7 +639,7 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       locations: [
         {
           title: 'Lokacioni Gjermani',
-          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nGjermani'
+          address: 'Gjermani'
         },
         {
           title: 'Lokacioni Kosovë',

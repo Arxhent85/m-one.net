@@ -90,7 +90,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
     if (isCleaningProduct) {
       const path = imageSrc.toLowerCase();
       if (path.includes('-4l')) return 'scale-100 lg:scale-[1.35]';
-      if (path.includes('universal-750ml')) return 'scale-[2.02] lg:scale-[1.58]';
+      if (path.includes('universal-750ml')) return 'scale-[2.42] lg:scale-[1.58]';
       return 'scale-[1.00]';
     }
     return '';
