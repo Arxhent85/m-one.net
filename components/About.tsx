@@ -73,15 +73,15 @@ const About: React.FC = () => {
 
         {/* ── Description + Feature Grid ── */}
         <div className="max-w-5xl mx-auto">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-brand-800 dark:text-neutral-300 text-lg md:text-xl mb-10 leading-relaxed text-center max-w-3xl mx-auto"
+            className="text-brand-800 dark:text-neutral-300 text-lg md:text-xl mb-10 leading-relaxed text-center max-w-3xl mx-auto whitespace-pre-line"
           >
             {t.sections.aboutText}
-          </motion.p>
+          </motion.div>
 
           <motion.div
             initial="hidden"

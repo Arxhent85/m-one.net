@@ -20,8 +20,8 @@ export const translations = {
     sections: {
       servicesTitle: 'Unsere Produktlinien',
       aboutTitle: 'MARKENQUALITÄT',
-      aboutHeading: 'Hightech-Chemie trifft auf echtes Handwerk.',
-      aboutText: 'M ONE ist mehr als nur ein Name auf einer Kartusche. Wir sind dein Partner für professionelle, technische Chemie. Unser Kernprodukt – das Premium-Sanitärsilikon – steht stellvertretend für alles, was wir tun: 100 % Leistung, dauerelastische Zuverlässigkeit und absolute Präzision. Wir fertigen kompromisslos nach strengsten deutschen und europäischen Industrienormen. Gemacht für Meister ihres Fachs, die Werte schaffen und sich auf der Baustelle blind auf ihr Material verlassen müssen.',
+      aboutHeading: 'M ONE – Exzellenz in jedem Detail.',
+      aboutText: 'Hinter der Marke M ONE steckt die Leidenschaft für kompromisslose chemische Lösungen und hochwertige Baumaterialien. Was uns antreibt, ist ein klares Ziel: Handwerkern, der Industrie und anspruchsvollen Haushalten genau die Produkte an die Hand zu geben, die perfekte Ergebnisse garantieren.\n\nUnser sorgfältig abgestimmtes Portfolio reicht von bewährten Premium-Dichtstoffen für den Sanitärbereich über spezialisierte technische Aerosole bis hin zu hochprofessionellen Reinigungsmitteln für den industriellen und privaten Gebrauch.\n\nHöchste Standards sind für uns keine leere Floskel, sondern das feste Fundament unserer Marke. Deshalb setzen wir auf erstklassige Rohstoffe, modernste Fertigungsverfahren und Produktionsstandorte mit Weltruf: Die Herstellung der M ONE Produkte erfolgt in höchster Qualität direkt in Deutschland und den Niederlanden. So stellen wir sicher, dass Sie bei jedem Handgriff spüren, dass Sie ein echtes Premiumprodukt verwenden.',
       teamButton: 'Unser Team kennenlernen',
       aboutList: [
         "Zertifizierte Produktion in D & NL: Höchste Qualitätsstandards aus hochmodernen Produktionsanlagen in Deutschland und den Niederlanden. Vollständig konform mit strengen DIN- und EU-Normen.",
@@ -317,8 +317,8 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
     sections: {
       servicesTitle: 'Our Sectors',
       aboutTitle: 'About Us',
-      aboutHeading: 'High-tech chemistry meets real craftsmanship.',
-      aboutText: 'M ONE is more than just a name on a cartridge. We are your partner for professional, technical chemistry. Our core product – the premium sanitary silicone – stands for everything we do: 100% performance, permanently elastic reliability, and absolute precision. We manufacture uncompromisingly according to the strictest German and European industrial standards. Made for masters of their trade who create value and must rely blindly on their material on the construction site.',
+      aboutHeading: 'M ONE – Excellence in every detail.',
+      aboutText: 'Behind the M ONE brand lies a passion for uncompromising chemical solutions and high-quality building materials. What drives us is a clear goal: to provide craftsmen, industry, and demanding households with exactly the products they need to guarantee perfect results.\n\nOur carefully curated portfolio ranges from proven premium sealants for the sanitary sector to specialized technical aerosols and highly professional cleaning agents for industrial and private use.\n\nHighest standards are not just empty words for us, but the firm foundation of our brand. That is why we rely on first-class raw materials, state-of-the-art manufacturing processes, and world-renowned production sites: M ONE products are manufactured in top quality directly in Germany and the Netherlands. This ensures that with every single move, you feel that you are using a truly premium product.',
       teamButton: 'Meet Our Team',
       aboutList: [
         "Certified Production in D & NL: Highest quality standards from state-of-the-art production facilities in Germany and the Netherlands. Fully compliant with strict DIN and EU standards.",
@@ -614,8 +614,8 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
     sections: {
       servicesTitle: 'Sektorët Tanë',
       aboutTitle: 'Rreth Nesh',
-      aboutHeading: 'Kimia e teknologjisë së lartë takon mjeshtërinë e vërtetë.',
-      aboutText: 'M ONE është më shumë se thjesht një emër në një kartushë. Ne jemi partneri juaj për kimi profesionale dhe teknike. Produkti ynë kryesor – silikoni sanitar premium – përfaqëson gjithçka që bëjmë: performancë 100%, besueshmëri vazhdimisht elastike dhe saktësi absolute. Ne prodhojmë pa kompromis sipas standardeve më të rrepta industriale gjermane dhe evropiane. Prodhuar për mjeshtra të zanatit të tyre që krijojnë vlera dhe duhet t\'i besojnë verbërisht materialit të tyre në kantier.',
+      aboutHeading: 'M ONE – Ekselencë në çdo detaj.',
+      aboutText: 'Mbas markës M ONE qëndron pasioni për zgjidhje kimike pa kompromis dhe materiale ndërtimi të cilësisë së lartë. Ajo që na shtyn përpara është një qëllim i qartë: t\'u ofrojmë mjeshtërve, industrisë dhe familjeve kërkuese saktësisht ato produkte që garantojnë rezultate perfekte.\n\nPortofoli ynë i përzgjedhur me kujdes varion nga izoluesit premium të provuar për sektorin sanitar te aerosolet teknike të specializuara e deri te mjetet e pastrimit shumë profesionale për përdorim industrial dhe privat.\n\nStandardet më të larta nuk janë thjesht fjalë boshe për ne, por themeli i fortë i markës sonë. Prandaj, ne mbështetemi në lëndët e para të klasit të parë, proceset më moderne të prodhimit dhe vendndodhjet e prodhimit me famë botërore: Prodhimi i produkteve M ONE bëhet me cilësi maksimale direkt në Gjermani dhe Holandë. Kështu sigurohemi që në çdo lëvizje të ndjeni se po përdorni një produkt vërtet premium.',
       teamButton: 'Njihuni me Ekipin',
       aboutList: [
         "Prodhimi i Certifikuar në Gjermani dhe Holandë: Standardet më të larta të cilësisë nga impiantet moderne të prodhimit në Gjermani dhe Holandë. Plotësisht në përputhje me standardet e rrepta DIN dhe BE.",
