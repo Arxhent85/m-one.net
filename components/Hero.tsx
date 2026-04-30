@@ -69,11 +69,20 @@ const Hero: React.FC = () => {
     const target = e.target as HTMLElement;
     if (target.closest('button') || target.closest('a')) return;
 
-    if (videoEnded) {
-      router.push(slide.slug);
-    } else {
-      document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Standardize behavior: both video and post-video state lead to categories scroll
+    scrollToCategories(e);
+  };
+
+  const scrollToCategories = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToAbout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
 
@@ -377,7 +386,10 @@ const Hero: React.FC = () => {
             className="flex flex-col gap-4 mb-12 border-b border-transparent pb-6" 
           >
             {/* Primary CTA */}
-            <button className="group relative bg-brand-500 text-white px-8 py-4 rounded-full font-bold text-sm overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] active:scale-95">
+            <button 
+              onClick={scrollToCategories}
+              className="group relative bg-brand-500 text-white px-8 py-4 rounded-full font-bold text-sm overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] active:scale-95"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {t.hero.startProject}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -386,7 +398,9 @@ const Hero: React.FC = () => {
             </button>
 
             {/* Secondary CTA */}
-            <button className={`px-8 py-4 rounded-full font-bold text-sm border transition-all duration-300 active:scale-95 ${theme === 'dark'
+            <button 
+              onClick={scrollToAbout}
+              className={`px-8 py-4 rounded-full font-bold text-sm border transition-all duration-300 active:scale-95 ${theme === 'dark'
                 ? 'border-white/20 text-white/90 hover:bg-white/10'
                 : 'border-black/20 text-neutral-800 hover:bg-black/5'
                 }`}
@@ -459,7 +473,10 @@ const Hero: React.FC = () => {
                 className="flex flex-row gap-4 mb-12" 
               >
                 {/* Primary CTA */}
-                <button className="group relative bg-brand-500 text-white px-8 py-5 rounded-full font-bold text-base overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] hover:shadow-[0_16px_36px_-8px_rgba(255,107,0,0.6)] hover:-translate-y-0.5">
+                <button 
+                  onClick={scrollToCategories}
+                  className="group relative bg-brand-500 text-white px-8 py-5 rounded-full font-bold text-base overflow-hidden transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,107,0,0.5)] hover:shadow-[0_16px_36px_-8px_rgba(255,107,0,0.6)] hover:-translate-y-0.5"
+                >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {t.hero.startProject}
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -468,7 +485,9 @@ const Hero: React.FC = () => {
                 </button>
 
                 {/* Secondary CTA */}
-                <button className={`px-8 py-5 rounded-full font-bold text-base border transition-all duration-300 ${theme === 'dark'
+                <button 
+                  onClick={scrollToAbout}
+                  className={`px-8 py-5 rounded-full font-bold text-base border transition-all duration-300 ${theme === 'dark'
                     ? 'border-white/20 text-white/90 hover:bg-white/10'
                     : 'border-black/20 text-neutral-800 hover:bg-black/5'
                     }`}
