@@ -84,7 +84,7 @@ export const translations = {
         subtitle: 'Kleben und Dichten',
         description: 'Premium-Silikone, Acryl und Spezial-Dichtstoffe für perfekte Fugen. Dauerelastisch, UV-beständig und extrem belastbar.',
         applications: 'Anwendungsbereiche',
-        projects: 'Kundenprojekte',
+        projects: '',
         madeInGermany: 'Qualität Made in Germany',
         learnMore: 'Mehr erfahren',
         products: [
@@ -153,7 +153,7 @@ Features: Ohne Bohren, Dauerelastisch, Neutral und frei von Silikon und Isocyana
         subtitle: 'Wartung',
         description: 'Technische Aerosole, Schmiermittel und Rostlöser. Chemische Präzision für Werkstatt, Industrie und Fuhrpark.',
         applications: 'Anwendungsbereiche',
-        projects: 'Referenzprojekte',
+        projects: '',
         madeInGermany: 'Qualität Made in Germany',
         learnMore: 'Mehr erfahren',
         products: [
@@ -208,7 +208,7 @@ Optimale Verarbeitungstemperatur: +16°C bis +25°C. Die Dose mindestens 2 Minut
         subtitle: 'Maler & Lackierer',
         description: 'Spezialsprays und technischer Oberflächenschutz. Maximale Performance für hochanspruchsvolle Anwendungen.',
         applications: 'Anwendungsbereiche',
-        projects: 'Referenzen & Design',
+        projects: '',
         madeInGermany: 'Qualität Made in Germany',
         learnMore: 'Mehr erfahren',
         products: [
@@ -243,7 +243,7 @@ Anwendung: Vor Gebrauch muss die Oberfläche sauber, trocken und ohne fettige R�
         subtitle: 'Reinigung',
         description: 'Hochwirksame Reinigungsmittel für Baustelle, KFZ und Werkstatt. Löst hartnäckigsten Schmutz kompromisslos.',
         applications: 'Anwendungsbereiche',
-        projects: 'Industrie-Referenzen',
+        projects: '',
         madeInGermany: 'Qualität Made in Germany',
         learnMore: 'Mehr erfahren',
         products: [
@@ -381,7 +381,7 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
         subtitle: 'Civil Engineering',
         description: 'Premium silicones, acrylics, and special sealants for perfect joints. Permanently elastic, UV-resistant, and extremely resilient.',
         applications: 'Application Areas',
-        projects: 'Client Projects',
+        projects: '',
         madeInGermany: 'Quality Made in Germany',
         learnMore: 'Learn more',
         products: [
@@ -450,7 +450,7 @@ Features: No drilling, permanently elastic, neutral and free of silicone and Iso
         subtitle: 'Maintenance',
         description: 'Technical aerosols, lubricants, and rust removers. Chemical precision for workshop, industry, and fleet.',
         applications: 'Application Areas',
-        projects: 'Reference Projects',
+        projects: '',
         madeInGermany: 'Quality Made in Germany',
         learnMore: 'Learn more',
         products: [
@@ -505,7 +505,7 @@ Optimal processing temperature: +16°C to +25°C. Shake the can for at least 2 m
         subtitle: 'Painting & Varnishing',
         description: 'Specialty sprays and technical surface protection. Maximum performance for highly demanding applications.',
         applications: 'Application Areas',
-        projects: 'References & Design',
+        projects: '',
         madeInGermany: 'Quality Made in Germany',
         learnMore: 'Learn more',
         products: [
@@ -540,7 +540,7 @@ Application: Before use, the surface must be clean, dry and free from oily resid
         subtitle: 'Cleaning',
         description: 'Highly effective cleaning agents for construction site, automotive, and workshop. Dissolves the most stubborn dirt without compromise.',
         applications: 'Application Areas',
-        projects: 'Industry References',
+        projects: '',
         madeInGermany: 'Quality Made in Germany',
         learnMore: 'Learn more',
         products: [
@@ -678,7 +678,7 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
         subtitle: 'Ndërtim i Lartë & i Ulët',
         description: 'Silikon premium, akrilikë dhe izolues specialë për fuga perfekte. Vazhdimisht elastikë, rezistentë ndaj rrezeve UV dhe jashtëzakonisht rezistentë.',
         applications: 'Zonat e Aplikimit',
-        projects: 'Projektet e Klientëve',
+        projects: '',
         madeInGermany: 'Cilësi Made in Germany',
         learnMore: 'Mëso më shumë',
         products: [
@@ -747,7 +747,7 @@ Karakteristika: Pa shpim, Përgjithmonë elastik, Pa silikon dhe Izocianat.`
         subtitle: 'Mirëmbajtja',
         description: 'Aerosolë teknikë, lubrifikantë dhe pastrues ndryshku. Saktësi kimike për punishte, industri dhe flota automjetesh.',
         applications: 'Zonat e Aplikimit',
-        projects: 'Projektet Referencë',
+        projects: '',
         madeInGermany: 'Cilësi Made in Germany',
         learnMore: 'Mëso më shumë',
         products: [
@@ -802,7 +802,7 @@ Temperatura optimale e përpunimit: +16°C deri në +25°C. Tundeni kanaçen pë
         subtitle: 'Lyerje & Bojaxhi',
         description: 'Sprej të veçantë dhe mbrojtje teknike e sipërfaqes. Performancë maksimale për aplikime shumë kërkuese.',
         applications: 'Zonat e Aplikimit',
-        projects: 'Referencat & Dizajni',
+        projects: '',
         madeInGermany: 'Cilësi Made in Germany',
         learnMore: 'Mëso më shumë',
         products: [
@@ -837,7 +837,7 @@ Aplikimi: Para përdorimit sipërfaqja duhet të jetë e pastër, e thatë dhe p
         subtitle: 'Pastrim',
         description: 'Agjentë pastrimi shumë efektivë për kantier ndërtimi, automjete dhe punishte. Shpërbën pa kompromis papastërtitë më kokëforta.',
         applications: 'Zonat e Aplikimit',
-        projects: 'Referencat Industriale',
+        projects: '',
         madeInGermany: 'Cilësi Made in Germany',
         learnMore: 'Mëso më shumë',
         products: [
