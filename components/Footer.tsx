@@ -91,7 +91,7 @@ const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
             <ul className="space-y-3 text-neutral-400">
               <li><Link href="/impressum" className="hover:text-white transition-colors">{t.footer.imprint}</Link></li>
               <li><Link href="/datenschutz" className="hover:text-white transition-colors">{t.footer.privacy}</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t.footer.terms}</a></li>
+              <li><Link href="/agb" className="hover:text-white transition-colors">{t.footer.terms}</Link></li>
             </ul>
           </motion.div>
 
