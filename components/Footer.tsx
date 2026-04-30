@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import ImageWithFallback from './ImageWithFallback';
 import { motion } from 'motion/react';
@@ -101,20 +101,27 @@ const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
           {/* Contact */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-bold mb-6 font-sans tracking-wide text-brand-500">{t.nav.contact}</h3>
-            <ul className="space-y-4 text-neutral-400">
-              <li className="flex items-start gap-3">
-                <MapPin className="shrink-0 text-brand-500" size={20} />
-                <span>Musterstraße 123<br />10115 Berlin</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="shrink-0 text-brand-500" size={20} />
-                <span>+49 (0) 30 1234 5678</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="shrink-0 text-brand-500" size={20} />
-                <span>info@m-one-gmbh.de</span>
-              </li>
-            </ul>
+            <div className="space-y-6 text-neutral-400">
+              {t.contactDetails.locations.map((loc, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <MapPin className="shrink-0 text-brand-500 mt-1" size={18} />
+                  <div>
+                    <p className="font-bold text-neutral-200 mb-1">{loc.title}</p>
+                    <p className="whitespace-pre-line text-sm leading-relaxed">{loc.address}</p>
+                  </div>
+                </div>
+              ))}
+              <div className="pt-2 space-y-3 border-t border-white/5">
+                <div className="flex items-center gap-3">
+                  <Mail className="shrink-0 text-brand-500" size={18} />
+                  <a href={`mailto:${t.contactDetails.email}`} className="text-sm hover:text-white transition-colors">{t.contactDetails.email}</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Globe className="shrink-0 text-brand-500" size={18} />
+                  <a href={`https://${t.contactDetails.website}`} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">{t.contactDetails.website}</a>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
 

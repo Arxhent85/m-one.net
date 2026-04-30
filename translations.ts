@@ -41,6 +41,20 @@ export const translations = {
       terms: 'AGB',
       rights: 'M ONE GmbH. Alle Rechte vorbehalten.'
     },
+    contactDetails: {
+      locations: [
+        {
+          title: 'Standort Deutschland',
+          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nDeutschland'
+        },
+        {
+          title: 'Standort Kosovo',
+          address: 'Veternik Z. Industriale\n10000 Prishtinë\nKosovë'
+        }
+      ],
+      email: 'info@m-one.net',
+      website: 'www.m-one.net'
+    },
     search: {
       placeholder: 'Wonach suchen Sie? (z.B. Sanitär Silikon)',
       noResults: 'Keine Ergebnisse für "{query}" gefunden.',
@@ -324,6 +338,20 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
       terms: 'Terms',
       rights: 'M ONE GmbH. All rights reserved.'
     },
+    contactDetails: {
+      locations: [
+        {
+          title: 'Location Germany',
+          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nGermany'
+        },
+        {
+          title: 'Location Kosovo',
+          address: 'Veternik Z. Industriale\n10000 Prishtinë\nKosovo'
+        }
+      ],
+      email: 'info@m-one.net',
+      website: 'www.m-one.net'
+    },
     search: {
       placeholder: 'What are you looking for? (e.g. Sanitary Silicon)',
       noResults: 'No results found for "{query}".',
@@ -606,6 +634,20 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
       privacy: 'Privatësia',
       terms: 'Kushtet',
       rights: 'M ONE GmbH. Të gjitha të drejtat e rezervuara.'
+    },
+    contactDetails: {
+      locations: [
+        {
+          title: 'Lokacioni Gjermani',
+          address: 'Am Kapellenberg 11\n97246 Eibelstadt\nGjermani'
+        },
+        {
+          title: 'Lokacioni Kosovë',
+          address: 'Veternik Z. Industriale\n10000 Prishtinë\nKosovë'
+        }
+      ],
+      email: 'info@m-one.net',
+      website: 'www.m-one.net'
     },
     search: {
       placeholder: 'Çfarë po kërkoni? (p.sh. Silikon Sanitar)',
