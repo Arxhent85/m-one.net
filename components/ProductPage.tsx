@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { ArrowLeft, ArrowRight, Download, ShieldCheck, FileText, CheckCircle2, ChevronDown, Package, Star, MessageSquare } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Download, ShieldCheck, FileText, ChevronDown, MessageSquare } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useNavigation } from './NavigationContext';
 import { useTheme } from './ThemeContext';
@@ -364,27 +364,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
                 {product.name}
               </h1>
               
-              {/* Trust Elements */}
-              <div className="flex flex-wrap items-center gap-4 text-xs font-bold mb-10">
-                <div className="flex items-center gap-1 text-yellow-500">
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <span className="text-neutral-500 dark:text-neutral-400 ml-1">4.9/5</span>
-                </div>
-                <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800 hidden sm:block"></div>
-                <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-500">
-                  <CheckCircle2 size={14} />
-                  <span>Sofort verfügbar</span>
-                </div>
-                <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800 hidden sm:block"></div>
-                <div className="flex items-center gap-1.5 text-neutral-400">
-                  <Package size={14} />
-                  <span>SKU: MO-{(product.name.length * 1024).toString().substring(0, 5).padEnd(5, '0')}</span>
-                </div>
-              </div>
               {/* Desktop Color Selection */}
               {hasVariants && (
                 <div className="mb-12 hidden lg:block">
@@ -464,7 +443,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
                     className="overflow-hidden"
                   >
                     <div className="p-6 space-y-4">
-                      {['Profi-Qualität', 'Nach DIN Norm', 'Lange Haltbarkeit', 'Sofort verfügbar'].map((feature, idx) => (
+                      {['Profi-Qualität', 'Nach DIN Norm', 'Lange Haltbarkeit'].map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-4 text-sm font-bold text-neutral-700 dark:text-neutral-300 group/feat cursor-default">
                           <div className="w-1.5 h-1.5 rounded-full bg-brand-500 transition-transform duration-300 group-hover/feat:scale-150"></div>
                           {feature}
