@@ -29,6 +29,41 @@ export const translations = {
         "Industriequalität für Meister: Maßgeschneiderte, industriell erprobte Rezepturen, die den extremen Anforderungen von Handwerkern und kompromisslosen Machern standhalten."
       ]
     },
+    qualitaet: {
+      heroLabel: 'Qualitätsphilosophie',
+      heroTitle: 'Unsere Qualitätsstandards',
+      heroSubtitle: 'Systematische Perfektion. Geprüft nach den höchsten Normen.',
+      introText: 'Bei M ONE betrachten wir Qualität nicht als statischen Zustand, sondern als einen dynamischen Prozess der kontinuierlichen Optimierung. Unsere Qualitätsphilosophie basiert auf der Überzeugung, dass nur durch die strikte Einhaltung systematischer Standards Ergebnisse entstehen, die den Namen',
+      introPremium: '„Premium"',
+      introSuffix: 'verdienen.',
+      s1Label: '01',
+      s1Title: 'Strenge Normen.\nStrengere Maßstäbe.',
+      s1Body: 'Unsere gesamte Produktpalette wird in strikter Konformität mit geltenden DIN-Normen und europäischen Industriestandards entwickelt und gefertigt. Diese Vorgaben bilden für uns jedoch nur die Ausgangsbasis – unser interner Qualitätsanspruch geht bewusst darüber hinaus.',
+      s1ImgAlt: 'DIN-Normen und Zertifizierungen',
+      s2Label: '02',
+      s2Title: 'Kontrollierte Wertschöpfung\nin jeder Phase.',
+      s2Body: 'Qualitätssicherung bei M ONE beginnt nicht am Ende der Fertigung, sondern bereits bei der Auswahl der Rohstoffe.',
+      s2ImgAlt: 'Qualitätskontrolle im Labor',
+      s2Pills: [
+        { label: 'Rohstoffselektion', desc: 'Nur Materialien, die unsere strengen Eingangskontrollen bestehen, werden zugelassen.' },
+        { label: 'Prozesssteuerung', desc: 'Modernste Fertigungsverfahren garantieren lückenlose Reproduzierbarkeit.' },
+        { label: 'Analytische Prüfung', desc: 'Jede Produktionsphase wird durch Prüfverfahren begleitet.' }
+      ],
+      s3Label: '03',
+      s3Title: 'Transparenz als Prinzip.',
+      s3Body: 'Unsere Technischen Datenblätter und Sicherheitsdatenblätter sind keine Formalität. Sie sind der Nachweis, dass jedes M ONE Produkt hält, was es verspricht – in der Praxis, nicht nur auf dem Papier.',
+      s3ImgAlt: 'M ONE Fertigungsanlage Deutschland',
+      s4Label: '04',
+      s4Title: 'Fertigung mit Weltruf.',
+      s4Body: 'Durch die Produktion an hochmodernen Standorten in Deutschland und den Niederlanden sichern wir eine gleichbleibende Fertigungsqualität auf industriellem Niveau. Jede Charge durchläuft strenge Qualitätskontrollen, bevor sie unter der Marke M ONE für den Einsatz freigegeben wird.',
+      s4Locations: [
+        { country: '🇩🇪', name: 'Deutschland', city: 'Produktionsstandort' },
+        { country: '🇳🇱', name: 'Niederlande', city: 'Produktionsstandort' }
+      ],
+      closingTitle: 'Gefertigt für die, die keine\nKompromisse machen.',
+      closingBody: 'M ONE Produkte werden dort eingesetzt, wo Fehler keine Option sind: auf der Baustelle, in der Werkstatt, in der Industrie. Unser Qualitätssystem ist darauf ausgelegt, genau diesem Anspruch standzuhalten – zuverlässig, wiederholbar, kompromisslos.',
+      closingTagline: 'M ONE – Ihr Partner für kompromisslose Chemie.',
+    },
     footer: {
       text: 'M ONE – Dein Maßstab. Premium-Bauchemie, technische Sprays und Pflegeprodukte für höchste Ansprüche im professionellen Handwerk und für ambitionierte Macher.',
       company: 'Unternehmen',
@@ -326,6 +361,41 @@ Eigenschaften: Hochkonzentriert, materialschonend, pH-neutral (ca. 7,5) und schn
         "Industrial Quality for Masters: Tailored, industrially proven formulations that withstand the extreme demands of craftsmen and uncompromising doers."
       ]
     },
+    qualitaet: {
+      heroLabel: 'Quality Philosophy',
+      heroTitle: 'Our Quality Standards',
+      heroSubtitle: 'Systematic perfection. Tested to the highest standards.',
+      introText: 'At M ONE, we do not view quality as a static state, but as a dynamic process of continuous improvement. Our quality philosophy is based on the conviction that only through strict adherence to systematic standards can results be achieved that deserve the name',
+      introPremium: '"Premium"',
+      introSuffix: '.',
+      s1Label: '01',
+      s1Title: 'Strict Standards.\nStricter Benchmarks.',
+      s1Body: 'Our entire product range is developed and manufactured in strict conformity with applicable DIN standards and European industry standards. However, these requirements are only the starting point for us – our internal quality standards deliberately go beyond them.',
+      s1ImgAlt: 'DIN Standards and Certifications',
+      s2Label: '02',
+      s2Title: 'Controlled Value Creation\nat Every Stage.',
+      s2Body: 'Quality assurance at M ONE does not begin at the end of production, but already at the selection of raw materials.',
+      s2ImgAlt: 'Quality Control in the Laboratory',
+      s2Pills: [
+        { label: 'Raw Material Selection', desc: 'Only materials that pass our strict incoming inspections are approved.' },
+        { label: 'Process Control', desc: 'State-of-the-art manufacturing processes guarantee seamless reproducibility.' },
+        { label: 'Analytical Testing', desc: 'Every production phase is accompanied by testing procedures.' }
+      ],
+      s3Label: '03',
+      s3Title: 'Transparency as a Principle.',
+      s3Body: 'Our Technical Data Sheets and Safety Data Sheets are not a formality. They are proof that every M ONE product delivers on its promise – in practice, not just on paper.',
+      s3ImgAlt: 'M ONE Manufacturing Facility Germany',
+      s4Label: '04',
+      s4Title: 'World-Class Manufacturing.',
+      s4Body: 'By producing at state-of-the-art facilities in Germany and the Netherlands, we ensure consistent manufacturing quality at an industrial level. Every batch undergoes strict quality controls before it is approved for use under the M ONE brand.',
+      s4Locations: [
+        { country: '🇩🇪', name: 'Germany', city: 'Production Site' },
+        { country: '🇳🇱', name: 'Netherlands', city: 'Production Site' }
+      ],
+      closingTitle: 'Made for those who make\nno compromises.',
+      closingBody: 'M ONE products are used where errors are not an option: on the construction site, in the workshop, in the industry. Our quality system is designed to stand up to exactly this demand – reliably, repeatably, uncompromisingly.',
+      closingTagline: 'M ONE – Your partner for uncompromising chemistry.',
+    },
     footer: {
       text: 'Excellence in construction since 1995. We create spaces that inspire and endure.',
       company: 'Company',
@@ -622,6 +692,41 @@ Properties: Highly concentrated, gentle on materials, pH-neutral (approx. 7.5), 
         "Vazhdimisht Elastik & Ngjitje Ekstreme: Perfeksion kimiko-teknik për fuga dhe bashkime afatgjata pa kompromise.",
         "Cilësi Industriale për Mjeshtra: Formula të përshtatura dhe të provuara në industri që përballojnë kërkesat ekstreme të zejtarëve dhe njerëzve të pakompromis të veprimit."
       ]
+    },
+    qualitaet: {
+      heroLabel: 'Filozofia e Cilësisë',
+      heroTitle: 'Standardet Tona të Cilësisë',
+      heroSubtitle: 'Përsosmëri sistematike. Testuar sipas standardeve më të larta.',
+      introText: 'Tek M ONE, ne nuk e shohim cilësinë si një gjendje statike, por si një proces dinamik të përmirësimit të vazhdueshëm. Filozofia jonë e cilësisë bazohet në bindjen se vetëm nëpërmjet respektimit të rreptë të standardeve sistematike mund të arrihen rezultate që meritojnë emrin',
+      introPremium: '"Premium"',
+      introSuffix: '.',
+      s1Label: '01',
+      s1Title: 'Standarde të Rrepta.\nKritere Edhe më të Rrepta.',
+      s1Body: 'E gjithë gama jonë e produkteve zhvillohet dhe prodhohet në përputhje të rreptë me standardet DIN në fuqi dhe standardet europiane të industrisë. Megjithatë, këto kërkesa janë vetëm pika jonë fillestare – standardet tona të brendshme të cilësisë shkojnë me qëllim përtej tyre.',
+      s1ImgAlt: 'Standardet DIN dhe Certifikimet',
+      s2Label: '02',
+      s2Title: 'Krijim i Kontrolluar i Vlerës\nnë Çdo Fazë.',
+      s2Body: 'Sigurimi i cilësisë tek M ONE nuk fillon në fund të prodhimit, por tashmë në fazën e zgjedhjes së lëndëve të para.',
+      s2ImgAlt: 'Kontrolli i Cilësisë në Laborator',
+      s2Pills: [
+        { label: 'Zgjedhja e Lëndëve të Para', desc: 'Vetëm materialet që kalojnë kontrollet tona të rrepta hyrëse miratohen.' },
+        { label: 'Kontrolli i Procesit', desc: 'Proceset moderne të prodhimit garantojnë riproduksion të plotë.' },
+        { label: 'Testimi Analitik', desc: 'Çdo fazë e prodhimit shoqërohet nga procedurat e testimit.' }
+      ],
+      s3Label: '03',
+      s3Title: 'Transparenca si Parim.',
+      s3Body: 'Fletët tona të të dhënave teknike dhe fletët e të dhënave të sigurisë nuk janë formalitet. Ato janë dëshmi se çdo produkt M ONE jep atë që premton – në praktikë, jo vetëm në letër.',
+      s3ImgAlt: 'Impianti i Prodhimit M ONE Gjermani',
+      s4Label: '04',
+      s4Title: 'Prodhim me Famë Botërore.',
+      s4Body: 'Duke prodhuar në impiantet moderne në Gjermani dhe Holandë, ne sigurojmë cilësi konstante të prodhimit në nivel industrial. Çdo seri i nënshtrohet kontrolleve të rrepta të cilësisë përpara se të miratohet për përdorim nën markën M ONE.',
+      s4Locations: [
+        { country: '🇩🇪', name: 'Gjermani', city: 'Vendndodhja e Prodhimit' },
+        { country: '🇳🇱', name: 'Holandë', city: 'Vendndodhja e Prodhimit' }
+      ],
+      closingTitle: 'Prodhuar për ata që nuk\nbëjnë kompromise.',
+      closingBody: 'Produktet M ONE përdoren aty ku gabimet nuk janë një opsion: në kantierin e ndërtimit, në punishte, në industri. Sistemi ynë i cilësisë është projektuar për të përballuar saktësisht këtë kërkesë – me besueshmëri, në mënyrë të ripërsëritshme, pa kompromise.',
+      closingTagline: 'M ONE – Partneri juaj për kimi pa kompromise.',
     },
     footer: {
       text: 'Përsosmëri në ndërtim që nga viti 1995. Ne krijojmë hapësira që frymëzojnë dhe zgjasin.',
