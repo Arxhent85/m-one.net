@@ -335,19 +335,6 @@ const Hero: React.FC = () => {
           transition={{ duration: 1.0, ease: "easeInOut" }}
           className="w-full max-w-2xl text-left pointer-events-auto"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className={`inline-block px-4 py-1.5 mb-6 border rounded-full text-[10px] font-bold tracking-[0.25em] uppercase ${theme === 'dark'
-              ? 'border-white/10 bg-white/5 text-white/60'
-              : 'border-black/10 bg-black/5 text-neutral-500'
-              }`}
-          >
-            {t.hero.since}
-          </motion.div>
-
           {/* Headline */}
           <h1 className={`text-5xl sm:text-6xl font-sans font-black leading-[0.95] mb-6 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'}`}>
             <motion.span
@@ -422,19 +409,6 @@ const Hero: React.FC = () => {
               transition={{ duration: 1.0, ease: "easeInOut" }}
               className="w-full max-w-2xl text-left pointer-events-auto"
             >
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`inline-block px-4 py-1.5 mb-6 border rounded-full text-[10px] font-bold tracking-[0.25em] uppercase ${theme === 'dark'
-                  ? 'border-white/10 bg-white/5 text-white/60'
-                  : 'border-black/10 bg-black/5 text-neutral-500'
-                  }`}
-              >
-                {t.hero.since}
-              </motion.div>
-
               {/* Headline */}
               <h1 className={`md:text-7xl lg:text-[5.5rem] font-sans font-black leading-[0.95] mb-6 tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-neutral-950'}`}>
                 <motion.span
