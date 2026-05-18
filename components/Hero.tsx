@@ -12,7 +12,7 @@ const SLIDES = [
   { id: 'bau', name: 'Bau', icon: BrickWall, darkImg: '/images/hero/slideshow/HeroSilikonDunkel.png', lightImg: '/images/hero/slideshow/HeroSilikonHell.PNG', slug: '/produkte/bau' },
   { id: 'service', name: 'Service & KFZ', icon: Wrench, darkImg: '/images/hero/slideshow/HeroServiceDunkel2.png', lightImg: '/images/hero/slideshow/HeroServiceHell2.png', slug: '/produkte/service--kfz' },
   { id: 'colors', name: 'Colors', icon: SprayCan, darkImg: '/images/hero/slideshow/HeroColorDark2.png', lightImg: '/images/hero/slideshow/HeroColorHell2.png', slug: '/produkte/colors' },
-  { id: 'cleaning', name: 'Cleaning', icon: Sparkles, darkImg: '/images/hero/slideshow/HeroCleanDunkel.PNG', lightImg: '/images/hero/slideshow/HeroCleanHell.PNG', slug: '/produkte/cleaning' },
+  { id: 'cleaning', name: 'Cleaning', icon: Sparkles, darkImg: '/images/hero/slideshow/HeroCleanDunkel2.png', lightImg: '/images/hero/slideshow/HeroCleanHell2.png', slug: '/produkte/cleaning' },
 ];
 
 const swipeConfidenceThreshold = 10000;
