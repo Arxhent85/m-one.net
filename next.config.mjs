@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   // Ensure @google/model-viewer is transpiled for SSR compatibility
