@@ -85,6 +85,7 @@ const Navbar: React.FC = () => {
               style={{ height: '40px', width: 'auto' }}
               className="object-contain block transition-all duration-300"
             />
+            <span className="text-green-500 font-extrabold text-lg ml-1 select-none">V1</span>
           </Link>
 
           {/* Desktop Menu */}
