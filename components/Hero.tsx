@@ -180,16 +180,18 @@ const Hero: React.FC = () => {
         <AnimatePresence>
           {!videoEnded && (
             <motion.video
-              initial={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1.0, ease: "easeOut" }}
               autoPlay
               muted
               playsInline
               preload="auto"
+              poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
               onEnded={() => setVideoEnded(true)}
               onCanPlay={(e) => { (e.target as HTMLVideoElement).playbackRate = 2.0; }}
-              className="absolute inset-0 w-full h-full object-cover object-center z-20 pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover object-center z-20 pointer-events-none bg-[#0a0a0a]"
             >
               <source src={videoSrc} type="video/mp4" />
             </motion.video>
@@ -278,16 +280,18 @@ const Hero: React.FC = () => {
         <AnimatePresence>
           {!videoEnded && (
             <motion.video
-              initial={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1.0, ease: "easeOut" }}
               autoPlay
               muted
               playsInline
               preload="auto"
+              poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
               onEnded={() => setVideoEnded(true)}
               onCanPlay={(e) => { (e.target as HTMLVideoElement).playbackRate = 2.0; }}
-              className="absolute inset-0 w-full h-full object-cover object-right scale-105 z-20 pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover object-right scale-105 z-20 pointer-events-none bg-[#0a0a0a]"
             >
               <source src={videoSrc} type="video/mp4" />
             </motion.video>

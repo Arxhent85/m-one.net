@@ -4,7 +4,7 @@ import { BrickWall, SprayCan, Sparkles, Wrench } from 'lucide-react';
 export const NAV_LINKS = [
   { id: 'services', href: '#categories' },
   { id: 'about', href: '#about' },
-  { id: 'contact', href: '#contact' },
+  { id: 'contact', href: '/kontakt' },
 ];
 
 // Stores only the static assets (Images & Icons) and IDs.

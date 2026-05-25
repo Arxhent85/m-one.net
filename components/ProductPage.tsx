@@ -24,7 +24,7 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, categoryId }) => {
-  const { t, getProductByImage } = useLanguage();
+  const { t, getProductByImage, language } = useLanguage();
   const { theme } = useTheme();
 
   const product = getProductByImage(initialProduct.image) || initialProduct;
@@ -167,6 +167,122 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
   const handleDownload = (type: string) => {
     alert(`${type} ${t.products.downloadStarted}`);
+  };
+
+  const getTdbUrl = () => {
+    const isDe = language === 'de';
+    return isDe 
+      ? '/downloads/M ONE Technical DATA/M ONE Technisches Datenblatt Silicon Premium.pdf'
+      : '/downloads/M ONE Technical DATA/M ONE Technical Data Sheet Silicon Premium.pdf';
+  };
+
+  const getRegUrl = () => {
+    const isDe = language === 'de';
+    return isDe
+      ? '/downloads/REGULATORY INFORMATION/M ONE REGULATORISCHE INFORMATIONEN Silikon Premium.pdf'
+      : '/downloads/REGULATORY INFORMATION/M ONE REGULATORY INFORMATION Silikon Premium.pdf';
+  };
+
+  const getSdbUrl = () => {
+    if (!isPremiumSilikon || !activeColor) return '';
+    
+    // Color folders in /downloads
+    const colorFolderMap: Record<string, string> = {
+      'transparent': 'M-One Sanitär Silikon transparent',
+      'anthrazit': 'M-One Sanitär Silikon anthrazit',
+      'bahama': 'M-One Sanitär Silikon Bahamabeige',
+      'braun': 'M-One Sanitär Silikon braun',
+      'caramel': 'M-One Sanitär Silikon Caramel',
+      'grau': 'M-One Sanitär Silikon grau',
+      'hellgrau': 'M-One Sanitär Silkon Hellgrau', // Note "Silkon"
+      'jasmin': 'M-One Sanitär Silikon Jasmin',
+      'manhatten': 'M-One Sanitär Silikon manhattan', // Note "manhattan"
+      'schwarz': 'M-One Sanitär Silikon schwarz',
+      'silber': 'M-One Sanitär Silikon silbergrau',
+      'weiss': 'M-One Sanitär Silikon Weiss' // Note capital W
+    };
+
+    const folder = colorFolderMap[activeColor.id] || `M-One Sanitär Silikon ${activeColor.name}`;
+    const isDe = language === 'de';
+
+    // File name resolving based on German vs English/Albanian
+    let fileName = '';
+    if (isDe) {
+      switch (activeColor.id) {
+        case 'grau':
+          fileName = 'M ONE SICHERHEITSDATENBLATT Silikon Premium.pdf';
+          break;
+        case 'weiss':
+          fileName = 'M ONE SICHERHEITSDATENBLATT Silikon Premium weiss.pdf';
+          break;
+        case 'transparent':
+          fileName = 'M ONE SICHERHEITSDATENBLATT Silikon Premium Transparent.pdf';
+          break;
+        default:
+          const cName = activeColor.id === 'hellgrau' ? 'Hellgrau' : 
+                        activeColor.id === 'caramel' ? 'Caramel' : 
+                        activeColor.id === 'bahama' ? 'Bahamabeige' : 
+                        activeColor.id === 'jasmin' ? 'Jasmin' : 
+                        activeColor.id === 'silber' ? 'silbergrau' : 
+                        activeColor.id === 'manhatten' ? 'manhattan' : 
+                        activeColor.name.toLowerCase();
+          fileName = `M ONE SICHERHEITSDATENBLATT Silikon Premium ${cName}.pdf`;
+      }
+    } else {
+      // English / Albanian (Fallback to English)
+      switch (activeColor.id) {
+        case 'grau':
+          fileName = 'M ONE SAFETY DATA SHEET Silikon Premium.pdf';
+          break;
+        case 'transparent':
+          fileName = 'M ONE SAFETY DATA SHEET Silikon Premium Transparent.pdf';
+          break;
+        case 'weiss':
+          fileName = 'M ONE SAFETY DATA SHEET Silikon Premium Weiss.pdf';
+          break;
+        default:
+          const cName = activeColor.id === 'hellgrau' ? 'Hellgrau' : 
+                        activeColor.id === 'caramel' ? 'Caramel' : 
+                        activeColor.id === 'bahama' ? 'Bahamabeige' : 
+                        activeColor.id === 'jasmin' ? 'Jasmin' : 
+                        activeColor.id === 'silber' ? 'silbergrau' : 
+                        activeColor.id === 'manhatten' ? 'manhattan' : 
+                        activeColor.name.toLowerCase();
+          fileName = `M ONE SAFETY DATA SHEET Silikon Premium ${cName}.pdf`;
+      }
+    }
+
+    return `/downloads/${folder}/${fileName}`;
+  };
+
+  const getDocuments = () => {
+    if (isPremiumSilikon) {
+      return [
+        { 
+          label: t.products.technicalSheet, 
+          icon: FileText, 
+          url: getTdbUrl(),
+          filename: language === 'de' ? 'M ONE Technisches Datenblatt Silicon Premium.pdf' : 'M ONE Technical Data Sheet Silicon Premium.pdf'
+        },
+        { 
+          label: (t.products as any).regulatorySheet || 'Regulatorische Information', 
+          icon: FileText, 
+          url: getRegUrl(),
+          filename: language === 'de' ? 'M ONE REGULATORISCHE INFORMATIONEN Silikon Premium.pdf' : 'M ONE REGULATORY INFORMATION Silikon Premium.pdf'
+        },
+        { 
+          label: t.products.safetySheet, 
+          icon: ShieldCheck, 
+          url: getSdbUrl(),
+          filename: activeColor ? (language === 'de' ? `M ONE SICHERHEITSDATENBLATT Silikon Premium ${activeColor.name}.pdf` : `M ONE SAFETY DATA SHEET Silikon Premium ${activeColor.name}.pdf`) : 'Sicherheitsdatenblatt.pdf'
+        }
+      ];
+    }
+    
+    return [
+      { label: t.products.technicalSheet, icon: FileText, onClick: () => handleDownload('TDB') },
+      { label: t.products.safetySheet, icon: ShieldCheck, onClick: () => handleDownload('SDB') }
+    ];
   };
 
   const getVariantFolder = () => {
@@ -470,27 +586,48 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
                     className="overflow-hidden"
                   >
                     <div className="p-2">
-                      {[
-                        { label: t.products.technicalSheet, icon: FileText, type: 'TDB' },
-                        { label: t.products.safetySheet, icon: ShieldCheck, type: 'SDB' }
-                      ].map((doc, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleDownload(doc.type)}
-                          className="w-full group flex items-center justify-between p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/40 rounded-xl transition-all duration-300 text-left"
-                        >
-                          <div className="flex items-center gap-5">
-                            <div className="p-3 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-400 group-hover:text-brand-500 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/10 transition-colors">
-                              <doc.icon size={20} />
+                      {getDocuments().map((doc, idx) => {
+                        const content = (
+                          <>
+                            <div className="flex items-center gap-5">
+                              <div className="p-3 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-400 group-hover:text-brand-500 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/10 transition-colors">
+                                <doc.icon size={20} />
+                              </div>
+                              <div>
+                                <p className="font-bold text-neutral-950 dark:text-white uppercase tracking-wider text-xs">{doc.label}</p>
+                                <p className="text-[10px] text-neutral-400 font-black tracking-widest mt-1">PDF • 1.2 MB</p>
+                              </div>
                             </div>
-                            <div>
-                              <p className="font-bold text-neutral-950 dark:text-white uppercase tracking-wider text-xs">{doc.label}</p>
-                              <p className="text-[10px] text-neutral-400 font-black tracking-widest mt-1">PDF • 1.2 MB</p>
-                            </div>
-                          </div>
-                          <Download size={18} className="text-neutral-300 dark:text-neutral-700 group-hover:text-brand-500 transition-colors" />
-                        </button>
-                      ))}
+                            <Download size={18} className="text-neutral-300 dark:text-neutral-700 group-hover:text-brand-500 transition-colors" />
+                          </>
+                        );
+
+                        if ('url' in doc && doc.url) {
+                          return (
+                            <a
+                              key={idx}
+                              href={doc.url}
+                              download={doc.filename}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full group flex items-center justify-between p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/40 rounded-xl transition-all duration-300 text-left cursor-pointer"
+                            >
+                              {content}
+                            </a>
+                          );
+                        }
+
+                        const clickableDoc = doc as { onClick?: () => void };
+                        return (
+                          <button
+                            key={idx}
+                            onClick={clickableDoc.onClick}
+                            className="w-full group flex items-center justify-between p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/40 rounded-xl transition-all duration-300 text-left"
+                          >
+                            {content}
+                          </button>
+                        );
+                      })}
                     </div>
                   </motion.div>
                 </div>

@@ -85,7 +85,6 @@ const Navbar: React.FC = () => {
               style={{ height: '40px', width: 'auto' }}
               className="object-contain block transition-all duration-300"
             />
-            <span className="text-green-500 font-extrabold text-lg ml-1 select-none">V1</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -166,7 +165,7 @@ const Navbar: React.FC = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="absolute top-full left-0 w-full glass-panel flex flex-col p-6 gap-6 md:hidden overflow-hidden"
+              className="absolute top-full left-0 w-full bg-white/95 dark:bg-neutral-950/95 backdrop-blur-3xl shadow-2xl flex flex-col p-6 gap-6 md:hidden overflow-hidden"
             >
               {NAV_LINKS.map((link) => (
                 <Link
