@@ -32,9 +32,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
   const isColorProduct = product.image.toLowerCase().includes('/products/colors/');
   const isCleaningProduct = product.image.toLowerCase().includes('/cleaning/');
 
-  const isPremiumSilikon = product.name.toLowerCase().includes('premium') && product.name.toLowerCase().includes('sili');
-  const isNeutralSilikon = product.name.toLowerCase().includes('neutral') && product.name.toLowerCase().includes('sili');
-  const isLackSpray = product.name.toLowerCase().includes('lack spray') || product.name.toLowerCase().includes('paint spray') || product.name.toLowerCase().includes('llak sprej');
+  const isPremiumSilikon = product.image.toLowerCase().includes('premium-silikon');
+  const isNeutralSilikon = product.image.toLowerCase().includes('neutral-silikon');
+  const isLackSpray = product.name.toLowerCase().includes('lack spray') || product.name.toLowerCase().includes('paint spray') || product.name.toLowerCase().includes('llak sprej') || product.image.toLowerCase().includes('lack-spray');
   const isFelgensilber = product.image.includes('felgensilber');
   const isHaftgrund = product.image.includes('haftgrund');
   const isHochtemperaturLack = product.image.includes('hochtemperatur-lack');
