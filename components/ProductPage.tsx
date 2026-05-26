@@ -255,6 +255,48 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
     return `/downloads/${folder}/${fileName}`;
   };
 
+  const getSprayDocuments = () => {
+    const img = product.image.toLowerCase();
+    
+    let prefix = '';
+
+    if (img.includes('bremsen')) {
+      prefix = 'M-ONE BREMSENREINIGER';
+    } else if (img.includes('fett')) {
+      prefix = 'M-ONE FETTSPRAY';
+    } else if (img.includes('rost')) {
+      prefix = 'M-ONE ROSTLOSER';
+    } else if (img.includes('silikonspray')) {
+      prefix = 'M-ONE SILIKON SPRAY';
+    } else if (img.includes('ubs')) {
+      prefix = 'M-ONE UBS-SPRAY';
+    } else if (img.includes('zink')) {
+      prefix = 'M-ONE ZINKSPRAY';
+    } else {
+      return null;
+    }
+
+    const doubleSpace = (prefix === 'M-ONE SILIKON SPRAY' || prefix === 'M-ONE ZINKSPRAY') ? ' ' : '';
+
+    const tdbUrl = `/downloads/Datenblätter Spray/${prefix}${doubleSpace} TECHNISCHES DATENBLATT.pdf`;
+    const sdbUrl = `/downloads/Datenblätter Spray/${prefix} SICHERHEITSDATENBLATT.pdf`;
+
+    return [
+      { 
+        label: t.products.technicalSheet, 
+        icon: FileText, 
+        url: tdbUrl,
+        filename: `${prefix} TECHNISCHES DATENBLATT.pdf`
+      },
+      { 
+        label: t.products.safetySheet, 
+        icon: ShieldCheck, 
+        url: sdbUrl,
+        filename: `${prefix} SICHERHEITSDATENBLATT.pdf`
+      }
+    ];
+  };
+
   const getDocuments = () => {
     if (isPremiumSilikon) {
       return [
@@ -277,6 +319,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
           filename: activeColor ? (language === 'de' ? `M ONE SICHERHEITSDATENBLATT Silikon Premium ${activeColor.name}.pdf` : `M ONE SAFETY DATA SHEET Silikon Premium ${activeColor.name}.pdf`) : 'Sicherheitsdatenblatt.pdf'
         }
       ];
+    }
+
+    const sprayDocs = getSprayDocuments();
+    if (sprayDocs) {
+      return sprayDocs;
+    }
+
+    if (product.image.toLowerCase().includes('motor')) {
+      return [];
     }
     
     return [
@@ -586,7 +637,15 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
                     className="overflow-hidden"
                   >
                     <div className="p-2">
-                      {getDocuments().map((doc, idx) => {
+                      {getDocuments().length === 0 ? (
+                        <div className="p-6 text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest text-center">
+                          {language === 'de' 
+                            ? 'Keine Datenblätter verfügbar.' 
+                            : language === 'sq' 
+                              ? 'Nuk ka fletë të dhënash në dispozicion.' 
+                              : 'No datasheets available.'}
+                        </div>
+                      ) : getDocuments().map((doc, idx) => {
                         const content = (
                           <>
                             <div className="flex items-center gap-5">
