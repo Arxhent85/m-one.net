@@ -8,10 +8,6 @@ import CookieBanner from "../components/CookieBanner";
 export const metadata: Metadata = {
   title: "M ONE | Premium Silikon und Dichtstoffe",
   description: "Die offizielle Webseite für hochwertige M ONE Produkte.",
-  icons: {
-    icon: '/favicon.webp',
-    apple: '/favicon.webp',
-  },
 };
 
 export default function RootLayout({
@@ -26,6 +22,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon-black.webp" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon-white.webp" media="(prefers-color-scheme: dark)" />
+        <link rel="apple-touch-icon" href="/favicon-black.webp" />
+        <link rel="shortcut icon" href="/favicon-black.webp" />
       </head>
       <body className="bg-light text-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-accent selection:text-white transition-colors duration-300">
         <Providers>
