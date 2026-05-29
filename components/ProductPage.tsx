@@ -278,8 +278,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
     const doubleSpace = (prefix === 'M-ONE SILIKON SPRAY' || prefix === 'M-ONE ZINKSPRAY') ? ' ' : '';
 
-    const tdbUrl = `/downloads/Datenblätter Spray/${prefix}${doubleSpace} TECHNISCHES DATENBLATT.pdf`;
-    const sdbUrl = `/downloads/Datenblätter Spray/${prefix} SICHERHEITSDATENBLATT.pdf`;
+    const langSuffix = language === 'en' ? ' EN' : language === 'sq' ? ' AL' : '';
+
+    const tdbUrl = `/downloads/Datenblätter Spray/${prefix}${doubleSpace} TECHNISCHES DATENBLATT new${langSuffix}.pdf`;
+    const sdbUrl = `/downloads/Datenblätter Spray/${prefix} SICHERHEITSDATENBLATT new${langSuffix}.pdf`;
 
     return [
       { 
