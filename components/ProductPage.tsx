@@ -280,8 +280,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product: initialProduct, cate
 
     const langSuffix = language === 'en' ? ' EN' : language === 'sq' ? ' AL' : '';
 
-    const tdbUrl = `/downloads/Datenblätter Spray/${prefix}${doubleSpace} TECHNISCHES DATENBLATT new${langSuffix}.pdf`;
-    const sdbUrl = `/downloads/Datenblätter Spray/${prefix} SICHERHEITSDATENBLATT new${langSuffix}.pdf`;
+    const tdbUrl = `/downloads/Datenblätter Spray/${prefix}${doubleSpace} TECHNISCHES DATENBLATT${langSuffix}.pdf`;
+    const sdbUrl = `/downloads/Datenblätter Spray/${prefix} SICHERHEITSDATENBLATT${langSuffix}.pdf`;
 
     return [
       { 

@@ -1,0 +1,1446 @@
+{
+  ".htaccess": {
+    "size": 4938,
+    "hash": "653b1f85f14ec39f36f6ab08fd436e75"
+  },
+  ".user.ini": {
+    "size": 153,
+    "hash": "40b57a8daa759a60dc47b65a44e3e26b"
+  },
+  "404/index.html": {
+    "size": 19035,
+    "hash": "aff9c5f1ba8f9e56f764574caae5882b"
+  },
+  "404.html": {
+    "size": 19035,
+    "hash": "aff9c5f1ba8f9e56f764574caae5882b"
+  },
+  "agb/index.html": {
+    "size": 25395,
+    "hash": "7ac050c7025fac71f440b7c7bb7c89d1"
+  },
+  "agb/index.txt": {
+    "size": 5713,
+    "hash": "3230583f5a06fc4badfa85e658de8e7b"
+  },
+  "categories/Colors M ONE.webp": {
+    "size": 101638,
+    "hash": "112466a23136ffa433af66a80587ffaf"
+  },
+  "categories/Dichtstoffe M ONE.webp": {
+    "size": 52700,
+    "hash": "40b55231e64be0f9fba72ddb426dd2d0"
+  },
+  "categories/Reinigusmittel M ONE.webp": {
+    "size": 56496,
+    "hash": "b3b87be63c4855b80db8b6ed7c4adee0"
+  },
+  "categories/Service Picture M ONE.webp": {
+    "size": 88716,
+    "hash": "1c290ad534ef0b40cc51ed65b24f95d3"
+  },
+  "datenschutz/index.html": {
+    "size": 23981,
+    "hash": "9089078fd50ffc140aaf56ca9060c343"
+  },
+  "datenschutz/index.txt": {
+    "size": 5745,
+    "hash": "6856d56624578fc22e0d9a67b713bfb1"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 1413251,
+    "hash": "25a30cc96646d81b80c18c5c0a13ef70"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 1408421,
+    "hash": "a3c6b8f153fd864b20f9a6c04b546a9a"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER SICHERHEITSDATENBLATT new.pdf": {
+    "size": 374721,
+    "hash": "ed475742aa77681906cb772888fb9c6a"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER SICHERHEITSDATENBLATT.pdf": {
+    "size": 149196,
+    "hash": "6241cbb529b4c0f7bbe3861cea51cc89"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 190646,
+    "hash": "1ba5174fa7961353839766102508c197"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 190410,
+    "hash": "18569828f760efb00812982d916b1cc5"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER TECHNISCHES DATENBLATT new.pdf": {
+    "size": 151725,
+    "hash": "1eb2968e0a6774e06d0421bdb8108858"
+  },
+  "downloads/Datenblätter Spray/M-ONE BREMSENREINIGER TECHNISCHES DATENBLATT.pdf": {
+    "size": 96462,
+    "hash": "ac14d9fd13bb20e296d29e298566b310"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 1491151,
+    "hash": "c70a1efb3d78d3ba673da96088554dad"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 1486691,
+    "hash": "26f0ff73584ea85ef415ff702921142e"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY SICHERHEITSDATENBLATT new.pdf": {
+    "size": 353102,
+    "hash": "204da3c43c83759b452592cd51d0d32a"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY SICHERHEITSDATENBLATT.pdf": {
+    "size": 147229,
+    "hash": "5f9336bfd016bf9fd109420c81db7b10"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 225301,
+    "hash": "d7ecd5a7257335431d78e270edb317d0"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 224934,
+    "hash": "c32b82851fff1bde5d213347e5dd0f47"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY TECHNISCHES DATENBLATT new.pdf": {
+    "size": 177778,
+    "hash": "e5589bca04d36674b4178e7b3db699ff"
+  },
+  "downloads/Datenblätter Spray/M-ONE FETTSPRAY TECHNISCHES DATENBLATT.pdf": {
+    "size": 97305,
+    "hash": "6648f2516877899f43b25b9218158282"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 1729492,
+    "hash": "8404fea3fe5159755b6cac2e77f4a6fc"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 1724413,
+    "hash": "9b184b6472d0449dbc2cd49c42474b07"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER SICHERHEITSDATENBLATT new.pdf": {
+    "size": 372653,
+    "hash": "be1a1f963e4aaf6d6f821b002b3b390a"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER SICHERHEITSDATENBLATT.pdf": {
+    "size": 164422,
+    "hash": "ee281bb691b48b4b645ed83ff32149a9"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 194030,
+    "hash": "79f88c69e616b8bfaadad9c307cb5033"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 193769,
+    "hash": "3913de0a32786ab67e8913d9086cc85a"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER TECHNISCHES DATENBLATT new.pdf": {
+    "size": 151987,
+    "hash": "cb44b208889bfea15d68c6201178da96"
+  },
+  "downloads/Datenblätter Spray/M-ONE ROSTLOSER TECHNISCHES DATENBLATT.pdf": {
+    "size": 98404,
+    "hash": "9566b8f735c3ba3328271e8e1ce638a7"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY  TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 215417,
+    "hash": "8ec41c6c552ec89c9c7469497002c1ec"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY  TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 215101,
+    "hash": "0c74b7b6ad9fa85c7e771bf7be7baeb0"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY  TECHNISCHES DATENBLATT new.pdf": {
+    "size": 166779,
+    "hash": "8c6e831df21b2c1aba61476094a0101a"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY  TECHNISCHES DATENBLATT.pdf": {
+    "size": 96931,
+    "hash": "3654835503efb470f590069b902d188d"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 1367082,
+    "hash": "e22e5e5ef5b8d4488ef008acf826c28f"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 1362849,
+    "hash": "e5e4035c9d9313055d5bd082816fbe63"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY SICHERHEITSDATENBLATT new.pdf": {
+    "size": 330808,
+    "hash": "f346483fa2fce19ac94eea08489aedb8"
+  },
+  "downloads/Datenblätter Spray/M-ONE SILIKON SPRAY SICHERHEITSDATENBLATT.pdf": {
+    "size": 141865,
+    "hash": "922639493a5eb8733cd60a613c64970b"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 1617141,
+    "hash": "516c17cee9618913e582f8a6c5d7f12a"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 1611916,
+    "hash": "3b2c7d93a212df219050b871f9a9c1b8"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY SICHERHEITSDATENBLATT new.pdf": {
+    "size": 367776,
+    "hash": "ab027f95068f23a20b7e77e4a775c765"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY SICHERHEITSDATENBLATT.pdf": {
+    "size": 131292,
+    "hash": "1c23886c78b553db75b0b334e9555e57"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 203375,
+    "hash": "d15e35414b5f14b9e8765fdee275be04"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 202970,
+    "hash": "ac418b3de36ff66633b2d13284a11e43"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY TECHNISCHES DATENBLATT new.pdf": {
+    "size": 160571,
+    "hash": "e658fbf506009f4a3221b229f2fb52a2"
+  },
+  "downloads/Datenblätter Spray/M-ONE UBS-SPRAY TECHNISCHES DATENBLATT.pdf": {
+    "size": 98269,
+    "hash": "f6a65340c13560d55d330f730d3fe043"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY  TECHNISCHES DATENBLATT new AL.pdf": {
+    "size": 235110,
+    "hash": "929e2e02cae76f7e1f366f65de6e2d96"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY  TECHNISCHES DATENBLATT new EN.pdf": {
+    "size": 234858,
+    "hash": "2b2a17d3018a6fb841dca0a6f370bade"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY  TECHNISCHES DATENBLATT new.pdf": {
+    "size": 193223,
+    "hash": "80f2db7221a8f6ce87ad9bc51457abaf"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY  TECHNISCHES DATENBLATT.pdf": {
+    "size": 98441,
+    "hash": "43a8087a06b906363a4078bcd0223ee3"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY SICHERHEITSDATENBLATT new AL.pdf": {
+    "size": 2498255,
+    "hash": "2ce7e83768f9e31ccb57a57e0092a4de"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY SICHERHEITSDATENBLATT new EN.pdf": {
+    "size": 2491671,
+    "hash": "cbc89ad3f899fa50eef9c37ba42ac0f7"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY SICHERHEITSDATENBLATT new.pdf": {
+    "size": 480943,
+    "hash": "06b3b49019f88ca670dd056074b09a8f"
+  },
+  "downloads/Datenblätter Spray/M-ONE ZINKSPRAY SICHERHEITSDATENBLATT.pdf": {
+    "size": 191767,
+    "hash": "e522bb90fc7dc1248e0624f1f7518e61"
+  },
+  "downloads/M ONE Technical DATA/M ONE Technical Data Sheet Silicon Premium.pdf": {
+    "size": 239072,
+    "hash": "f752862b3b7d73dd8c790684bc230195"
+  },
+  "downloads/M ONE Technical DATA/M ONE Technisches Datenblatt Silicon Premium.pdf": {
+    "size": 141318,
+    "hash": "9893cad68a749f9c20f587d6405a183b"
+  },
+  "downloads/M-ONE logo Lang schwarz.pdf": {
+    "size": 389437,
+    "hash": "cf2517b05715c8487d2aa0e014db7b86"
+  },
+  "downloads/M-One Sanitär Silikon anthrazit/M ONE SAFETY DATA SHEET Silikon Premium anthrazit.pdf": {
+    "size": 623340,
+    "hash": "28bf0806d287acb7b2ddeeb1c618e36b"
+  },
+  "downloads/M-One Sanitär Silikon anthrazit/M ONE SICHERHEITSDATENBLATT Silikon Premium anthrazit.pdf": {
+    "size": 642310,
+    "hash": "000de994643e35b7ac4c731ba8bfe1df"
+  },
+  "downloads/M-One Sanitär Silikon Bahamabeige/M ONE SAFETY DATA SHEET Silikon Premium Bahamabeige.pdf": {
+    "size": 623768,
+    "hash": "9e029d2a35700804d9f48b614e070b92"
+  },
+  "downloads/M-One Sanitär Silikon Bahamabeige/M ONE SICHERHEITSDATENBLATT Silikon Premium Bahamabeige.pdf": {
+    "size": 642812,
+    "hash": "02027ee1e42d3a5629c042d10d0248e1"
+  },
+  "downloads/M-One Sanitär Silikon braun/M ONE SAFETY DATA SHEET Silikon Premium braun.pdf": {
+    "size": 595583,
+    "hash": "530628b635f8db10f84e827fae98f94a"
+  },
+  "downloads/M-One Sanitär Silikon braun/M ONE SICHERHEITSDATENBLATT Silikon Premium braun.pdf": {
+    "size": 603082,
+    "hash": "7c67644f9739a1580e028d05161671e8"
+  },
+  "downloads/M-One Sanitär Silikon Caramel/M ONE SAFETY DATA SHEET Silikon Premium Caramel.pdf": {
+    "size": 604315,
+    "hash": "77f01238b4e94c22bfdf979aeade0756"
+  },
+  "downloads/M-One Sanitär Silikon Caramel/M ONE SICHERHEITSDATENBLATT Silikon Premium Caramel.pdf": {
+    "size": 611797,
+    "hash": "d5dd8e6026e18464117f73d8bacb5f87"
+  },
+  "downloads/M-One Sanitär Silikon grau/M ONE SAFETY DATA SHEET Silikon Premium.pdf": {
+    "size": 1549600,
+    "hash": "ddfbbb42aa5708378d35a7e4ea6e34aa"
+  },
+  "downloads/M-One Sanitär Silikon grau/M ONE SICHERHEITSDATENBLATT Silikon Premium.pdf": {
+    "size": 629196,
+    "hash": "5eac0577d8500b2e6e3920d82decdc08"
+  },
+  "downloads/M-One Sanitär Silikon Jasmin/M ONE SAFETY DATA SHEET Silikon Premium Jasmin.pdf": {
+    "size": 600425,
+    "hash": "e1db4a130a1b2b3e37fe748dfdfc7154"
+  },
+  "downloads/M-One Sanitär Silikon Jasmin/M ONE SICHERHEITSDATENBLATT Silikon Premium Jasmin.pdf": {
+    "size": 608400,
+    "hash": "a1dd5b55d7447739e4451693f3dcb644"
+  },
+  "downloads/M-One Sanitär Silikon manhattan/30633539_MTR_ECLP_BE_09082025074628.pdf": {
+    "size": 149237,
+    "hash": "24bc95d6687021527de9de7e5d0d822e"
+  },
+  "downloads/M-One Sanitär Silikon manhattan/30633539_MTR_GCLP_DE_09082025074931.pdf": {
+    "size": 168215,
+    "hash": "2c6eaddefd57691d70b6f24c172b142c"
+  },
+  "downloads/M-One Sanitär Silikon manhattan/M ONE SAFETY DATA SHEET Silikon Premium manhattan.pdf": {
+    "size": 623757,
+    "hash": "5f323bc0984d1a413b3a69673df29f36"
+  },
+  "downloads/M-One Sanitär Silikon manhattan/M ONE SICHERHEITSDATENBLATT Silikon Premium manhattan.pdf": {
+    "size": 642568,
+    "hash": "10bf5ba424e4d29b10a22562e1f1a4a0"
+  },
+  "downloads/M-One Sanitär Silikon schwarz/M ONE SAFETY DATA SHEET Silikon Premium schwarz.pdf": {
+    "size": 595731,
+    "hash": "1e3ccec3bd5986ff63559273434297eb"
+  },
+  "downloads/M-One Sanitär Silikon schwarz/M ONE SICHERHEITSDATENBLATT Silikon Premium schwarz.pdf": {
+    "size": 603208,
+    "hash": "1ddc3c69ab097c1bf85f3b1d1cc13285"
+  },
+  "downloads/M-One Sanitär Silikon silbergrau/M ONE SAFETY DATA SHEET Silikon Premium silbergrau.pdf": {
+    "size": 623894,
+    "hash": "b160868c3dcccca2cf0c49636013bc73"
+  },
+  "downloads/M-One Sanitär Silikon silbergrau/M ONE SICHERHEITSDATENBLATT Silikon Premium silbergrau.pdf": {
+    "size": 642809,
+    "hash": "9e1c9b7f7e17ca6599815b2561d5fedd"
+  },
+  "downloads/M-One Sanitär Silikon transparent/M ONE SAFETY DATA SHEET Silikon Premium Transparent.pdf": {
+    "size": 613406,
+    "hash": "7397ee36be66b0112097580dfe2b4746"
+  },
+  "downloads/M-One Sanitär Silikon transparent/M ONE SICHERHEITSDATENBLATT Silikon Premium Transparent.pdf": {
+    "size": 629761,
+    "hash": "153919339bb89bfa987e2639b708cdfb"
+  },
+  "downloads/M-One Sanitär Silikon Weiss/M ONE SAFETY DATA SHEET Silikon Premium Weiss.pdf": {
+    "size": 623478,
+    "hash": "67c7f90a5251ccbd79aee4ca4beeed9b"
+  },
+  "downloads/M-One Sanitär Silikon Weiss/M ONE SICHERHEITSDATENBLATT Silikon Premium weiss.pdf": {
+    "size": 643000,
+    "hash": "f3be596deaa22619add99082eef3181d"
+  },
+  "downloads/M-One Sanitär Silkon Hellgrau/M ONE SAFETY DATA SHEET Silikon Premium Hellgrau.pdf": {
+    "size": 600949,
+    "hash": "828a16006547a51e674190eb40303adb"
+  },
+  "downloads/M-One Sanitär Silkon Hellgrau/M ONE SICHERHEITSDATENBLATT Silikon Premium Hellgrau.pdf": {
+    "size": 609637,
+    "hash": "b27c0b34718404e821d559d973130930"
+  },
+  "downloads/REGULATORY INFORMATION/M ONE REGULATORISCHE INFORMATIONEN Silikon Premium.pdf": {
+    "size": 2607611,
+    "hash": "5d9e1b0a9f505a1c2b2ee134a63cadc1"
+  },
+  "downloads/REGULATORY INFORMATION/M ONE REGULATORY INFORMATION Silikon Premium.pdf": {
+    "size": 559637,
+    "hash": "7ba629d0aff77f662cf0a239c97b1e2c"
+  },
+  "favicon-black.webp": {
+    "size": 2922,
+    "hash": "b81b0f8cebfef8a68eff047cb59e3bb6"
+  },
+  "favicon-white.webp": {
+    "size": 2488,
+    "hash": "d48b691f359c7bac175c1d769bb5df5e"
+  },
+  "favicon.webp": {
+    "size": 2922,
+    "hash": "b81b0f8cebfef8a68eff047cb59e3bb6"
+  },
+  "HeroPic M ONE.webp": {
+    "size": 63988,
+    "hash": "8f4a1f5d2877fce013c8b3756966c576"
+  },
+  "images/about/architecture.png": {
+    "size": 735907,
+    "hash": "9a91c9fcfa42a8867513240394680c4e"
+  },
+  "images/about/quality.png": {
+    "size": 782676,
+    "hash": "395d4be44aacc460740ca8d503621b06"
+  },
+  "images/about/service.png": {
+    "size": 628539,
+    "hash": "51e5f39982f6e7aed5fe8270d9d08fcd"
+  },
+  "images/hero/Colors_M_ONE.webp": {
+    "size": 101638,
+    "hash": "112466a23136ffa433af66a80587ffaf"
+  },
+  "images/hero/Dichtstoffe_M_ONE.webp": {
+    "size": 52700,
+    "hash": "40b55231e64be0f9fba72ddb426dd2d0"
+  },
+  "images/hero/HeroPic.webp": {
+    "size": 63988,
+    "hash": "8f4a1f5d2877fce013c8b3756966c576"
+  },
+  "images/hero/hero_dark.webp": {
+    "size": 556028,
+    "hash": "6c0c3eca72a40a48b3aa4f9878064899"
+  },
+  "images/hero/hero_light.webp": {
+    "size": 426772,
+    "hash": "cfba5c2a5b0881f6f7bc13f31b057ffa"
+  },
+  "images/hero/Reinigusmittel_M_ONE.webp": {
+    "size": 56496,
+    "hash": "b3b87be63c4855b80db8b6ed7c4adee0"
+  },
+  "images/hero/Service_Picture_M_ONE.webp": {
+    "size": 88716,
+    "hash": "1c290ad534ef0b40cc51ed65b24f95d3"
+  },
+  "images/hero/slideshow/HeroCleanDunkel.PNG": {
+    "size": 1020293,
+    "hash": "fdeda62588829bdcd09cc338918d8a86"
+  },
+  "images/hero/slideshow/HeroCleanDunkel2.png": {
+    "size": 2011895,
+    "hash": "fa1ddeed7816fe4b7da50e4199bb695c"
+  },
+  "images/hero/slideshow/HeroCleanHell.PNG": {
+    "size": 1196608,
+    "hash": "6b1c0735e6c497a33c2932a945955473"
+  },
+  "images/hero/slideshow/HeroCleanHell2.png": {
+    "size": 1709051,
+    "hash": "8413fdb6284ded0e6439114fd3908c1a"
+  },
+  "images/hero/slideshow/HeroColorDark2.png": {
+    "size": 2110189,
+    "hash": "68ed90dbb4c77a95f870080559b6e6a8"
+  },
+  "images/hero/slideshow/HeroColorDunkel.png": {
+    "size": 1248170,
+    "hash": "5d65053022a7b716f144ea08326a992b"
+  },
+  "images/hero/slideshow/HeroColorHell.png": {
+    "size": 1064059,
+    "hash": "0ad096b451a23ae4381bbf7610010046"
+  },
+  "images/hero/slideshow/HeroColorHell2.png": {
+    "size": 2213345,
+    "hash": "b7cca4217e7544170cda2d6d45714bad"
+  },
+  "images/hero/slideshow/HeroServiceDunkel.PNG": {
+    "size": 1062993,
+    "hash": "0a91e1fef7b59e6bb63047081d9d982a"
+  },
+  "images/hero/slideshow/HeroServiceDunkel2.png": {
+    "size": 1936403,
+    "hash": "a93a46fd5e30e254b039e6d5e926706f"
+  },
+  "images/hero/slideshow/HeroServiceHell.PNG": {
+    "size": 1010915,
+    "hash": "4d80d4a27020af9cff95fe90dcf719a9"
+  },
+  "images/hero/slideshow/HeroServiceHell2.png": {
+    "size": 1756767,
+    "hash": "0c20e215eb5177c002c16bc824f4306e"
+  },
+  "images/hero/slideshow/HeroSilikonDunkel.png": {
+    "size": 5583678,
+    "hash": "6df33083aafd22954a233838678c131b"
+  },
+  "images/hero/slideshow/HeroSilikonHell.PNG": {
+    "size": 818998,
+    "hash": "a7f1438d17fb80c5689d37f2a36369a8"
+  },
+  "images/products/cleaning/industriereiniger.png": {
+    "size": 581510,
+    "hash": "fccd445d7f333290190f3a84822e6910"
+  },
+  "images/products/cleaning/montagereiniger.png": {
+    "size": 561236,
+    "hash": "5e998e350f1bf59e50faff7bf8d3b970"
+  },
+  "images/products/cleaning/universalreiniger.png": {
+    "size": 449888,
+    "hash": "9f69cabb5ab77dc8c6135f41b3bd47ff"
+  },
+  "images/quality/certification.png": {
+    "size": 793823,
+    "hash": "5a17a16659f1384eb6a71a90fd2ca071"
+  },
+  "images/quality/lab.png": {
+    "size": 769572,
+    "hash": "7591f764743fd8ce95a883477f99abad"
+  },
+  "images/quality/production.png": {
+    "size": 7184259,
+    "hash": "2cc72bb720441a8685ad682b26506548"
+  },
+  "impressum/index.html": {
+    "size": 23406,
+    "hash": "a6d2f9c0ac9cb61297bd428f34fcf36c"
+  },
+  "impressum/index.txt": {
+    "size": 5737,
+    "hash": "61c3d440738de9e85bfea88c31c01770"
+  },
+  "index.html": {
+    "size": 49231,
+    "hash": "e01a85161269ff727f580c57e3e2fa8d"
+  },
+  "index.txt": {
+    "size": 5447,
+    "hash": "0f1b5e8addf4cd56c439a2eaee029a0c"
+  },
+  "kontakt/index.html": {
+    "size": 21468,
+    "hash": "b19536d20a83b9f67494ab5d5416def7"
+  },
+  "kontakt/index.txt": {
+    "size": 5625,
+    "hash": "9f9f91b67752dec67643bd39d2d147a3"
+  },
+  "logos/M-ONE Lang.webp": {
+    "size": 4504,
+    "hash": "edccf88d1f12bb0d717ebcaa4377ccf2"
+  },
+  "logos/M-ONE LOGO ZI.webp": {
+    "size": 3798,
+    "hash": "e17ea10cc73e74343d6ac045d213dfff"
+  },
+  "logos/M-ONE LOGO.webp": {
+    "size": 4008,
+    "hash": "cb2754485ae434c124e84bf274804824"
+  },
+  "logos/M-ONE_logo_kurz_schwarz.webp": {
+    "size": 9158,
+    "hash": "dc35456f57216f31de4f43f26c2c93b6"
+  },
+  "logos/M-ONE_logo_kurz_weiss.webp": {
+    "size": 9796,
+    "hash": "9f6029d6e5b48ae0c59df0e3539593b5"
+  },
+  "logos/M-ONE_logo_Lang_schwarz.webp": {
+    "size": 12004,
+    "hash": "fee91287f32462d8471b4069f35c7458"
+  },
+  "logos/M-ONE_logo_Lang_weiss.webp": {
+    "size": 12688,
+    "hash": "99a20458ee124e676132c1e987249746"
+  },
+  "models/HeroModel.glb": {
+    "size": 4965096,
+    "hash": "153df4bb528c3cbc8be374d310e16e47"
+  },
+  "products/Bremsen und Teile Reiniger Spray M ONE-3D-4K-Transparent.webp": {
+    "size": 30240,
+    "hash": "e66e805f84541e30886233ee17da1efa"
+  },
+  "products/Bremsen und Teile Reiniger Spray M ONE-3D.glb": {
+    "size": 6281748,
+    "hash": "9dbbdb2c904e8eda51ad6ddada75a65d"
+  },
+  "products/cleaning/antikalk-750ml.png": {
+    "size": 202216,
+    "hash": "e0ede97932afff57ad349ac55b74fafc"
+  },
+  "products/cleaning/auto-innen-750ml.png": {
+    "size": 214681,
+    "hash": "2fe6a13f97e043df43830eb405c50274"
+  },
+  "products/cleaning/betriebs-4l.png": {
+    "size": 414831,
+    "hash": "e65c2be0713b0311dd8d185ab9ec7b7d"
+  },
+  "products/cleaning/kamin-750ml.png": {
+    "size": 232000,
+    "hash": "7136cdd90c49397c8f0ba9d6cffa2ec4"
+  },
+  "products/cleaning/laminat-4l.png": {
+    "size": 436958,
+    "hash": "61b2c9d1d377bb4b525178d3a7535bdd"
+  },
+  "products/cleaning/universal-750ml.png": {
+    "size": 258686,
+    "hash": "453db38bc2ec590b82aba9adc32a60e4"
+  },
+  "products/colors/felgensilber-3D.glb": {
+    "size": 4418676,
+    "hash": "2dc5d675f2699c125f0e974effb4ac92"
+  },
+  "products/colors/felgensilber-dunkel.webp": {
+    "size": 297856,
+    "hash": "82fc455dfe31e61c0281cfa6cd82bcd7"
+  },
+  "products/colors/felgensilber-hell.webp": {
+    "size": 233156,
+    "hash": "155ba476c85db69053cbe4dd4a2a504a"
+  },
+  "products/colors/felgensilber-transparent.webp": {
+    "size": 25574,
+    "hash": "62443b0e1202bd50da6b7cc0585ee346"
+  },
+  "products/colors/haftgrund-3D.glb": {
+    "size": 3843672,
+    "hash": "06ca5f86c957d51ba02a8c5dab8763ab"
+  },
+  "products/colors/haftgrund-dunkel.webp": {
+    "size": 199656,
+    "hash": "dd72b126a8d1a60f33fe70e126b62210"
+  },
+  "products/colors/haftgrund-hell.webp": {
+    "size": 204110,
+    "hash": "9e66afb87799c0f7132e2936af39843a"
+  },
+  "products/colors/haftgrund-transparent.webp": {
+    "size": 18406,
+    "hash": "67756ff088701daf522c1f2e89a585f4"
+  },
+  "products/colors/hochtemperatur-lack-3D.glb": {
+    "size": 6506240,
+    "hash": "698fc5bd2c0919ffb61ebab35592353a"
+  },
+  "products/colors/hochtemperatur-lack-transparent.webp": {
+    "size": 282676,
+    "hash": "db4861e64c620d3dc7b1cf2e63b8aa02"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Braun 3D.glb": {
+    "size": 3697768,
+    "hash": "5974517198062ceed0ef7595d010c71b"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Braun.webp": {
+    "size": 356352,
+    "hash": "f8e2fd4e02ba552debbfab8d8063c479"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Chrom 3D.glb": {
+    "size": 3697772,
+    "hash": "cafee6b94d2198a0f932e5ccce82bd1f"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Chrom.webp": {
+    "size": 346196,
+    "hash": "6df51d676af897a863aa3ad640fa3b79"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Gelb 3D.glb": {
+    "size": 3697772,
+    "hash": "867dea75f37df52854c7b13359b0830c"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Gelb.webp": {
+    "size": 352722,
+    "hash": "7e9049b975cf03c0d54d831d99879dbb"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Gold 3D.glb": {
+    "size": 3697752,
+    "hash": "cff6852818bb92d5a693613925bf7a40"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Gold.webp": {
+    "size": 353154,
+    "hash": "93c36dd6b18f373a9cb3440892c4ab68"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Grau 3D.glb": {
+    "size": 3697772,
+    "hash": "9a88b583e1a100328ea07e0ab65df624"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Grau.webp": {
+    "size": 345770,
+    "hash": "49084a74c9c815410c940756643fde82"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Grün 3D.glb": {
+    "size": 3697756,
+    "hash": "20738e83b16c24e54bef559b72d34bf4"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Grün.webp": {
+    "size": 354724,
+    "hash": "905dbef61a6c9200b3988f2d888c2086"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Rot 3D.glb": {
+    "size": 3697756,
+    "hash": "06ae4b8449b3a865f4907aa8e2df16d5"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Rot.webp": {
+    "size": 356098,
+    "hash": "137eaefa659246d31de5c039f8771339"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Schwarz 3D.glb": {
+    "size": 3697776,
+    "hash": "8ee30fa91e4d3598c84a136585ad826d"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Schwarz Matt 3D.glb": {
+    "size": 3697720,
+    "hash": "588ec7f97f8075668d44d27787b3d3e7"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Schwarz Matt.webp": {
+    "size": 349882,
+    "hash": "b3788fce9ba8829612bf4d923b39dfaf"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Schwarz.webp": {
+    "size": 350362,
+    "hash": "01d8f022aa5e17ecce408debc0e14c5d"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Weiss 3D.glb": {
+    "size": 3697692,
+    "hash": "08e01ff1a48c16c2dd8c013d3bf7ada5"
+  },
+  "products/colors/lack-spray/LACK SPRAY M ONE Weiss.webp": {
+    "size": 344362,
+    "hash": "4b676973d68859512d9aeebf380ac584"
+  },
+  "products/colors/lack-spray/punkt Braun.webp": {
+    "size": 14282,
+    "hash": "cda9b65aa00c8fbe8c1e96f79f158b58"
+  },
+  "products/colors/lack-spray/punkt Chrom.webp": {
+    "size": 18356,
+    "hash": "93f92106c2ac9eb139cbbf17d9f8ba48"
+  },
+  "products/colors/lack-spray/punkt Gelb.webp": {
+    "size": 13768,
+    "hash": "2fefc96551e6539d5ca93e62e0d2ac7b"
+  },
+  "products/colors/lack-spray/punkt Gold.webp": {
+    "size": 15990,
+    "hash": "c59960358345d4be3e3c7a8ba2653ef7"
+  },
+  "products/colors/lack-spray/punkt Grau.webp": {
+    "size": 10044,
+    "hash": "475918701faeedba65afc547bd98ebad"
+  },
+  "products/colors/lack-spray/punkt Grün.webp": {
+    "size": 13812,
+    "hash": "2a9f457095f84cfe2e107c0d8f7bfd4d"
+  },
+  "products/colors/lack-spray/punkt Rot.webp": {
+    "size": 16208,
+    "hash": "0c9f3dfd56c1c47cd417dfbf8076411b"
+  },
+  "products/colors/lack-spray/punkt Schwarz Matt.webp": {
+    "size": 43370,
+    "hash": "c275521a0e7ee504930d87d61f5f3307"
+  },
+  "products/colors/lack-spray/punkt Schwarz.webp": {
+    "size": 12428,
+    "hash": "fe7aa58cea363c4dcb06cb098f164b32"
+  },
+  "products/colors/lack-spray/punkt Weiss.webp": {
+    "size": 9808,
+    "hash": "5677b8b9d085bdef96aa55f12f848501"
+  },
+  "products/colors/lack-spray-dunkel.webp": {
+    "size": 386280,
+    "hash": "af9d4eab08e9cd54cfa9d0a47adb4547"
+  },
+  "products/colors/lack-spray-hell.webp": {
+    "size": 355244,
+    "hash": "d6a26f45d3b282cc1dfc335c5d6dc36e"
+  },
+  "products/colors/lack-spray-rot-transparent.webp": {
+    "size": 356098,
+    "hash": "137eaefa659246d31de5c039f8771339"
+  },
+  "products/extrem-kleber/profi mont extrem 3D.glb": {
+    "size": 3119532,
+    "hash": "199128a764a2d40330df84342c31925a"
+  },
+  "products/extrem-kleber/profi mont extrem-Einzeln-4K-Transparent.webp": {
+    "size": 256388,
+    "hash": "a42942b47b624cb3f5e0d48f3d2e723d"
+  },
+  "products/FettSpray M ONE-3D-4K-Transparent.webp": {
+    "size": 24096,
+    "hash": "640ec67c4924b08ec5810e915aed8ca3"
+  },
+  "products/FettSpray M ONE-3D.glb": {
+    "size": 5931664,
+    "hash": "6f391271e14f7470b3cdb5c78dce010a"
+  },
+  "products/MotorStarter M ONE-3D-4K-Transparent.webp": {
+    "size": 27202,
+    "hash": "6255c15cc9e08b6ee60b343c1f161474"
+  },
+  "products/MotorStarter M ONE-3D.glb": {
+    "size": 6844508,
+    "hash": "4ee56039251f0e8a0531f0b4d8c091b6"
+  },
+  "products/neutral-silikon/Bau Silicon text.txt": {
+    "size": 2808,
+    "hash": "f9e31e2c76fb81620e404d3f65f57f37"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON grau.glb": {
+    "size": 3574160,
+    "hash": "3962a56300eb7591296af958ed3a30a0"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON grau.webp": {
+    "size": 283308,
+    "hash": "d102ab8e57431aff29d01f1fe5008831"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON schwarz.glb": {
+    "size": 3574164,
+    "hash": "6364f6a51991b313c4cfbc46a70d2489"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON schwarz.webp": {
+    "size": 281352,
+    "hash": "73e9c2600ab3225e99518c02034a7b6c"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON transparent.glb": {
+    "size": 3574336,
+    "hash": "d9b9af26275f9915bd8d312923ade4de"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON transparent.webp": {
+    "size": 286146,
+    "hash": "cdcfc2dae4544a624078cfeeed2fed7c"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON weiss.glb": {
+    "size": 3574076,
+    "hash": "d711da0c80beda5439ebb21e9d40f841"
+  },
+  "products/neutral-silikon/M-ONE BAU SILIKON weiss.webp": {
+    "size": 280110,
+    "hash": "e917e2ceed9c14536f9fd7a34dffa2f5"
+  },
+  "products/neutral-silikon/punkt grau.webp": {
+    "size": 1166,
+    "hash": "f2fa9bf1a3af8807736b778932e78b5c"
+  },
+  "products/neutral-silikon/punkt schwarz.webp": {
+    "size": 1004,
+    "hash": "9e0ebbcb0223c619aeaa56616619a629"
+  },
+  "products/neutral-silikon/punkt transparent.webp": {
+    "size": 1236,
+    "hash": "fe8063bebadfbea34f3f6cf3e90559dd"
+  },
+  "products/neutral-silikon/punkt weiss.webp": {
+    "size": 1292,
+    "hash": "357a7acc8a84b70e528f81db8ddd15f2"
+  },
+  "products/premium-silikon/PREMIUM SILIKON 2026.pdf": {
+    "size": 799615,
+    "hash": "0e663a4f96cfaed774b3213b261440e7"
+  },
+  "products/premium-silikon/PREMIUM SILIKON anthrazit 3D.glb": {
+    "size": 5035220,
+    "hash": "36aeb526850e6c39e656b07d767efc00"
+  },
+  "products/premium-silikon/PREMIUM SILIKON anthrazit.webp": {
+    "size": 210086,
+    "hash": "4088c8502bf979c90e58cf3b2c7f98c0"
+  },
+  "products/premium-silikon/PREMIUM SILIKON bahama 3D.glb": {
+    "size": 5035216,
+    "hash": "d210a64c78bbbd98d2ab2182b5109d63"
+  },
+  "products/premium-silikon/PREMIUM SILIKON bahama.webp": {
+    "size": 212482,
+    "hash": "ccdd9b445d8ad9c9f8b0d083ad277589"
+  },
+  "products/premium-silikon/PREMIUM SILIKON braun 3D.glb": {
+    "size": 5035220,
+    "hash": "ce1bb455f1b82a9b46288a790690676f"
+  },
+  "products/premium-silikon/PREMIUM SILIKON braun.webp": {
+    "size": 212444,
+    "hash": "3f4ae21636cde0e13ce497d3f733d8f4"
+  },
+  "products/premium-silikon/PREMIUM SILIKON caramel 3D.glb": {
+    "size": 5035220,
+    "hash": "84d534e3d86d950d85f15aa96b60fce8"
+  },
+  "products/premium-silikon/PREMIUM SILIKON caramel.webp": {
+    "size": 213534,
+    "hash": "d643652efac446e9077d4356dd0bd756"
+  },
+  "products/premium-silikon/PREMIUM SILIKON grau 3D.glb": {
+    "size": 5035220,
+    "hash": "26c07bbf4c59c6a68760400083f06702"
+  },
+  "products/premium-silikon/PREMIUM SILIKON grau.webp": {
+    "size": 209608,
+    "hash": "4d14e16660bd6319a72a0852e898f5b8"
+  },
+  "products/premium-silikon/PREMIUM SILIKON hellgrau 3D.glb": {
+    "size": 5035216,
+    "hash": "c8003e25ab8e357ef37a5155f5da2f54"
+  },
+  "products/premium-silikon/PREMIUM SILIKON hellgrau.webp": {
+    "size": 209122,
+    "hash": "ff325ddc2616cb54de5689d4cc870718"
+  },
+  "products/premium-silikon/PREMIUM SILIKON jasmin 3D.glb": {
+    "size": 5035216,
+    "hash": "436acbb6c4b33efc63391ef0452102b4"
+  },
+  "products/premium-silikon/PREMIUM SILIKON jasmin.webp": {
+    "size": 209114,
+    "hash": "f97ad6d447a636d523cbc0bfe8094e9b"
+  },
+  "products/premium-silikon/PREMIUM SILIKON manhatten 3D.glb": {
+    "size": 5035216,
+    "hash": "f2e64510587e470d26f4b3b723e3d441"
+  },
+  "products/premium-silikon/PREMIUM SILIKON manhatten.webp": {
+    "size": 210132,
+    "hash": "49167afb9a4504453393ae660f904392"
+  },
+  "products/premium-silikon/PREMIUM SILIKON schwarz 3D.glb": {
+    "size": 5035220,
+    "hash": "500f883e389ee88fc96de958311f1019"
+  },
+  "products/premium-silikon/PREMIUM SILIKON schwarz.webp": {
+    "size": 208906,
+    "hash": "a269c913805b501971ccc6a2a26de50a"
+  },
+  "products/premium-silikon/PREMIUM SILIKON silber 3D.glb": {
+    "size": 5035216,
+    "hash": "78b57d3119adaedbbb2f3020ccd1bb95"
+  },
+  "products/premium-silikon/PREMIUM SILIKON silber.webp": {
+    "size": 208972,
+    "hash": "bf59aebaacf7fe1591b6ee8177a9690a"
+  },
+  "products/premium-silikon/Premium Silikon Text.txt": {
+    "size": 2592,
+    "hash": "5754b3697ac0c09eda9927af00cde628"
+  },
+  "products/premium-silikon/PREMIUM SILIKON Transparent 3D.glb": {
+    "size": 5042360,
+    "hash": "7dcc7142687980c6fd9dbd0e8098bb14"
+  },
+  "products/premium-silikon/PREMIUM SILIKON Transparent.webp": {
+    "size": 223696,
+    "hash": "d71dc08c9a11e65628af725281772cb9"
+  },
+  "products/premium-silikon/PREMIUM SILIKON weiss 3D.glb": {
+    "size": 5035136,
+    "hash": "00e3a9152f0c5c0dd38558c03c8917e3"
+  },
+  "products/premium-silikon/PREMIUM SILIKON weiss.webp": {
+    "size": 206338,
+    "hash": "63bf739ccead9224a91ed53b1a89649b"
+  },
+  "products/premium-silikon/pukt bahama.webp": {
+    "size": 1288,
+    "hash": "3e0780a00430fa687d534190469eb4ef"
+  },
+  "products/premium-silikon/punkt anthrazit.webp": {
+    "size": 1040,
+    "hash": "0e4d744dbef19a16a8c44082d70b510f"
+  },
+  "products/premium-silikon/punkt bahama.webp": {
+    "size": 1288,
+    "hash": "3e0780a00430fa687d534190469eb4ef"
+  },
+  "products/premium-silikon/punkt braun.webp": {
+    "size": 1116,
+    "hash": "702a86a80ceb227696d8dd7b8dd4c9d2"
+  },
+  "products/premium-silikon/punkt caramel.webp": {
+    "size": 1296,
+    "hash": "bb336546b8eb01762d4b323d99e534d7"
+  },
+  "products/premium-silikon/punkt grau.webp": {
+    "size": 1166,
+    "hash": "f2fa9bf1a3af8807736b778932e78b5c"
+  },
+  "products/premium-silikon/punkt hellgrau.webp": {
+    "size": 1148,
+    "hash": "fd8cc0bb7f8f3aa1befc688bc59090da"
+  },
+  "products/premium-silikon/punkt jasmin.webp": {
+    "size": 1190,
+    "hash": "688aa6d8956453016d07d4a6ed0e78d3"
+  },
+  "products/premium-silikon/punkt manhatten.webp": {
+    "size": 1124,
+    "hash": "61ed4073fc51fce2cfcea2676ec9a72b"
+  },
+  "products/premium-silikon/punkt schwarz.webp": {
+    "size": 1004,
+    "hash": "9e0ebbcb0223c619aeaa56616619a629"
+  },
+  "products/premium-silikon/punkt silber.webp": {
+    "size": 1208,
+    "hash": "2294731d67e880ca0e129e3247fac4d6"
+  },
+  "products/premium-silikon/punkt Transparent.webp": {
+    "size": 1236,
+    "hash": "fe8063bebadfbea34f3f6cf3e90559dd"
+  },
+  "products/premium-silikon/punkt weiss.webp": {
+    "size": 1292,
+    "hash": "357a7acc8a84b70e528f81db8ddd15f2"
+  },
+  "products/RostlöserSpray M ONE-3D-4K-Transparent.webp": {
+    "size": 25372,
+    "hash": "0e99e86fc82a08fd8008049afe2aad56"
+  },
+  "products/RostlöserSpray M ONE-3D.glb": {
+    "size": 5937008,
+    "hash": "c4896731ac465483e1305288a74be43a"
+  },
+  "products/SilikonSpray M ONE-3D-4K-Transparent.webp": {
+    "size": 25210,
+    "hash": "0fb45079bbf76ca8941d27c792c06139"
+  },
+  "products/SilikonSpray M ONE-3D.glb": {
+    "size": 5995308,
+    "hash": "2ea9659bcbbc8e187b783ed1bb1e5a78"
+  },
+  "products/struktur-acryl/M-ONE ACRYL STRUKTUR 3D.glb": {
+    "size": 4706492,
+    "hash": "e0c7161894ddfe0c89ce5e524cd33a9c"
+  },
+  "products/struktur-acryl/M-ONE ACRYL STRUKTUR.webp": {
+    "size": 200410,
+    "hash": "4990d5de002716b4ed0f92942f1b5202"
+  },
+  "products/UBS Spray M ONE-3D-4K-Transparent.webp": {
+    "size": 36484,
+    "hash": "08d64da00ae83e3e306ce7f970e81f92"
+  },
+  "products/UBS Spray M ONE-3D.glb": {
+    "size": 7370484,
+    "hash": "7dbb4aea476982173f6ca5eaea7c0867"
+  },
+  "products/universal-acryl/M-ONE UNIVERSAL ACRYL-Einzeln-4K-Transparent.webp": {
+    "size": 189282,
+    "hash": "b1b0bac774756da1090bf3de5542b18e"
+  },
+  "products/universal-acryl/M-ONE UNIVERSAL ACRYL.glb": {
+    "size": 5108464,
+    "hash": "9a0de974103e7cd239eab2a4271cd2e8"
+  },
+  "products/ZinkSpray M ONE-3D-4K-Transparent.webp": {
+    "size": 22462,
+    "hash": "42f6716a8e835ec15ee086bf164adce4"
+  },
+  "products/ZinkSpray M ONE-3D.glb": {
+    "size": 6635604,
+    "hash": "30be8c91bef7514a5d44081ad59d9523"
+  },
+  "produkte/bau/index.html": {
+    "size": 34019,
+    "hash": "b05386c4407230d78133bcd85bd81fa4"
+  },
+  "produkte/bau/index.txt": {
+    "size": 6207,
+    "hash": "583f3ffbf3d196d0e412deb5383644ce"
+  },
+  "produkte/bau/m-one-extrem-kleber/index.html": {
+    "size": 30330,
+    "hash": "dcf2001a252204b94b074de868a0a2ca"
+  },
+  "produkte/bau/m-one-extrem-kleber/index.txt": {
+    "size": 6715,
+    "hash": "1a831f90b7528909afd1ee951db922b7"
+  },
+  "produkte/bau/m-one-neutral-silicon/index.html": {
+    "size": 34678,
+    "hash": "44a1864387e067cce08f955b90676c45"
+  },
+  "produkte/bau/m-one-neutral-silicon/index.txt": {
+    "size": 6726,
+    "hash": "474c1ae2575c9b930dbb1578e30b88b6"
+  },
+  "produkte/bau/m-one-premium-silicon/index.html": {
+    "size": 44304,
+    "hash": "7c7c19dd796e2dbdb35b10d632a8e6e6"
+  },
+  "produkte/bau/m-one-premium-silicon/index.txt": {
+    "size": 6724,
+    "hash": "0e50beeaaaef35f9152af55680263255"
+  },
+  "produkte/bau/m-one-struktur-acryl/index.html": {
+    "size": 30370,
+    "hash": "47256718aab1cb47acaee93dd0912e46"
+  },
+  "produkte/bau/m-one-struktur-acryl/index.txt": {
+    "size": 6723,
+    "hash": "adffed614fb8053ec8e6caf4c4c02b0f"
+  },
+  "produkte/bau/m-one-universal-acryl/index.html": {
+    "size": 30325,
+    "hash": "484c70286533c165276f95a68de629ef"
+  },
+  "produkte/bau/m-one-universal-acryl/index.txt": {
+    "size": 6725,
+    "hash": "18cce0d916fc1f3dc10ce168002a2af9"
+  },
+  "produkte/cleaning/index.html": {
+    "size": 36387,
+    "hash": "e7d36d6f03d239fca7758ae55884f081"
+  },
+  "produkte/cleaning/index.txt": {
+    "size": 6204,
+    "hash": "744b660e0d0a44ae9534660a8f4fe0a9"
+  },
+  "produkte/cleaning/m-one-antikalk-power-750ml/index.html": {
+    "size": 29288,
+    "hash": "66ded7a5c803bc9ee4c835dda814445e"
+  },
+  "produkte/cleaning/m-one-antikalk-power-750ml/index.txt": {
+    "size": 6758,
+    "hash": "e06073e103264d212c4317dd0807d696"
+  },
+  "produkte/cleaning/m-one-auto-innenreiniger-750ml/index.html": {
+    "size": 29438,
+    "hash": "5cce69b6d0d770c196eec24c3c6055bb"
+  },
+  "produkte/cleaning/m-one-auto-innenreiniger-750ml/index.txt": {
+    "size": 6773,
+    "hash": "5af11bb9c443dd9a803118f463a1c044"
+  },
+  "produkte/cleaning/m-one-betriebs--und-flchenreiniger-4-liter/index.html": {
+    "size": 29410,
+    "hash": "8d5091ceaf5035f8d701bbfef3859110"
+  },
+  "produkte/cleaning/m-one-betriebs--und-flchenreiniger-4-liter/index.txt": {
+    "size": 6823,
+    "hash": "7f44e5e41aa42960b49086ce90bbb301"
+  },
+  "produkte/cleaning/m-one-kamin-cleaner-750ml/index.html": {
+    "size": 29476,
+    "hash": "f837f23a0afd42e117dbd4e3b282867f"
+  },
+  "produkte/cleaning/m-one-kamin-cleaner-750ml/index.txt": {
+    "size": 6753,
+    "hash": "4b983cff12d5dba2571dbc26d56439c0"
+  },
+  "produkte/cleaning/m-one-laminatreiniger-4-liter/index.html": {
+    "size": 29330,
+    "hash": "72b42e626742d9bf6ccd77fbf269cc2e"
+  },
+  "produkte/cleaning/m-one-laminatreiniger-4-liter/index.txt": {
+    "size": 6769,
+    "hash": "6fa7002d3623e68cd77b064c29af3b56"
+  },
+  "produkte/cleaning/m-one-universal-cleaner-750ml/index.html": {
+    "size": 29649,
+    "hash": "7e95a0702a2b53c952343f3397716f1b"
+  },
+  "produkte/cleaning/m-one-universal-cleaner-750ml/index.txt": {
+    "size": 6769,
+    "hash": "88977877fd489ef68c5a2e23a364bc4b"
+  },
+  "produkte/colors/felgensilber-m-one/index.html": {
+    "size": 30280,
+    "hash": "7004c85b61aded4f1751983197694176"
+  },
+  "produkte/colors/felgensilber-m-one/index.txt": {
+    "size": 6727,
+    "hash": "ad6264b3cc3273f1ab26b484385a1ade"
+  },
+  "produkte/colors/haftgrund-m-one/index.html": {
+    "size": 30077,
+    "hash": "fd81858aa33eabc8c96b3835c9425c68"
+  },
+  "produkte/colors/haftgrund-m-one/index.txt": {
+    "size": 6718,
+    "hash": "729850768660623a146529c0af7cc9ad"
+  },
+  "produkte/colors/hochtemperatur-lack-m-one/index.html": {
+    "size": 30641,
+    "hash": "fdcca559ea3eaaa9ec48bc971fc3ab7c"
+  },
+  "produkte/colors/hochtemperatur-lack-m-one/index.txt": {
+    "size": 6759,
+    "hash": "c8942355287c258ef95d72c8e13651b8"
+  },
+  "produkte/colors/index.html": {
+    "size": 31566,
+    "hash": "b5e6e2de468f530acfb9fb3ef3ff56fd"
+  },
+  "produkte/colors/index.txt": {
+    "size": 6204,
+    "hash": "f4e3b26bf5d99ee7d429b7e33a631784"
+  },
+  "produkte/colors/lack-spray-m-one/index.html": {
+    "size": 40009,
+    "hash": "6ffdd0fc21e04da8bee8f077f12fdaaf"
+  },
+  "produkte/colors/lack-spray-m-one/index.txt": {
+    "size": 6720,
+    "hash": "d33a12d8d5eeb8fa59bb183049c1fc48"
+  },
+  "produkte/index.html": {
+    "size": 37987,
+    "hash": "efb12464e1625a94ee7e87458d71c105"
+  },
+  "produkte/index.txt": {
+    "size": 5756,
+    "hash": "8a7a8305b5e9a5e3d5a27144853d1c02"
+  },
+  "produkte/service--kfz/index.html": {
+    "size": 38845,
+    "hash": "c445f4a2448db18b41991d8c5d5c5a54"
+  },
+  "produkte/service--kfz/index.txt": {
+    "size": 6255,
+    "hash": "ef28cadb9f5ac339f13b69a8b29594af"
+  },
+  "produkte/service--kfz/m-one-bremsenreiniger/index.html": {
+    "size": 30995,
+    "hash": "24df7a55d195cef1ae851c7beb8ac0cd"
+  },
+  "produkte/service--kfz/m-one-bremsenreiniger/index.txt": {
+    "size": 6752,
+    "hash": "b2a0f0f573e8dc9b6a53e14477555b40"
+  },
+  "produkte/service--kfz/m-one-fettspray/index.html": {
+    "size": 30799,
+    "hash": "64881233e914ffce454c7a4a01de8f56"
+  },
+  "produkte/service--kfz/m-one-fettspray/index.txt": {
+    "size": 6726,
+    "hash": "539738598fe0ab345b57895effb97ec1"
+  },
+  "produkte/service--kfz/m-one-motorstarter/index.html": {
+    "size": 27633,
+    "hash": "9e86d17343f48241ffdd80549a4567e2"
+  },
+  "produkte/service--kfz/m-one-motorstarter/index.txt": {
+    "size": 6738,
+    "hash": "46080e675d2745a654294ffbe9135514"
+  },
+  "produkte/service--kfz/m-one-rostlser-spray/index.html": {
+    "size": 30602,
+    "hash": "b794be8d2812ed0b017a776f2914b2e8"
+  },
+  "produkte/service--kfz/m-one-rostlser-spray/index.txt": {
+    "size": 6750,
+    "hash": "f6bc93eda1cae00991138c37bc4b1ada"
+  },
+  "produkte/service--kfz/m-one-silikonspray/index.html": {
+    "size": 30667,
+    "hash": "cafd28f69f68da6fc8d51289162266a3"
+  },
+  "produkte/service--kfz/m-one-silikonspray/index.txt": {
+    "size": 6741,
+    "hash": "969e5d1b72b77b710088bd3a92d9f1b0"
+  },
+  "produkte/service--kfz/m-one-unterbodenschutz-ubs-spray/index.html": {
+    "size": 31047,
+    "hash": "ad44492932e9aee383027927718188cd"
+  },
+  "produkte/service--kfz/m-one-unterbodenschutz-ubs-spray/index.txt": {
+    "size": 6796,
+    "hash": "ee073c8e0ded14c10614d8ef0ce9bff1"
+  },
+  "produkte/service--kfz/m-one-zinkspray/index.html": {
+    "size": 30590,
+    "hash": "ba2ef96d8eb75af14f66975f08351883"
+  },
+  "produkte/service--kfz/m-one-zinkspray/index.txt": {
+    "size": 6731,
+    "hash": "76548f1fddf10664470544a54a68b020"
+  },
+  "qualitaet/index.html": {
+    "size": 27063,
+    "hash": "415e52e58fcf95835d023bd984d3fc79"
+  },
+  "qualitaet/index.txt": {
+    "size": 5783,
+    "hash": "e6970e4ba6c2d5fc99068405ddb8318e"
+  },
+  "send-email.php": {
+    "size": 4931,
+    "hash": "d9d3da1595d6ae836fb4a6e9a734067a"
+  },
+  "videos/hero.mp4": {
+    "size": 3640016,
+    "hash": "0e8f208913974ea6c358e2cc8f248aa0"
+  },
+  "videos/HeroSection_Video_1.mp4": {
+    "size": 2879212,
+    "hash": "23755feaa2ab30942edd21cb6f443c88"
+  },
+  "videos/HeroVideoFinal.mp4": {
+    "size": 3470311,
+    "hash": "9337a17dd493ec553f8bbde65ed5f92e"
+  },
+  "_next/static/chunks/139.7a5a8e93a21948c1.js": {
+    "size": 740,
+    "hash": "57a2f3550fa9b5fbf2ecb42bde9d6420"
+  },
+  "_next/static/chunks/150-dbdaf06641ef8b60.js": {
+    "size": 7838,
+    "hash": "e2cbfbe267391175e06d02e79aeddfa4"
+  },
+  "_next/static/chunks/210-3b5438adc7d5b60f.js": {
+    "size": 7004,
+    "hash": "22155edd2ad17c1b64f269e381eb4ee3"
+  },
+  "_next/static/chunks/224-4d90db98482b1502.js": {
+    "size": 8991,
+    "hash": "451454ca4b55c5e87940e8e7dce7ffb3"
+  },
+  "_next/static/chunks/239-492339b72c4e778e.js": {
+    "size": 14971,
+    "hash": "0344723207a223c76341bb33a35b8452"
+  },
+  "_next/static/chunks/245-c5da0b016f751a48.js": {
+    "size": 13754,
+    "hash": "e441c95c944bed30597c9127f6f58e3a"
+  },
+  "_next/static/chunks/255-81ba70bd132d3eed.js": {
+    "size": 173668,
+    "hash": "2f948c1f3cd76a5f8d75827a376c0ef6"
+  },
+  "_next/static/chunks/480-c03cb9cfbd899ae6.js": {
+    "size": 5738,
+    "hash": "08494405902c903ea330d4a005581190"
+  },
+  "_next/static/chunks/4bd1b696-c023c6e3521b1417.js": {
+    "size": 173019,
+    "hash": "81cd3b2d7a933bcc456bfcdf03a6ba1f"
+  },
+  "_next/static/chunks/53-e75df7065355fa54.js": {
+    "size": 8068,
+    "hash": "2c10d46e58f8e397298bb4e762dc8d55"
+  },
+  "_next/static/chunks/558-796e7f79f2dc97fb.js": {
+    "size": 21494,
+    "hash": "b69d612e68c424c98ef9878792149721"
+  },
+  "_next/static/chunks/646.f342b7cffc01feb0.js": {
+    "size": 5444,
+    "hash": "0e5080cbb851aeca93de2eaabb5d7b96"
+  },
+  "_next/static/chunks/870.5b61172b362112e2.js": {
+    "size": 432501,
+    "hash": "11e826bdcda4e4c4578ef375e570efa7"
+  },
+  "_next/static/chunks/903-37790ce553b700d4.js": {
+    "size": 127759,
+    "hash": "50f35a5e77ba9045637a4ed414251418"
+  },
+  "_next/static/chunks/989-19ec7ee0605b4739.js": {
+    "size": 70873,
+    "hash": "d70d7fece2a1332ff4a8d518e87e47ee"
+  },
+  "_next/static/chunks/app/agb/page-56efea338a2bd1f9.js": {
+    "size": 14313,
+    "hash": "b4033f0602a72b0464f2d6f571c4dcca"
+  },
+  "_next/static/chunks/app/datenschutz/page-54825819aec15724.js": {
+    "size": 12270,
+    "hash": "1f8fbf33e4a0ef58e3015069c55d4fdd"
+  },
+  "_next/static/chunks/app/impressum/page-abdb4bef5052da10.js": {
+    "size": 11580,
+    "hash": "a77a18712d6fd8b1840cefeb6e600c11"
+  },
+  "_next/static/chunks/app/kontakt/page-135d99e1a9d59bb1.js": {
+    "size": 6309,
+    "hash": "fef05c65008b1268a8f847e897c777da"
+  },
+  "_next/static/chunks/app/layout-10be8474ab40fb32.js": {
+    "size": 21061,
+    "hash": "cbddf983a833318365ca9cfaf306f5b7"
+  },
+  "_next/static/chunks/app/page-3d0709da2379fe88.js": {
+    "size": 17123,
+    "hash": "97bcdc4ead12b75769cd054a6ef0e187"
+  },
+  "_next/static/chunks/app/produkte/bau/page-d15200b039246b52.js": {
+    "size": 143,
+    "hash": "3486d32c60eb0aef417e895f9bb24eab"
+  },
+  "_next/static/chunks/app/produkte/cleaning/page-c45a4312e7bc5af1.js": {
+    "size": 143,
+    "hash": "54fa05980d4c18abe13f56b4534e26ff"
+  },
+  "_next/static/chunks/app/produkte/colors/page-b8f3d61c3bf65b01.js": {
+    "size": 143,
+    "hash": "0295ee0b0f4c1fd6eecdae0f582f0271"
+  },
+  "_next/static/chunks/app/produkte/page-ab95ae6d18766769.js": {
+    "size": 4606,
+    "hash": "e9c9f536e754212ea0ae404d6ad82edd"
+  },
+  "_next/static/chunks/app/produkte/service--kfz/page-e34cae700084cc62.js": {
+    "size": 143,
+    "hash": "1db2918f35f32fd50b2b3127c6573096"
+  },
+  "_next/static/chunks/app/produkte/[category]/[slug]/page-509fbce659753a60.js": {
+    "size": 2085,
+    "hash": "d042073b9b2603d9653b390661d2d38d"
+  },
+  "_next/static/chunks/app/qualitaet/page-f85f9da63c01eef7.js": {
+    "size": 7086,
+    "hash": "267983af314c27f24b355ff8d85711f6"
+  },
+  "_next/static/chunks/app/_not-found/page-ebfbe9a74425dc30.js": {
+    "size": 2670,
+    "hash": "946a1c40e29952f105dba4cd07a0d7ba"
+  },
+  "_next/static/chunks/b536a0f1.55b8f5fc5f7117ea.js": {
+    "size": 323064,
+    "hash": "2288c1819ba00e05aa63406b93b24428"
+  },
+  "_next/static/chunks/bd904a5c.74e92e8effa1d159.js": {
+    "size": 233963,
+    "hash": "faaad8c4b74e7063260cae54093d0b9d"
+  },
+  "_next/static/chunks/framework-de98b93a850cfc71.js": {
+    "size": 189765,
+    "hash": "17dbb312851d1f0e39ac45cf93f311d0"
+  },
+  "_next/static/chunks/main-app-d72247acb3a89fc1.js": {
+    "size": 557,
+    "hash": "a32cc3dcd616e58daccd27550c17d31f"
+  },
+  "_next/static/chunks/main-f7f36b39fe615836.js": {
+    "size": 122146,
+    "hash": "7379d9ed1037f1cf2b06e25e0f5dab53"
+  },
+  "_next/static/chunks/pages/_app-82835f42865034fa.js": {
+    "size": 912,
+    "hash": "ae4c92d3c699e2e64d7904e8fc511f0c"
+  },
+  "_next/static/chunks/pages/_error-013f4188946cdd04.js": {
+    "size": 5652,
+    "hash": "77ab41f2b0cafdd6347b243ae04bf602"
+  },
+  "_next/static/chunks/polyfills-42372ed130431b0a.js": {
+    "size": 112594,
+    "hash": "846118c33b2c0e922d7b3a7676f81f6f"
+  },
+  "_next/static/chunks/webpack-31393ec5f42416e1.js": {
+    "size": 3592,
+    "hash": "cebd2b82334943332222ed3ff4f6fcd7"
+  },
+  "_next/static/css/b20c80fac9dd3c68.css": {
+    "size": 48462,
+    "hash": "229ef3a910d9998670bfde9f2693bb75"
+  },
+  "_next/static/pNggHoM5ilFvfcIeGyo-v/_buildManifest.js": {
+    "size": 935,
+    "hash": "a31f66d152205da171e1c49ec0c0d1d7"
+  },
+  "_next/static/pNggHoM5ilFvfcIeGyo-v/_ssgManifest.js": {
+    "size": 124,
+    "hash": "4b40896a678972feda3bf3bb7ca23f95"
+  }
+}
